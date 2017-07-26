@@ -20,4 +20,5 @@ KNOWN_SCHEDULES = ["IRS990", "IRS990EZ", "IRS990PF", "IRS990ScheduleA",  \
                 "IRS990ScheduleE", "IRS990ScheduleF", "IRS990ScheduleG", \
                 "IRS990ScheduleH", "IRS990ScheduleI", "IRS990ScheduleJ", \
                 "IRS990ScheduleK", "IRS990ScheduleL", "IRS990ScheduleM", \
-                "IRS990ScheduleN", "IRS990ScheduleO", "IRS990ScheduleR"]
+                "IRS990ScheduleN", "IRS990ScheduleO", "IRS990ScheduleR", \
+                "ReturnHeader990x"]
