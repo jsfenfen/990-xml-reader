@@ -3,7 +3,7 @@ import re
 import os
 from datetime import datetime
 
-from .settings import IRS_XML_HTTP_BASE, WORKING_DIRECTORY
+from .settings import IRS_XML_HTTP_BASE, WORKING_DIRECTORY, INDEX_DIRECTORY
 
 OBJECT_ID_RE = re.compile(r'20\d{16}')
 
@@ -47,11 +47,15 @@ def get_s3_URL(object_id):
     return ("%s/%s_public.xml" % (IRS_XML_HTTP_BASE, object_id) )
 
 def get_local_path(object_id):
-    csv_file_name = "%s_public.xml" % object_id
-    return os.path.join(WORKING_DIRECTORY, csv_file_name)
+    file_name = "%s_public.xml" % object_id
+    return os.path.join(WORKING_DIRECTORY, file_name)
 
 def get_index_file_URL(year):
     return ("%s/index_%s.csv" % (IRS_XML_HTTP_BASE, year) )
+
+def get_local_index_path(year):
+    csv_file_name = "index_%s.csv" % year
+    return os.path.join(INDEX_DIRECTORY, csv_file_name)
 
 
 
