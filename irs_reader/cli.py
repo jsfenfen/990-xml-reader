@@ -1,19 +1,29 @@
 import sys
 import argparse
-from datetime import date
-from .file_utils import get_index_file_URL, get_local_index_path, \
-    stream_download
-
-this_year = date.today().year
-INDEXED_YEARS = [str(i) for i in range(2010, this_year+1)]
+import json
+from .filing import Filing
+from .settings import KNOWN_SCHEDULES
 
 def parse_args():
 
-    parser = argparse.ArgumentParser("Irsreader")
+    parser = argparse.ArgumentParser("xirsx")
+
+    parser.add_argument('object_ids', metavar='N', type=int, nargs='+',
+                    help='object ids')
 
     parser.add_argument('--verbose', dest='verbose', action='store_const',
-                    const=True, default=False,
-                    help='Verbose output')
+                const=True, default=False,
+                help='Verbose output')
+
+    parser.add_argument("--schedule",
+        choices=KNOWN_SCHEDULES,
+        default=None,
+        help='Get only that schedule')
+
+    parser.add_argument("--format",
+        choices=['dict', 'json'],
+        default='dict',
+        help='Output format')
 
     args = parser.parse_args()
     return args
@@ -22,6 +32,23 @@ def parse_args():
 def main(args=None):
     """The main routine."""
     args_read = parse_args()
+
+    for object_id in args_read.object_ids:
+        if args_read.verbose:
+            print("Processing filing %s" % object_id)
+        this_filing = Filing(object_id)
+        this_filing.process(verbose=args_read.verbose)
+        if args_read.schedule:
+            if args_read.format=='json':
+                print(json.dumps(this_filing.get_schedule(args_read.schedule)))
+            else:
+                print(this_filing.get_schedule(args_read.schedule))
+        else:
+            if args_read.format=='json':
+                print(json.dumps(this_filing.get_raw_irs_dict()))
+            else:
+                print(this_filing.get_raw_irs_dict())
+
 
 
 if __name__ == "__main__":

@@ -15,7 +15,7 @@ class Filing(object):
             Ignore these and defaults will be used.
             If filepath is set, URL is ignored.
         """
-        self.json_dict = None # The parsed xml will go here
+        self.raw_irs_dict = None # The parsed xml will go here
         self.version_string = None  #Version number here
 
         self.object_id = validate_object_id(object_id)
@@ -42,19 +42,19 @@ class Filing(object):
                 return False
         stream_download(self.URL, self.filepath, verbose=verbose)
 
-    def _set_json_from_xml(self):
+    def _set_dict_from_xml(self):
         with open(self.filepath, 'r') as fh:
             raw_file=fh.read()
-            self.json_dict =  xmltodict.parse(raw_file) 
+            self.raw_irs_dict =  xmltodict.parse(raw_file) 
 
     def _set_version(self):
-        self.version_string = self.json_dict['Return']['@returnVersion']
+        self.version_string = self.raw_irs_dict['Return']['@returnVersion']
 
     def _set_schedules(self):
         """ Attach the known and unknown schedules """
-        self.schedules = []
+        self.schedules = ['ReturnHeader990x',]
         self.otherforms = []
-        for sked in self.json_dict['Return']['ReturnData'].keys():
+        for sked in self.raw_irs_dict['Return']['ReturnData'].keys():
             if not sked.startswith("@"):
                 if sked in KNOWN_SCHEDULES:
                     self.schedules.append(sked)
@@ -62,16 +62,16 @@ class Filing(object):
                     self.otherforms.append(sked)
 
     def get_schedule(self, skedname):
-        if schedule == 'ReturnHeader990x':
-            return self.json_dict['Return']['ReturnHeader']
-        elif schedule in self.schedules:
-            return self.json_dict['Return']['ReturnData'][schedule]
+        if skedname == 'ReturnHeader990x':
+            return self.raw_irs_dict['Return']['ReturnHeader']
+        elif skedname in self.schedules:
+            return self.raw_irs_dict['Return']['ReturnData'][skedname]
         else:
             return None
 
     def get_otherform(self, skedname):
-        if schedule in self.otherforms:
-            return self.json_dict['Return']['ReturnData'][schedule]
+        if skedname in self.otherforms:
+            return self.raw_irs_dict['Return']['ReturnData'][skedname]
         else:
             return None
 
@@ -81,12 +81,15 @@ class Filing(object):
     def get_version(self):
         return self.version_string
 
-    def get_json(self):
-        return self.json_dict
+    def get_raw_irs_dict(self):
+        return self.raw_irs_dict
+
+    def get_schedules(self):
+        return self.schedules
         
     def process(self, verbose=False):
-        self._download()
-        self._set_json_from_xml()
+        self._download(verbose=verbose)
+        self._set_dict_from_xml()
         self._set_version()
         self._set_schedules()
 

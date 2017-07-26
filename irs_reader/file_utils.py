@@ -1,6 +1,9 @@
-import requests
 import re
 import os
+
+# maybe not worth the size for a simple download?
+import requests
+
 from datetime import datetime
 
 from .settings import IRS_XML_HTTP_BASE, WORKING_DIRECTORY, INDEX_DIRECTORY
@@ -33,7 +36,7 @@ def stream_download(url, target_path, verbose=False):
         if chunk:  # filter out keep-alive new chunks
             handle.write(chunk)
     if verbose:
-        print("Download completed in %s" %  (datetime.now()-start) )
+        print("Download completed to %s in %s" %  ( target_path , datetime.now()-start) )
 
 def validate_object_id(object_id):
     """ It's easy to make a mistake entering these, validate the format first """

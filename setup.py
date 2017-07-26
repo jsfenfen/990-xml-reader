@@ -2,11 +2,11 @@ from setuptools import setup
 import os
 
 
-NAME = "irs_reader"
+NAME = "xirsx"
 HUMAN_NAME = 'xirsx'
 HERE = os.path.abspath(os.path.dirname(__file__))
 version_ns = {}
-with open(os.path.join(HERE, NAME, '_version.py')) as f:
+with open(os.path.join(HERE, 'irs_reader', '_version.py')) as f:
     exec(f.read(), {}, version_ns)
 
 
@@ -16,9 +16,9 @@ setup(name=HUMAN_NAME,
       setup_requires=["setuptools",],
       install_requires=["requests", "xmltodict"],
       tests_require=["nose",],
-      packages=["irs_reader"],
-      package_dir={'irs_reader': 'irs_reader'},
-      package_data={'irs_reader': ['data/*/*.json']},
+      packages=["xirsx"],
+      package_dir={'xirsx': 'irs_reader'},
+      package_data={'xirsx': ['data/*/*.json']},
       entry_points={
           "console_scripts": ["xirsx=irs_reader.cli:main", "xirsx_index=irs_reader.cli_index:main"]
       },
