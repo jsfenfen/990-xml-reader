@@ -3,6 +3,7 @@ from .dir_utils import mkdir_p
 
 IRS_READER_ROOT = os.path.abspath(os.path.dirname(__file__))
 
+# IRS_READER_ROOT = /Local/path"
 
 # This is the URL to amazon's bucket, could use another synced to it
 IRS_XML_HTTP_BASE = "https://s3.amazonaws.com/irs-form-990"
