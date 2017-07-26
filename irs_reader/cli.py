@@ -36,10 +36,8 @@ def get_indexfile_by_year(year, verbose=False):
 
 def main(args=None):
     """The main routine."""
-    if args is None:
-        args = sys.argv[1:]
-
     args_read = parse_args()
+
     if args_read.getindexes:
         for year in INDEXED_YEARS:  
             get_indexfile_by_year(year, verbose=args_read.verbose)
