@@ -6,15 +6,14 @@ from .filing import Filing
 from .settings import KNOWN_SCHEDULES
 
 def parse_args():
-
     parser = argparse.ArgumentParser("xirsx")
 
     parser.add_argument('object_ids', metavar='N', type=int, nargs='+',
-                    help='object ids')
+        help='object ids')
 
     parser.add_argument('--verbose', dest='verbose', action='store_const',
-                const=True, default=False,
-                help='Verbose output')
+        const=True, default=False,
+        help='Verbose output')
 
     parser.add_argument("--schedule",
         choices=KNOWN_SCHEDULES,
@@ -26,19 +25,19 @@ def parse_args():
         default='dict',
         help='Output format')
 
-    parser.add_argument('--list_schedules', dest='list_schedules', action='store_const',
-                const=True, default=False,
-                help='Only list schedules')
+    parser.add_argument('--list_schedules', dest='list_schedules', 
+        action='store_const', const=True, default=False,
+        help='Only list schedules')
 
     parser.add_argument("--encoding",
-        default="utf-8")
+        default="utf-8",
+        help="encoding (probably utf-8)")
 
     args = parser.parse_args()
     return args
 
-
-
 class DecimalEncoder(json.JSONEncoder):
+    """ Thanks to github.com/jsvine/pdfplumber see cli.py#L11 """
     def default(self, o):
         if isinstance(o, Decimal):
             return float(o.quantize(Decimal('.0001'), rounding=ROUND_HALF_UP))
@@ -67,7 +66,8 @@ def main(args=None):
 
         elif args_read.schedule:
             if args_read.format=='json':
-                to_json( this_filing.get_schedule(args_read.schedule), args_read.encoding )
+                to_json( this_filing.get_schedule(args_read.schedule), 
+                    args_read.encoding )
             else:
                 print(this_filing.get_schedule(args_read.schedule) )
         else:
