@@ -8,10 +8,15 @@ from .settings import KNOWN_SCHEDULES
 def parse_args():
     parser = argparse.ArgumentParser("xirsx")
 
-    parser.add_argument('object_ids', metavar='N', type=int, nargs='+',
+    parser.add_argument('object_ids', 
+        metavar='N', 
+        type=int, 
+        nargs='+',
         help='object ids')
 
-    parser.add_argument('--verbose', dest='verbose', action='store_const',
+    parser.add_argument('--verbose', 
+        dest='verbose', 
+        action='store_const',
         const=True, default=False,
         help='Verbose output')
 
@@ -25,8 +30,11 @@ def parse_args():
         default='dict',
         help='Output format')
 
-    parser.add_argument('--list_schedules', dest='list_schedules', 
-        action='store_const', const=True, default=False,
+    parser.add_argument('--list_schedules', 
+        dest='list_schedules', 
+        action='store_const', 
+        const=True, 
+        default=False,
         help='Only list schedules')
 
     parser.add_argument("--encoding",
@@ -49,7 +57,6 @@ def to_json(data, encoding):
         json.dump(data, sys.stdout, cls=DecimalEncoder)
     else:
         json.dump(data, sys.stdout, cls=DecimalEncoder, encoding=encoding)
-
 
 def main(args=None):
     """The main routine."""
@@ -75,8 +82,6 @@ def main(args=None):
                 to_json( this_filing.get_raw_irs_dict(), args_read.encoding )
             else:
                 print(this_filing.get_raw_irs_dict() )
-
-
 
 if __name__ == "__main__":
     main()
