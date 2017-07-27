@@ -1,9 +1,7 @@
 import sys, os
-from .dir_utils import mkdir_p
+# from .dir_utils import mkdir_p
 
 IRS_READER_ROOT = os.path.abspath(os.path.dirname(__file__))
-
-# IRS_READER_ROOT = /Local/path"
 
 # This is the URL to amazon's bucket, could use another synced to it
 IRS_XML_HTTP_BASE = "https://s3.amazonaws.com/irs-form-990"
@@ -14,7 +12,7 @@ WORKING_DIRECTORY = (os.path.join(IRS_READER_ROOT, "XML") )
 # Helpful to keep these around for lookup purposes
 INDEX_DIRECTORY = (os.path.join(IRS_READER_ROOT, "CSV") )
 
-mkdir_p([WORKING_DIRECTORY, INDEX_DIRECTORY])
+# mkdir_p([WORKING_DIRECTORY, INDEX_DIRECTORY])
 
 KNOWN_SCHEDULES = ["IRS990", "IRS990EZ", "IRS990PF", "IRS990ScheduleA",  \
                 "IRS990ScheduleB", "IRS990ScheduleC", "IRS990ScheduleD", \
