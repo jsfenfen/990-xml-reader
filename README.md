@@ -3,6 +3,8 @@
 
 This is a python library and command line tool to simplify working with nonprofit tax returns released by the IRS in XML format. 
 
+It is under development and some capabilities have yet to be implemented.
+
 The IRS identifies electronic filings by their object_id, available in the annual index files released [link].
 
 ## Installation
@@ -13,7 +15,25 @@ The IRS identifies electronic filings by their object_id, available in the annua
 - install locally using `$ pip install . ` from the directory with setup.py in it. It's painfully slow. You should now be able to run it as a command line utility, i.e. $ xirsx --help or $ xirsx_index --help
 - To uninstall use `$ pip uninstall xirsx`
 - To see if it's installed, run `$ pip freeze`; if you see a line line 'xirsx==0.0.1' it is installed. 
+
+
 ## xirsx -- command line
+Use the object_id to reference a particular filing.
+
+
+		$ xirsx --list_schedules 201642229349300909
+		['ReturnHeader990x', u'IRS990', u'IRS990ScheduleA',
+		 u'IRS990ScheduleB', u'IRS990ScheduleD', u'IRS990ScheduleM',
+		 u'IRS990ScheduleO']
+		 
+Save it to a file by redirecting the output: 
+		
+		$ xirsx --schedule IRS990 --format json 201642229349300909 > 2016_990.json
+
+This is a json representation of the form as it appears--we have no standardized variables across versions at all in this representation.
+	
+	
+
 
 		usage: xirsx [-h] [--verbose]
 		             [--schedule {IRS990,IRS990EZ,IRS990PF,IRS990ScheduleA,IRS990ScheduleB,IRS990ScheduleC,IRS990ScheduleD,IRS990ScheduleE,IRS990ScheduleF,IRS990ScheduleG,IRS990ScheduleH,IRS990ScheduleI,IRS990ScheduleJ,IRS990ScheduleK,IRS990ScheduleL,IRS990ScheduleM,IRS990ScheduleN,IRS990ScheduleO,IRS990ScheduleR,ReturnHeader990x}]
