@@ -35,9 +35,9 @@ def run_main(args_read):
             get_indexfile_by_year(year, verbose=args_read.verbose)
 
 def main(args=None):
-    parser = get_parser()
+    parser = get_cli_index_parser()
     args = parser.parse_args()
-    run_main(args)
+    run_cli_index_main(args)
 
 
 if __name__ == "__main__":

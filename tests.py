@@ -8,8 +8,8 @@ from irs_reader.filing import Filing
 from irs_reader.settings import WORKING_DIRECTORY
 
 # For running cli stuff
-from irs_reader.cli import run_main as run_cli_main, get_parser as get_cli_parser
-from irs_reader.cli_index import run_main as run_cli_index_main, get_parser as get_cli_index_parser
+from irs_reader.xirsx_cli import run_main as run_cli_main, get_parser as get_cli_parser
+from irs_reader.xirsx_index_cli import run_main as run_cli_index_main, get_parser as get_cli_index_parser
 
 
 FILING_2015V21 = '201642229349300909'
@@ -59,7 +59,7 @@ class TestCommandLine:
         parser = get_cli_parser()
         self.parser = parser
     def test_cli_1(self):
-        args = self.parser.parse_args([FILING_2015V21, 'verbose'])
+        args = self.parser.parse_args([FILING_2015V21, '--verbose'])
         # Does it run? Output is to std out. 
         run_cli_main(args)
 

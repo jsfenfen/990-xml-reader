@@ -53,12 +53,12 @@ class DecimalEncoder(json.JSONEncoder):
             return float(o.quantize(Decimal('.0001'), rounding=ROUND_HALF_UP))
         return super(DecimalEncoder, self).default(o)
 ### ibid.
-def to_json(data, encoding):
+def to_json(data, encoding=None):
     if hasattr(sys.stdout, "buffer"):
         sys.stdout = codecs.getwriter("utf-8")(sys.stdout.buffer, "strict")
         json.dump(data, sys.stdout)
     else:
-        json.dump(data, sys.stdout, encoding=encoding)
+        json.dump(data, sys.stdout)
 
 ###
 def run_main(args_read):
