@@ -59,9 +59,17 @@ class TestCommandLine:
         parser = get_cli_parser()
         self.parser = parser
     def test_cli_1(self):
-        args = self.parser.parse_args([FILING_2015V21])
+        args = self.parser.parse_args([FILING_2015V21, 'verbose'])
         # Does it run? Output is to std out. 
         run_cli_main(args)
+
+    def test_cli_2(self):
+        # dump only main 990 in json format
+        test_args = ['--schedule', 'IRS990', '--format', 'json', '201642229349300909']
+        args = self.parser.parse_args(test_args)
+        run_cli_main(args)
+
+
 
 class TestCommandLine_Index:
     def setUp(self):
