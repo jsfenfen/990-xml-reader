@@ -18,15 +18,14 @@ The IRS identifies electronic filings by their object_id, available in the annua
 
 
 ## xirsx -- command line
-Use the object_id to reference a particular filing.
+Installing the library will also install the xirsx command line tool, which uses the IRS' object_ids to reference a particular filing. This will just spit out the string representation of an ordered dictionary for the entire filing. 
 
-
-		$ xirsx --list_schedules 201642229349300909
-		['ReturnHeader990x', u'IRS990', u'IRS990ScheduleA',
-		 u'IRS990ScheduleB', u'IRS990ScheduleD', u'IRS990ScheduleM',
-		 u'IRS990ScheduleO']
+		$ xirsx 201642229349300909
+		OrderedDict([(u'Return', OrderedDict([(u'@xmlns'  < ..lengthy output.. >
+		
+To get a json version, use "--format json", i.e. `$ xirsx --format json 201642229349300909`.
 		 
-Save the entire filing object to a file (note that we are redirecting the output using the '>' operator): 
+Save the entire filing object to a file  as json (note that we are redirecting the output using the '>' operator) like this:
 		
 		$ xirsx --format json 201642229349300909 > 2016.json
 
