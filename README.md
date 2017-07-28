@@ -26,13 +26,27 @@ Use the object_id to reference a particular filing.
 		 u'IRS990ScheduleB', u'IRS990ScheduleD', u'IRS990ScheduleM',
 		 u'IRS990ScheduleO']
 		 
-Save it to a file by redirecting the output: 
+Save the entire filing object to a file (note that we are redirecting the output using the '>' operator): 
 		
-		$ xirsx --schedule IRS990 --format json 201642229349300909 > 2016_990.json
+		$ xirsx --format json 201642229349300909 > 2016.json
 
 This is a json representation of the form as it appears--we have no standardized variables across versions at all in this representation.
+
+Which schedules are included in this filing? 
 	
+		$ xirsx --list_schedules 201642229349300909
 	
+		['ReturnHeader990x', u'IRS990', u'IRS990ScheduleA', u'IRS990ScheduleB', 
+		u'IRS990ScheduleD', u'IRS990ScheduleM', u'IRS990ScheduleO']
+	
+Pull out only schedule M and save it to file.
+
+	$ xirsx --format json 201642229349300909 > 2016_M.json
+
+The alternative to json format is 'dict' which at the moment just prints the python representation of the ordered dict before it is converted to json. The dict has an inherent ordering to it, whereas the json doesn't (but the transformed json will have an 'ordering' element to allow sorting).
+	
+
+Full usage:
 
 
 		usage: xirsx [-h] [--verbose]
