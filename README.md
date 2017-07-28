@@ -9,7 +9,7 @@ The IRS identifies electronic filings by their object_id, available in the annua
 
 ## Installation
 
-#### The directions below are a hack--we should put this on pypy when released
+#### The directions below are a hack--we should put this on PyPI when released
  
 - git clone the repo 
 - install locally using `$ pip install . ` from the directory with setup.py in it. It's painfully slow. You should now be able to run it as a command line utility, i.e. $ xirsx --help or $ xirsx_index --help
