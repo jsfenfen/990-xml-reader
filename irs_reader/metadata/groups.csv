@@ -1,0 +1,93 @@
+parent_sked,parent_sked_part,ordering,xpath,db_name,line_number,description,headless,versions
+IRS990,part_0,1,/IRS990/SpecialConditionDesc,SpclCndtnDsc,, Special condition description,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990,part_iii,2,/IRS990/ProgSrvcAccomActyOtherGrp,PrgSrvcAccmActyOthr,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990,part_v,3,/IRS990/ForeignCountryCd,FrgnCntryCd, Part V Line 4b, Name of foreign country,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990,part_vi,4,/IRS990/StatesWhereCopyOfReturnIsFldCd,SttsWhrCpyOfRtrnIsFldCd, Part VI Section C Line 17, States where return filed,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990,part_vii,5,/IRS990/ContractorCompensationGrp,CntrctrCmpnstn,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990,part_vii,6,/IRS990/Form990PartVIISectionAGrp,Frm990PrtVIISctnA,," Section A, at least name required",,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990,part_viii,7,/IRS990/OtherRevenueMiscGrp,OthrRvnMsc,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990,part_viii,8,/IRS990/ProgramServiceRevenueGrp,PrgrmSrvcRvn,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990,part_ix,9,/IRS990/OtherExpensesGrp,OthrExpnss,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990PF,pf_part_0,1,/IRS990PF/SpecialConditionDesc,PFSpclCndtnDsc,, Special condition description,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990PF,pf_part_iv,2,/IRS990PF/CapGainsLossTxInvstIncmDetail/CapGainsLossTxInvstIncmGrp,PFCpGnsLssTxInvstIncm,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990PF,pf_part_viia,3,/IRS990PF/StatementsRegardingActyGrp/ForeignCountryCd,PFFrgnCntryCd, Part VII-A Line 16, Name of foreign country,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990PF,pf_part_viia,4,/IRS990PF/StatementsRegardingActyGrp/OrgReportOrRegisterStateCd,PFOrgRprtOrRgstrSttCd, Part VII-A Line 8a, States Filed With,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990PF,pf_part_viii,5,/IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationHighestPaidEmplGrp,PFCmpnstnHghstPdEmpl, Part VIII Line 2," Compensation of the five highest paid employees other than officers, directors, and trustees",,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990PF,pf_part_viii,6,/IRS990PF/OfficerDirTrstKeyEmplInfoGrp/CompensationOfHghstPdCntrctGrp,PFCmpnstnOfHghstPdCntrct, Part VIII Line 3, Compensation of the five highest paid independent contractors for professional services,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990PF,pf_part_viii,7,/IRS990PF/OfficerDirTrstKeyEmplInfoGrp/OfficerDirTrstKeyEmplGrp,PFOffcrDrTrstKyEmpl, Part VIII Line 1," Officer, Director, Trustee, or Key Employee",,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990PF,pf_part_xv,8,/IRS990PF/SupplementaryInformationGrp/ApplicationSubmissionInfoGrp,PFApplctnSbmssnInf,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990PF,pf_part_xv,9,/IRS990PF/SupplementaryInformationGrp/ContributingManagerNm,PFCntrbtngMngrNm, Part XV Line 1a, Contributing Manager,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990PF,pf_part_xv,10,/IRS990PF/SupplementaryInformationGrp/GrantOrContriApprvForFutGrp,PFGrntOrCntrApprvFrFt,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990PF,pf_part_xv,11,/IRS990PF/SupplementaryInformationGrp/GrantOrContributionPdDurYrGrp,PFGrntOrCntrbtnPdDrYr,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990PF,pf_part_xv,12,/IRS990PF/SupplementaryInformationGrp/ShareholderManagerNm,PFShrhldrMngrNm, Part XV Line 1b, Shareholder Manager,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990PF,pf_part_xvia,13,/IRS990PF/AnalysisIncomeProducingActyGrp/OtherRevenueDescribedGrp,PFOthrRvnDscrbd,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990PF,pf_part_xvia,14,/IRS990PF/AnalysisIncomeProducingActyGrp/ProgramServiceRevPartVIIGrp,PFPrgrmSrvcRvPrtVII,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990PF,pf_part_xvib,15,/IRS990PF/RlnOfActyToAccomOfExmptPrpsGrp/RlnOfActyToAccomOfExmptPrpsGrp,PFRlnOfActyTAccmOfExmptPrps, Part XVI-B, Relationship of activities to the accomplishment of exempt purposes,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990PF,pf_part_xvii,16,/IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/RelationshipScheduleDetail,PFRltnshpSkdDtl,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990PF,pf_part_xvii,17,/IRS990PF/TrnsfrTransRlnNonchrtblEOGrp/TransferScheduleDetail,PFTrnsfrSkdDtl,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990EZ,ez_part_0,1,/IRS990EZ/SpecialConditionDesc,EZSpclCndtnDsc,, Special condition description,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990EZ,ez_part_iii,2,/IRS990EZ/ProgramSrvcAccomplishmentGrp,EZPrgrmSrvcAccmplshmnt,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990EZ,ez_part_iv,3,/IRS990EZ/OfficerDirectorTrusteeEmplGrp,EZOffcrDrctrTrstEmpl,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990EZ,ez_part_v,4,/IRS990EZ/ForeignFinancialAccountCntryCd,EZFrgnFnnclAccntCntryCd, Part V Line 42b, Name of foreign country,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990EZ,ez_part_v,5,/IRS990EZ/ForeignOfficeCountryCd,EZFrgnOffcCntryCd, Part V Line 42c, Name of foreign country,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990EZ,ez_part_v,6,/IRS990EZ/StatesWhereCopyOfReturnIsFldCd,EZSttsWhrCpyOfRtrnIsFldCd, Part V Line 41, States With Which a Copy of This Return is Filed,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990EZ,ez_part_vi,7,/IRS990EZ/CompensationHighestPaidEmplGrp,EZCmpnstnHghstPdEmpl,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990EZ,ez_part_vi,8,/IRS990EZ/CompensationOfHghstPdCntrctGrp,EZCmpnstnOfHghstPdCntrct,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleA,skeda_part_i,1,/IRS990ScheduleA/HospitalNameAndAddressGrp,SkdAHsptlNmAndAddrss,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleA,skeda_part_i,2,/IRS990ScheduleA/SupportedOrgInformationGrp,SkdASpprtdOrgInfrmtn,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleA,skeda_part_vi,3,/IRS990ScheduleA/Form990ScheduleAPartIVGrp,SkdAFrm990SkdAPrtVI,,,,2013v3.0;2013v3.1;2013v4.0
+IRS990ScheduleA,skeda_part_vi,4,/IRS990ScheduleA/Form990ScheduleAPartVIGrp,SkdAFrm990SkdAPrtVI," Schedule A, Part VI", Supplemental information for schedule A,,2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleB,skedb_part_i,1,/IRS990ScheduleB/ContributorInformationGrp,SkdBCntrbtrInfrmtn,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleB,skedb_part_ii,2,/IRS990ScheduleB/CharitableContributionsDetail,SkdBChrtblCntrbtnsDtl,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleB,skedb_part_ii,3,/IRS990ScheduleB/NonCashPropertyContributionGrp,SkdBNnCshPrprtyCntrbtn,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleC,skedc_part_0,1,/IRS990ScheduleC/Section527PoliticalOrgGrp,SkdCSctn527PltclOrg,," State the names, addresses and Employer Identification Number (EIN) of all section 527 political organizations to which payments were made",,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleC,skedc_part_iv,2,/IRS990ScheduleC/SupplementalInformationDetail,SkdCSpplmntlInfrmtnDtl,, Part IV contents,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleD,skedd_part_vii,1,/IRS990ScheduleD/OtherSecuritiesGrp,SkdDOthrScrts,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleD,skedd_part_viii,2,/IRS990ScheduleD/InvstProgramRelatedOrgGrp,SkdDInvstPrgrmRltdOrg,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleD,skedd_part_ix,3,/IRS990ScheduleD/OtherAssetsOrgGrp,SkdDOthrAsstsOrg,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleD,skedd_part_x,4,/IRS990ScheduleD/OtherLiabilitiesOrgGrp,SkdDOthrLbltsOrg,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleD,skedd_part_xiii,5,/IRS990ScheduleD/SupplementalInformationDetail,SkdDSpplmntlInfrmtnDtl,, Part XIII contents,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleE,skede_part_ii,1,/IRS990ScheduleE/SupplementalInformationDetail,SkdESpplmntlInfrmtnDtl,, Part II contents,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleF,skedf_part_i,1,/IRS990ScheduleF/AccountActivitiesOutsideUSGrp,SkdFAccntActvtsOtsdUS,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleF,skedf_part_ii,2,/IRS990ScheduleF/GrantsToOrgOutsideUSGrp,SkdFGrntsTOrgOtsdUS,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleF,skedf_part_iii,3,/IRS990ScheduleF/ForeignIndividualsGrantsGrp,SkdFFrgnIndvdlsGrnts,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleF,skedf_part_v,4,/IRS990ScheduleF/SupplementalInformationDetail,SkdFSpplmntlInfrmtnDtl,, Part V contents,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleG,skedg_part_i,1,/IRS990ScheduleG/FundraiserActivityInfoGrp,SkdGFndrsrActvtyInf,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleG,skedg_part_i,2,/IRS990ScheduleG/LicensedStatesCd,SkdGLcnsdSttsCd, Part I Line 3, List all states in which the organization is registered or licensed to solicit funds or has been notified it is exempt from registration or licensing,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleG,skedg_part_iii,3,/IRS990ScheduleG/StatesWhereGamingConductedCd,SkdGSttsWhrGmngCndctdCd, Part III Line 9, Enter state where organization conducts gaming activities,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleG,skedg_part_iv,4,/IRS990ScheduleG/SupplementalInformationDetail,SkdGSpplmntlInfrmtnDtl,, Part IV contents,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleH,skedh_part_iv,1,/IRS990ScheduleH/ManagementCoAndJntVenturesGrp,SkdHMngmntCAndJntVntrs,, Part IV repeating group,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleH,skedh_part_va,2,/IRS990ScheduleH/HospitalFacilitiesGrp,SkdHHsptlFclts,, Part V Section A repeating group,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleH,skedh_part_vb,3,/IRS990ScheduleH/HospitalFcltyPoliciesPrctcGrp,SkdHHsptlFcltyPlcsPrctc,, Part V Section B repeating group,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleH,skedh_part_vc,4,/IRS990ScheduleH/SupplementalInformationGrp,SkdHSpplmntlInfrmtn,," Part V Section C, Supplemental Information for Part V Section B",,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleH,skedh_part_vd,5,/IRS990ScheduleH/OthHlthCareFcltsNotHospitalGrp/OthHlthCareFcltsGrp,SkdHOthHlthCrFclts,," Part V section D, other health care facilities; ; Part V Section D repeating group",,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleH,skedh_part_vi,6,/IRS990ScheduleH/SupplementalInformationDetail,SkdHSpplmntlInfrmtnDtl,, Part VI contents,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleI,skedi_part_ii,1,/IRS990ScheduleI/RecipientTable,SkdIRcpntTbl, Part II," Complete if the organization reported more than $5,000 on Form 990, Part IX, line 1 for any recipient that received more than $5,000",,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleI,skedi_part_iii,2,/IRS990ScheduleI/GrantsOtherAsstToIndivInUSGrp,SkdIGrntsOthrAsstTIndvInUS,, Part III content,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleI,skedi_part_iv,3,/IRS990ScheduleI/SupplementalInformationDetail,SkdISpplmntlInfrmtnDtl,, Part IV content,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleJ,skedj_part_ii,1,/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp,SkdJRltdOrgOffcrTrstKyEmpl,, Part II contents,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleJ,skedj_part_iii,2,/IRS990ScheduleJ/SupplementalInformationDetail,SkdJSpplmntlInfrmtnDtl,, Part III contents,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleK,skedk_part_i,1,/IRS990ScheduleK/TaxExemptBondsIssuesGrp,SkdKTxExmptBndsIsss,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleK,skedk_part_ii,2,/IRS990ScheduleK/TaxExemptBondsProceedsGrp,SkdKTxExmptBndsPrcds,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleK,skedk_part_iii,3,/IRS990ScheduleK/TaxExemptBondsPrivateBusUseGrp,SkdKTxExmptBndsPrvtBsUs,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleK,skedk_part_iv,4,/IRS990ScheduleK/TaxExemptBondsArbitrageGrp,SkdKTxExmptBndsArbtrg,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleK,skedk_part_v,5,/IRS990ScheduleK/ProceduresCorrectiveActionGrp,SkdKPrcdrsCrrctvActn,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleK,skedk_part_vi,6,/IRS990ScheduleK/SupplementalInformationDetail,SkdKSpplmntlInfrmtnDtl,, Part VI contents,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleL,skedl_part_i,1,/IRS990ScheduleL/DisqualifiedPersonExBnftTrGrp,SkdLDsqlfdPrsnExBnftTr,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleL,skedl_part_ii,2,/IRS990ScheduleL/LoansBtwnOrgInterestedPrsnGrp,SkdLLnsBtwnOrgIntrstdPrsn,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleL,skedl_part_iii,3,/IRS990ScheduleL/GrntAsstBnftInterestedPrsnGrp,SkdLGrntAsstBnftIntrstdPrsn,, Part III content,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleL,skedl_part_iv,4,/IRS990ScheduleL/BusTrInvolveInterestedPrsnGrp,SkdLBsTrInvlvIntrstdPrsn,, Part IV content,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleL,skedl_part_v,5,/IRS990ScheduleL/SupplementalInformationDetail,SkdLSpplmntlInfrmtnDtl,, Part V contents,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleM,skedm_part_i,1,/IRS990ScheduleM/OtherNonCashContriTableGrp,SkdMOthrNnCshCntrTbl,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleM,skedm_part_ii,2,/IRS990ScheduleM/SupplementalInformationDetail,SkdMSpplmntlInfrmtnDtl, Part II, Explanation repeating group,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleN,skedn_part_i,1,/IRS990ScheduleN/LiquidationOfAssetsTableGrp/LiquidationOfAssetsDetail,SkdNLqdtnOfAsstsDtl,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleN,skedn_part_ii,2,/IRS990ScheduleN/DispositionOfAssetsDetail,SkdNDspstnOfAsstsDtl,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleN,skedn_part_iii,3,/IRS990ScheduleN/SupplementalInformationDetail,SkdNSpplmntlInfrmtnDtl,, Part III contents,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleO,skedo_part_i,1,/IRS990ScheduleO/SupplementalInformationDetail,SkdOSpplmntlInfrmtnDtl,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleR,skedr_part_i,1,/IRS990ScheduleR/IdDisregardedEntitiesGrp,SkdRIdDsrgrddEntts,, Part I content - Identification of disregarded entities,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleR,skedr_part_ii,2,/IRS990ScheduleR/IdRelatedTaxExemptOrgGrp,SkdRIdRltdTxExmptOrg,, Part II content - Identification of related tax-exempt organizations,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleR,skedr_part_iii,3,/IRS990ScheduleR/IdRelatedOrgTxblPartnershipGrp,SkdRIdRltdOrgTxblPrtnrshp,, Part III content - Identification of related organizations taxable as a partnership,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleR,skedr_part_iv,4,/IRS990ScheduleR/IdRelatedOrgTxblCorpTrGrp,SkdRIdRltdOrgTxblCrpTr,, Part IV content - Identification of related organizations taxable as a corporation or trust,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleR,skedr_part_v,5,/IRS990ScheduleR/TransactionsRelatedOrgGrp,SkdRTrnsctnsRltdOrg,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleR,skedr_part_vi,6,/IRS990ScheduleR/UnrelatedOrgTxblPartnershipGrp,SkdRUnrltdOrgTxblPrtnrshp,, Part VI content,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
+IRS990ScheduleR,skedr_part_vii,7,/IRS990ScheduleR/SupplementalInformationDetail,SkdRSpplmntlInfrmtnDtl,, Part VII contents,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0
