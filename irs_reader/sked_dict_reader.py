@@ -76,31 +76,33 @@ class SkedDictReader(object):
 
                 except KeyError:
                     # It's not a group so it should be a variable we know about
+                    print("Not a group %s" % element_path)
 
+                    try:
+                        var_data = self.standardizer.get_var(element_path)
+                        var_found = True
+
+                    except KeyError:
+                        # pass through for some common key errors:
+                        if not ignorable_keyerror(element_path):
+                            msg = "Key error %s in %s ein=%s" % (element_path, self.object_id, self.ein)
+                            self.logging.warning(msg)
+                        var_found = False
+
+                    if var_found:
+
+                        table_name = var_data['db_table']
+                        var_name = var_data['db_name']
+                        print("Added to %s %s :%s" % (table_name, var_name, json_node))
                         try:
-                            var_data = self.standardizer.get_var(element_path)
-                            var_found = True
-
+                            # Do we need the ordering downstream? Add --doc option to show line numbers, order
+                            # this_sked = self.schedule_parts[table_name][var_name] = {'value': json_node, 'ordering': var_data['ordering'] }
+                            # but if not:
+                            self.schedule_parts[table_name][var_name] =  json_node    
                         except KeyError:
-                            # pass through for some common key errors:
-                            if not ignorable_keyerror(element_path):
-                                msg = "Key error %s in %s ein=%s" % (element_path, self.object_id, self.ein)
-                                self.logging.warning(msg)
-                            var_found = False
-
-                        if var_found:
-
-                            table_name = var_data['db_table']
-                            var_name = var_data['db_name']
-                            try:
-                                # Do we need the ordering downstream? Add --doc option to show line numbers, order vars
-                                # this_sked = self.schedule_parts[table_name][var_name] = {'value': json_node, 'ordering': var_data['ordering'] }
-                                # but if not:
-                                self.schedule_parts[table_name][var_name] =  json_node    
-                            except KeyError:
-                                # ditto as above
-                                self.schedule_parts[table_name] = self._get_table_start()
-                                self.schedule_parts[table_name][var_name] = json_node 
+                            # ditto as above
+                            self.schedule_parts[table_name] = self._get_table_start()
+                            self.schedule_parts[table_name][var_name] = json_node 
 
         elif this_node_type == listType:
 
@@ -117,10 +119,17 @@ class SkedDictReader(object):
             self._process_group(json_node, parent_path, this_group)
 
         elif this_node_type == orderedDictType:
-            keys = json_node.keys()
-            for key in keys:
-                new_path = parent_path + "/" + key
-                self._parse_json(json_node[key], parent_path=new_path)
+
+            try:
+                # is it a singleton group? 
+                this_group = self.groups[element_path]
+                self._process_group([{parent_path:json_node}], '', this_group)
+
+            except KeyError:
+                keys = json_node.keys()
+                for key in keys:
+                    new_path = parent_path + "/" + key
+                    self._parse_json(json_node[key], parent_path=new_path)
 
         elif this_node_type == noneType:
             pass

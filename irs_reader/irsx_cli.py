@@ -4,6 +4,7 @@ import json
 import codecs
 from .filing import Filing
 from .settings import KNOWN_SCHEDULES
+from .runner import Runner
 
 def get_parser():
     parser = argparse.ArgumentParser("xirsx")
@@ -26,8 +27,8 @@ def get_parser():
         help='Get only that schedule')
 
     parser.add_argument("--format",
-        choices=['dict', 'json'],
-        default='dict',
+        choices=['print', 'bare'],
+        default='print',
         help='Output format')
 
     parser.add_argument('--list_schedules', 
@@ -60,8 +61,17 @@ def to_json(data, encoding=None):
     else:
         json.dump(data, sys.stdout)
 
-###
+def print_indented_json(data):
+    if hasattr(sys.stdout, "buffer"):
+        sys.stdout = codecs.getwriter("utf-8")(sys.stdout.buffer, "strict")
+        json.dump(data, sys.stdout, indent=2)
+    else:
+        json.dump(data, sys.stdout, indent=2)
+
 def run_main(args_read):
+
+    xml_runner = Runner()
+
     for object_id in args_read.object_ids:
         if args_read.verbose:
             print("Processing filing %s" % object_id)
@@ -73,16 +83,17 @@ def run_main(args_read):
 
         elif args_read.schedule:
 
-            if args_read.format=='json':
-                to_json( this_filing.get_schedule(args_read.schedule), 
-                    args_read.encoding )
+            result = xml_runner.run_filing_single_schedule(object_id, args_read.schedule, verbose=args_read.verbose)
+            if args_read.format=='bare':
+                to_json(result, args_read.encoding)
             else:
-                print(this_filing.get_schedule(args_read.schedule) )
+                print_indented_json(result)
         else:
-            if args_read.format=='json':
-                to_json( this_filing.get_raw_irs_dict(), args_read.encoding )
+            result = xml_runner.run_filing(object_id, verbose=args_read.verbose)
+            if args_read.format=='bare':
+                to_json(result, args_read.encoding)
             else:
-                print(this_filing.get_raw_irs_dict() )
+                print_indented_json(result)
 
 def main(args=None):
     parser = get_parser()

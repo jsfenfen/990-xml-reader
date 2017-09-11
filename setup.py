@@ -20,7 +20,7 @@ setup(name=HUMAN_NAME,
       package_dir={'irsx': 'irs_reader'},
       package_data={'irsx': ['data/*/*.json']},
       entry_points={
-          "console_scripts": ["irsx=irsx.xirsx_cli:main", "irsx_index=irsx.irsx_cli_index:main"]
+          "console_scripts": ["irsx=irsx.irsx_cli:main", "irsx_index=irsx.irsx_cli_index:main"]
       },
       )
 

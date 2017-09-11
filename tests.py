@@ -46,7 +46,7 @@ def test_process_with_filepath():
 
 class TestConversion:
     """ Still doesn't validate actual values, but... """
-    
+
     def setUp(self):
         self.standardizer = Standardizer()
         self.group_dicts = self.standardizer.get_groups()
@@ -143,8 +143,8 @@ class TestCommandLine:
         run_cli_main(args)
 
     def test_cli_2(self):
-        # dump only main 990 in json format
-        test_args = ['--schedule', 'IRS990', '--format', 'json', '201642229349300909']
+        # dump only main 990 in bare json format
+        test_args = ['--schedule', 'IRS990', '--format', 'bare', '201642229349300909']
         args = self.parser.parse_args(test_args)
         run_cli_main(args)
 
