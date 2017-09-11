@@ -2,8 +2,8 @@ from setuptools import setup
 import os
 
 
-NAME = "xirsx"
-HUMAN_NAME = 'xirsx'
+NAME = "irsx"
+HUMAN_NAME = 'irsx'
 HERE = os.path.abspath(os.path.dirname(__file__))
 version_ns = {}
 with open(os.path.join(HERE, 'irs_reader', '_version.py')) as f:
@@ -14,13 +14,13 @@ setup(name=HUMAN_NAME,
       description="Turn the IRS' versioned XML 990's into python objects with original line number and description.",
       version=version_ns['__version__'],
       setup_requires=["setuptools",],
-      install_requires=["requests", "xmltodict"],
+      install_requires=["requests", "xmltodict", "unicodecsv"],
       tests_require=["nose",],
-      packages=["xirsx"],
-      package_dir={'xirsx': 'irs_reader'},
-      package_data={'xirsx': ['data/*/*.json']},
+      packages=["irsx"],
+      package_dir={'irsx': 'irs_reader'},
+      package_data={'irsx': ['data/*/*.json']},
       entry_points={
-          "console_scripts": ["xirsx=xirsx.xirsx_cli:main", "xirsx_index=xirsx.xirsx_cli_index:main"]
+          "console_scripts": ["irsx=irsx.xirsx_cli:main", "irsx_index=irsx.irsx_cli_index:main"]
       },
       )
 

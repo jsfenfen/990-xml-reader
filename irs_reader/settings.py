@@ -22,6 +22,13 @@ KNOWN_SCHEDULES = ["IRS990", "IRS990EZ", "IRS990PF", "IRS990ScheduleA",  \
                 "IRS990ScheduleN", "IRS990ScheduleO", "IRS990ScheduleR", \
                 "ReturnHeader990x"]
 
+ALLOWED_VERSIONSTRINGS = ['2013v3.0', '2013v3.1', '2013v4.0', '2014v5.0', '2014v6.0', '2015v2.0', '2015v2.1', '2015v3.0']
+
+METADATA_DIRECTORY = (os.path.join(IRS_READER_ROOT, "metadata") )
+
+KEYERROR_LOG = os.path.join(IRS_READER_ROOT, "keyerrors.log")
+LOG_KEY = 'xml' 
+
 try:
     from .local_settings import *
 except ImportError:

@@ -1,4 +1,4 @@
-# xirsx
+# irsx
 ### Turn the IRS' versioned XML 990's into python objects aware of the version-specific line number, description and data type 
 
 This is a python library and command line tool to simplify working with nonprofit tax returns released by the IRS in XML format. 
@@ -12,35 +12,35 @@ The IRS identifies electronic filings by their object_id, available in the annua
 #### The directions below are a hack--we should put this on PyPI when released
  
 - git clone the repo 
-- install locally using `$ pip install . ` from the directory with setup.py in it. It's painfully slow. You should now be able to run it as a command line utility, i.e. $ xirsx --help or $ xirsx_index --help
-- To uninstall use `$ pip uninstall xirsx`
-- To see if it's installed, run `$ pip freeze`; if you see a line line 'xirsx==0.0.1' it is installed. 
+- install locally using `$ pip install . ` from the directory with setup.py in it. It's painfully slow. You should now be able to run it as a command line utility, i.e. $ irsx --help or $ irsx_index --help
+- To uninstall use `$ pip uninstall irsx`
+- To see if it's installed, run `$ pip freeze`; if you see a line line 'irsx==0.0.1' it is installed. 
 
 
-## xirsx -- command line
-Installing the library will also install the xirsx command line tool, which uses the IRS' object_ids to reference a particular filing. This will just spit out the string representation of an ordered dictionary for the entire filing. 
+## irsx -- command line
+Installing the library will also install the irsx command line tool, which uses the IRS' object_ids to reference a particular filing. This will just spit out the string representation of an ordered dictionary for the entire filing. 
 
-		$ xirsx 201642229349300909
+		$ irsx 201642229349300909
 		OrderedDict([(u'Return', OrderedDict([(u'@xmlns'  < ..lengthy output.. >
 		
-To get a json version, use "--format json", i.e. `$ xirsx --format json 201642229349300909`.
+To get a json version, use "--format json", i.e. `$ irsx --format json 201642229349300909`.
 		 
 Save the entire filing object to a file  as json (note that we are redirecting the output using the '>' operator) like this:
 		
-		$ xirsx --format json 201642229349300909 > 2016.json
+		$ irsx --format json 201642229349300909 > 2016.json
 
 This is a json representation of the form as it appears--we have no standardized variables across versions at all in this representation.
 
 Which schedules are included in this filing? 
 	
-		$ xirsx --list_schedules 201642229349300909
+		$ irsx --list_schedules 201642229349300909
 	
 		['ReturnHeader990x', u'IRS990', u'IRS990ScheduleA', u'IRS990ScheduleB', 
 		u'IRS990ScheduleD', u'IRS990ScheduleM', u'IRS990ScheduleO']
 	
 Pull out only schedule M and save it to file.
 
-	$ xirsx --format json 201642229349300909 > 2016_M.json
+	$ irsx --format json 201642229349300909 > 2016_M.json
 
 The alternative to json format is 'dict' which at the moment just prints the python representation of the ordered dict before it is converted to json. The dict has an inherent ordering to it, whereas the json doesn't (but the transformed json will have an 'ordering' element to allow sorting).
 	
@@ -48,7 +48,7 @@ The alternative to json format is 'dict' which at the moment just prints the pyt
 Full usage:
 
 
-		usage: xirsx [-h] [--verbose]
+		usage: irsx [-h] [--verbose]
 		             [--schedule {IRS990,IRS990EZ,IRS990PF,IRS990ScheduleA,IRS990ScheduleB,IRS990ScheduleC,IRS990ScheduleD,IRS990ScheduleE,IRS990ScheduleF,IRS990ScheduleG,IRS990ScheduleH,IRS990ScheduleI,IRS990ScheduleJ,IRS990ScheduleK,IRS990ScheduleL,IRS990ScheduleM,IRS990ScheduleN,IRS990ScheduleO,IRS990ScheduleR,ReturnHeader990x}]
 		             [--format {dict,json}] [--list_schedules] [--encoding ENCODING]
 		             N [N ...]
@@ -66,10 +66,10 @@ Full usage:
 		  --encoding ENCODING   encoding (probably utf-8)
 
 
-## xirsx -- use from python
+## irsx -- use from python
 
 
-	>>> from xirsx.filing import Filing
+	>>> from irsx.filing import Filing
 	>>> f = Filing(201642229349300909)
 	>>> f.process()
 	>>> f.get_version() # 2015v2.1
@@ -82,11 +82,11 @@ Full usage:
 
 ## Introduction to the IRS' MEF 990 XML
 
-### xirsx_index : Get the index files, --year[ly]
+### irsx_index : Get the index files, --year[ly]
 
-The IRS maintains annual index files, from 2011 forwards, of what filings have been received electronically and approved for release. Use the utility command, '$ xirsx_index' to retrieve them all, or use the --year option to pick just one. Here we just grab 2017. Note that the --verbose flag is on, so that it'll say where the file is saved to. 
+The IRS maintains annual index files, from 2011 forwards, of what filings have been received electronically and approved for release. Use the utility command, '$ irsx_index' to retrieve them all, or use the --year option to pick just one. Here we just grab 2017. Note that the --verbose flag is on, so that it'll say where the file is saved to. 
 
-	$ xirsx_index --year 2017 --verbose
+	$ irsx_index --year 2017 --verbose
 	Getting index file for year: 2017
 	Beginning streaming download of https://s3.amazonaws.com/irs-form-990/index_2017.csv
 	Total file size: 18.18 MB
@@ -104,7 +104,7 @@ The location is specified in the settings file, but by default it'll go into a s
 
 #### To use without installing via pip
 
-- from the directory with the readme in it, instead of the xirsx command, use `$python -m python -m irs_reader.cli` or `$python -m irs_reader.cli_index` (for xirsx_index) so that the command line tools are run as modules and python doesn't freak out. 
+- from the directory with the readme in it, instead of the irsx command, use `$python -m python -m irs_reader.cli` or `$python -m irs_reader.cli_index` (for irsx_index) so that the command line tools are run as modules and python doesn't freak out. 
 
 
 ## Testing

@@ -69,7 +69,7 @@ def run_main(args_read):
         this_filing.process(verbose=args_read.verbose)
 
         if args_read.list_schedules:
-            print(this_filing.get_schedules())
+            print(this_filing.list_schedules())
 
         elif args_read.schedule:
 

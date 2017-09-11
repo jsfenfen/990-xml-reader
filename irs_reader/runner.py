@@ -2,6 +2,8 @@ from .filing import Filing
 from .standardizer import Standardizer
 from .sked_dict_reader import SkedDictReader
 from .log_utils import configure_logging
+from .type_utils import listType
+
 
 from .settings import WORKING_DIRECTORY, ALLOWED_VERSIONSTRINGS
 

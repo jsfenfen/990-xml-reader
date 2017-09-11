@@ -50,6 +50,9 @@ class Filing(object):
     def _set_version(self):
         self.version_string = self.raw_irs_dict['Return']['@returnVersion']
 
+    def _set_ein(self):
+        self.ein = self.raw_irs_dict['Return']['ReturnHeader']['Filer']['EIN']
+
     def _set_schedules(self):
         """ Attach the known and unknown schedules """
         self.schedules = ['ReturnHeader990x',]
@@ -69,6 +72,9 @@ class Filing(object):
         else:
             return None
 
+    def get_ein(self):
+        return self.ein
+
     def get_otherform(self, skedname):
         if skedname in self.otherforms:
             return self.raw_irs_dict['Return']['ReturnData'][skedname]
@@ -84,13 +90,14 @@ class Filing(object):
     def get_raw_irs_dict(self):
         return self.raw_irs_dict
 
-    def get_schedules(self):
+    def list_schedules(self):
         return self.schedules
         
     def process(self, verbose=False):
         self._download(verbose=verbose)
         self._set_dict_from_xml()
         self._set_version()
+        self._set_ein()
         self._set_schedules()
 
 
