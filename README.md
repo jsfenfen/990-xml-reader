@@ -1,15 +1,19 @@
 # irsx
 ### Turn the IRS' versioned XML 990's into python objects aware of the version-specific line number, description and data type 
 
-This is a python library and command line tool to simplify working with nonprofit tax returns released by the IRS in XML format. 
+This is a python library and command line tool to simplify working with nonprofit tax returns [released](https://aws.amazon.com/public-datasets/irs-990/) by the IRS in XML format. 
+
+The IRS releases one xml file per 990 filing, which is identified by a unique object id. To find the object_id, look at the annual index files from the IRS (also have a look at irsx_index, a helper command described below).
+
+The files are available at: [https://s3.amazonaws.com/irs-form-990/index_2017.csv](https://s3.amazonaws.com/irs-form-990/index_2017.csv). Other years, from 2011 forward, are available at similar URLs, just replace '2017' with the year you want. 
 
 
 
-The IRS identifies electronic filings by their object_id, available in the annual index files released [link].
+
 
 ## Installation
 
-#### The directions below are a hack--we should put this on PyPI when released
+#### Will be easier once we put this on pypi
  
 - git clone the repo 
 - install locally using `$ pip install . ` from the directory with setup.py in it. It's painfully slow. You should now be able to run it as a command line utility, i.e. $ irsx --help or $ irsx_index --help
@@ -18,7 +22,7 @@ The IRS identifies electronic filings by their object_id, available in the annua
 
 
 ## irsx -- command line
-Installing the library will also install the irsx command line tool, which uses the IRS' object_ids to reference a particular filing. This will just spit out the string representation of an ordered dictionary for the entire filing. 
+Installing the library will also install the irsx command line tool, which uses the IRS' object_ids to reference a particular filing. This will just spit out a json representation of the entire filing. See more about the data format that's returned below.
 
 	$ irsx 201642229349300909
 	[{"schedule_name": "ReturnHeader990x", "data": {"schedule_parts"...
