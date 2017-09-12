@@ -1,9 +1,11 @@
 # irsx
-### Turn the IRS' versioned XML 990's into python objects aware of the version-specific line number, description and data type 
+### Turn the IRS' versioned XML 990's into standardized objects with line number, description and data type
 
 This is a python library and command line tool to simplify working with nonprofit tax returns [released](https://aws.amazon.com/public-datasets/irs-990/) by the IRS in XML format. The library currently standarizes returns submitted in formats dating from 2013 and forwards into consistently named datastructures that follow the same format as the "paper" 990. Repeating elements, such as the salary disclosed for best compensated employees, appear at the end of each schedule.
 
 From the command line, xml files can be output as machine readable json, or human readable text, optionally with documentation. From within a python program, the results are returned as native data structures. 
+
+
 
 ## Installation
 
@@ -73,13 +75,11 @@ We can narrow in on a single schedule, but first we need to know what is present
 	
 Now let's look at a human readable text version of schedule M
 
-	$ irsx --format=txt --documentation --schedule=IRS990ScheduleM 201533089349301428
+	$ irsx --format=txt --documentation --schedule=IRS990ScheduleJ 201533089349301428
 
-		
-	Schedule: IRS990ScheduleM
+The output is lengthy: it lists first the schedule parts and then the repeating groups, and for each variable it includes the line number, description and data type of each variable. This is from the section of the output on 'SkdJRltdOrgOffcrTrstKyEmpl':
 	
-	
-	skedm_part_i
+	Repeating Group: SkdJRltdOrgOffcrTrstKyEmpl
 	
 	
 		*ein*: value=941156621 
@@ -88,46 +88,60 @@ Now let's look at a human readable text version of schedule M
 		*object_id*: value=201533089349301428 
 		Line Number 'NA' Description: 'IRS-assigned object id' Type: String(18)
 	
-		*SkdM_AnyPrprtyThtMstBHldInd*: value=false 
-		Line Number ' Part I Line 30a' Description: ' Any property that must be held?' Type: String(length=5)
+		*PrsnNm*: value=Patrick Fry 
+		Line Number ' Part II Column (A)' Description: ' Part II contents; Name of officer - person' Type: String(length=35)
 	
-		*SkdM_RvwPrcssUnslNCGftsInd*: value=true 
-		Line Number ' Part I Line 31' Description: ' Review process reference unusual noncash gifts?' Type: String(length=5)
+		*TtlTxt*: value=Trustee, President & CEO SH 
+		Line Number ' Part II Column (A)' Description: ' Part II contents; Title of Officer' Type: String(length=100)
 	
-		*SkdM_ThrdPrtsUsdInd*: value=false 
-		Line Number ' Part I Line 32a' Description: ' Third parties used?' Type: String(length=5)
+		*BsCmpnstnFlngOrgAmt*: value=0 
+		Line Number ' Part II Column (B)(i)' Description: ' Part II contents; Base compensation ($) from filing organization' Type: BigInteger
 	
-		*ScrtsPblclyTrdd_NnCshChckbxInd*: value=X 
-		Line Number ' Part I Line 9; Column (a)' Description: ' Securities - publicly traded; Checkbox for lines on Part I' Type: String(length=1)
+		*CmpnstnBsdOnRltdOrgsAmt*: value=1523132 
+		Line Number ' Part II Column (B)(i)' Description: ' Part II contents; Compensation based on related organizations?' Type: BigInteger
 	
-		*ScrtsPblclyTrdd_CntrbtnCnt*: value=1 
-		Line Number ' Part I Line 9; Column (b)' Description: ' Securities - publicly traded; Number of contributions' Type: BigInteger
+		*BnsFlngOrgnztnAmnt*: value=0 
+		Line Number ' Part II Column (B)(ii)' Description: ' Part II contents; Bonus and incentive compensation ($) from filing organization' Type: BigInteger
 	
-		*ScrtsPblclyTrdd_NncshCntrbtnsRptF990Amt*: value=70018 
-		Line Number ' Part I Line 9; Column (c)' Description: ' Securities - publicly traded; Revenues reported on F990, Pt VIII, line 1g' Type: BigInteger
+		*BnsRltdOrgnztnsAmt*: value=1687050 
+		Line Number ' Part II Column (B)(ii)' Description: ' Part II contents; Bonus and incentive compensation ($) from related organizations' Type: BigInteger
 	
-		*ScrtsPblclyTrdd_MthdOfDtrmnngRvnsTxt*: value=FMV 
-		Line Number ' Part I Line 9; Column (d)' Description: ' Securities - publicly traded; Method of determining revenues' Type: String(length=100)
+		*OthrCmpnstnFlngOrgAmt*: value=0 
+		Line Number ' Part II Column (B)(iii)' Description: ' Part II contents; Other compensation ($) from filing organization' Type: BigInteger
 	
-	Repeating Group: SkdMSpplmntlInfrmtnDtl
+		*OthrCmpnstnRltdOrgsAmt*: value=416185 
+		Line Number ' Part II Column (B)(iii)' Description: ' Part II contents; Other compensation ($) from related organizations' Type: BigInteger
 	
+		*DfrrdCmpnstnFlngOrgAmt*: value=0 
+		Line Number ' Part II Column (C)' Description: ' Part II contents; Deferred compensation ($) from filing organization' Type: BigInteger
 	
-		*ein*: value=941156621 
-		Line Number 'NA' Description: 'IRS employer id number' Type: String(9)
+		*DfrrdCmpRltdOrgsAmt*: value=2693377 
+		Line Number ' Part II Column (C)' Description: ' Part II contents; Deferred compensation ($) from related organizations' Type: BigInteger
 	
-		*object_id*: value=201533089349301428 
-		Line Number 'NA' Description: 'IRS-assigned object id' Type: String(18)
+		*NntxblBnftsFlngOrgAmt*: value=0 
+		Line Number ' Part II Column (D)' Description: ' Part II contents; Nontaxable benefits ($) from filing organization' Type: BigInteger
 	
-		*FrmAndLnRfrncDsc*: value=Schedule M, Part I, Line 9 
-		Line Number ' Part II; Part II' Description: ' Explanation repeating group; Form, part and line number reference' Type: String(length=100)
+		*NntxblBnftsRltdOrgsAmt*: value=34953 
+		Line Number ' Part II Column (D)' Description: ' Part II contents; Nontaxable benefits ($) from related organizations' Type: BigInteger
 	
-		*ExplntnTxt*: value=The securities were contributed by a single donee and are treated as one donation for purposes of Scheduled M. 
-		Line Number ' Part II; Part II' Description: ' Explanation repeating group; Form, part and line number reference explanation' Type: Text
+		*TtlCmpnstnFlngOrgAmt*: value=0 
+		Line Number ' Part II Column (E)' Description: ' Part II contents; Total of (B)(i) - (D), from filing org' Type: BigInteger
 	
+		*TtlCmpnstnRltdOrgsAmt*: value=6354697 
+		Line Number ' Part II Column (E)' Description: ' Part II contents; Total of (B)(i) - (D), from related orgs' Type: BigInteger
+	
+		*CmpRprtPrr990FlngOrgAmt*: value=0 
+		Line Number ' Part II Column (F)' Description: ' Part II contents; Comp reported prior 990 - from filing org' Type: BigInteger
+	
+		*CmpRprtPrr990RltdOrgsAmt*: value=396136 
+		Line Number ' Part II Column (F)' Description: ' Part II contents; Comp reported prior 990 - from related orgs' Type: BigInteger
+ 
 
-The "text" representation is under development and may change, though the underlying json output should not. We can save just that schedule to file with:
+When looking at compensation, it's important to differentiate between compenstation from the filer -- 'TtlCmpnstnFlngOrgAmt'  which in the above is 0 and 'TtlCmpnstnRltdOrgsAmt' total compensation from related organizations, which is $6,354,697.
 
-	$ irsx --schedule=IRS990ScheduleM 201533089349301428 > 201533089349301428.json
+The "text" representation is under development and may change, though the underlying json output should not. We can save just that schedule to a file with:
+
+	$ irsx --schedule=IRS990ScheduleJ 201533089349301428 > 201533089349301428.json
 
 ### About the data
 
