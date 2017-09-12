@@ -3,6 +3,8 @@
 
 This is a python library and command line tool to simplify working with nonprofit tax returns [released](https://aws.amazon.com/public-datasets/irs-990/) by the IRS in XML format. The library currently standarizes returns submitted in formats dating from 2013 and forwards into consistently named datastructures that follow the same format as the "paper" 990. Repeating elements, such as the salary disclosed for best compensated employees, appear at the end of each schedule.
 
+From the command line, xml files can be output as machine readable json, or human readable text, optionally with documentation. From within a python program, the results are returned as native data structures. 
+
 ## Installation
 
 #### Will be easier once we put this on pypi
