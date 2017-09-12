@@ -51,83 +51,109 @@ We could have saved it to a file with using the '>' to redirect the output
 
 	$ irsx 201533089349301428 > 201533089349301428.json
 		
-The default format is json, but you can make it easier to read with the --format=txt switch, i.e. which makes it slightly more readable.
+The default format is json, but you can make it easier to read with the --format=txt switch, i.e. which makes it slightly more readable. The whole output is much longer, I've truncated here.
 
 	$ irsx --format=txt 201533089349301428
 	[
-	    {
-	        "schedule_name": "ReturnHeader990x",
-	        "data": {
-	            "schedule_parts": {
-	                "returnheader990x_part_i": {
-	                    "object_id": 201642229349300909,
-	                    "ein": "431786847",
-	                    "RtrnHdr_RtrnTs": "2016-08-09T08:31:41-07:00",
-	                    "RtrnHdr_TxPrdEndDt": "2015-12-31",
+    {
+        "schedule_name": "ReturnHeader990x",
+        "data": {
+            "schedule_parts": {
+                "returnheader990x_part_i": {
+                    "object_id": 201533089349301428,
+                    "ein": "941156621",
+                    "RtrnHdr_RtrnTs": "2015-11-04T20:09:01-06:00",
+                    "RtrnHdr_TxPrdEndDt": "2014-12-31",
 	                    ...
 	                    
 That's better, but it's still really hard to follow. Use the --documentation flag in text format to make this easier to follow: 
 
-	$ irsx --format=txt --documentation 201642229349300909
+	$ irsx --format=txt --documentation 201533089349301428
 
-		Schedule: ReturnHeader990x
-		
-		
-		returnheader990x_part_i
-		
-		
-			*ein*: value=431786847 
-			Line Number '' Description: 'IRS employer id number' Type: String(9)
+	Schedule: ReturnHeader990x
+	
+	
+	returnheader990x_part_i
+	
+	
+		*ein*: value=941156621 
+		Line Number 'NA' Description: 'IRS employer id number' Type: String(9)
+	
+		*object_id*: value=201533089349301428 
+		Line Number 'NA' Description: 'IRS-assigned object id' Type: String(18)
+	
+		*RtrnHdr_RtrnTs*: value=2015-11-04T20:09:01-06:00 
+		Line Number '' Description: ' The date and time when the return was created' Type: String(length=63)
 
+		...
+	
 		
 That's a more useful representation of the filing--it also appears roughly in the same order as a paper 990 filing (with the exception of repeating groups, which appear at the end of each schedule). It's also remarkably verbose.
 
 We can narrow in on a single schedule, but first we need to know what is present in this filing, using the --list_schedules option
 		 
 	
-		$ irsx --list_schedules 201642229349300909
+		$ irsx --list_schedules 201533089349301428
 	
-		['ReturnHeader990x', u'IRS990', u'IRS990ScheduleA', u'IRS990ScheduleB', 
-		u'IRS990ScheduleD', u'IRS990ScheduleM', u'IRS990ScheduleO']
+		['ReturnHeader990x', 'IRS990', 'IRS990ScheduleA', 'IRS990ScheduleB', 'IRS990ScheduleC', 'IRS990ScheduleD', 'IRS990ScheduleG', 'IRS990ScheduleH', 'IRS990ScheduleI', 'IRS990ScheduleJ', 'IRS990ScheduleK', 'IRS990ScheduleL', 'IRS990ScheduleM', 'IRS990ScheduleO', 'IRS990ScheduleR']
 	
 Now let's look at a human readable text version of schedule M
 
-	$ irsx --format=txt --documentation --schedule=IRS990ScheduleM 201642229349300909
+	$ irsx --format=txt --documentation --schedule=IRS990ScheduleM 201533089349301428
 
-		Schedule: IRS990ScheduleM
 		
-		
-		skedm_part_i
-		
-		
-			*ein*: value=431786847 
-			Line Number '' Description: 'IRS employer id number' Type: String(9)
-		
-			*object_id*: value=201642229349300909 
-			Line Number '' Description: '' Type: 
-		
-			*SkdM_AnyPrprtyThtMstBHldInd*: value=false 
-			Line Number ' Part I Line 30a' Description: ' Any property that must be held?' Type: String(length=5)
-		
-			*SkdM_RvwPrcssUnslNCGftsInd*: value=false 
-			Line Number ' Part I Line 31' Description: ' Review process reference unusual noncash gifts?' Type: String(length=5)
-		
-			*SkdM_ThrdPrtsUsdInd*: value=false 
-			Line Number ' Part I Line 32a' Description: ' Third parties used?' Type: String(length=5)
-		
-			*RlEsttCmmrcl_NnCshChckbxInd*: value=X 
-			Line Number ' Part I Line 16; Column (a)' Description: ' Real estate - commercial; Checkbox for lines on Part I' Type: String(length=1)
-		
-			*RlEsttCmmrcl_CntrbtnCnt*: value=6 
-			Line Number ' Part I Line 16; Column (b)' Description: ' Real estate - commercial; Number of contributions' Type: BigInteger
-		
-			*RlEsttCmmrcl_NncshCntrbtnsRptF990Amt*: value=190500 
-			Line Number ' Part I Line 16; Column (c)' Description: ' Real estate - commercial; Revenues reported on F990, Pt VIII, line 1g' Type: BigInteger
-
+	Schedule: IRS990ScheduleM
+	
+	
+	skedm_part_i
+	
+	
+		*ein*: value=941156621 
+		Line Number 'NA' Description: 'IRS employer id number' Type: String(9)
+	
+		*object_id*: value=201533089349301428 
+		Line Number 'NA' Description: 'IRS-assigned object id' Type: String(18)
+	
+		*SkdM_AnyPrprtyThtMstBHldInd*: value=false 
+		Line Number ' Part I Line 30a' Description: ' Any property that must be held?' Type: String(length=5)
+	
+		*SkdM_RvwPrcssUnslNCGftsInd*: value=true 
+		Line Number ' Part I Line 31' Description: ' Review process reference unusual noncash gifts?' Type: String(length=5)
+	
+		*SkdM_ThrdPrtsUsdInd*: value=false 
+		Line Number ' Part I Line 32a' Description: ' Third parties used?' Type: String(length=5)
+	
+		*ScrtsPblclyTrdd_NnCshChckbxInd*: value=X 
+		Line Number ' Part I Line 9; Column (a)' Description: ' Securities - publicly traded; Checkbox for lines on Part I' Type: String(length=1)
+	
+		*ScrtsPblclyTrdd_CntrbtnCnt*: value=1 
+		Line Number ' Part I Line 9; Column (b)' Description: ' Securities - publicly traded; Number of contributions' Type: BigInteger
+	
+		*ScrtsPblclyTrdd_NncshCntrbtnsRptF990Amt*: value=70018 
+		Line Number ' Part I Line 9; Column (c)' Description: ' Securities - publicly traded; Revenues reported on F990, Pt VIII, line 1g' Type: BigInteger
+	
+		*ScrtsPblclyTrdd_MthdOfDtrmnngRvnsTxt*: value=FMV 
+		Line Number ' Part I Line 9; Column (d)' Description: ' Securities - publicly traded; Method of determining revenues' Type: String(length=100)
+	
+	Repeating Group: SkdMSpplmntlInfrmtnDtl
+	
+	
+		*ein*: value=941156621 
+		Line Number 'NA' Description: 'IRS employer id number' Type: String(9)
+	
+		*object_id*: value=201533089349301428 
+		Line Number 'NA' Description: 'IRS-assigned object id' Type: String(18)
+	
+		*FrmAndLnRfrncDsc*: value=Schedule M, Part I, Line 9 
+		Line Number ' Part II; Part II' Description: ' Explanation repeating group; Form, part and line number reference' Type: String(length=100)
+	
+		*ExplntnTxt*: value=The securities were contributed by a single donee and are treated as one donation for purposes of Scheduled M. 
+		Line Number ' Part II; Part II' Description: ' Explanation repeating group; Form, part and line number reference explanation' Type: Text
+	
 
 The "text" representation is under development and may change, though the underlying json output should not. We can save just that schedule to file with:
 
-	$ irsx --schedule=IRS990ScheduleM 201642229349300909 > 201642229349300909.json
+	$ irsx --schedule=IRS990ScheduleM 201533089349301428 > 201533089349301428.json
 
 
 
@@ -168,8 +194,10 @@ The location is specified in the settings file, but by default it'll go into a s
 
 #### To use without installing via pip
 
-- from the directory with the readme in it, instead of the irsx command, use `$python -m python -m irs_reader.cli` or `$python -m irs_reader.cli_index` (for irsx_index) so that the command line tools are run as modules and python doesn't freak out. 
+From the directory with the readme in it, instead of the irsx command, use `$python -m python -m irs_reader.irsx_cli` so that the command line tools are run as modules and python doesn't freak out. 
+You can still add command line args, like this:
 
+		python -m irs_reader.irsx_cli --schedule=ReturnHeader990x --format=txt 201533089349301428
 
 ## Testing
 
