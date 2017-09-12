@@ -10,7 +10,7 @@ class SkedDictReader(object):
     We get an ordered dict back from xmltodict, but we want to "flatten" it
     into xpath-ed variables and repeated structures. 
     """
-    def __init__(self, standardizer, groups, object_id, ein, documentId=None):
+    def __init__(self, standardizer, groups, object_id, ein, documentId=None, documentation=False):
 
         self.standardizer = standardizer
         self.object_id = object_id
@@ -20,14 +20,25 @@ class SkedDictReader(object):
         self.repeating_groups = {} # multiple per filing
         self.groups = groups
         self.logging = logging.getLogger(LOG_KEY)
+        self.documentation = documentation
+
+        if self.documentation and not self.standardizer.get_documentation_status():
+            raise Exception ("Standardizer must be initialized with the documentation flag to load documentation")
 
 
     def _get_table_start(self):
         """ prefill the columns we need for all tables """ 
 
-        standardized_table_start = {'object_id':self.object_id, 'ein':self.ein}
-        if self.documentId:
-            standardized_table_start['documentId'] = self.documentId
+        if self.documentation:
+            standardized_table_start = {'object_id':{'value':self.object_id, 'ordering':-1}, 'ein':{'value':self.ein, 'ordering':-2} }
+            if self.documentId:
+                standardized_table_start['documentId'] = {'value':self.documentId, 'description':'Document ID', 'ordering':0}
+        else:
+            standardized_table_start = {'object_id':self.object_id, 'ein':self.ein}
+            if self.documentId:
+                standardized_table_start['documentId'] = self.documentId
+
+
         return standardized_table_start
 
     def _process_group(self, json_node, path, this_group):
@@ -55,7 +66,13 @@ class SkedDictReader(object):
                     this_var_value = flattened_list_item[xpath]
                     this_var_name = this_var_data['db_name']
                     table_name = this_var_data['db_table']
-                    standardized_group_dict[this_var_name] =  this_var_value 
+                    if self.documentation:
+                        result =  {'value': this_var_value, 'ordering': this_var_data['ordering'], 
+                            'line_number':this_var_data['line_number'], 'description':this_var_data['description'], 'db_type':this_var_data['db_type'] }
+                        standardized_group_dict[this_var_name] = result
+
+                    else:
+                        standardized_group_dict[this_var_name] =  this_var_value 
             try:
                 self.repeating_groups[table_name].append(standardized_group_dict) 
             except KeyError:
@@ -76,8 +93,6 @@ class SkedDictReader(object):
 
                 except KeyError:
                     # It's not a group so it should be a variable we know about
-                    print("Not a group %s" % element_path)
-
                     try:
                         var_data = self.standardizer.get_var(element_path)
                         var_found = True
@@ -93,16 +108,16 @@ class SkedDictReader(object):
 
                         table_name = var_data['db_table']
                         var_name = var_data['db_name']
-                        print("Added to %s %s :%s" % (table_name, var_name, json_node))
+
+                        result = json_node
+                        if self.documentation:
+                            result = {'value': json_node, 'ordering': var_data['ordering'], 'line_number':var_data['line_number'], 'description':var_data['description'], 'db_type':var_data['db_type'] }
+
                         try:
-                            # Do we need the ordering downstream? Add --doc option to show line numbers, order
-                            # this_sked = self.schedule_parts[table_name][var_name] = {'value': json_node, 'ordering': var_data['ordering'] }
-                            # but if not:
-                            self.schedule_parts[table_name][var_name] =  json_node    
+                            self.schedule_parts[table_name][var_name] =  result  
                         except KeyError:
-                            # ditto as above
                             self.schedule_parts[table_name] = self._get_table_start()
-                            self.schedule_parts[table_name][var_name] = json_node 
+                            self.schedule_parts[table_name][var_name] = result 
 
         elif this_node_type == listType:
 

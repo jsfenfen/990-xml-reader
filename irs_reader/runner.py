@@ -11,11 +11,19 @@ class Runner(object):
     """ Persist a Standardizer while processing multiple filings 
         Probably needs a better name. Logging in progress
     """
-    def __init__(self):
-        self.standardizer = Standardizer()
+    def __init__(self, documentation=False):
+        self.documentation = documentation
+        if documentation:
+            self.standardizer = Standardizer(documentation=documentation)
+        else:
+            self.standardizer = Standardizer()
         self.group_dicts = self.standardizer.get_groups()
         self.logging = configure_logging("BulkRunner")
         self.whole_filing_data = []
+
+    def get_standardizer(self):
+        """ Sometimes it's handy to have access to it from outside """ 
+        return self.standardizer
 
     def run_schedule_k(self, sked, object_id, sked_dict, path_root, ein):
         assert sked=='IRS990ScheduleK' 
@@ -23,11 +31,11 @@ class Runner(object):
             for individual_sked in sked_dict:
                 doc_id = individual_sked['@documentId']
                 self.logging.info("Handling multiple sked: %s's id=%s object_id=%s " % (sked, doc_id, object_id) )
-                reader = SkedDictReader(standardizer, self.group_dicts, object_id, ein,  documentId=doc_id)
+                reader = SkedDictReader(standardizer, self.group_dicts, object_id, ein,  documentId=doc_id, documentation=self.documentation)
                 result = reader.parse(individual_sked, parent_path=path_root)
                 self.whole_filing_data.append({'schedule_name':sked, 'data':result})
         else:
-            reader = SkedDictReader(standardizer, self.group_dicts, object_id, ein)
+            reader = SkedDictReader(standardizer, self.group_dicts, object_id, ein, documentation=self.documentation)
             result = reader.parse(sked_dict, parent_path=path_root)
             self.whole_filing_data.append({'schedule_name':sked, 'data':result})
 
@@ -38,7 +46,7 @@ class Runner(object):
             self.run_schedule_k(sked, object_id, sked_dict, path_root)
 
         else:
-            reader = SkedDictReader(self.standardizer, self.group_dicts, object_id, ein)            
+            reader = SkedDictReader(self.standardizer, self.group_dicts, object_id, ein, documentation=self.documentation)            
             if sked == 'ReturnHeader990x':
                 path_root = "/ReturnHeader"  
             result = reader.parse(sked_dict, parent_path=path_root)
@@ -67,7 +75,8 @@ class Runner(object):
         """
         sked is the proper name of the schedule:
         IRS990, IRS990EZ, IRS990PR, IRS990ScheduleA, etc. 
-        """        
+        """
+
         self.whole_filing_data = []
         this_filing = Filing(object_id)
         this_filing.process(verbose=verbose)
@@ -80,7 +89,7 @@ class Runner(object):
             sked_dict = this_filing.get_schedule(sked)
             self.run_schedule(sked, object_id, sked_dict, ein)
 
-            return self.whole_filing_data[0]
+            return self.whole_filing_data
         else:            
             self.logging.info("** Skipping %s with unsupported version string %s" % (object_id, this_version) )
             return None

@@ -15,13 +15,17 @@ from .type_utils import listType
 
 class Standardizer(object):
     """
-    This reads an ordered dict of the original xml into a standardized format.
-    Data comes as variables and repeating structures, so reflect that
+    This reads three metadata .csv files, which it uses to standardize ordered dicts
+    Only loads documentation when needed, not sure this is the right paradigm
     """
 
-    def __init__(self):
+    def __init__(self, documentation=False):
+        self.show_documentation = documentation
         self.groups = {}
         self.variables = {}
+        self.schedule_parts = {}
+        if self.show_documentation:
+            self._make_schedule_parts()
         # read in the metadata files, they should be validated elsewhere
         self._make_groups()
         self._make_variables()
@@ -31,7 +35,14 @@ class Standardizer(object):
         with open(group_filepath, 'r') as reader_fh:
             reader = csv.DictReader(reader_fh)
             for row in reader:
-                self.groups[row['xpath']] = {'db_table':row['db_name']}
+                self.groups[row['xpath']] = row
+
+    def _make_schedule_parts(self):
+        parts_filepath = os.path.join(METADATA_DIRECTORY, 'schedule_parts.csv')
+        with open(parts_filepath, 'r') as reader_fh:
+            reader = csv.DictReader(reader_fh)
+            for row in reader:
+                self.schedule_parts[row['parent_sked_part']] = {'name':row['part_name'], 'ordering':row['ordering']}
 
     def _make_variables(self):
         variable_filepath = os.path.join(METADATA_DIRECTORY, 'variables.csv')
@@ -39,9 +50,30 @@ class Standardizer(object):
             reader = csv.DictReader(variable_fh)
             for row in reader:
                 # do we need ordering? Or should there just be a flag for pretty print? 
-                self.variables[row['xpath']] = {'db_table':row['db_table'], 'db_name':row['db_name'], 'ordering':row['ordering']}
+                if self.show_documentation:
+                    self.variables[row['xpath']] = {'db_table':row['db_table'], 'db_name':row['db_name'], 'ordering':row['ordering'], 'line_number':row['line_number'], 'description':row['description'], 'db_type':row['db_type']}
+                    
+                else:
+                    self.variables[row['xpath']] = {'db_table':row['db_table'], 'db_name':row['db_name']}
+
     def get_groups(self):
         return self.groups
+
+    def part_ordering(self, partname):
+        try: 
+            result = int(self.schedule_parts[partname]['ordering'])
+            return result
+        except KeyError:
+            return None
+
+    def group_ordering(self, groupname):
+        try: 
+            return self.groups[groupname]['ordering']
+        except KeyError:
+            return None
+
+    def get_documentation_status(self):
+        return self.show_documentation
 
     def get_var(self, var_xpath, version=None):
         if version:

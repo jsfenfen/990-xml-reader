@@ -3,7 +3,7 @@
 
 This is a python library and command line tool to simplify working with nonprofit tax returns released by the IRS in XML format. 
 
-It is under development and some capabilities have yet to be implemented.
+
 
 The IRS identifies electronic filings by their object_id, available in the annual index files released [link].
 
