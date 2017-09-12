@@ -16,7 +16,7 @@ From the command line, xml files can be output as machine readable json, or huma
 
 
 ## irsx -- command line
-Installing the library will also install the irsx command line tool, which uses the IRS' object_ids to reference a particular filing. This will just spit out a json representation of the entire filing. See more about the data format that's returned below.
+Installing the library will also install the irsx command line tool, which uses the IRS' object_ids to reference a particular filing. This will just spit out a json representation of the entire filing. See more about how to get an IRS object_id and how to read the data format that's returned below.
 
 	$ irsx 201533089349301428
 	[{"schedule_name": "ReturnHeader990x", "data": {"schedule_parts"...
