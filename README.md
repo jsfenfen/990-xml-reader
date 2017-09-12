@@ -15,34 +15,6 @@ From the command line, xml files can be output as machine readable json, or huma
 - To see if it's installed, run `$ pip freeze`; if you see a line line 'irsx==0.0.1' it is installed. 
 
 
-### About the data
-
-The IRS releases one xml file per 990 filing, which is identified by a unique object id. Irsx uses that unique id as well, so we need to know it to extract data. To find the object\_id, look at the annual index files from the IRS (also have a look at irsx_index, a helper command described below).
-
-The files are available at: [https://s3.amazonaws.com/irs-form-990/index_2017.csv](https://s3.amazonaws.com/irs-form-990/index_2017.csv). Other years, from 2011 forward, are available at similar URLs, just replace '2017' with the year you want [Note that the year is the year the return was received by the IRS]. Some years have >300,000 filings in them, so the index files might not open in older versions of excel.
-
-You can use command line tools, like [csvkit](https://csvkit.readthedocs.io/en/1.0.2/), to search through the file pretty quickly to find the id you want. These are the headers:
-
-	$ head -n 1 index_2016.csv 
-	RETURN_ID,FILING_TYPE,EIN,TAX_PERIOD,SUB_DATE,TAXPAYER_NAME,RETURN_TYPE,DLN,OBJECT_ID
-
-Using csvcut we can just spit out the EIN, TAX\_PERIOD, TAXPAYER\_NAME and the OBJECT\_ID we need by identifying the column numbers 
-
-		$ csvcut -c 3,4,6,9 index_2016.csv | head -n 3
-	EIN,TAX_PERIOD,TAXPAYER_NAME,OBJECT_ID
-	742661023,201412,HARRIET AND HARMON KELLEY FOUNDATION FOR THE ARTS,201543159349100344
-	562629114,201412,BROWN COMMUNITY DEVELOPMENT CORPORATION,201543109349200219
-
-
-I'm looking for filings from "Sutter Health" (though note I use all caps to search). 
-
-		$ csvcut -c 3,4,6,9 index_2016.csv | grep 'SUTTER HEALTH'
-	941156621,201412,SUTTER HEALTH SACRAMENTO SIERRA REGION,201533089349301428
-	990298651,201412,SUTTER HEALTH PACIFIC,201523039349301087
-	942788907,201412,SUTTER HEALTH,201543089349301429
-
-Let's use Sutter Health Sacramento Sierra Region's 12/2014 filing, which has an object id number of 201533089349301428 [ and an EIN of 941156621]. You can find the relevant filing via nonprofit explorer [here](https://projects.propublica.org/nonprofits/organizations/941156621). 
-
 ## irsx -- command line
 Installing the library will also install the irsx command line tool, which uses the IRS' object_ids to reference a particular filing. This will just spit out a json representation of the entire filing. See more about the data format that's returned below.
 
@@ -157,6 +129,34 @@ The "text" representation is under development and may change, though the underl
 
 	$ irsx --schedule=IRS990ScheduleM 201533089349301428 > 201533089349301428.json
 
+### About the data
+
+The IRS releases one xml file per 990 filing, which is identified by a unique object id. Irsx uses that unique id as well, so we need to know it to extract data. To find the object\_id, look at the annual index files from the IRS (also have a look at irsx_index, a helper command described below).
+
+The files are available at: [https://s3.amazonaws.com/irs-form-990/index_2017.csv](https://s3.amazonaws.com/irs-form-990/index_2017.csv). Other years, from 2011 forward, are available at similar URLs, just replace '2017' with the year you want [Note that the year is the year the return was received by the IRS]. Some years have >300,000 filings in them, so the index files might not open in older versions of excel.
+
+You can use command line tools, like [csvkit](https://csvkit.readthedocs.io/en/1.0.2/), to search through the file pretty quickly to find the id you want. These are the headers:
+
+	$ head -n 1 index_2016.csv 
+	RETURN_ID,FILING_TYPE,EIN,TAX_PERIOD,SUB_DATE,TAXPAYER_NAME,RETURN_TYPE,DLN,OBJECT_ID
+
+Using csvcut we can just spit out the EIN, TAX\_PERIOD, TAXPAYER\_NAME and the OBJECT\_ID we need by identifying the column numbers 
+
+		$ csvcut -c 3,4,6,9 index_2016.csv | head -n 3
+	EIN,TAX_PERIOD,TAXPAYER_NAME,OBJECT_ID
+	742661023,201412,HARRIET AND HARMON KELLEY FOUNDATION FOR THE ARTS,201543159349100344
+	562629114,201412,BROWN COMMUNITY DEVELOPMENT CORPORATION,201543109349200219
+
+
+I'm looking for filings from "Sutter Health" (though note I use all caps to search). 
+
+		$ csvcut -c 3,4,6,9 index_2016.csv | grep 'SUTTER HEALTH'
+	941156621,201412,SUTTER HEALTH SACRAMENTO SIERRA REGION,201533089349301428
+	990298651,201412,SUTTER HEALTH PACIFIC,201523039349301087
+	942788907,201412,SUTTER HEALTH,201543089349301429
+
+Let's use Sutter Health Sacramento Sierra Region's 12/2014 filing, which has an object id number of 201533089349301428 [ and an EIN of 941156621]. You can find the relevant filing via nonprofit explorer [here](https://projects.propublica.org/nonprofits/organizations/941156621). 
+
 
 
 ## irsx -- use from python
@@ -164,11 +164,60 @@ The "text" representation is under development and may change, though the underl
 Much broader functionality is available by running from within python.
 
 
-	>>> from irs_reader.runner import Runner
+	>>> from irsx.runner import Runner
 	>>> xml_runner = Runner()
-	>>> result = xml_runner.run_filing_single_schedule(201642229349300909, 'IRS990ScheduleM')
-	>>> result[0]['data']['schedule_parts']['skedm_part_i']['RlEsttCmmrcl_NncshCntrbtnsRptF990Amt']
-	'190500' 
+	>>> result = xml_runner.run_filing(201533089349301428)
+
+Result is an array of schedules; each schedule's name can be accessed as result[i]['schedule_name']. Note that this filing has *3* different schedule K's in it. Only schedule K is allowed to repeat--all other lettered schedules (i.e. Schedules A-O and R) may only appear once. If we only care about one schedule we can extract it (though note that the result will still be an array of schedules).
+
+	>>> result = xml_runner.run_filing_single_schedule(201533089349301428, 'IRS990ScheduleJ')
+
+Show the repeating groups that are present this schedule:
+
+	>>> print(result[0]['groups'].keys())
+	dict_keys(['SkdJRltdOrgOffcrTrstKyEmpl', 'SkdJSpplmntlInfrmtnDtl'])
+
+	
+Show the schedule parts that are present:
+
+	>>> print(result[0]['schedule_parts'].keys())
+	dict_keys(['skedj_part_i'])
+	
+Delve into one:	
+	
+	>>> key_employees = result[0]['groups']['SkdJRltdOrgOffcrTrstKyEmpl']
+	>>> print(key_employees)
+	20
+	>>> key_employees[0].keys()
+	
+	dict_keys(['object_id', 'ein', 'PrsnNm', 'TtlTxt', 'BsCmpnstnFlngOrgAmt', 'CmpnstnBsdOnRltdOrgsAmt', 'BnsFlngOrgnztnAmnt', 'BnsRltdOrgnztnsAmt', 'OthrCmpnstnFlngOrgAmt', 'OthrCmpnstnRltdOrgsAmt', 'DfrrdCmpnstnFlngOrgAmt', 'DfrrdCmpRltdOrgsAmt', 'NntxblBnftsFlngOrgAmt', 'NntxblBnftsRltdOrgsAmt', 'TtlCmpnstnFlngOrgAmt', 'TtlCmpnstnRltdOrgsAmt', 'CmpRprtPrr990FlngOrgAmt', 'CmpRprtPrr990RltdOrgsAmt'])
+	
+	>>> for employee in key_employees:                                                                
+		  print("[%s] [%s] $%s" % (employee['PrsnNm'], employee['TtlTxt'], employee['TtlCmpnstnRltdOrgsAmt']) )
+
+	[John Boyd] [CAO, MNTL HLTH & CONT CARE SSR] $493297
+	[Thomas Blinn] [CEO, Reg Amb Care, SRR] $1007654
+	[Pat Brady] [CEO, Sutter Roseville Med. Ctr] $989398
+	[James Conforti] [Regional President, SHSSR] $1406818
+	[Dennie Conrad] [REG VP, PLNNG & BUS DEV SHSSR] $486103
+	[Patrick Fry] [Trustee, President & CEO SH] $6354697
+	[Terry Glubka] [CEO, Sutter Solano Medical Ctr] $705442
+	[Mitch Hanna] [CAO, SAFH] $647751
+	[Sarah Krevans] [COO Sutter Health] $2186723
+	[Shelly McGriff] [CNE Sutter Med Ctr Sac.] $477144
+	[John Mesic MD] [CMO, Sac Sierra Region] $968939
+	[Carrie Owen-Plietz] [CEO, Sutter Med Ctr Sacramento] $934648
+	[Anne Platt] [CEO, SUTTER AMADOR HOSPITAL] $579266
+	[Thomas Ream II] [Reg CIO, Sac Sierra Region] $424847
+	[Jeffrey Sprague] [CFO, Sac Sierra Region (Pt Yr)] $1454430
+	[Jeffrey Szczesny] [Reg VP HR, Sac Sierra Region] $633383
+	[Paige Terra] [CFO (Part Year)] $657288
+	[Janet Wagner] [CAO, Sutter Davis Hospital] $745985
+	[PENNY WESTFALL] [VP & REG COUNSEL, SSR] $638189
+	[BARBARA NELSON] [CNE, SUTTER ROSEVILLE MED. CTR] $450466
+
+
+
 
 
 

@@ -33,11 +33,11 @@ class Runner(object):
                 self.logging.info("Handling multiple sked: %s's id=%s object_id=%s " % (sked, doc_id, object_id) )
                 reader = SkedDictReader(self.standardizer, self.group_dicts, object_id, ein,  documentId=doc_id, documentation=self.documentation)
                 result = reader.parse(individual_sked, parent_path=path_root)
-                self.whole_filing_data.append({'schedule_name':sked, 'data':result})
+                self.whole_filing_data.append({'schedule_name':sked, 'groups':result['groups'], 'schedule_parts':result['schedule_parts']})
         else:
             reader = SkedDictReader(standardizer, self.group_dicts, object_id, ein, documentation=self.documentation)
             result = reader.parse(sked_dict, parent_path=path_root)
-            self.whole_filing_data.append({'schedule_name':sked, 'data':result})
+            self.whole_filing_data.append({'schedule_name':sked, 'groups':result['groups'], 'schedule_parts':result['schedule_parts']})
 
     def run_schedule(self, sked, object_id, sked_dict, ein):
         path_root = "/" + sked
@@ -50,7 +50,7 @@ class Runner(object):
             if sked == 'ReturnHeader990x':
                 path_root = "/ReturnHeader"  
             result = reader.parse(sked_dict, parent_path=path_root)
-            self.whole_filing_data.append({'schedule_name':sked, 'data':result})
+            self.whole_filing_data.append({'schedule_name':sked, 'groups':result['groups'], 'schedule_parts':result['schedule_parts']})
 
     def run_filing(self, object_id, verbose=False):
         self.whole_filing_data = []

@@ -33,8 +33,8 @@ def write_ordered_documentation(data, standardizer):
         print("\nSchedule: %s\n" % schedule['schedule_name'])
 
         schedule_parts = []
-        for key in schedule['data']['schedule_parts'].keys():
-            this_part = schedule['data']['schedule_parts'][key]
+        for key in schedule['schedule_parts'].keys():
+            this_part = schedule['schedule_parts'][key]
             this_part['name']=key
 
             schedule_parts.append(this_part)
@@ -44,8 +44,8 @@ def write_ordered_documentation(data, standardizer):
             print_part_start(part['name'])
             print_documented_vars(part)
         
-        for grpkey in schedule['data']['groups'].keys():
-            for grp in schedule['data']['groups'][grpkey]:
+        for grpkey in schedule['groups'].keys():
+            for grp in schedule['groups'][grpkey]:
                 print ("\nRepeating Group: %s\n" % grpkey)
 
                 print_documented_vars(grp)
