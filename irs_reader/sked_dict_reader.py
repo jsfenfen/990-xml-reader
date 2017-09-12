@@ -1,43 +1,75 @@
 import logging
 
-from .type_utils import dictType, orderedDictType, listType, unicodeType, noneType, strType
+from .type_utils import dictType, orderedDictType, listType, \
+    unicodeType, noneType, strType
 from .flatten_utils import flatten
 from .keyerror_utils import ignorable_keyerror
 from .settings import LOG_KEY
 
+
 class SkedDictReader(object):
     """
     We get an ordered dict back from xmltodict, but we want to "flatten" it
-    into xpath-ed variables and repeated structures. 
+    into xpath-ed variables and repeated structures.
     """
-    def __init__(self, standardizer, groups, object_id, ein, documentId=None, documentation=False):
+    def __init__(
+        self,
+        standardizer,
+        groups,
+        object_id,
+        ein,
+        documentId=None,
+        documentation=False
+    ):
 
         self.standardizer = standardizer
         self.object_id = object_id
         self.ein = ein
-        self.documentId=documentId
-        self.schedule_parts = {} # allows one entry per filing
-        self.repeating_groups = {} # multiple per filing
+        self.documentId = documentId
+        self.schedule_parts = {}  # allows one entry per filing
+        self.repeating_groups = {}  # multiple per filing
         self.groups = groups
         self.logging = logging.getLogger(LOG_KEY)
         self.documentation = documentation
 
         if self.documentation and not self.standardizer.get_documentation_status():
-            raise Exception ("Standardizer must be initialized with the documentation flag to load documentation")
-
+            raise Exception(
+                "Standardizer must be initialized with the \
+                documentation flag to load documentation"
+            )
 
     def _get_table_start(self):
-        """ prefill the columns we need for all tables """ 
-
+        """ prefill the columns we need for all tables """
         if self.documentation:
-            standardized_table_start = {'object_id':{'value':self.object_id, 'ordering':-1,  'line_number':'NA', 'description':'IRS-assigned object id', 'db_type':'String(18)'}, 'ein':{'value':self.ein, 'ordering':-2, 'line_number':'NA', 'description':'IRS employer id number', 'db_type':'String(9)'} }
+            standardized_table_start = {
+                'object_id': {
+                    'value': self.object_id,
+                    'ordering': -1,
+                    'line_number': 'NA',
+                    'description': 'IRS-assigned object id',
+                    'db_type': 'String(18)'
+                },
+                'ein': {
+                    'value': self.ein,
+                    'ordering': -2,
+                    'line_number': 'NA',
+                    'description': 'IRS employer id number',
+                    'db_type': 'String(9)'
+                }
+            }
             if self.documentId:
-                standardized_table_start['documentId'] = {'value':self.documentId, 'description':'Document ID', 'ordering':0}
+                standardized_table_start['documentId'] = {
+                    'value': self.documentId,
+                    'description': 'Document ID',
+                    'ordering': 0
+                }
         else:
-            standardized_table_start = {'object_id':self.object_id, 'ein':self.ein}
+            standardized_table_start = {
+                'object_id': self.object_id,
+                'ein': self.ein
+            }
             if self.documentId:
                 standardized_table_start['documentId'] = self.documentId
-
 
         return standardized_table_start
 
@@ -46,8 +78,8 @@ class SkedDictReader(object):
             this_node_type = type(node)
             flattened_list_item = None
             if this_node_type == unicodeType:
-                flattened_list_item = {path:json_node}            
-            else: # do we need to be picky about types? 
+                flattened_list_item = {path: json_node}
+            else:
                 flattened_list_item = flatten(node, parent_key=path, sep='/')
             table_name = None
             standardized_group_dict = self._get_table_start()
@@ -60,36 +92,49 @@ class SkedDictReader(object):
                         this_var_data = self.standardizer.get_var(xpath)
                     except KeyError:
                         if not ignorable_keyerror(xpath):
-                            msg = "Key error %s in %s ein=%s" % (xpath, self.object_id, self.ein)
+                            msg = "Key error %s in %s ein=%s" % (
+                                xpath,
+                                self.object_id,
+                                self.ein
+                            )
                             self.logging.warning(msg)
                         continue
                     this_var_value = flattened_list_item[xpath]
                     this_var_name = this_var_data['db_name']
                     table_name = this_var_data['db_table']
                     if self.documentation:
-                        result =  {'value': this_var_value, 'ordering': this_var_data['ordering'], 
-                            'line_number':this_var_data['line_number'], 'description':this_var_data['description'], 'db_type':this_var_data['db_type'] }
+                        result = {
+                            'value': this_var_value,
+                            'ordering': this_var_data['ordering'],
+                            'line_number': this_var_data['line_number'],
+                            'description': this_var_data['description'],
+                            'db_type': this_var_data['db_type']
+                        }
                         standardized_group_dict[this_var_name] = result
 
                     else:
-                        standardized_group_dict[this_var_name] =  this_var_value 
+                        standardized_group_dict[this_var_name] = this_var_value
             try:
-                self.repeating_groups[table_name].append(standardized_group_dict) 
+                self.repeating_groups[table_name].append(standardized_group_dict)
             except KeyError:
                 self.repeating_groups[table_name] = [standardized_group_dict]
 
     def _parse_json(self, json_node, parent_path=""):
         this_node_type = type(json_node)
-        element_path = parent_path # we've arrived
+        element_path = parent_path
         if this_node_type == unicodeType:
-            # but ignore it if is an @ or # - we get docId elsewhere
+            # but ignore it if is an @ or # - we get @docId elsewhere
             if '@' in element_path or '#' in element_path:
                 pass
             else:
                 try:
-                    # is it a group? 
+                    # is it a group?
                     this_group = self.groups[element_path]
-                    self._process_group([{parent_path:json_node}], '', this_group)
+                    self._process_group(
+                        [{parent_path: json_node}],
+                        '',
+                        this_group
+                    )
 
                 except KeyError:
                     # It's not a group so it should be a variable we know about
@@ -100,7 +145,11 @@ class SkedDictReader(object):
                     except KeyError:
                         # pass through for some common key errors:
                         if not ignorable_keyerror(element_path):
-                            msg = "Key error %s in %s ein=%s" % (element_path, self.object_id, self.ein)
+                            msg = "Key error %s in %s ein=%s" % (
+                                element_path,
+                                self.object_id,
+                                self.ein
+                            )
                             self.logging.warning(msg)
                         var_found = False
 
@@ -111,13 +160,19 @@ class SkedDictReader(object):
 
                         result = json_node
                         if self.documentation:
-                            result = {'value': json_node, 'ordering': var_data['ordering'], 'line_number':var_data['line_number'], 'description':var_data['description'], 'db_type':var_data['db_type'] }
+                            result = {
+                                'value': json_node,
+                                'ordering': var_data['ordering'],
+                                'line_number': var_data['line_number'],
+                                'description': var_data['description'],
+                                'db_type': var_data['db_type']
+                            }
 
                         try:
-                            self.schedule_parts[table_name][var_name] =  result  
+                            self.schedule_parts[table_name][var_name] = result
                         except KeyError:
                             self.schedule_parts[table_name] = self._get_table_start()
-                            self.schedule_parts[table_name][var_name] = result 
+                            self.schedule_parts[table_name][var_name] = result
 
         elif this_node_type == listType:
 
@@ -125,10 +180,13 @@ class SkedDictReader(object):
             process_normal = True
             try:
                 this_group = self.groups[element_path]
-                
-            except KeyError:                
-                ## TODO: If this is multiple schedule k's, handle differently.
-                msg = "Group error %s in %s ein=%s" % (element_path, self.object_id, self.ein)
+
+            except KeyError:
+                msg = "Group error %s in %s ein=%s" % (
+                    element_path,
+                    self.object_id,
+                    self.ein
+                )
                 self.logging.warning(msg)
                 process_normal = False
             self._process_group(json_node, parent_path, this_group)
@@ -136,9 +194,9 @@ class SkedDictReader(object):
         elif this_node_type == orderedDictType:
 
             try:
-                # is it a singleton group? 
+                # is it a singleton group?
                 this_group = self.groups[element_path]
-                self._process_group([{parent_path:json_node}], '', this_group)
+                self._process_group([{parent_path: json_node}], '', this_group)
 
             except KeyError:
                 keys = json_node.keys()
@@ -148,14 +206,16 @@ class SkedDictReader(object):
 
         elif this_node_type == noneType:
             pass
-        
+
         elif this_node_type == strType:
             msg = "String '%s'" % json_node
             self.logging.debug(msg)
         else:
-            raise Exception ("Unhandled type: %s" % (type(json_node)))
+            raise Exception("Unhandled type: %s" % (type(json_node)))
 
     def parse(self, raw_ordered_dict, parent_path=""):
         self._parse_json(raw_ordered_dict, parent_path=parent_path)
-        return ({'schedule_parts': self.schedule_parts, 'groups': self.repeating_groups } )
-
+        return ({
+            'schedule_parts': self.schedule_parts,
+            'groups': self.repeating_groups
+        })
