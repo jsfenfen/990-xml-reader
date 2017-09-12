@@ -1,22 +1,21 @@
 import os
 import sys
-import collections 
+import collections
 import logging
 from datetime import datetime
-
-if sys.version_info >= (3, 0):
-    import csv
-else:
-    import unicodecsv as csv 
-
 from .settings import METADATA_DIRECTORY, KEYERROR_LOG
 from .sked_dict_reader import SkedDictReader
 from .type_utils import listType
+if sys.version_info >= (3, 0):
+    import csv
+else:
+    import unicodecsv as csv
+
 
 class Standardizer(object):
     """
-    This reads three metadata .csv files, which it uses to standardize ordered dicts
-    Only loads documentation when needed, not sure this is the right paradigm
+    This reads three metadata .csv files, which it uses to standardize
+    ordered dicts. Only loads documentation when needed.
     """
 
     def __init__(self, documentation=False):
@@ -38,36 +37,47 @@ class Standardizer(object):
                 self.groups[row['xpath']] = row
 
     def _make_schedule_parts(self):
-        parts_filepath = os.path.join(METADATA_DIRECTORY, 'schedule_parts.csv')
-        with open(parts_filepath, 'r') as reader_fh:
+        part_filepath = os.path.join(METADATA_DIRECTORY, 'schedule_parts.csv')
+        with open(part_filepath, 'r') as reader_fh:
             reader = csv.DictReader(reader_fh)
             for row in reader:
-                self.schedule_parts[row['parent_sked_part']] = {'name':row['part_name'], 'ordering':row['ordering']}
+                self.schedule_parts[row['parent_sked_part']] = {
+                    'name': row['part_name'],
+                    'ordering': row['ordering']
+                }
 
     def _make_variables(self):
         variable_filepath = os.path.join(METADATA_DIRECTORY, 'variables.csv')
         with open(variable_filepath, 'r') as variable_fh:
             reader = csv.DictReader(variable_fh)
             for row in reader:
-                # do we need ordering? Or should there just be a flag for pretty print? 
                 if self.show_documentation:
-                    self.variables[row['xpath']] = {'db_table':row['db_table'], 'db_name':row['db_name'], 'ordering':row['ordering'], 'line_number':row['line_number'], 'description':row['description'], 'db_type':row['db_type']}
-                    
+                    self.variables[row['xpath']] = {
+                        'db_table': row['db_table'],
+                        'db_name': row['db_name'],
+                        'ordering': row['ordering'],
+                        'line_number': row['line_number'],
+                        'description': row['description'],
+                        'db_type': row['db_type']
+                    }
                 else:
-                    self.variables[row['xpath']] = {'db_table':row['db_table'], 'db_name':row['db_name']}
+                    self.variables[row['xpath']] = {
+                        'db_table': row['db_table'],
+                        'db_name': row['db_name']
+                    }
 
     def get_groups(self):
         return self.groups
 
     def part_ordering(self, partname):
-        try: 
+        try:
             result = int(self.schedule_parts[partname]['ordering'])
             return result
         except KeyError:
             return None
 
     def group_ordering(self, groupname):
-        try: 
+        try:
             return self.groups[groupname]['ordering']
         except KeyError:
             return None
@@ -78,4 +88,4 @@ class Standardizer(object):
     def get_var(self, var_xpath, version=None):
         if version:
             raise Exception("Version checking is not implemented")
-        return ( self.variables[var_xpath] )
+        return (self.variables[var_xpath])
