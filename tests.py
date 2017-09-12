@@ -150,7 +150,7 @@ class TestCommandLine:
         run_cli_main(args)
 
     def test_cli_3(self):
-        # dump only main 990 in bare json format
+        # dump only main 990 in text format
         test_args = ['--schedule', 'IRS990', '--format', 'txt', '--documentation', '201642229349300909']
         args = self.parser.parse_args(test_args)
         run_cli_main(args)

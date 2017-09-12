@@ -16,9 +16,9 @@ setup(name=HUMAN_NAME,
       setup_requires=["setuptools",],
       install_requires=["requests", "xmltodict", "unicodecsv"],
       tests_require=["nose",],
-      packages=["irsx"],
+      packages=['irsx'],
       package_dir={'irsx': 'irs_reader'},
-      package_data={'irsx': ['data/*/*.json']},
+      package_data={'irsx': ['metadata/*.csv']},
       entry_points={
           "console_scripts": ["irsx=irsx.irsx_cli:main", "irsx_index=irsx.irsx_cli_index:main"]
       },

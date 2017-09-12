@@ -1,16 +1,8 @@
 import json
 import sys
+import codecs
 
-### Thanks to github.com/jsvine/pdfplumber see cli.py#L11 
-class DecimalEncoder(json.JSONEncoder):
-    """ 
-    Helper to deal with decimal encoding, think it's not needed here now(?)
-    """
-    def default(self, o):
-        if isinstance(o, Decimal):
-            return float(o.quantize(Decimal('.0001'), rounding=ROUND_HALF_UP))
-        return super(DecimalEncoder, self).default(o)
-### ibid.
+# to_json stolen from jsvine: [ link ]
 def to_json(data, encoding=None):
     if hasattr(sys.stdout, "buffer"):
         sys.stdout = codecs.getwriter("utf-8")(sys.stdout.buffer, "strict")

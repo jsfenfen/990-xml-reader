@@ -20,63 +20,103 @@ The IRS identifies electronic filings by their object_id, available in the annua
 ## irsx -- command line
 Installing the library will also install the irsx command line tool, which uses the IRS' object_ids to reference a particular filing. This will just spit out the string representation of an ordered dictionary for the entire filing. 
 
-		$ irsx 201642229349300909
-		OrderedDict([(u'Return', OrderedDict([(u'@xmlns'  < ..lengthy output.. >
+	$ irsx 201642229349300909
+	[{"schedule_name": "ReturnHeader990x", "data": {"schedule_parts"...
+
+We could have saved it to a file with using the '>' to redirect the output
+
+	$ irsx 201642229349300909 > 201642229349300909.json
 		
-To get a json version, use "--format json", i.e. `$ irsx --format json 201642229349300909`.
+The default format is json, but you can make it easier to read with the --format=txt switch, i.e. which makes it slightly more readable.
+
+	$ irsx --format=txt 201642229349300909
+	[
+	    {
+	        "schedule_name": "ReturnHeader990x",
+	        "data": {
+	            "schedule_parts": {
+	                "returnheader990x_part_i": {
+	                    "object_id": 201642229349300909,
+	                    "ein": "431786847",
+	                    "RtrnHdr_RtrnTs": "2016-08-09T08:31:41-07:00",
+	                    "RtrnHdr_TxPrdEndDt": "2015-12-31",
+	                    ...
+	                    
+That's better, but it's still really hard to follow. Use the --documentation flag in text format to make this easier to follow: 
+
+	$ irsx --format=txt --documentation 201642229349300909
+
+		Schedule: ReturnHeader990x
+		
+		
+		returnheader990x_part_i
+		
+		
+			*ein*: value=431786847 
+			Line Number '' Description: 'IRS employer id number' Type: String(9)
+
+		
+That's a more useful representation of the filing--it also appears roughly in the same order as a paper 990 filing (with the exception of repeating groups, which appear at the end of each schedule). It's also remarkably verbose.
+
+We can narrow in on a single schedule, but first we need to know what is present in this filing, using the --list_schedules option
 		 
-Save the entire filing object to a file  as json (note that we are redirecting the output using the '>' operator) like this:
-		
-		$ irsx --format json 201642229349300909 > 2016.json
-
-This is a json representation of the form as it appears--we have no standardized variables across versions at all in this representation.
-
-Which schedules are included in this filing? 
 	
 		$ irsx --list_schedules 201642229349300909
 	
 		['ReturnHeader990x', u'IRS990', u'IRS990ScheduleA', u'IRS990ScheduleB', 
 		u'IRS990ScheduleD', u'IRS990ScheduleM', u'IRS990ScheduleO']
 	
-Pull out only schedule M and save it to file.
+Now let's look at a human readable text version of schedule M
 
-	$ irsx --format json 201642229349300909 > 2016_M.json
+	$ irsx --format=txt --documentation --schedule=IRS990ScheduleM 201642229349300909
 
-The alternative to json format is 'dict' which at the moment just prints the python representation of the ordered dict before it is converted to json. The dict has an inherent ordering to it, whereas the json doesn't (but the transformed json will have an 'ordering' element to allow sorting).
-	
+		Schedule: IRS990ScheduleM
+		
+		
+		skedm_part_i
+		
+		
+			*ein*: value=431786847 
+			Line Number '' Description: 'IRS employer id number' Type: String(9)
+		
+			*object_id*: value=201642229349300909 
+			Line Number '' Description: '' Type: 
+		
+			*SkdM_AnyPrprtyThtMstBHldInd*: value=false 
+			Line Number ' Part I Line 30a' Description: ' Any property that must be held?' Type: String(length=5)
+		
+			*SkdM_RvwPrcssUnslNCGftsInd*: value=false 
+			Line Number ' Part I Line 31' Description: ' Review process reference unusual noncash gifts?' Type: String(length=5)
+		
+			*SkdM_ThrdPrtsUsdInd*: value=false 
+			Line Number ' Part I Line 32a' Description: ' Third parties used?' Type: String(length=5)
+		
+			*RlEsttCmmrcl_NnCshChckbxInd*: value=X 
+			Line Number ' Part I Line 16; Column (a)' Description: ' Real estate - commercial; Checkbox for lines on Part I' Type: String(length=1)
+		
+			*RlEsttCmmrcl_CntrbtnCnt*: value=6 
+			Line Number ' Part I Line 16; Column (b)' Description: ' Real estate - commercial; Number of contributions' Type: BigInteger
+		
+			*RlEsttCmmrcl_NncshCntrbtnsRptF990Amt*: value=190500 
+			Line Number ' Part I Line 16; Column (c)' Description: ' Real estate - commercial; Revenues reported on F990, Pt VIII, line 1g' Type: BigInteger
 
-Full usage:
 
+The "text" representation is under development and may change, though the underlying json output should not. We can save just that schedule to file with:
 
-		usage: irsx [-h] [--verbose]
-		             [--schedule {IRS990,IRS990EZ,IRS990PF,IRS990ScheduleA,IRS990ScheduleB,IRS990ScheduleC,IRS990ScheduleD,IRS990ScheduleE,IRS990ScheduleF,IRS990ScheduleG,IRS990ScheduleH,IRS990ScheduleI,IRS990ScheduleJ,IRS990ScheduleK,IRS990ScheduleL,IRS990ScheduleM,IRS990ScheduleN,IRS990ScheduleO,IRS990ScheduleR,ReturnHeader990x}]
-		             [--format {dict,json}] [--list_schedules] [--encoding ENCODING]
-		             N [N ...]
-			
-		positional arguments:
-		  N                     object ids
-			
-		optional arguments:
-		  -h, --help            show this help message and exit
-		  --verbose             Verbose output
-		  --schedule {IRS990,IRS990EZ,IRS990PF,IRS990ScheduleA,IRS990ScheduleB,IRS990ScheduleC,IRS990ScheduleD,IRS990ScheduleE,IRS990ScheduleF,IRS990ScheduleG,IRS990ScheduleH,IRS990ScheduleI,IRS990ScheduleJ,IRS990ScheduleK,IRS990ScheduleL,IRS990ScheduleM,IRS990ScheduleN,IRS990ScheduleO,IRS990ScheduleR,ReturnHeader990x}
-		                        Get only that schedule
-		  --format {dict,json}  Output format
-		  --list_schedules      Only list schedules
-		  --encoding ENCODING   encoding (probably utf-8)
+	$ irsx --schedule=IRS990ScheduleM 201642229349300909 > 201642229349300909.json
+
 
 
 ## irsx -- use from python
 
+Much broader functionality is available by running from within python.
 
-	>>> from irsx.filing import Filing
-	>>> f = Filing(201642229349300909)
-	>>> f.process()
-	>>> f.get_version() # 2015v2.1
-	>>> schedules = f.get_schedules()
-	[u'IRS990', u'IRS990ScheduleA', u'IRS990ScheduleB', u'IRS990ScheduleD', u'IRS990ScheduleM', u'IRS990ScheduleO']
-	>>> for sked in schedules:
-	>>>  print("\n\n%s \n%s" % (sked, f.get_schedule(sked) ) ) 
+
+	>>> from irs_reader.runner import Runner
+	>>> xml_runner = Runner()
+	>>> result = xml_runner.run_filing_single_schedule(201642229349300909, 'IRS990ScheduleM')
+	>>> result[0]['data']['schedule_parts']['skedm_part_i']['RlEsttCmmrcl_NncshCntrbtnsRptF990Amt']
+	'190500' 
 
 
 

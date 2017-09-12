@@ -30,7 +30,7 @@ class SkedDictReader(object):
         """ prefill the columns we need for all tables """ 
 
         if self.documentation:
-            standardized_table_start = {'object_id':{'value':self.object_id, 'ordering':-1}, 'ein':{'value':self.ein, 'ordering':-2} }
+            standardized_table_start = {'object_id':{'value':self.object_id, 'ordering':-1}, 'ein':{'value':self.ein, 'ordering':-2, 'description':'IRS employer id number', 'db_type':'String(9)'} }
             if self.documentId:
                 standardized_table_start['documentId'] = {'value':self.documentId, 'description':'Document ID', 'ordering':0}
         else:

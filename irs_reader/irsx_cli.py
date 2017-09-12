@@ -1,6 +1,5 @@
 import argparse
-import codecs
-from operator import itemgetter
+
 from .filing import Filing
 from .settings import KNOWN_SCHEDULES
 from .runner import Runner
@@ -11,7 +10,7 @@ def get_parser():
     parser = argparse.ArgumentParser("xirsx")
 
     parser.add_argument('object_ids', 
-        metavar='N', 
+        metavar='object_ids', 
         type=int, 
         nargs='+',
         help='object ids')
