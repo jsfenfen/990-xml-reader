@@ -71,7 +71,7 @@ class Runner(object):
             self.logging.info("** Skipping %s with unsupported version string %s" % (object_id, this_version) )
             return None
 
-    def run_filing_single_schedule(self, object_id, sked, verbose=False):
+    def run_sked(self, object_id, sked, verbose=False):
         """
         sked is the proper name of the schedule:
         IRS990, IRS990EZ, IRS990PR, IRS990ScheduleA, etc. 
@@ -93,15 +93,3 @@ class Runner(object):
         else:            
             self.logging.info("** Skipping %s with unsupported version string %s" % (object_id, this_version) )
             return None
-
-
-
-if __name__ == "__main__":
-    from .object_ids import object_ids_2017, object_ids_2016, object_ids_2015
-
-    TEST_DEPTH = 10
-    object_ids = object_ids_2017[:TEST_DEPTH] + object_ids_2016[:TEST_DEPTH] + object_ids_2015[:TEST_DEPTH] 
-    runner = Runner()
-    for object_id in object_ids:
-        result = runner.run_filing(object_id)
-        print(result)
