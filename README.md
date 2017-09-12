@@ -261,7 +261,7 @@ The location is specified in the settings file, but by default it'll go into a s
 
 #### To use without installing via pip
 
-From the directory with the readme in it, instead of the irsx command, use `$python -m python -m irs_reader.irsx_cli` so that the command line tools are run as modules and python doesn't freak out. 
+From the directory with the readme in it, instead of the irsx command, use `$ python -m irs_reader.irsx_cli` so that the command line tools are run as modules and python doesn't freak out. 
 You can still add command line args, like this:
 
 		python -m irs_reader.irsx_cli --schedule=ReturnHeader990x --format=txt 201533089349301428
