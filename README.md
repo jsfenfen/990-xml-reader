@@ -7,6 +7,8 @@ From the command line, xml files can be output as machine readable json, or huma
 
 
 
+
+
 ## Installation
 
 #### Will be easier once we put this on pypi
@@ -73,7 +75,7 @@ We can narrow in on a single schedule, but first we need to know what is present
 	
 		['ReturnHeader990x', 'IRS990', 'IRS990ScheduleA', 'IRS990ScheduleB', 'IRS990ScheduleC', 'IRS990ScheduleD', 'IRS990ScheduleG', 'IRS990ScheduleH', 'IRS990ScheduleI', 'IRS990ScheduleJ', 'IRS990ScheduleK', 'IRS990ScheduleL', 'IRS990ScheduleM', 'IRS990ScheduleO', 'IRS990ScheduleR']
 	
-Now let's look at a human readable text version of schedule M
+Now let's look at a human readable text version of schedule J
 
 	$ irsx --format=txt --documentation --schedule=IRS990ScheduleJ 201533089349301428
 
@@ -143,7 +145,7 @@ The "text" representation is under development and may change, though the underl
 
 	$ irsx --schedule=IRS990ScheduleJ 201533089349301428 > 201533089349301428.json
 
-### About the data
+### Getting an object id
 
 The IRS releases one xml file per 990 filing, which is identified by a unique object id. Irsx uses that unique id as well, so we need to know it to extract data. To find the object\_id, look at the annual index files from the IRS (also have a look at irsx_index, a helper command described below).
 
@@ -263,6 +265,7 @@ From the directory with the readme in it, instead of the irsx command, use `$pyt
 You can still add command line args, like this:
 
 		python -m irs_reader.irsx_cli --schedule=ReturnHeader990x --format=txt 201533089349301428
+		
 
 ## Testing
 
