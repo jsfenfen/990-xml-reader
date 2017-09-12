@@ -21,6 +21,10 @@ from irs_reader.irsx_index_cli import run_main as run_cli_index_main, get_parser
 FILING_2015V21 = '201642229349300909'
 FILING_2015V21_skeds = [u'ReturnHeader990x', u'IRS990', u'IRS990ScheduleA', u'IRS990ScheduleB', u'IRS990ScheduleD', u'IRS990ScheduleM', u'IRS990ScheduleO']
 
+FILING_2014V50 = '201533089349301428'
+
+FILING_2014V50_skeds = ['ReturnHeader990x', 'IRS990', 'IRS990ScheduleA', 'IRS990ScheduleB', 'IRS990ScheduleC', 'IRS990ScheduleD', 'IRS990ScheduleG', 'IRS990ScheduleH', 'IRS990ScheduleI', 'IRS990ScheduleJ', 'IRS990ScheduleK', 'IRS990ScheduleL', 'IRS990ScheduleM', 'IRS990ScheduleO', 'IRS990ScheduleR']
+
 # don't bother testing every filing in tests
 TEST_DEPTH = 100
 
@@ -36,12 +40,18 @@ def test_process_from_id_only():
     a.process()
     assert a.get_version() == '2015v2.1'
 
+def test_process_from_id_only_2():
+    a = Filing(FILING_2014V50)
+    a.process()
+    assert a.get_version() == '2014v5.0'
+
 def test_process_with_filepath():
     filename = "%s_public.xml" % FILING_2015V21
     filepath = os.path.join(WORKING_DIRECTORY, filename)
     a = Filing(FILING_2015V21, filepath=filepath)
     a.process()
     assert a.get_version() == '2015v2.1'
+
 
 
 class TestConversion:

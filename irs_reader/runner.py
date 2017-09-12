@@ -31,7 +31,7 @@ class Runner(object):
             for individual_sked in sked_dict:
                 doc_id = individual_sked['@documentId']
                 self.logging.info("Handling multiple sked: %s's id=%s object_id=%s " % (sked, doc_id, object_id) )
-                reader = SkedDictReader(standardizer, self.group_dicts, object_id, ein,  documentId=doc_id, documentation=self.documentation)
+                reader = SkedDictReader(self.standardizer, self.group_dicts, object_id, ein,  documentId=doc_id, documentation=self.documentation)
                 result = reader.parse(individual_sked, parent_path=path_root)
                 self.whole_filing_data.append({'schedule_name':sked, 'data':result})
         else:
@@ -43,7 +43,7 @@ class Runner(object):
         path_root = "/" + sked
         # Only sked K is allowed to repeat
         if sked=='IRS990ScheduleK':
-            self.run_schedule_k(sked, object_id, sked_dict, path_root)
+            self.run_schedule_k(sked, object_id, sked_dict, path_root, ein)
 
         else:
             reader = SkedDictReader(self.standardizer, self.group_dicts, object_id, ein, documentation=self.documentation)            

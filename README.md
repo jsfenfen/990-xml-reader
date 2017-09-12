@@ -1,15 +1,7 @@
 # irsx
 ### Turn the IRS' versioned XML 990's into python objects aware of the version-specific line number, description and data type 
 
-This is a python library and command line tool to simplify working with nonprofit tax returns [released](https://aws.amazon.com/public-datasets/irs-990/) by the IRS in XML format. 
-
-The IRS releases one xml file per 990 filing, which is identified by a unique object id. To find the object_id, look at the annual index files from the IRS (also have a look at irsx_index, a helper command described below).
-
-The files are available at: [https://s3.amazonaws.com/irs-form-990/index_2017.csv](https://s3.amazonaws.com/irs-form-990/index_2017.csv). Other years, from 2011 forward, are available at similar URLs, just replace '2017' with the year you want. 
-
-
-
-
+This is a python library and command line tool to simplify working with nonprofit tax returns [released](https://aws.amazon.com/public-datasets/irs-990/) by the IRS in XML format. The library currently standarizes returns submitted in formats dating from 2013 and forwards into consistently named datastructures that follow the same format as the "paper" 990. Repeating elements, such as the salary disclosed for best compensated employees, appear at the end of each schedule.
 
 ## Installation
 
@@ -21,19 +13,47 @@ The files are available at: [https://s3.amazonaws.com/irs-form-990/index_2017.cs
 - To see if it's installed, run `$ pip freeze`; if you see a line line 'irsx==0.0.1' it is installed. 
 
 
+### About the data
+
+The IRS releases one xml file per 990 filing, which is identified by a unique object id. Irsx uses that unique id as well, so we need to know it to extract data. To find the object\_id, look at the annual index files from the IRS (also have a look at irsx_index, a helper command described below).
+
+The files are available at: [https://s3.amazonaws.com/irs-form-990/index_2017.csv](https://s3.amazonaws.com/irs-form-990/index_2017.csv). Other years, from 2011 forward, are available at similar URLs, just replace '2017' with the year you want [Note that the year is the year the return was received by the IRS]. Some years have >300,000 filings in them, so the index files might not open in older versions of excel.
+
+You can use command line tools, like [csvkit](https://csvkit.readthedocs.io/en/1.0.2/), to search through the file pretty quickly to find the id you want. These are the headers:
+
+	$ head -n 1 index_2016.csv 
+	RETURN_ID,FILING_TYPE,EIN,TAX_PERIOD,SUB_DATE,TAXPAYER_NAME,RETURN_TYPE,DLN,OBJECT_ID
+
+Using csvcut we can just spit out the EIN, TAX\_PERIOD, TAXPAYER\_NAME and the OBJECT\_ID we need by identifying the column numbers 
+
+		$ csvcut -c 3,4,6,9 index_2016.csv | head -n 3
+	EIN,TAX_PERIOD,TAXPAYER_NAME,OBJECT_ID
+	742661023,201412,HARRIET AND HARMON KELLEY FOUNDATION FOR THE ARTS,201543159349100344
+	562629114,201412,BROWN COMMUNITY DEVELOPMENT CORPORATION,201543109349200219
+
+
+I'm looking for filings from "Sutter Health" (though note I use all caps to search). 
+
+		$ csvcut -c 3,4,6,9 index_2016.csv | grep 'SUTTER HEALTH'
+	941156621,201412,SUTTER HEALTH SACRAMENTO SIERRA REGION,201533089349301428
+	990298651,201412,SUTTER HEALTH PACIFIC,201523039349301087
+	942788907,201412,SUTTER HEALTH,201543089349301429
+
+Let's use Sutter Health Sacramento Sierra Region's 12/2014 filing, which has an object id number of 201533089349301428 [ and an EIN of 941156621]. You can find the relevant filing via nonprofit explorer [here](https://projects.propublica.org/nonprofits/organizations/941156621). 
+
 ## irsx -- command line
 Installing the library will also install the irsx command line tool, which uses the IRS' object_ids to reference a particular filing. This will just spit out a json representation of the entire filing. See more about the data format that's returned below.
 
-	$ irsx 201642229349300909
+	$ irsx 201533089349301428
 	[{"schedule_name": "ReturnHeader990x", "data": {"schedule_parts"...
 
 We could have saved it to a file with using the '>' to redirect the output
 
-	$ irsx 201642229349300909 > 201642229349300909.json
+	$ irsx 201533089349301428 > 201533089349301428.json
 		
 The default format is json, but you can make it easier to read with the --format=txt switch, i.e. which makes it slightly more readable.
 
-	$ irsx --format=txt 201642229349300909
+	$ irsx --format=txt 201533089349301428
 	[
 	    {
 	        "schedule_name": "ReturnHeader990x",
