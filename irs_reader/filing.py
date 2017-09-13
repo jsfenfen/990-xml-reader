@@ -7,6 +7,7 @@ from .file_utils import stream_download, get_s3_URL, validate_object_id, \
 
 from .settings import KNOWN_SCHEDULES, IRS_READER_ROOT
 
+
 class Filing(object):
 
     def __init__(self, object_id, filepath=None, URL=None):
@@ -15,8 +16,8 @@ class Filing(object):
             Ignore these and defaults will be used.
             If filepath is set, URL is ignored.
         """
-        self.raw_irs_dict = None # The parsed xml will go here
-        self.version_string = None  #Version number here
+        self.raw_irs_dict = None        # The parsed xml will go here
+        self.version_string = None      # Version number here
 
         self.object_id = validate_object_id(object_id)
         if filepath:
@@ -29,23 +30,26 @@ class Filing(object):
             else:
                 self.URL = get_s3_URL(self.object_id)
 
-    def _download(self, force_overwrite=False,verbose=False):
-        """ 
+    def _download(self, force_overwrite=False, verbose=False):
+        """
         Download the file if it's not already there.
         We shouldn't *need* to overwrite; the xml is not supposed to update.
-        """ 
+        """
         if not force_overwrite:
             # If the file is already there, we're done
             if os.path.isfile(self.filepath):
                 if verbose:
-                    print("File already available at %s -- skipping " % self.filepath)
+                    print(
+                        "File already available at %s -- skipping "
+                        % self.filepath
+                    )
                 return False
         stream_download(self.URL, self.filepath, verbose=verbose)
 
     def _set_dict_from_xml(self):
         with open(self.filepath, 'r') as fh:
-            raw_file=fh.read()
-            self.raw_irs_dict =  xmltodict.parse(raw_file) 
+            raw_file = fh.read()
+            self.raw_irs_dict = xmltodict.parse(raw_file)
 
     def _set_version(self):
         self.version_string = self.raw_irs_dict['Return']['@returnVersion']
@@ -55,7 +59,7 @@ class Filing(object):
 
     def _set_schedules(self):
         """ Attach the known and unknown schedules """
-        self.schedules = ['ReturnHeader990x',]
+        self.schedules = ['ReturnHeader990x', ]
         self.otherforms = []
         for sked in self.raw_irs_dict['Return']['ReturnData'].keys():
             if not sked.startswith("@"):
@@ -92,29 +96,10 @@ class Filing(object):
 
     def list_schedules(self):
         return self.schedules
-        
+
     def process(self, verbose=False):
         self._download(verbose=verbose)
         self._set_dict_from_xml()
         self._set_version()
         self._set_ein()
         self._set_schedules()
-
-
-if __name__ == '__main__':
-    ## 
-    a = Filing(201642229349300909)
-    a.process()
-
-    print("filepath: %s version %s" % (a.get_filepath(), a.get_version()) )
-    a._set_schedules()
-
-    ## 
-    filename = "%s_public.xml" % ('201642229349300909')
-    a = Filing(201642229349300909, os.path.join(IRS_READER_ROOT, "XML", filename) )
-
-    a.process()
-
-    print("filepath: %s version %s" % (a.get_filepath(), a.get_version()) )
-
-
