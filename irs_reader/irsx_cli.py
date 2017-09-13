@@ -10,45 +10,52 @@ from .text_format_utils import to_json, print_documented_vars, \
 def get_parser():
     parser = argparse.ArgumentParser("irsx")
 
-    parser.add_argument('object_ids',
-                        metavar='object_ids',
-                        type=int,
-                        nargs='+',
-                        help='object ids')
-
-    parser.add_argument('--verbose',
-                        dest='verbose',
-                        action='store_const',
-                        const=True, default=False,
-                        help='Verbose output')
-
-    parser.add_argument("--schedule",
-                        choices=KNOWN_SCHEDULES,
-                        default=None,
-                        help='Get only that schedule')
-
-    parser.add_argument("--documentation",
-                        dest='documentation',
-                        action='store_const',
-                        const=True, default=False,
-                        help='Show documentation with output')
-
-    parser.add_argument("--format",
-                        choices=['json', 'txt'],
-                        default='json',
-                        help='Output format')
-
-    parser.add_argument('--list_schedules',
-                        dest='list_schedules',
-                        action='store_const',
-                        const=True,
-                        default=False,
-                        help='Only list schedules')
-
-    parser.add_argument("--encoding",
-                        default="utf-8",
-                        help="encoding (probably utf-8)")
-
+    parser.add_argument(
+        'object_ids',
+        metavar='object_ids',
+        type=int,
+        nargs='+',
+        help='object ids'
+    )
+    parser.add_argument(
+        '--verbose',
+        dest='verbose',
+        action='store_const',
+        const=True, default=False,
+        help='Verbose output'
+    )
+    parser.add_argument(
+        "--schedule",
+        choices=KNOWN_SCHEDULES,
+        default=None,
+        help='Get only that schedule'
+    )
+    parser.add_argument(
+        "--documentation",
+        dest='documentation',
+        action='store_const',
+        const=True, default=False,
+        help='Show documentation with output'
+    )
+    parser.add_argument(
+        "--format",
+        choices=['json', 'txt'],
+        default='json',
+        help='Output format'
+    )
+    parser.add_argument(
+        '--list_schedules',
+        dest='list_schedules',
+        action='store_const',
+        const=True,
+        default=False,
+        help='Only list schedules'
+    )
+    parser.add_argument(
+        "--encoding",
+        default="utf-8",
+        help="encoding (probably utf-8)"
+    )
     return parser
 
 
