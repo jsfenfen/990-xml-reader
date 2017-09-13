@@ -1,9 +1,22 @@
 # irsx
-### Turn the IRS' versioned XML 990's into standardized objects with line number, description and data type
 
-This is a python library and command line tool to simplify working with nonprofit tax returns [released](https://aws.amazon.com/public-datasets/irs-990/) by the IRS in XML format. The library currently standarizes returns submitted in formats dating from 2013 and forwards into consistently named datastructures that follow the same format as the "paper" 990. Repeating elements, such as the salary disclosed for best compensated employees, appear at the end of each schedule.
+## Quickstart
+
+	>>> from irsx.runner import Runner
+	>>> xml_runner = Runner()
+	>>> result = xml_runner.run_schedule(201533089349301428, 'IRS990ScheduleJ')
+	>>> key_employees = result[0]['groups']['SkdJRltdOrgOffcrTrstKyEmpl']
+	>>> for employee in key_employees:                                                                
+		  print(employee['PrsnNm'])
+
+
+## About
+
+IRSX is a python library and command line tool to simplify working with nonprofit tax returns [released](https://aws.amazon.com/public-datasets/irs-990/) by the IRS in XML format. The library currently standarizes returns submitted in formats dating from 2013 and forwards into consistently named datastructures that follow the same format as the "paper" 990. Repeating elements, such as the salary disclosed for best compensated employees, appear at the end of each schedule. We hope to release further data that will allow processing of earlier forms.
 
 From the command line, xml files can be output as machine readable json, or human readable text, optionally with documentation. From within a python program, the results are returned as native data structures. 
+
+The tax returns are complex--the easiest way to understand them is to consult the metadata csv files [link], and cross reference these to the forms in sample\_schedules (which contains recent pdf versions of the schedules).  The data returned for each schedule read contains schedule parts (see the schedule\_parts.csv for all possible parts) and repeating groups (see groups.csv) that occur within that schedule. Both repeating groups and schedule\_parts contain variables, which are documented in the variables.csv table. 
 
 
 
@@ -186,7 +199,7 @@ Much broader functionality is available by running from within python.
 
 Result is an array of schedules; each schedule's name can be accessed as result[i]['schedule_name']. Note that this filing has *3* different schedule K's in it. Only schedule K is allowed to repeat--all other lettered schedules (i.e. Schedules A-O and R) may only appear once. If we only care about one schedule we can extract it (though note that the result will still be an array of schedules).
 
-	>>> result = xml_runner.run_filing_single_schedule(201533089349301428, 'IRS990ScheduleJ')
+	>>> result = xml_runner.run_schedule(201533089349301428, 'IRS990ScheduleJ')
 
 Show the repeating groups that are present this schedule:
 
@@ -202,7 +215,7 @@ Show the schedule parts that are present:
 Delve into one:	
 	
 	>>> key_employees = result[0]['groups']['SkdJRltdOrgOffcrTrstKyEmpl']
-	>>> print(key_employees)
+	>>> print(len(key_employees))
 	20
 	>>> key_employees[0].keys()
 	
