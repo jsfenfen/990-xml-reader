@@ -32,7 +32,7 @@ class Runner(object):
                 doc_id = individual_sked['@documentId']
                 self.logging.info(
                     "Repeating sked K id=%s object_id=%s"
-                    % (sked, doc_id, object_id)
+                    % (doc_id, object_id)
                 )
                 reader = SkedDictReader(
                     self.standardizer,

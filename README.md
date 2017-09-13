@@ -1,6 +1,7 @@
 # irsx
 
 ## Quickstart
+We're using the "object_id" 201533089349301428 to refer to the Dec. 2014 990 filed by "Sutter Health Sacramento Region", which is described in the 2016 [index file](. 
 
 	>>> from irsx.runner import Runner
 	>>> xml_runner = Runner()
@@ -36,7 +37,12 @@ The tax returns are complex--the easiest way to understand them is to consult th
 Installing the library will also install the irsx command line tool, which uses the IRS' object_ids to reference a particular filing. This will just spit out a json representation of the entire filing. See more about how to get an IRS object_id and how to read the data format that's returned below.
 
 	$ irsx 201533089349301428
-	[{"schedule_name": "ReturnHeader990x", "data": {"schedule_parts"...
+	[{"schedule_name": "ReturnHeader990x", "groups": {}, "schedule_parts": {"returnheader990x_part_i": {"object_id": 201533089349301428, "ein": "941156621", "RtrnHdr_RtrnTs": "2015-11-04T20:09:01-06:00",...
+
+
+Note that IRSX will download the file if it hasn't already--for more information about the location, use the --verbose option. IRSX by default will retrieve the file from the IRS' public Amazon S3 bucket. If you plan to work with a large collection of files, you may want to host xml on your own bucket, and use bulk tools like AWS CLI's sync to move many documents at once.
+
+
 
 We could have saved it to a file with using the '>' to redirect the output
 
@@ -46,16 +52,15 @@ The default format is json, but you can make it easier to read with the --format
 
 	$ irsx --format=txt 201533089349301428
 	[
-    {
+      {
         "schedule_name": "ReturnHeader990x",
         "data": {
             "schedule_parts": {
                 "returnheader990x_part_i": {
                     "object_id": 201533089349301428,
-                    "ein": "941156621",
-                    "RtrnHdr_RtrnTs": "2015-11-04T20:09:01-06:00",
-                    "RtrnHdr_TxPrdEndDt": "2014-12-31",
 	                    ...
+	           	"part_i
+
 	                    
 That's better, but it's still really hard to follow. Use the --documentation flag in text format to make this easier to follow: 
 

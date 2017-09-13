@@ -67,28 +67,40 @@ def run_main(args_read):
     for object_id in args_read.object_ids:
         if args_read.verbose:
             print("Processing filing %s" % object_id)
-        this_filing = Filing(object_id)
-        this_filing.process(verbose=args_read.verbose)
 
         if args_read.list_schedules:
+            this_filing = Filing(object_id)
+            this_filing.process()
             print(this_filing.list_schedules())
 
         elif args_read.schedule:
-            result = xml_runner.run_sked(object_id, args_read.schedule,
-                                            verbose=args_read.verbose)
+            result = xml_runner.run_sked(
+                object_id,
+                args_read.schedule,
+                verbose=args_read.verbose
+            )
             if args_read.format == 'json':
                 to_json(result, args_read.encoding)
             else:
-                format_for_text(result, standardizer=standardizer,
-                                documentation=args_read.documentation)
+                format_for_text(
+                    result,
+                    standardizer=standardizer,
+                    documentation=args_read.documentation
+                )
+
         else:
-            result = xml_runner.run_filing(object_id,
-                                        verbose=args_read.verbose)
+            result = xml_runner.run_filing(
+                object_id,
+                verbose=args_read.verbose
+            )
             if args_read.format == 'json':
                 to_json(result, args_read.encoding)
             else:
-                format_for_text(result, standardizer=standardizer,
-                                    documentation=args_read.documentation)
+                format_for_text(
+                    result,
+                    standardizer=standardizer,
+                    documentation=args_read.documentation
+                )
 
 
 def main(args=None):

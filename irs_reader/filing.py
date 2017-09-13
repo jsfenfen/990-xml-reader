@@ -41,10 +41,11 @@ class Filing(object):
                 if verbose:
                     print(
                         "File already available at %s -- skipping "
-                        % self.filepath
+                        % (self.filepath)
                     )
                 return False
         stream_download(self.URL, self.filepath, verbose=verbose)
+        return True
 
     def _set_dict_from_xml(self):
         with open(self.filepath, 'r') as fh:
