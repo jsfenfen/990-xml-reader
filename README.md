@@ -16,7 +16,7 @@ IRSX is a python library and command line tool to simplify working with nonprofi
 
 From the command line, xml files can be output as machine readable json, or human readable text, optionally with documentation. From within a python program, the results are returned as native data structures. 
 
-The tax returns are complex--the easiest way to understand them is to consult the metadata csv files [link], and cross reference these to the forms in sample\_schedules (which contains recent pdf versions of the schedules).  The data returned for each schedule read contains schedule parts (see the schedule\_parts.csv for all possible parts) and repeating groups (see groups.csv) that occur within that schedule. Both repeating groups and schedule\_parts contain variables, which are documented in the variables.csv table. 
+The tax returns are complex--the easiest way to understand them is to consult the [metadata csv files](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata), and cross reference these to the forms in [sample\_schedules](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/sample_schedules) (which contains recent pdf versions of the schedules).  The data returned for each schedule read contains schedule parts (see the schedule\_parts.csv for all possible parts) and repeating groups (see groups.csv) that occur within that schedule. Both repeating groups and schedule\_parts contain variables, which are documented in the variables.csv table. 
 
 
 
