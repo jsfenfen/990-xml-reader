@@ -11,7 +11,7 @@ def configure_logging(name=LOG_KEY):
 
     # Setup console logging
     ch = logging.StreamHandler()
-    ch.setLevel(logging.DEBUG)
+    ch.setLevel(logging.WARNING)
     ch.setFormatter(formatter)
     logger.addHandler(ch)
 

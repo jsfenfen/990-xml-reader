@@ -1,0 +1,2 @@
+include README.md
+recursive-include irs_reader/metadata *

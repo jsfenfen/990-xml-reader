@@ -1,7 +1,7 @@
 # irsx
 
 ## Quickstart
-We're using the "object_id" 201533089349301428 to refer to the Dec. 2014 990 filed by "Sutter Health Sacramento Region", which is described in the 2016 [index file](. 
+We're using the "object_id" 201533089349301428 to refer to the Dec. 2014 990 filed by "Sutter Health Sacramento Region", which is described in the [2016 index file](https://s3.amazonaws.com/irs-form-990/index_2016.csv). 
 
 	>>> from irsx.runner import Runner
 	>>> xml_runner = Runner()
