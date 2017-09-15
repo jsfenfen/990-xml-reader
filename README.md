@@ -27,7 +27,7 @@ IRSX is a python library and command line tool to simplify working with nonprofi
 
 From the command line, xml files can be output as machine readable json, or human readable text, optionally with documentation. From within a python program, the results are returned as native data structures. 
 
-The tax returns are complex--the easiest way to understand them is to consult the [metadata csv files](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata), and cross reference these to the forms in [sample\_schedules](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/sample_schedules) (which contains recent pdf versions of the schedules).  The data returned for each schedule read contains schedule parts (see the schedule\_parts.csv for all possible parts) and repeating groups (see groups.csv) that occur within that schedule. Both repeating groups and schedule\_parts contain variables, which are documented in the variables.csv table. 
+The tax returns are complex--the easiest way to understand them is to consult the [metadata csv files](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata), and cross reference these to the forms in [sample\_schedules](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/sample_schedules) (which contains recent pdf versions of the schedules).  The data returned for each schedule read contains schedule parts (see the [schedule\_parts.csv](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata/schedule_parts.csv) for all possible parts) and repeating groups (see [groups.csv](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata/groups.csv)) that occur within that schedule. Both repeating groups and schedule\_parts contain variables, which are documented in the [variables.csv](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata/variables.csv) table. 
 
 
 
@@ -50,8 +50,26 @@ Installing the library will also install the irsx command line tool, which uses 
 	[{"schedule_name": "ReturnHeader990x", "groups": {}, "schedule_parts": {"returnheader990x_part_i": {"object_id": 201533089349301428, "ein": "941156621", "RtrnHdr_RtrnTs": "2015-11-04T20:09:01-06:00",...
 
 
-Note that IRSX will download the file if it hasn't already--for more information about the location, use the --verbose option. IRSX by default will retrieve the file from the IRS' public Amazon S3 bucket. If you plan to work with a large collection of files, you may want to host xml on your own bucket, and use bulk tools like AWS CLI's sync to move many documents at once.
+The general structure of the return is an array of schedules:
 
+	[
+	      {
+	        "schedule_name": <Schedule Name>,
+	        "schedule_parts": {
+	                "<schedule part name>": { dictionary of variables in this part },
+	                	...
+	        "groups": {
+	        	"<group name>":
+	        		[ Array of groups of this name that were found
+	        			{ dictionary of variables in this group }
+	        		]
+	        }, ... 
+	]
+	        
+	
+Each schedule part or repeating group includes the original object_id and ein of the filing as well as all the IRS variables. 
+
+Note that IRSX will download the file if it hasn't already--for more information about the location, use the --verbose option. IRSX by default will retrieve the file from the IRS' public Amazon S3 bucket. If you plan to work with a large collection of files, you may want to host xml on your own bucket, and use bulk tools like AWS CLI's sync to move many documents at once.
 
 
 We could have saved it to a file with using the '>' to redirect the output
