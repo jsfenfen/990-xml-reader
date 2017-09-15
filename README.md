@@ -76,7 +76,7 @@ We could have saved it to a file with using the '>' to redirect the output
 
 	$ irsx 201533089349301428 > 201533089349301428.json
 		
-The default format is json, but you can make it easier to read with the --format=txt switch, i.e. which makes it slightly more readable. The whole output is much longer, I've truncated here.
+The default format is json, but you can make it easier to read with the --format=txt switch. The whole output is much longer, I've truncated here.
 
 	$ irsx --format=txt 201533089349301428
 	[
