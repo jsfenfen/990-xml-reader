@@ -67,7 +67,7 @@ The general structure of the return is an array of schedules:
 	]
 	        
 	
-Each schedule part or repeating group includes the original object\_id and ein of the filing as well as all the IRS variables. The schedule\_part name and the group name are the values that appear in those respective .csv files in the [metadata directory](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata).
+Each schedule part or repeating group includes the original object\_id and ein of the filing as well as all the IRS variables. The schedule\_part name and the group name are the values that appear in those respective .csv files in the [metadata directory](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata). If a particular schedule, schedule part or repeating group has no values, it is not included.
 
 Note that IRSX will download the file if it hasn't already--for more information about the location, use the --verbose option. IRSX by default will retrieve the file from the IRS' public Amazon S3 bucket. If you plan to work with a large collection of files, you may want to host xml on your own bucket, and use bulk tools like AWS CLI's sync to move many documents at once.
 
