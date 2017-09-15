@@ -1,5 +1,15 @@
 # irsx
 
+## Table of Contents
+
+- [Quickstart](#quickstart)
+- [About](#about)
+- [Installation](#installation)
+- [Command line irsx](#command-line-irsx)
+- [irsx_index](#irsx_index)
+- [Developer directions](#developer-directions)
+- [Testing](#testing)
+
 ## Quickstart
 We're using the "object_id" 201533089349301428 to refer to the Dec. 2014 990 filed by "Sutter Health Sacramento Region", which is described in the [2016 index file](https://s3.amazonaws.com/irs-form-990/index_2016.csv). 
 
@@ -33,7 +43,7 @@ The tax returns are complex--the easiest way to understand them is to consult th
 - To see if it's installed, run `$ pip freeze`; if you see a line line 'irsx==0.0.1' it is installed. 
 
 
-## irsx -- command line
+## command line irsx
 Installing the library will also install the irsx command line tool, which uses the IRS' object_ids to reference a particular filing. This will just spit out a json representation of the entire filing. See more about how to get an IRS object_id and how to read the data format that's returned below.
 
 	$ irsx 201533089349301428
@@ -255,9 +265,9 @@ Delve into one:
 
 
 
-## Introduction to the IRS' MEF 990 XML
+## irsx_index 
 
-### irsx_index : Get the index files, --year[ly]
+### Get the index files, --year[ly]
 
 The IRS maintains annual index files, from 2011 forwards, of what filings have been received electronically and approved for release. Use the utility command, '$ irsx_index' to retrieve them all, or use the --year option to pick just one. Here we just grab 2017. Note that the --verbose flag is on, so that it'll say where the file is saved to. 
 
@@ -275,7 +285,7 @@ The location is specified in the settings file, but by default it'll go into a s
 	
 
 
-# Dev directions
+# Developer directions
 
 #### To use without installing via pip
 
