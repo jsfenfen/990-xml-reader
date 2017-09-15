@@ -1,5 +1,4 @@
-from setuptools import setup
-#from distutils.core import setup
+from distutils.core import setup
 import os
 
 NAME = 'irsx'
@@ -26,7 +25,7 @@ setup(name=HUMAN_NAME,
       keywords = ['990', 'nonprofit', 'tax'],
       entry_points = {
           "console_scripts": ["irsx=irsx.irsx_cli:main",
-                              "irsx_index=irsx.irsx_cli_index:main"]
+                              "irsx_index=irsx.irsx_index_cli:main"]
       },
       classifiers=[
           # How mature is this project? Common values are

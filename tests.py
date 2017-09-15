@@ -17,8 +17,8 @@ from irs_reader .object_ids import object_ids_2017, \
 # For running cli stuff
 from irs_reader.irsx_cli import run_main as run_cli_main, \
     get_parser as get_cli_parser
-from irs_reader.irsx_index_cli import run_main as run_cli_index_main, \
-    get_parser as get_cli_index_parser
+from irs_reader.irsx_index_cli import run_cli_index_main, \
+    get_cli_index_parser
 
 
 FILING_2015V21 = '201642229349300909'
@@ -40,7 +40,7 @@ FILING_2014V50_skeds = [
 ]
 
 # don't bother testing every filing in tests
-TEST_DEPTH = 100
+TEST_DEPTH = 10
 
 # When set to false don't test download files that are already there.
 # Runs faster set to off!

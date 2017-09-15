@@ -8,7 +8,7 @@ this_year = date.today().year
 INDEXED_YEARS = [str(i) for i in range(2011, this_year+1)]
 
 
-def get_parser():
+def get_cli_index_parser():
     parser = argparse.ArgumentParser("Irsreader")
     parser.add_argument(
         "--year",
@@ -38,7 +38,7 @@ def get_indexfile_by_year(year, verbose=False):
     stream_download(remoteurl, localpath, verbose=verbose)
 
 
-def run_main(args_read):
+def run_cli_index_main(args_read):
     if args_read.year:
         get_indexfile_by_year(args_read.year, verbose=args_read.verbose)
     else:
