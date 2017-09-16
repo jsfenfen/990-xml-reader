@@ -6,7 +6,8 @@
 - [About](#about)
 - [Installation](#installation)
 - [Command line irsx](#command-line-irsx)
-- [irsx_index](#irsx_index)
+- [Find an object_id](#getting-an-object-id)
+- [irsx_index: get yearly index files](#irsx_index) 
 - [Developer directions](#developer-directions)
 - [Testing](#testing)
 
@@ -23,7 +24,7 @@ We're using the "object_id" 201533089349301428 to refer to the Dec. 2014 990 fil
 
 ## About
 
-IRSX is a python library and command line tool to simplify working with nonprofit tax returns [released](https://aws.amazon.com/public-datasets/irs-990/) by the IRS in XML format. The library currently standarizes returns submitted in formats dating from 2013 and forwards into consistently named datastructures that follow the same format as the "paper" 990. Repeating elements, such as the salary disclosed for best compensated employees, appear at the end of each schedule. We hope to release further data that will allow processing of earlier forms.
+IRSX is a python library and command line tool to simplify working with nonprofit tax returns [released](https://aws.amazon.com/public-datasets/irs-990/) by the IRS in XML format. The library currently standarizes returns submitted in formats dating from 2013 and forwards into consistently named datastructures that follow the same format as the "paper" 990. Repeating elements, such as the salary disclosed for best compensated employees, appear at the end of each schedule. We plan to release updated metadata that will allow processing of earlier forms.
 
 From the command line, xml files can be output as machine readable json, or human readable text, optionally with documentation. From within a python program, the results are returned as native data structures. 
 
