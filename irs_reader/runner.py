@@ -51,7 +51,7 @@ class Runner(object):
                 })
         else:
             reader = SkedDictReader(
-                standardizer,
+                self.standardizer,
                 self.group_dicts,
                 object_id,
                 ein,
