@@ -7,7 +7,7 @@ from .type_utils import listType
 from .settings import WORKING_DIRECTORY, ALLOWED_VERSIONSTRINGS
 
 
-class Runner(object):
+class XMLRunner(object):
     """ Persist a Standardizer while processing multiple filings
         Probably needs a better name. Logging in progress
     """
@@ -64,11 +64,11 @@ class Runner(object):
                 'schedule_parts': result['schedule_parts']
             })
 
-    def run_schedule(self, sked, object_id, sked_dict, ein):
+    def _run_schedule(self, sked, object_id, sked_dict, ein):
         path_root = "/" + sked
         # Only sked K is allowed to repeat
         if sked == 'IRS990ScheduleK':
-            self.run_schedule_k(sked, object_id, sked_dict, path_root, ein)
+            self._run_schedule_k(sked, object_id, sked_dict, path_root, ein)
 
         else:
             reader = SkedDictReader(
@@ -99,15 +99,42 @@ class Runner(object):
             whole_filing_data = []
             for sked in schedules:
                 sked_dict = this_filing.get_schedule(sked)
-                self.run_schedule(sked, object_id, sked_dict, ein)
+                self._run_schedule(sked, object_id, sked_dict, ein)
 
-            return self.whole_filing_data
+            this_filing.set_result(self.whole_filing_data)
+            return this_filing
         else:
             self.logging.info(
                 "** Skipping %s with unsupported version string %s"
                 % (object_id, this_version)
             )
-            return None
+            return this_filing
+
+    def run_from_filing_obj(self, this_filing, verbose=False):  
+        """
+         Assumes an unprocessed filing.
+        """
+
+        this_filing.process(verbose=verbose)
+        object_id = this_filing.get_object_id()
+        this_version = this_filing.get_version()
+        if this_version in ALLOWED_VERSIONSTRINGS:
+            this_version = this_filing.get_version()
+            schedules = this_filing.list_schedules()
+            ein = this_filing.get_ein()
+            whole_filing_data = []
+            for sked in schedules:
+                sked_dict = this_filing.get_schedule(sked)
+                self._run_schedule(sked, object_id, sked_dict, ein)
+            this_filing.set_result(self.whole_filing_data)
+            return this_filing
+        else:
+            self.logging.info(
+                "** Skipping %s with unsupported version string %s"
+                % (object_id, this_version)
+            )
+            return this_filing
+
 
     def run_sked(self, object_id, sked, verbose=False):
         """
@@ -124,12 +151,13 @@ class Runner(object):
             ein = this_filing.get_ein()
             whole_filing_data = []
             sked_dict = this_filing.get_schedule(sked)
-            self.run_schedule(sked, object_id, sked_dict, ein)
+            self._run_schedule(sked, object_id, sked_dict, ein)
 
-            return self.whole_filing_data
+            this_filing.set_result(self.whole_filing_data)
+            return this_filing
         else:
             self.logging.info(
                 "** Skipping %s with unsupported version string %s"
                 % (object_id, this_version)
             )
-            return None
+            return this_filing

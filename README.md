@@ -14,10 +14,10 @@
 ## Quickstart
 We're using the "object_id" 201533089349301428 to refer to the Dec. 2014 990 filed by "Sutter Health Sacramento Region", which is described in the [2016 index file](https://s3.amazonaws.com/irs-form-990/index_2016.csv). 
 
-	>>> from irsx.runner import Runner
-	>>> xml_runner = Runner()
-	>>> result = xml_runner.run_schedule(201533089349301428, 'IRS990ScheduleJ')
-	>>> key_employees = result[0]['groups']['SkdJRltdOrgOffcrTrstKyEmpl']
+	>>> from irsx.xmlrunner import XMLRunner
+	>>> xml_runner = XMLRunner()
+	>>> parsed_filing = xml_runner.run_schedule(201533089349301428, 'IRS990ScheduleJ')
+	>>> key_employees = parsed_filing.get_result()[0]['groups']['SkdJRltdOrgOffcrTrstKyEmpl']
 	>>> for employee in key_employees:                                                                
 		  print(employee['PrsnNm'])
 
@@ -227,13 +227,14 @@ Let's use Sutter Health Sacramento Sierra Region's 12/2014 filing, which has an 
 Much broader functionality is available by running from within python.
 
 
-	>>> from irsx.runner import Runner
-	>>> xml_runner = Runner()
+	>>> from irsx.runner import XMLRunner
+	>>> xml_runner = XMLRunner()
 	>>> result = xml_runner.run_filing(201533089349301428)
 
 Result is an array of schedules; each schedule's name can be accessed as result[i]['schedule_name']. Note that this filing has *3* different schedule K's in it. Only schedule K is allowed to repeat--all other lettered schedules (i.e. Schedules A-O and R) may only appear once. If we only care about one schedule we can extract it (though note that the result will still be an array of schedules).
 
-	>>> result = xml_runner.run_schedule(201533089349301428, 'IRS990ScheduleJ')
+	>>> parsed_filing = xml_runner.run_schedule(201533089349301428, 'IRS990ScheduleJ')
+	>>> result = parsed_filing.get_result()
 
 Show the repeating groups that are present this schedule:
 

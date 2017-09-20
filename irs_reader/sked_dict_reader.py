@@ -191,7 +191,7 @@ class SkedDictReader(object):
                 process_normal = False
             self._process_group(json_node, parent_path, this_group)
 
-        elif this_node_type == orderedDictType:
+        elif this_node_type == orderedDictType or this_node_type == dictType:
 
             try:
                 # is it a singleton group?

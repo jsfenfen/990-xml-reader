@@ -2,7 +2,7 @@ import argparse
 
 from .filing import Filing
 from .settings import KNOWN_SCHEDULES
-from .runner import Runner
+from .xmlrunner import XMLRunner
 from .text_format_utils import to_json, print_documented_vars, \
     print_part_start, write_ordered_documentation, format_for_text
 
@@ -60,7 +60,7 @@ def get_parser():
 
 
 def run_main(args_read):
-    xml_runner = Runner(documentation=args_read.documentation)
+    xml_runner = XMLRunner(documentation=args_read.documentation)
     # Use the standardizer that was init'ed by Runner
     standardizer = xml_runner.get_standardizer()
 
@@ -74,34 +74,32 @@ def run_main(args_read):
             print(this_filing.list_schedules())
 
         elif args_read.schedule:
-            result = xml_runner.run_sked(
+            parsed_filing = xml_runner.run_sked(
                 object_id,
                 args_read.schedule,
                 verbose=args_read.verbose
             )
             if args_read.format == 'json':
-                to_json(result, args_read.encoding)
+                to_json(parsed_filing.get_result(), args_read.encoding)
             else:
                 format_for_text(
-                    result,
+                    parsed_filing.get_result(),
                     standardizer=standardizer,
                     documentation=args_read.documentation
                 )
-
         else:
-            result = xml_runner.run_filing(
+            parsed_filing = xml_runner.run_filing(
                 object_id,
                 verbose=args_read.verbose
             )
             if args_read.format == 'json':
-                to_json(result, args_read.encoding)
+                to_json(parsed_filing.get_result(), args_read.encoding)
             else:
                 format_for_text(
-                    result,
+                    parsed_filing.get_result(),
                     standardizer=standardizer,
                     documentation=args_read.documentation
                 )
-
 
 def main(args=None):
     parser = get_parser()

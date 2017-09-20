@@ -10,25 +10,36 @@ from .settings import KNOWN_SCHEDULES, IRS_READER_ROOT
 
 class Filing(object):
 
-    def __init__(self, object_id, filepath=None, URL=None):
+    def __init__(self, object_id, filepath=None, URL=None, json=None):
         """ Filepath is the location of the file locally;
             URL is it's remote location (if not default)
             Ignore these and defaults will be used.
             If filepath is set, URL is ignored.
+            json is a json representation of the data, so if given, 
+            no file will be downloaded.
         """
         self.raw_irs_dict = None        # The parsed xml will go here
         self.version_string = None      # Version number here
 
         self.object_id = validate_object_id(object_id)
-        if filepath:
-            self.filepath = filepath
-        else:
-            self.filepath = get_local_path(self.object_id)
+        self.result = None
+        self.processed = False
 
-            if URL:
-                self.URL = URL
+        if json:
+            self.json = json
+            self.input_type = 'json'
+        else:
+            self.json = None
+            self.input_type = 'xml'
+            if filepath:
+                self.filepath = filepath
             else:
-                self.URL = get_s3_URL(self.object_id)
+                self.filepath = get_local_path(self.object_id)
+
+                if URL:
+                    self.URL = URL
+                else:
+                    self.URL = get_s3_URL(self.object_id)
 
     def _download(self, force_overwrite=False, verbose=False):
         """
@@ -52,6 +63,9 @@ class Filing(object):
             raw_file = fh.read()
             self.raw_irs_dict = xmltodict.parse(raw_file)
 
+    def _set_dict_from_json(self):
+        self.raw_irs_dict = self.json
+
     def _set_version(self):
         self.version_string = self.raw_irs_dict['Return']['@returnVersion']
 
@@ -68,6 +82,9 @@ class Filing(object):
                     self.schedules.append(sked)
                 else:
                     self.otherforms.append(sked)
+
+    def get_object_id(self):
+        return self.object_id
 
     def get_schedule(self, skedname):
         if skedname == 'ReturnHeader990x':
@@ -98,9 +115,47 @@ class Filing(object):
     def list_schedules(self):
         return self.schedules
 
+    def set_result(self, result):
+        self.result = result
+
+    def get_result(self):
+        return self.result
+
+    def get_type(self):
+        if 'IRS990' in self.schedules:
+            return 'IRS990'
+        elif 'IRS990EZ' in self.schedules:
+            return 'IRS990EZ'
+        elif 'IRS990PF' in self.schedules:
+            return 'IRS990PF'    
+        else:
+            raise Exception("Missing 990, 990EZ and 990PF-is this filing valid?")
+
+    def get_parsed_sked(self, skedname):
+        """ Returns an array because multiple sked K's are allowed"""
+        if not self.processed:
+            raise Exception("Filing must be processed to return parsed sked")
+        if skedname in self.schedules:
+            matching_skeds = []
+            for sked in self.result:
+                if sked['schedule_name']==skedname:
+                    matching_skeds.append(sked)
+            return matching_skeds
+        else:
+            return []
+
+
     def process(self, verbose=False):
-        self._download(verbose=verbose)
-        self._set_dict_from_xml()
-        self._set_version()
-        self._set_ein()
-        self._set_schedules()
+        # don't reprocess inadvertently
+        if not self.processed:
+            self.processed=True
+            if self.json:
+                self._set_dict_from_json()
+            else:
+                self._download(verbose=verbose)
+                self._set_dict_from_xml()
+
+            self._set_version()
+            self._set_ein()
+            self._set_schedules()
+

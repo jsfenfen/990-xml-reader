@@ -1,4 +1,5 @@
 import os
+import json
 from unittest import TestCase
 
 from irs_reader.file_utils import validate_object_id
@@ -7,7 +8,7 @@ from irs_reader.settings import WORKING_DIRECTORY, ALLOWED_VERSIONSTRINGS
 from irs_reader.standardizer import Standardizer
 from irs_reader.sked_dict_reader import SkedDictReader
 from irs_reader.type_utils import listType
-from irs_reader.runner import Runner
+from irs_reader.xmlrunner import XMLRunner
 
 
 # some test ids
@@ -71,75 +72,36 @@ def test_process_with_filepath():
     assert a.get_version() == '2015v2.1'
 
 
+# test without runner
 class TestConversion:
     """ Still doesn't validate actual values, but... """
 
     def setUp(self):
-        self.standardizer = Standardizer()
-        self.group_dicts = self.standardizer.get_groups()
-
-    def run_filing(self, object_id, group_dicts):
-        this_filing = Filing(object_id)
-        this_filing.process(verbose=False)
-        this_version = this_filing.get_version()
-        if this_version in ALLOWED_VERSIONSTRINGS:
-            schedules = this_filing.list_schedules()
-            ein = this_filing.get_ein()
-            whole_filing_data = []
-            for sked in schedules:
-                sked_dict = this_filing.get_schedule(sked)
-                path_root = "/" + sked
-
-                # Only sked K is allowed to repeat
-                if sked == 'IRS990ScheduleK':
-                    if type(sked_dict) == listType:
-                        for individual_sked in sked_dict:
-                            doc_id = individual_sked['@documentId']
-                            reader = SkedDictReader(
-                                    self.standardizer,
-                                    self.group_dicts,
-                                    object_id,
-                                    ein,
-                                    documentId=doc_id
-                            )
-                            result = reader.parse(
-                                individual_sked,
-                                parent_path=path_root
-                            )
-                    else:
-                        reader = SkedDictReader(
-                                self.standardizer,
-                                self.group_dicts,
-                                object_id, ein
-                        )
-                        result = reader.parse(
-                                sked_dict,
-                                parent_path=path_root
-                        )
-                else:
-                    reader = SkedDictReader(
-                            self.standardizer,
-                            self.group_dicts,
-                            object_id,
-                            ein
-                    )
-                    if sked == 'ReturnHeader990x':
-                        path_root = "/ReturnHeader"
-                    result = reader.parse(sked_dict, parent_path=path_root)
-        else:
-            print("unsupported version %s %s" % (this_version, object_id))
+        self.xml_runner = XMLRunner()
 
     def test_case_1(self):
-        object_id = FILING_2015V21
-        group_dicts = self.standardizer.get_groups()
-        self.run_filing(object_id, group_dicts)
+        parsed_filing = self.xml_runner.run_filing(FILING_2015V21)
 
     def test_case_2(self):
         object_ids = object_ids_2017[:TEST_DEPTH] \
             + object_ids_2016[:TEST_DEPTH] + object_ids_2015[:TEST_DEPTH]
-        group_dicts = self.standardizer.get_groups()
         for object_id in object_ids:
-            self.run_filing(object_id, group_dicts)
+            self.xml_runner.run_filing(object_id)
+
+class TestRunner:
+    """ Test using runner class """
+
+    def setUp(self):
+        self.xml_runner = XMLRunner()
+
+    def test1(self):
+        parsed_filing = self.xml_runner.run_filing(FILING_2015V21)
+        assert parsed_filing.get_type()=='IRS990'
+        parsed_filing_schedules = parsed_filing.list_schedules()
+        for sked in FILING_2015V21_skeds:
+            assert sked in parsed_filing_schedules
+            parsed_filing.get_parsed_sked(sked)
+
 
 
 class TestWithDownload:
@@ -202,3 +164,17 @@ class TestCommandLine_Index:
         # Does it run? Output is to the 2017 index file.
         if DOWNLOAD:
             run_cli_index_main(args)
+"""
+    # using installed lib:
+    from irsx.xmlrunner import XMLRunner
+    from irsx.filing import Filing
+
+    Todo: test json entry, need it not from a file.
+    object_id = '201612439349300026'
+    with open('irs_reader/t1.json') as json_data:
+        string_json = json.load(json_data)
+    nf = Filing(object_id, json=string_json)
+    xml_runner = XMLRunner()
+    result = xml_runner.run_from_filing_obj(nf)
+    print(result)
+"""
