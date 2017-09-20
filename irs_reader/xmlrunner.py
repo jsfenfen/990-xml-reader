@@ -25,7 +25,7 @@ class XMLRunner(object):
         """ Sometimes it's handy to have access to it from outside """
         return self.standardizer
 
-    def run_schedule_k(self, sked, object_id, sked_dict, path_root, ein):
+    def _run_schedule_k(self, sked, object_id, sked_dict, path_root, ein):
         assert sked == 'IRS990ScheduleK'
         if type(sked_dict) == listType:
             for individual_sked in sked_dict:

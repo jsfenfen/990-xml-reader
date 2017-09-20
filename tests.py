@@ -102,6 +102,16 @@ class TestRunner:
             assert sked in parsed_filing_schedules
             parsed_filing.get_parsed_sked(sked)
 
+    def test_multiple_sked_ks(self):
+        parsed_filing = self.xml_runner.run_filing(FILING_2014V50)
+        assert parsed_filing.get_type()=='IRS990'
+        parsed_filing_schedules = parsed_filing.list_schedules()
+        for sked in FILING_2014V50_skeds:
+            assert sked in parsed_filing_schedules
+            parsed_filing.get_parsed_sked(sked)
+
+            
+
 
 
 class TestWithDownload:
