@@ -1,7 +1,7 @@
 import os
 import sys
 import collections
-import logging
+#import logging
 from datetime import datetime
 from .settings import METADATA_DIRECTORY, KEYERROR_LOG
 from .sked_dict_reader import SkedDictReader

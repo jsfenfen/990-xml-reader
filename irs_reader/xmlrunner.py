@@ -1,7 +1,7 @@
 from .filing import Filing
 from .standardizer import Standardizer
 from .sked_dict_reader import SkedDictReader
-from .log_utils import configure_logging
+# from .log_utils import configure_logging
 from .type_utils import listType
 
 from .settings import WORKING_DIRECTORY, ALLOWED_VERSIONSTRINGS
@@ -23,7 +23,7 @@ class XMLRunner(object):
             else:
                 self.standardizer = Standardizer()
         self.group_dicts = self.standardizer.get_groups()
-        self.logging = configure_logging("BulkRunner")
+        # self.logging = configure_logging("BulkRunner")
         self.whole_filing_data = []
 
     def get_standardizer(self):
@@ -35,10 +35,10 @@ class XMLRunner(object):
         if type(sked_dict) == listType:
             for individual_sked in sked_dict:
                 doc_id = individual_sked['@documentId']
-                self.logging.info(
-                    "Repeating sked K id=%s object_id=%s"
-                    % (doc_id, object_id)
-                )
+                #self.logging.info(
+                #    "Repeating sked K id=%s object_id=%s"
+                #    % (doc_id, object_id)
+                #)
                 reader = SkedDictReader(
                     self.standardizer,
                     self.group_dicts,
@@ -109,10 +109,10 @@ class XMLRunner(object):
             this_filing.set_result(self.whole_filing_data)
             return this_filing
         else:
-            self.logging.info(
-                "** Skipping %s with unsupported version string %s"
-                % (object_id, this_version)
-            )
+            #self.logging.info(
+            #    "** Skipping %s with unsupported version string %s"
+            #    % (object_id, this_version)
+            #)
             return this_filing
 
     def run_from_filing_obj(self, this_filing, verbose=False):  
@@ -134,10 +134,10 @@ class XMLRunner(object):
             this_filing.set_result(self.whole_filing_data)
             return this_filing
         else:
-            self.logging.info(
-                "** Skipping %s with unsupported version string %s"
-                % (object_id, this_version)
-            )
+            #self.logging.info(
+            #    "** Skipping %s with unsupported version string %s"
+            #    % (object_id, this_version)
+            #)
             return this_filing
 
 
@@ -161,8 +161,8 @@ class XMLRunner(object):
             this_filing.set_result(self.whole_filing_data)
             return this_filing
         else:
-            self.logging.info(
-                "** Skipping %s with unsupported version string %s"
-                % (object_id, this_version)
-            )
+            #self.logging.info(
+            #    "** Skipping %s with unsupported version string %s"
+            #    % (object_id, this_version)
+            #)
             return this_filing
