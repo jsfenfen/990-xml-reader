@@ -11,18 +11,23 @@ class XMLRunner(object):
     """ Persist a Standardizer while processing multiple filings
         Probably needs a better name. Logging in progress
     """
-    def __init__(self, documentation=False):
+    def __init__(self, documentation=False, standardizer=None):
         self.documentation = documentation
+
         if documentation:
+            # we need a new standardizer, ignore one if passed in
             self.standardizer = Standardizer(documentation=documentation)
         else:
-            self.standardizer = Standardizer()
+            if standardizer:
+                self.standardizer = standardizer
+            else:
+                self.standardizer = Standardizer()
         self.group_dicts = self.standardizer.get_groups()
         self.logging = configure_logging("BulkRunner")
         self.whole_filing_data = []
 
     def get_standardizer(self):
-        """ Sometimes it's handy to have access to it from outside """
+        """ Sometimes it's handy to pass it off """
         return self.standardizer
 
     def _run_schedule_k(self, sked, object_id, sked_dict, path_root, ein):

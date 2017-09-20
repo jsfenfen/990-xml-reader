@@ -109,6 +109,9 @@ class TestRunner:
         for sked in FILING_2014V50_skeds:
             assert sked in parsed_filing_schedules
             parsed_filing.get_parsed_sked(sked)
+    def test_with_standardizer(self):
+        standardizer = Standardizer()
+        self.xml_runner = XMLRunner(standardizer=standardizer)
 
             
 

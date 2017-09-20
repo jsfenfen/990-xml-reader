@@ -35,6 +35,7 @@ class Standardizer(object):
             reader = csv.DictReader(reader_fh)
             for row in reader:
                 self.groups[row['xpath']] = row
+        return True
 
     def _make_schedule_parts(self):
         part_filepath = os.path.join(METADATA_DIRECTORY, 'schedule_parts.csv')
@@ -45,6 +46,7 @@ class Standardizer(object):
                     'name': row['part_name'],
                     'ordering': row['ordering']
                 }
+        return True
 
     def _make_variables(self):
         variable_filepath = os.path.join(METADATA_DIRECTORY, 'variables.csv')
@@ -65,6 +67,7 @@ class Standardizer(object):
                         'db_table': row['db_table'],
                         'db_name': row['db_name']
                     }
+        return True
 
     def get_groups(self):
         return self.groups
