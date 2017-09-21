@@ -121,6 +121,10 @@ class Filing(object):
     def get_result(self):
         return self.result
 
+    def get_unparsed_json(self):
+        """ Json dicts are unordered """ 
+        return json.dumps(self.raw_irs_dict)
+
     def get_type(self):
         if 'IRS990' in self.schedules:
             return 'IRS990'

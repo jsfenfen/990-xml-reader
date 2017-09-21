@@ -101,7 +101,7 @@ class XMLRunner(object):
             this_version = this_filing.get_version()
             schedules = this_filing.list_schedules()
             ein = this_filing.get_ein()
-            whole_filing_data = []
+            self.whole_filing_data = []
             for sked in schedules:
                 sked_dict = this_filing.get_schedule(sked)
                 self._run_schedule(sked, object_id, sked_dict, ein)
@@ -127,7 +127,7 @@ class XMLRunner(object):
             this_version = this_filing.get_version()
             schedules = this_filing.list_schedules()
             ein = this_filing.get_ein()
-            whole_filing_data = []
+            self.whole_filing_data = []
             for sked in schedules:
                 sked_dict = this_filing.get_schedule(sked)
                 self._run_schedule(sked, object_id, sked_dict, ein)
@@ -147,14 +147,13 @@ class XMLRunner(object):
         IRS990, IRS990EZ, IRS990PR, IRS990ScheduleA, etc.
         """
 
-        self.whole_filing_data = []
         this_filing = Filing(object_id)
         this_filing.process(verbose=verbose)
         this_version = this_filing.get_version()
         if this_version in ALLOWED_VERSIONSTRINGS:
             this_version = this_filing.get_version()
             ein = this_filing.get_ein()
-            whole_filing_data = []
+            self.whole_filing_data = []
             sked_dict = this_filing.get_schedule(sked)
             self._run_schedule(sked, object_id, sked_dict, ein)
 
