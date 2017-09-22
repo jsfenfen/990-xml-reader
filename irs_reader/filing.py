@@ -25,6 +25,9 @@ class Filing(object):
         self.result = None
         self.processed = False
 
+        self.keyerrors = None
+        self.group_keyerrors = None
+
         if json:
             self.json = json
             self.input_type = 'json'
@@ -51,7 +54,7 @@ class Filing(object):
             if os.path.isfile(self.filepath):
                 if verbose:
                     print(
-                        "File already available at %s -- skipping "
+                        "File already available at %s -- skipping"
                         % (self.filepath)
                     )
                 return False
@@ -121,6 +124,12 @@ class Filing(object):
     def get_result(self):
         return self.result
 
+    def set_keyerrors(self, keyerrorlist):
+        self.keyerrors = keyerrorlist
+
+    def get_keyerrors(self):
+        return self.keyerrors
+
     def get_unparsed_json(self):
         """ Json dicts are unordered """ 
         return json.dumps(self.raw_irs_dict)
@@ -148,7 +157,6 @@ class Filing(object):
         else:
             return []
 
-
     def process(self, verbose=False):
         # don't reprocess inadvertently
         if not self.processed:
@@ -162,4 +170,3 @@ class Filing(object):
             self._set_version()
             self._set_ein()
             self._set_schedules()
-

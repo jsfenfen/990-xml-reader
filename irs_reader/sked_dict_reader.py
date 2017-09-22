@@ -1,4 +1,4 @@
-import logging
+#import logging
 
 from .type_utils import dictType, orderedDictType, listType, \
     unicodeType, noneType, strType
@@ -11,6 +11,7 @@ class SkedDictReader(object):
     """
     We get an ordered dict back from xmltodict, but we want to "flatten" it
     into xpath-ed variables and repeated structures.
+    Will also work on reading xmltodict that was previously turned into json
     """
     def __init__(
         self,
@@ -26,13 +27,15 @@ class SkedDictReader(object):
         self.object_id = object_id
         self.ein = ein
         self.documentId = documentId
-        self.schedule_parts = {}  # allows one entry per filing
-        self.repeating_groups = {}  # multiple per filing
+        self.schedule_parts = {}         # allows one entry per filing
+        self.repeating_groups = {}       # multiple per filing
         self.groups = groups
-        self.logging = logging.getLogger(LOG_KEY)
         self.documentation = documentation
+        self.variable_keyerrors = []
+        self.group_keyerrors = []
 
         if self.documentation and not self.standardizer.get_documentation_status():
+            # Todo: split out documenter entirely so we don't have to do this
             raise Exception(
                 "Standardizer must be initialized with the \
                 documentation flag to load documentation"
@@ -92,12 +95,9 @@ class SkedDictReader(object):
                         this_var_data = self.standardizer.get_var(xpath)
                     except KeyError:
                         if not ignorable_keyerror(xpath):
-                            msg = "Key error %s in %s ein=%s" % (
-                                xpath,
-                                self.object_id,
-                                self.ein
+                            self.variable_keyerrors.append(
+                                {'element_path':xpath}
                             )
-                            self.logging.warning(msg)
                         continue
                     this_var_value = flattened_list_item[xpath]
                     this_var_name = this_var_data['db_name']
@@ -143,14 +143,12 @@ class SkedDictReader(object):
                         var_found = True
 
                     except KeyError:
-                        # pass through for some common key errors:
+                        # pass through for some common key errors
+                        # [ TODO: FIX THE KEYERRORS! ]
                         if not ignorable_keyerror(element_path):
-                            msg = "Key error %s in %s ein=%s" % (
-                                element_path,
-                                self.object_id,
-                                self.ein
+                            self.variable_keyerrors.append(
+                                {'element_path':element_path}
                             )
-                            self.logging.warning(msg)
                         var_found = False
 
                     if var_found:
@@ -177,18 +175,12 @@ class SkedDictReader(object):
         elif this_node_type == listType:
 
             this_group = None
-            process_normal = True
             try:
                 this_group = self.groups[element_path]
-
             except KeyError:
-                msg = "Group error %s in %s ein=%s" % (
-                    element_path,
-                    self.object_id,
-                    self.ein
+                self.group_keyerrors.append(
+                    {'element_path':element_path}
                 )
-                self.logging.warning(msg)
-                process_normal = False
             self._process_group(json_node, parent_path, this_group)
 
         elif this_node_type == orderedDictType or this_node_type == dictType:
@@ -209,7 +201,7 @@ class SkedDictReader(object):
 
         elif this_node_type == strType:
             msg = "String '%s'" % json_node
-            self.logging.debug(msg)
+            #self.logging.debug(msg)
         else:
             raise Exception("Unhandled type: %s" % (type(json_node)))
 
@@ -217,5 +209,7 @@ class SkedDictReader(object):
         self._parse_json(raw_ordered_dict, parent_path=parent_path)
         return ({
             'schedule_parts': self.schedule_parts,
-            'groups': self.repeating_groups
+            'groups': self.repeating_groups,
+            'keyerrors':self.variable_keyerrors,
+            'group_keyerrors':self.group_keyerrors
         })
