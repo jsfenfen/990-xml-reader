@@ -24,9 +24,7 @@ class Filing(object):
         self.object_id = validate_object_id(object_id)
         self.result = None
         self.processed = False
-
         self.keyerrors = None
-        self.group_keyerrors = None
 
         if json:
             self.json = json
@@ -129,7 +127,7 @@ class Filing(object):
 
     def get_keyerrors(self):
         return self.keyerrors
-
+        
     def get_unparsed_json(self):
         """ Json dicts are unordered """ 
         return json.dumps(self.raw_irs_dict)
