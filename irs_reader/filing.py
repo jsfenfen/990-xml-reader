@@ -1,11 +1,16 @@
 import os
 import xmltodict
 import json
+from xml.parsers.expat import ExpatError
 
 from .file_utils import stream_download, get_s3_URL, validate_object_id, \
     get_local_path
 
 from .settings import KNOWN_SCHEDULES, IRS_READER_ROOT
+
+
+class InvalidXMLException(Exception):
+    pass
 
 
 class Filing(object):
@@ -62,7 +67,22 @@ class Filing(object):
     def _set_dict_from_xml(self):
         with open(self.filepath, 'r') as fh:
             raw_file = fh.read()
-            self.raw_irs_dict = xmltodict.parse(raw_file)
+            try:
+                self.raw_irs_dict = xmltodict.parse(raw_file)
+            except ExpatError:
+                raise InvalidXMLException(
+                    "\nXML Parse error in " + self.filepath \
+                    + "\nFile may be damaged or incomplete.\n"\
+                    + "Try erasing this file and downloading again."
+                )
+            try:
+                self.raw_irs_dict['Return']
+            except KeyError:
+                raise InvalidXMLException(
+                    "'Return' element not located in" + self.filepath \
+                    + "\nFile may be damaged or incomplete.\n" \
+                    + "Try erasing this file and downloading again."
+                )
 
     def _set_dict_from_json(self):
         self.raw_irs_dict = self.json
@@ -140,7 +160,7 @@ class Filing(object):
         elif 'IRS990PF' in self.schedules:
             return 'IRS990PF'    
         else:
-            raise Exception("Missing 990, 990EZ and 990PF-is this filing valid?")
+            raise Exception("Missing 990/990EZ/990PF-is this filing valid?")
 
     def get_parsed_sked(self, skedname):
         """ Returns an array because multiple sked K's are allowed"""
