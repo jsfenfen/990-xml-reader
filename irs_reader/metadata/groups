@@ -36,8 +36,7 @@ IRS990EZ,ez_part_vi,8,/IRS990EZ/CompensationOfHghstPdCntrctGrp,EZCmpnstnOfHghstP
 IRS990ScheduleA,skeda_part_i,1,/IRS990ScheduleA/AgriculturalNameAndAddressGrp,SkdAAgrcltrlNmAndAddrss,,,,2016v3.0
 IRS990ScheduleA,skeda_part_i,2,/IRS990ScheduleA/HospitalNameAndAddressGrp,SkdAHsptlNmAndAddrss,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0;2016v3.0
 IRS990ScheduleA,skeda_part_i,3,/IRS990ScheduleA/SupportedOrgInformationGrp,SkdASpprtdOrgInfrmtn,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0;2016v3.0
-IRS990ScheduleA,skeda_part_vi,4,/IRS990ScheduleA/Form990ScheduleAPartIVGrp,SkdAFrm990SkdAPrtVI,,,,2013v3.0;2013v3.1;2013v4.0
-IRS990ScheduleA,skeda_part_vi,5,/IRS990ScheduleA/Form990ScheduleAPartVIGrp,SkdAFrm990SkdAPrtVI," Schedule A, Part VI", Supplemental information for schedule A,,2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0;2016v3.0
+IRS990ScheduleA,skeda_part_vi,4,/IRS990ScheduleA/Form990ScheduleAPartVIGrp,SkdAFrm990SkdAPrtVI," Schedule A, Part VI", Supplemental information for schedule A,,2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0;2016v3.0
 IRS990ScheduleB,skedb_part_i,1,/IRS990ScheduleB/ContributorInformationGrp,SkdBCntrbtrInfrmtn,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0;2016v3.0
 IRS990ScheduleB,skedb_part_ii,2,/IRS990ScheduleB/CharitableContributionsDetail,SkdBChrtblCntrbtnsDtl,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0;2016v3.0
 IRS990ScheduleB,skedb_part_ii,3,/IRS990ScheduleB/NonCashPropertyContributionGrp,SkdBNnCshPrprtyCntrbtn,,,,2013v3.0;2013v3.1;2013v4.0;2014v5.0;2014v6.0;2015v2.0;2015v2.1;2015v3.0;2016v3.0
