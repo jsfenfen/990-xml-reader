@@ -31,8 +31,8 @@ class SkedDictReader(object):
         self.repeating_groups = {}       # multiple per filing
         self.groups = groups
         self.documentation = documentation
-        self.variable_keyerrors = []
-        self.group_keyerrors = []
+        self.variable_keyerrors = []    # record any unexpected variables
+        self.group_keyerrors = []       # or unexpected groups
 
         if self.documentation and not self.standardizer.get_documentation_status():
             # Todo: split out documenter entirely so we don't have to do this

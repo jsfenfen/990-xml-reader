@@ -100,6 +100,8 @@ class XMLRunner(object):
         this_filing = Filing(object_id)
         this_filing.process(verbose=verbose)
         this_version = this_filing.get_version()
+        if verbose:
+            print("Filing %s is version %s" % (object_id, this_version))
         if this_version in ALLOWED_VERSIONSTRINGS:
             this_version = this_filing.get_version()
             schedules = this_filing.list_schedules()
@@ -111,6 +113,11 @@ class XMLRunner(object):
 
             this_filing.set_result(self.whole_filing_data)
             this_filing.set_keyerrors(self.filing_keyerr_data)
+            if verbose:
+                if len(self.filing_keyerr_data)>0:
+                    print("In %s keyerrors: %s" % (object_id, self.filing_keyerr_data))
+                else:
+                    print("No keyerrors found")
             return this_filing
         else:
             return this_filing
