@@ -78,11 +78,14 @@ class SkedDictReader(object):
 
     def _process_group(self, json_node, path, this_group):
         for node in json_node:
+            #print("_process_group %s %s" % (node, path))
             this_node_type = type(node)
             flattened_list_item = None
             if this_node_type == unicodeType:
-                flattened_list_item = {path: json_node}
+                #print("_pg: unicodeType %s ")
+                flattened_list_item = {path: node}
             else:
+                #print("_pg: NOT unicodeType")
                 flattened_list_item = flatten(node, parent_key=path, sep='/')
             table_name = None
             standardized_group_dict = self._get_table_start()
@@ -122,7 +125,20 @@ class SkedDictReader(object):
     def _parse_json(self, json_node, parent_path=""):
         this_node_type = type(json_node)
         element_path = parent_path
-        if this_node_type == unicodeType:
+
+        if this_node_type == listType:
+            #print("List type %s" % element_path)
+
+            this_group = None
+            try:
+                this_group = self.groups[element_path]
+            except KeyError:
+                self.group_keyerrors.append(
+                    {'element_path':element_path}
+                )
+            self._process_group(json_node, parent_path, this_group)
+
+        elif this_node_type == unicodeType:
             # but ignore it if is an @ or # - we get @docId elsewhere
             if '@' in element_path or '#' in element_path:
                 pass
@@ -172,16 +188,6 @@ class SkedDictReader(object):
                             self.schedule_parts[table_name] = self._get_table_start()
                             self.schedule_parts[table_name][var_name] = result
 
-        elif this_node_type == listType:
-
-            this_group = None
-            try:
-                this_group = self.groups[element_path]
-            except KeyError:
-                self.group_keyerrors.append(
-                    {'element_path':element_path}
-                )
-            self._process_group(json_node, parent_path, this_group)
 
         elif this_node_type == orderedDictType or this_node_type == dictType:
 

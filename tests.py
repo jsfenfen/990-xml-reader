@@ -113,9 +113,6 @@ class TestRunner:
         standardizer = Standardizer()
         self.xml_runner = XMLRunner(standardizer=standardizer)
 
-            
-
-
 
 class TestWithDownload:
     def setUp(self):
@@ -153,6 +150,11 @@ class TestCommandLine:
         run_cli_main(args)
 
     def test_cli_3(self):
+        test_args = ['--schedule', 'IRS990', FILING_2014V50]
+        args = self.parser.parse_args(test_args)
+        run_cli_main(args)
+
+    def test_cli_4(self):
         # dump only main 990 in text format
         test_args = [
             '--schedule',
@@ -177,7 +179,9 @@ class TestCommandLine_Index:
         # Does it run? Output is to the 2017 index file.
         if DOWNLOAD:
             run_cli_index_main(args)
+
 """
+    # from json
     # using installed lib:
     from irsx.xmlrunner import XMLRunner
     from irsx.filing import Filing
