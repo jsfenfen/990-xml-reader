@@ -1,14 +1,14 @@
-# irsx
+# IRSx
 
 ## Table of Contents
 
 - [Quickstart](#quickstart)
 - [About](#about)
 - [Installation](#installation)
-- [Command line irsx](#command-line-irsx)
+- [Command line IRSx](#command-line-irsx)
 - [Find a tax return's object_id](#getting-an-object-id)
 - [Variable errors and deprecated return values](#variable-errors-and-deprecated-values)
-- [irsx from within python](#irsx-from-python)
+- [IRSx from within python](#irsx-from-python)
 - [irsx_index: get yearly index files](#irsx_index) 
 - [Developer directions](#developer-directions)
 - [Testing](#testing)
@@ -26,7 +26,7 @@ We're using the "object_id" 201533089349301428 to refer to the Dec. 2014 990 fil
 
 ## About
 
-IRSX is a python library and command line tool to simplify working with nonprofit tax returns [released](https://aws.amazon.com/public-datasets/irs-990/) by the IRS in XML format. The library currently standarizes returns submitted in formats dating from 2013 and forwards into consistently named datastructures that follow the same format as the "paper" 990. Repeating elements, such as the salary disclosed for best compensated employees, appear at the end of each schedule. We plan to release updated metadata that will allow processing of earlier forms.
+IRSx is a python library and command line tool to simplify working with nonprofit tax returns [released](https://aws.amazon.com/public-datasets/irs-990/) by the IRS in XML format. The library currently standarizes returns submitted in formats dating from 2013 and forwards into consistently named datastructures that follow the same format as the "paper" 990. Repeating elements, such as the salary disclosed for best compensated employees, appear at the end of each schedule. We plan to release updated metadata that will allow processing of earlier forms.
 
 From the command line, xml files can be output as machine readable json, or human readable text, optionally with documentation. From within a python program, the results are returned as native data structures. 
 
@@ -46,7 +46,7 @@ The tax returns are complex--the easiest way to understand them is to consult th
 - To see if it's installed, run `$ pip freeze`; if you see a line line 'irsx==0.0.1' it is installed. 
 
 
-## command line irsx
+## Command line IRSx
 Installing the library will also install the irsx command line tool, which uses the IRS' object_ids to reference a particular filing. This will just spit out a json representation of the entire filing. See more about how to get an IRS object_id and how to read the data format that's returned below.
 
 	$ irsx 201533089349301428
