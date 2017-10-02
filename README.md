@@ -6,7 +6,9 @@
 - [About](#about)
 - [Installation](#installation)
 - [Command line irsx](#command-line-irsx)
-- [Find an object_id](#getting-an-object-id)
+- [Find a tax return's object_id](#getting-an-object-id)
+- [Variable errors and deprecated return values](#Variable-errors-and-deprecated-values)
+- [irsx from within python](#irsx-from-python)
 - [irsx_index: get yearly index files](#irsx_index) 
 - [Developer directions](#developer-directions)
 - [Testing](#testing)
@@ -192,6 +194,7 @@ The "text" representation is under development and may change, though the underl
 
 	$ irsx --schedule=IRS990ScheduleJ 201533089349301428 > 201533089349301428.json
 
+
 ### Getting an object id
 
 The IRS releases one xml file per 990 filing, which is identified by a unique object id. Irsx uses that unique id as well, so we need to know it to extract data. To find the object\_id, look at the annual index files from the IRS (also have a look at irsx_index, a helper command described below).
@@ -222,7 +225,7 @@ Let's use Sutter Health Sacramento Sierra Region's 12/2014 filing, which has an 
 
 
 
-## irsx -- use from python
+## irsx from python 
 
 Much broader functionality is available by running from within python.
 
@@ -282,6 +285,49 @@ Delve into one:
 
 
 
+### Variable errors and deprecated values
+
+In normal operation variable errors--where tax returns specify a value that's not defined in the schema files--should not be a frequent occurrence, and can be suggestive of larger problems. This section is intended mainly for testing, development, or adding new schema versions. 
+
+To understand which variables are not recorded, or missed, you need to know a bit about how xml is represented. Consider this snipped:
+
+		<PreparerFirmGrp>
+	      <PreparerFirmEIN>820343828</PreparerFirmEIN>
+	      <PreparerFirmName>
+	        <BusinessNameLine1Txt>COOPER NORMAN</BusinessNameLine1Txt>
+	      </PreparerFirmName>
+	      <PreparerUSAddress>
+	        <AddressLine1Txt>PO BOX 5399</AddressLine1Txt>
+	        <CityNm>TWIN FALLS</CityNm>
+	        <StateAbbreviationCd>ID</StateAbbreviationCd>
+	        <ZIPCd>833035399</ZIPCd>
+	      </PreparerUSAddress>
+	    </PreparerFirmGrp>
+	    
+The individual variables can be referred to by the "xpath" to them (a slash-separated record of the element hierarchy), so for instance, the name of the business that completed this return is /PreparerFirmGrp/PreparerFirmName/BusinessNameLine1Txt . That assumes this element is the "root", but the full path to this element (which is in the returnheader section) is this: /Return/Returnheader/PreparerFirmGrp/PreparerFirmName/BusinessNameLine1Txt.
+
+Imagine the return includes a BusinessNameLine3Txt -- in other words, a value with the xpath /PreparerFirmGrp/PreparerFirmName/BusinessNameLine3Txt . That's unlikely to happen--the IRS has validation software that would likely prevent this from being submitted. If irsx encounters a variable that's not defined in variables CSV it simply ignores it and logs it as a keyerror. You can retrieve the keyerrors from any filing using the library.   
+
+	 
+	completed_filing  = self.xml_runner.run_filing(FILING_ID)
+	if completed_filing.get_keyerrors(): # Returns True / False
+        keyerrors = completed_filing.get_keyerrors()
+        
+
+The return value should be a list of dictionaries like this:  
+
+	[ 'schedule_name': NAME, 
+	  'keyerrors':
+	  		['element_path': XPATH_ERROR, 
+	  		 'element_path': XPATH_ERROR, 
+	  		 ...
+	
+	  		]
+	 ]
+
+By far the biggest source of keyerrors are tax return items that no longer occur on current forms. 
+
+Irsx works by turning a version-specific representation of a tax return (the original xml filing) into a standardized representation modeled on 2016v3.0. In other words, it tries to transform prior year tax forms into a canonical version.  For variables that have been removed, there's no canonical version. In the future, these variables will be tracked in  
 
 
 
