@@ -365,5 +365,5 @@ You can still add command line args, like this:
 
 Nosetests - Test coverage is incomplete
 
-Tox -- see tox.ini; testing for: 2.7,3.5,3.6 . You may need to run `pip install tox` in the testing environment. 
+Tox -- see tox.ini; testing for: 2.7,3.4,3.5,3.6 . You may need to run `pip install tox` in the testing environment. 
 
