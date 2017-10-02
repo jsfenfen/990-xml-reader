@@ -7,7 +7,7 @@
 - [Installation](#installation)
 - [Command line irsx](#command-line-irsx)
 - [Find a tax return's object_id](#getting-an-object-id)
-- [Variable errors and deprecated return values](#Variable-errors-and-deprecated-values)
+- [Variable errors and deprecated return values](#variable-errors-and-deprecated-values)
 - [irsx from within python](#irsx-from-python)
 - [irsx_index: get yearly index files](#irsx_index) 
 - [Developer directions](#developer-directions)
@@ -327,7 +327,7 @@ The return value should be a list of dictionaries like this:
 
 By far the biggest source of keyerrors are tax return items that no longer occur on current forms. 
 
-Irsx works by turning a version-specific representation of a tax return (the original xml filing) into a standardized representation modeled on 2016v3.0. In other words, it tries to transform prior year tax forms into a canonical version.  For variables that have been removed, there's no canonical version. In the future, these variables will be tracked in  
+Irsx works by turning a version-specific representation of a tax return (the original xml filing) into a standardized representation modeled on 2016v3.0. In other words, it tries to transform prior year tax forms into a canonical version.  For variables that have been removed, there's no canonical version. In the future, these variables will be tracked in a separate location.  
 
 
 
