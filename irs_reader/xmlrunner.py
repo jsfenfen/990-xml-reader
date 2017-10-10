@@ -1,5 +1,5 @@
 from .filing import Filing
-from .standardizer import Standardizer
+from .standardizer import Standardizer, Documentizer
 from .sked_dict_reader import SkedDictReader
 # from .log_utils import configure_logging
 from .type_utils import listType
@@ -16,7 +16,7 @@ class XMLRunner(object):
 
         if documentation:
             # we need a new standardizer, ignore one if passed in
-            self.standardizer = Standardizer(documentation=documentation)
+            self.standardizer = Documentizer()
         else:
             if standardizer:
                 self.standardizer = standardizer

@@ -14,20 +14,22 @@ else:
 
 class Standardizer(object):
     """
-    This reads three metadata .csv files, which it uses to standardize
-    ordered dicts. Only loads documentation when needed.
+    This reads metadata .csv files, which it uses to standardize
+    ordered dicts. For documentation, see Documentizer below. 
     """
 
-    def __init__(self, documentation=False):
-        self.show_documentation = documentation
+    def __init__(self):
+        #self.show_documentation = documentation
         self.groups = {}
         self.variables = {}
         self.schedule_parts = {}
-        if self.show_documentation:
-            self._make_schedule_parts()
-        # read in the metadata files, they should be validated elsewhere
+
+        # This is overridden for Documentizer class below
+        self.variable_columns =['db_table', 'db_name']
+
         self._make_groups()
         self._make_variables()
+
 
     def _make_groups(self):
         group_filepath = os.path.join(METADATA_DIRECTORY, 'groups.csv')
@@ -37,6 +39,51 @@ class Standardizer(object):
                 self.groups[row['xpath']] = row
         return True
 
+    def _make_variables(self):
+        variable_filepath = os.path.join(METADATA_DIRECTORY, 'variables.csv')
+        with open(variable_filepath, 'r') as variable_fh:
+            reader = csv.DictReader(variable_fh)
+            for row in reader:
+                vardict = {}
+                for col in self.variable_columns:
+                    vardict[col]=row[col]
+                self.variables[row['xpath']] = vardict
+
+        return True
+
+    def get_groups(self):
+        return self.groups
+
+    def get_var(self, var_xpath, version=None):
+        if version:
+            raise Exception("Version checking is not implemented")
+        return (self.variables[var_xpath])
+
+    def get_documentation_status(self):
+        return False
+
+
+class Documentizer(Standardizer):
+    """ Like Standardizer, but returns extra info """
+
+    def __init__(self):
+        self.groups = {}
+        self.variables = {}
+        self.schedule_parts = {}
+
+        self.variable_columns =[
+            'db_table', 'db_name', 'ordering', 
+            'line_number', 'description', 'db_type',
+            'irs_type', 'xpath'
+        ]
+
+        self._make_schedule_parts()
+        self._make_groups()
+        self._make_variables()
+
+    def get_documentation_status(self):
+        return True
+
     def _make_schedule_parts(self):
         part_filepath = os.path.join(METADATA_DIRECTORY, 'schedule_parts.csv')
         with open(part_filepath, 'r') as reader_fh:
@@ -44,33 +91,16 @@ class Standardizer(object):
             for row in reader:
                 self.schedule_parts[row['parent_sked_part']] = {
                     'name': row['part_name'],
-                    'ordering': row['ordering']
+                    'ordering': row['ordering'],
+                    'parent_sked': row['parent_sked'],
+                    'parent_sked_part': row['parent_sked_part'],
+                    'is_shell': row['is_shell']
+
                 }
         return True
 
-    def _make_variables(self):
-        variable_filepath = os.path.join(METADATA_DIRECTORY, 'variables.csv')
-        with open(variable_filepath, 'r') as variable_fh:
-            reader = csv.DictReader(variable_fh)
-            for row in reader:
-                if self.show_documentation:
-                    self.variables[row['xpath']] = {
-                        'db_table': row['db_table'],
-                        'db_name': row['db_name'],
-                        'ordering': row['ordering'],
-                        'line_number': row['line_number'],
-                        'description': row['description'],
-                        'db_type': row['db_type']
-                    }
-                else:
-                    self.variables[row['xpath']] = {
-                        'db_table': row['db_table'],
-                        'db_name': row['db_name']
-                    }
-        return True
-
-    def get_groups(self):
-        return self.groups
+    def get_schedule_parts(self):
+        return self.schedule_parts
 
     def part_ordering(self, partname):
         try:
@@ -85,10 +115,20 @@ class Standardizer(object):
         except KeyError:
             return None
 
-    def get_documentation_status(self):
-        return self.show_documentation
+    def get_groups_by_sked(self, sked):
+        groups = []
+        for thisgroup in self.groups.keys():
+            if self.groups[thisgroup]['parent_sked'] == sked:
+                groups.append(self.groups[thisgroup])
+        return groups
 
-    def get_var(self, var_xpath, version=None):
-        if version:
-            raise Exception("Version checking is not implemented")
-        return (self.variables[var_xpath])
+    def get_parts_by_sked(self, sked):
+        parts = []
+        for thispart in self.schedule_parts.keys():
+            #print(self.schedule_parts[thispart])
+            if self.schedule_parts[thispart]['parent_sked'] == sked:
+                parts.append(self.schedule_parts[thispart])
+        return parts
+
+    def get_variables(self):
+        return self.variables
