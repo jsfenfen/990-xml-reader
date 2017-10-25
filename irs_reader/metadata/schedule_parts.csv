@@ -1,16 +1,16 @@
 parent_sked,parent_sked_part,ordering,part_name,xml_root,is_shell
-IRS990,part_0,1, Part 0 Prefatory material ,/Return/ReturnData,False
-IRS990,part_i,2, Part I Summary ,/Return/ReturnData,False
-IRS990,part_iii,3, Part III Program Service Accomplishments ,/Return/ReturnData,False
-IRS990,part_iv,4, Part IV Required Schedules ,/Return/ReturnData,False
-IRS990,part_v,5, Part V Other Filings ,/Return/ReturnData,False
-IRS990,part_vi,6, Part VI Governance ,/Return/ReturnData,False
-IRS990,part_vii,7, Part VII Compensation ,/Return/ReturnData,False
-IRS990,part_viii,8, Part VIII Revenue ,/Return/ReturnData,False
-IRS990,part_ix,9, Part IX Functional Expense ,/Return/ReturnData,False
-IRS990,part_x,10, Part X Balance Sheet ,/Return/ReturnData,False
-IRS990,part_xi,11, Part XI Reconciliation of Net Assets ,/Return/ReturnData,False
-IRS990,part_xii,12, Part XII Financial Statements and Reporting ,/Return/ReturnData,False
+IRS990,part_0,1,Part 0 Prefatory material ,/Return/ReturnData,False
+IRS990,part_i,2,Part I Summary ,/Return/ReturnData,False
+IRS990,part_iii,3,Part III Program Service Accomplishments ,/Return/ReturnData,False
+IRS990,part_iv,4,Part IV Required Schedules ,/Return/ReturnData,False
+IRS990,part_v,5,Part V Other Filings ,/Return/ReturnData,False
+IRS990,part_vi,6,Part VI Governance ,/Return/ReturnData,False
+IRS990,part_vii,7,Part VII Compensation ,/Return/ReturnData,False
+IRS990,part_viii,8,Part VIII Revenue ,/Return/ReturnData,False
+IRS990,part_ix,9,Part IX Functional Expense ,/Return/ReturnData,False
+IRS990,part_x,10,Part X Balance Sheet ,/Return/ReturnData,False
+IRS990,part_xi,11,Part XI Reconciliation of Net Assets ,/Return/ReturnData,False
+IRS990,part_xii,12,Part XII Financial Statements and Reporting ,/Return/ReturnData,False
 IRS990EZ,ez_part_0,1,EZ Part 0 Prefatory material ,/Return/ReturnData,False
 IRS990EZ,ez_part_i,2,"EZ Part I Revenue, Expenses, and Changes in Net Assets or Fund Balances ",/Return/ReturnData,False
 IRS990EZ,ez_part_ii,3,EZ Part II Balance Sheets ,/Return/ReturnData,False
