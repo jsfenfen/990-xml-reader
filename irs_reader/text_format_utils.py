@@ -1,11 +1,7 @@
 import json
 import sys
 import codecs
-
-
-
 import re
-import unidecode
 
 BRACKET_RE = re.compile(r'\[.*?\]')
 
