@@ -6,9 +6,12 @@ from .type_utils import listType
 
 from .settings import WORKING_DIRECTORY, ALLOWED_VERSIONSTRINGS
 
+# local override 
+# 201303199349310500 is version 2012v2.1
+ALLOWED_VERSIONSTRINGS = ALLOWED_VERSIONSTRINGS + ['2012v3.0', '2012v2.1']
 
 class XMLRunner(object):
-    """ Load a Standardizer just a once while running multiple filings
+    """ Load a Standardizer just once while running multiple filings
         Return Filing objects with results, keyerrors set
     """
     def __init__(self, documentation=False, standardizer=None):
