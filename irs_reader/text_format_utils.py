@@ -3,6 +3,26 @@ import sys
 import codecs
 
 
+
+import re
+import unidecode
+
+BRACKET_RE = re.compile(r'\[.*?\]')
+
+
+def debracket(string):
+    """ Eliminate the bracketed var names in doc, line strings """
+    result = re.sub(BRACKET_RE, ';', str(string))
+    result = result.lstrip(';')
+    result = result.lstrip(' ')
+    result = result.replace('; ;',';')
+    return result
+
+def most_recent(semicolon_delimited_string):
+    result = semicolon_delimited_string.split(";")[-1]
+    return result
+
+
 # to_json stolen from jsvine: [ link ]
 def to_json(data, encoding=None):
     if hasattr(sys.stdout, "buffer"):
