@@ -30,6 +30,7 @@ class Filing(object):
         self.result = None
         self.processed = False
         self.keyerrors = None
+        self.csv_result = None
 
         if json:
             self.json = json
@@ -141,6 +142,12 @@ class Filing(object):
 
     def get_result(self):
         return self.result
+
+    def set_csv_result(self, csv_result):
+        self.csv_result = csv_result
+
+    def get_csv_result(self):
+        return self.csv_result
 
     def set_keyerrors(self, keyerrorlist):
         self.keyerrors = keyerrorlist
