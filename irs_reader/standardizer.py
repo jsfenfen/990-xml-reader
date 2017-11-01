@@ -64,9 +64,9 @@ class Standardizer(object):
 
 
 class Documentizer(Standardizer):
-    """ Like Standardizer, but returns extra info """
+    """ Like Standardizer, but returns canonical documentation info from 2016 version """
 
-    def __init__(self):
+    def __init__(self, versions=False):
         self.groups = {}
         self.variables = {}
         self.schedule_parts = {}
@@ -76,6 +76,8 @@ class Documentizer(Standardizer):
             'line_number', 'description', 'db_type',
             'irs_type', 'xpath'
         ]
+        if versions:
+            self.variable_columns = self.variable_columns + ['versions']
 
         self._make_schedule_parts()
         self._make_groups()
@@ -132,3 +134,78 @@ class Documentizer(Standardizer):
 
     def get_variables(self):
         return self.variables
+
+
+
+class VersionDocumentizer(object):
+    """
+    Returns version-specific line number and documentation.
+    """
+
+    def __init__(self):
+        self.line_numbers = {}
+        self.descriptions = {}
+
+
+        self._make_line_numbers()
+        self._make_descriptions()
+
+
+    def _make_line_numbers(self):
+        filepath = os.path.join(METADATA_DIRECTORY, 'line_numbers.csv')
+        with open(filepath, 'r') as reader_fh:
+            reader = csv.DictReader(reader_fh)
+
+            for row in reader:
+                try:
+                    self.line_numbers[row['xpath']]
+                    self.line_numbers[row['xpath']].append(row)
+
+                except KeyError:
+                    self.line_numbers[row['xpath']] = [row]
+
+    def _make_descriptions(self):
+        filepath = os.path.join(METADATA_DIRECTORY, 'descriptions.csv')
+        with open(filepath, 'r') as reader_fh:
+            reader = csv.DictReader(reader_fh)
+
+            for row in reader:
+                try:
+                    self.descriptions[row['xpath']]
+                    self.descriptions[row['xpath']].append(row)
+
+                except KeyError:
+                    self.descriptions[row['xpath']] = [row]
+
+
+    def get_line_number(self, xpath, version_string):
+        #print("get_line_number %s %s" % (xpath, version_string))
+
+        candidate_rows = []
+        try:
+            candidate_rows = self.line_numbers[xpath]
+        except KeyError:
+            return None
+
+        for row in candidate_rows:
+            if version_string in row['versions']:
+                #print("get_line_number %s %s = %s" % (xpath, version_string, row['line_number']))
+                return row['line_number']
+
+        return None
+
+    def get_description(self, xpath, version_string):
+        candidate_rows = []
+        try:
+            candidate_rows = self.descriptions[xpath]
+        except KeyError:
+            return None
+        for row in candidate_rows:
+            if version_string in row['versions']:
+                return row['description']
+        return None
+
+
+        
+
+
