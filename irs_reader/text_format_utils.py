@@ -132,10 +132,10 @@ def to_txt(parsed_filing, standardizer=None, documentation=True, vd=None, outfil
                     this_sked_name = this_result['form']
                 
                 if documentation:
-                    textoutput += "\nForm %s Line:%s Description:%s\nValue=%s" % (
-                        this_result['form'], 
+                    textoutput += "\nLine:%s Description:%s Xpath:%s\nValue=%s " % (
                         this_result['line_number'], 
                         this_result['description'], 
+                        this_result['xpath'],
                         this_result['value'], 
                     )
                     if this_result['in_group']:

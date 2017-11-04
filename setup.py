@@ -17,7 +17,6 @@ setup(name=HUMAN_NAME,
       url = 'https://github.com/jsfenfen/990-xml-reader',
       license = 'MIT',
       setup_requires = ["setuptools", ],
-      #install_requires = ['requests', 'xmltodict', 'unicodecsv;python_version<"3.0"'],
       install_requires = ['requests', 'xmltodict', 'unicodecsv'],
       tests_require = ['nose', 'requests', 'xmltodict', 'unicodecsv'],
       packages = ['irsx'],
@@ -35,9 +34,8 @@ setup(name=HUMAN_NAME,
           #   5 - Production/Stable
           'Development Status :: 3 - Alpha',
           'License :: OSI Approved :: MIT License',
-          # Specify the Python versions you support here. In particular, ensure
-          # that you indicate whether you support Python 2, Python 3 or both.
           'Programming Language :: Python :: 2.7',
+          'Programming Language :: Python :: 3.4',
           'Programming Language :: Python :: 3.5',
           'Programming Language :: Python :: 3.6',
 

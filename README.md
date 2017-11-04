@@ -14,7 +14,7 @@
 - [Testing](#testing)
 
 ## Quickstart
-We're using the "object_id" 201533089349301428 to refer to the Dec. 2014 990 filed by "Sutter Health Sacramento Region", which is described in the [2016 index file](https://s3.amazonaws.com/irs-form-990/index_2016.csv). 
+We're using the "object_id" 201533089349301428 to refer to the Dec. 2014 990 filed by "Sutter Health Sacramento Region", which is described in the [2016 index file](https://s3.amazonaws.com/irs-form-990/index_2016.csv). We can use it to pull out specific pieces of data, across versions
 
 	>>> from irsx.xmlrunner import XMLRunner
 	>>> xml_runner = XMLRunner()
@@ -24,11 +24,14 @@ We're using the "object_id" 201533089349301428 to refer to the Dec. 2014 990 fil
 		  print(employee['PrsnNm'])
 
 
+
 ## About
 
 IRSx is a python library and command line tool to simplify working with nonprofit tax returns [released](https://aws.amazon.com/public-datasets/irs-990/) by the IRS in XML format. The library currently standarizes returns submitted in formats dating from 2013 and forwards into consistently named datastructures that follow the same format as the "paper" 990. Repeating elements, such as the salary disclosed for best compensated employees, appear at the end of each schedule. We plan to release updated metadata that will allow processing of earlier forms.
 
-From the command line, xml files can be output as machine readable json, or human readable text, optionally with documentation. From within a python program, the results are returned as native data structures. 
+Forms from schemas from years 2010 to the present are 'viewable' in CSV and TXT mode via the command line tool.
+
+From the command line, xml files can be output as machine readable json, csv or human readable text. From within a python program, the results are returned as native data structures. 
 
 The tax returns are complex--the easiest way to understand them is to consult the [metadata csv files](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata), and cross reference these to the forms in [sample\_schedules](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/sample_schedules) (which contains recent pdf versions of the schedules).  The data returned for each schedule read contains schedule parts (see the [schedule\_parts.csv](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata/schedule_parts.csv) for all possible parts) and repeating groups (see [groups.csv](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata/groups.csv)) that occur within that schedule. Both repeating groups and schedule\_parts contain variables, which are documented in the [variables.csv](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata/variables.csv) table. 
 
@@ -47,10 +50,25 @@ The tax returns are complex--the easiest way to understand them is to consult th
 
 
 ## Command line IRSx
-Installing the library will also install the irsx command line tool, which uses the IRS' object_ids to reference a particular filing. This will just spit out a json representation of the entire filing. See more about how to get an IRS object_id and how to read the data format that's returned below.
+Installing the library will also install the irsx command line tool, which uses the IRS' object\_ids to reference a particular filing. 
+
+### Command line output formats: json, csv, txt
+
+The command line tool supports two styles of 'displaying' a filing. 
+
+- __JSON__ The first is a nested-json structure that provides a consistent way of describing variables for all schema versions from 2013 and forwards. The down side of this is that json is not ordered, so it can be confusing for humans to view.
+- __CSV__ This isn't a 'real' csv file, it's really a listing of all the different variables found, along with metadata like line number and description. It's available for versions 2010 and forwards. This doesn't attempt to restructure the content, it just spits it out in the order that it appears. This is often more human readable than json. Because it's a listing of all variables, the xpaths to those variables may repeat. A group_index column keeps count of which repeating group each variable belongs to.
+- __TXT__ There's also a txt format output that is very similar to csv in that it prints the rows it finds in an ordered dump, but makes it slightly more readable. 
+
+
+### JSON examples
+
+
 
 	$ irsx 201533089349301428
 	[{"schedule_name": "ReturnHeader990x", "groups": {}, "schedule_parts": {"returnheader990x_part_i": {"object_id": 201533089349301428, "ein": "941156621", "RtrnHdr_RtrnTs": "2015-11-04T20:09:01-06:00",...
+
+This will just spit out a json representation of the entire filing. See more about how to get an IRS object_id and how to read the data format that's returned below.
 
 
 The general structure of the return is an array of schedules:
@@ -74,48 +92,8 @@ Each schedule part or repeating group includes the original object\_id and ein o
 
 Note that IRSX will download the file if it hasn't already--for more information about the location, use the --verbose option. IRSX by default will retrieve the file from the IRS' public Amazon S3 bucket. If you plan to work with a large collection of files, you may want to host xml on your own bucket, and use bulk tools like AWS CLI's sync to move many documents at once.
 
+### CSV / TXT examples
 
-We could have saved it to a file with using the '>' to redirect the output
-
-	$ irsx 201533089349301428 > 201533089349301428.json
-		
-The default format is json, but you can make it easier to read with the --format=txt switch. The whole output is much longer, I've truncated here.
-
-	$ irsx --format=txt 201533089349301428
-	[
-      {
-        "schedule_name": "ReturnHeader990x",
-        "data": {
-            "schedule_parts": {
-                "returnheader990x_part_i": {
-                    "object_id": 201533089349301428,
-	                    ...
-	           	"part_i
-
-	                    
-That's better, but it's still really hard to follow. Use the --documentation flag in text format to make this easier to follow: 
-
-	$ irsx --format=txt --documentation 201533089349301428
-
-	Schedule: ReturnHeader990x
-	
-	
-	returnheader990x_part_i
-	
-	
-		*ein*: value=941156621 
-		Line Number 'NA' Description: 'IRS employer id number' Type: String(9)
-	
-		*object_id*: value=201533089349301428 
-		Line Number 'NA' Description: 'IRS-assigned object id' Type: String(18)
-	
-		*RtrnHdr_RtrnTs*: value=2015-11-04T20:09:01-06:00 
-		Line Number '' Description: ' The date and time when the return was created' Type: String(length=63)
-
-		...
-	
-		
-That's a more useful representation of the filing--it also appears roughly in the same order as a paper 990 filing (with the exception of repeating groups, which appear at the end of each schedule). It's also remarkably verbose.
 
 We can narrow in on a single schedule, but first we need to know what is present in this filing, using the --list_schedules option
 		 
@@ -126,73 +104,55 @@ We can narrow in on a single schedule, but first we need to know what is present
 	
 Now let's look at a human readable text version of schedule J
 
-	$ irsx --format=txt --documentation --schedule=IRS990ScheduleJ 201533089349301428
+	$ irsx --format=txt --schedule=IRS990ScheduleJ 201533089349301428
 
-The output is lengthy: it lists first the schedule parts and then the repeating groups, and for each variable it includes the line number, description and data type of each variable. This is from the section of the output on 'SkdJRltdOrgOffcrTrstKyEmpl':
+Note that the --schedule argument also works in json or csv mode.
+
+The output is lengthy, but let's look at an excerpt:
+
+	Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+	Value=Patrick Fry 
+	Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
 	
-	Repeating Group: SkdJRltdOrgOffcrTrstKyEmpl
+	Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+	Value=Trustee, President & CEO SH 
+	Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
 	
+	Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+	Value=0 
+	Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
 	
-		*ein*: value=941156621 
-		Line Number 'NA' Description: 'IRS employer id number' Type: String(9)
-	
-		*object_id*: value=201533089349301428 
-		Line Number 'NA' Description: 'IRS-assigned object id' Type: String(18)
-	
-		*PrsnNm*: value=Patrick Fry 
-		Line Number ' Part II Column (A)' Description: ' Part II contents; Name of officer - person' Type: String(length=35)
-	
-		*TtlTxt*: value=Trustee, President & CEO SH 
-		Line Number ' Part II Column (A)' Description: ' Part II contents; Title of Officer' Type: String(length=100)
-	
-		*BsCmpnstnFlngOrgAmt*: value=0 
-		Line Number ' Part II Column (B)(i)' Description: ' Part II contents; Base compensation ($) from filing organization' Type: BigInteger
-	
-		*CmpnstnBsdOnRltdOrgsAmt*: value=1523132 
-		Line Number ' Part II Column (B)(i)' Description: ' Part II contents; Compensation based on related organizations?' Type: BigInteger
-	
-		*BnsFlngOrgnztnAmnt*: value=0 
-		Line Number ' Part II Column (B)(ii)' Description: ' Part II contents; Bonus and incentive compensation ($) from filing organization' Type: BigInteger
-	
-		*BnsRltdOrgnztnsAmt*: value=1687050 
-		Line Number ' Part II Column (B)(ii)' Description: ' Part II contents; Bonus and incentive compensation ($) from related organizations' Type: BigInteger
-	
-		*OthrCmpnstnFlngOrgAmt*: value=0 
-		Line Number ' Part II Column (B)(iii)' Description: ' Part II contents; Other compensation ($) from filing organization' Type: BigInteger
-	
-		*OthrCmpnstnRltdOrgsAmt*: value=416185 
-		Line Number ' Part II Column (B)(iii)' Description: ' Part II contents; Other compensation ($) from related organizations' Type: BigInteger
-	
-		*DfrrdCmpnstnFlngOrgAmt*: value=0 
-		Line Number ' Part II Column (C)' Description: ' Part II contents; Deferred compensation ($) from filing organization' Type: BigInteger
-	
-		*DfrrdCmpRltdOrgsAmt*: value=2693377 
-		Line Number ' Part II Column (C)' Description: ' Part II contents; Deferred compensation ($) from related organizations' Type: BigInteger
-	
-		*NntxblBnftsFlngOrgAmt*: value=0 
-		Line Number ' Part II Column (D)' Description: ' Part II contents; Nontaxable benefits ($) from filing organization' Type: BigInteger
-	
-		*NntxblBnftsRltdOrgsAmt*: value=34953 
-		Line Number ' Part II Column (D)' Description: ' Part II contents; Nontaxable benefits ($) from related organizations' Type: BigInteger
-	
-		*TtlCmpnstnFlngOrgAmt*: value=0 
-		Line Number ' Part II Column (E)' Description: ' Part II contents; Total of (B)(i) - (D), from filing org' Type: BigInteger
-	
-		*TtlCmpnstnRltdOrgsAmt*: value=6354697 
-		Line Number ' Part II Column (E)' Description: ' Part II contents; Total of (B)(i) - (D), from related orgs' Type: BigInteger
-	
-		*CmpRprtPrr990FlngOrgAmt*: value=0 
-		Line Number ' Part II Column (F)' Description: ' Part II contents; Comp reported prior 990 - from filing org' Type: BigInteger
-	
-		*CmpRprtPrr990RltdOrgsAmt*: value=396136 
-		Line Number ' Part II Column (F)' Description: ' Part II contents; Comp reported prior 990 - from related orgs' Type: BigInteger
+	Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+	Value=1523132 
+	Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+ 
  
 
-When looking at compensation, it's important to differentiate between compenstation from the filer -- 'TtlCmpnstnFlngOrgAmt'  which in the above is 0 and 'TtlCmpnstnRltdOrgsAmt' total compensation from related organizations, which is $6,354,697.
 
-The "text" representation is under development and may change, though the underlying json output should not. We can save just that schedule to a file with:
+### Complete command line usage
+This is available with the --help option
 
-	$ irsx --schedule=IRS990ScheduleJ 201533089349301428 > 201533089349301428.json
+	usage: irsx [-h] [--verbose]
+	            [--schedule {IRS990,IRS990EZ,IRS990PF,IRS990ScheduleA,IRS990ScheduleB,IRS990ScheduleC,IRS990ScheduleD,IRS990ScheduleE,IRS990ScheduleF,IRS990ScheduleG,IRS990ScheduleH,IRS990ScheduleI,IRS990ScheduleJ,IRS990ScheduleK,IRS990ScheduleL,IRS990ScheduleM,IRS990ScheduleN,IRS990ScheduleO,IRS990ScheduleR,ReturnHeader990x}]
+	            [--no_doc] [--format {json,csv,txt}] [--file FILE]
+	            [--list_schedules]
+	            object_ids [object_ids ...]
+	
+	positional arguments:
+	  object_ids            object ids
+	
+	optional arguments:
+	  -h, --help            show this help message and exit
+	  --verbose             Verbose output
+	  --schedule {IRS990,IRS990EZ,IRS990PF,IRS990ScheduleA,IRS990ScheduleB,IRS990ScheduleC,IRS990ScheduleD,IRS990ScheduleE,IRS990ScheduleF,IRS990ScheduleG,IRS990ScheduleH,IRS990ScheduleI,IRS990ScheduleJ,IRS990ScheduleK,IRS990ScheduleL,IRS990ScheduleM,IRS990ScheduleN,IRS990ScheduleO,IRS990ScheduleR,ReturnHeader990x}
+	                        Get only that schedule
+	  --no_doc              Hide line number, description, other documentation
+	  --format {json,csv,txt}
+	                        Output format
+	  --file FILE           Write result to file
+	  --list_schedules      Only list schedules
+
+
 
 
 ### Getting an object id
