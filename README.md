@@ -50,7 +50,7 @@ The tax returns are complex--the easiest way to understand them is to consult th
 
 
 ## Command line IRSx
-Installing the library will also install the irsx command line tool, which uses the IRS' object\_ids to reference a particular filing. 
+Installing the library will also install the irsx command line tool, which uses the IRS' object\_ids to reference a particular filing. By default results are printed to the terminal, but can be saved to a specific file with the `--file` option. Using the `--verbose` flag will display a bit more information about what's happening, but should not be used if you're trying to capture the output into a file (as it won't follow the format needed). 
 
 ### Command line output formats: json, csv, txt
 
