@@ -3,9 +3,7 @@ import argparse
 from .filing import Filing
 from .settings import KNOWN_SCHEDULES
 from .xmlrunner import XMLRunner
-from .text_format_utils import to_json, print_documented_vars, \
-    print_part_start, write_ordered_documentation, format_for_text
-
+from .text_format_utils import * 
 
 def get_parser():
     parser = argparse.ArgumentParser("irsx")
@@ -31,15 +29,15 @@ def get_parser():
         help='Get only that schedule'
     )
     parser.add_argument(
-        "--documentation",
+        "--no_doc",
         dest='documentation',
         action='store_const',
-        const=True, default=False,
-        help='Show documentation with output'
+        const=False, default=True,
+        help='Hide line number, description, other documentation'
     )
     parser.add_argument(
         "--format",
-        choices=['json', 'txt'],
+        choices=['json', 'csv', 'txt'],
         default='json',
         help='Output format'
     )
@@ -51,17 +49,21 @@ def get_parser():
         default=False,
         help='Only list schedules'
     )
-    parser.add_argument(
-        "--encoding",
-        default="utf-8",
-        help="encoding (probably utf-8)"
-    )
+    #### Do we really wanna claim to support encodings... 
+    #parser.add_argument(
+    #    "--encoding",
+    #    default="utf-8",
+    #    help="encoding (probably utf-8)"
+    #)
     return parser
 
 
 def run_main(args_read):
-    xml_runner = XMLRunner(documentation=args_read.documentation)
-    # Use the standardizer that was init'ed by Runner
+
+    csv_format= args_read.format=='csv' or args_read.format=='txt'
+    xml_runner = XMLRunner(documentation=args_read.documentation, csv_format=csv_format)
+
+    # Use the standardizer that was init'ed by XMLRunner
     standardizer = xml_runner.get_standardizer()
 
     for object_id in args_read.object_ids:
@@ -73,33 +75,36 @@ def run_main(args_read):
             this_filing.process()
             print(this_filing.list_schedules())
 
-        elif args_read.schedule:
-            parsed_filing = xml_runner.run_sked(
-                object_id,
-                args_read.schedule,
-                verbose=args_read.verbose
-            )
-            if args_read.format == 'json':
-                to_json(parsed_filing.get_result(), args_read.encoding)
-            else:
-                format_for_text(
-                    parsed_filing.get_result(),
-                    standardizer=standardizer,
-                    documentation=args_read.documentation
-                )
         else:
-            parsed_filing = xml_runner.run_filing(
-                object_id,
-                verbose=args_read.verbose
-            )
-            if args_read.format == 'json':
-                to_json(parsed_filing.get_result(), args_read.encoding)
-            else:
-                format_for_text(
-                    parsed_filing.get_result(),
-                    standardizer=standardizer,
-                    documentation=args_read.documentation
+            if args_read.schedule:
+                parsed_filing = xml_runner.run_sked(
+                    object_id,
+                    args_read.schedule,
+                    verbose=args_read.verbose
                 )
+            else:
+                parsed_filing = xml_runner.run_filing(
+                    object_id,
+                    verbose=args_read.verbose
+                )
+
+        if args_read.format == 'json':
+            to_json(parsed_filing.get_result())
+
+        elif args_read.format=='csv':   
+                to_csv(
+                    parsed_filing,
+                    standardizer=standardizer,
+                    documentation=args_read.documentation,
+                )
+
+        elif args_read.format=='txt':
+                to_txt(
+                    parsed_filing,
+                    standardizer=standardizer,
+                    documentation=args_read.documentation,
+                )
+
 
 def main(args=None):
     parser = get_parser()

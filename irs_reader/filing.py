@@ -145,7 +145,7 @@ class Filing(object):
 
     def set_csv_result(self, csv_result):
         self.csv_result = csv_result
-
+        
     def get_csv_result(self):
         return self.csv_result
 

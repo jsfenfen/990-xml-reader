@@ -363,7 +363,16 @@ You can still add command line args, like this:
 
 ## Testing
 
-Nosetests - Test coverage is incomplete
+Nosetests - Test coverage is incomplete, improve it with coverage.py ( so run 'pip install coverage' 
+then:
+
+$ nosetests --with-coverage --cover-erase --cover-package=irs_reader
+
+or
+
+$ coverage report -m 
+
+
 
 Tox -- see tox.ini; testing for: 2.7,3.4,3.5,3.6 . You may need to run `pip install tox` in the testing environment. 
 

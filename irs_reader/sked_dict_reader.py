@@ -1,5 +1,3 @@
-#import logging
-
 from .type_utils import dictType, orderedDictType, listType, \
     unicodeType, noneType, strType
 from .flatten_utils import flatten
@@ -20,7 +18,8 @@ class SkedDictReader(object):
         object_id,
         ein,
         documentId=None,
-        documentation=False
+        documentation=False,
+        csv_format=False
     ):
 
         self.standardizer = standardizer
@@ -29,6 +28,8 @@ class SkedDictReader(object):
         self.documentId = documentId
         self.schedule_parts = {}         # allows one entry per filing
         self.repeating_groups = {}       # multiple per filing
+        self.csv_format = csv_format     # Do we need to generate ordered csv
+        self.for_csv_list = []           # keep record of elements, line by line
         self.groups = groups
         self.documentation = documentation
         self.variable_keyerrors = []    # record any unexpected variables
@@ -77,8 +78,9 @@ class SkedDictReader(object):
         return standardized_table_start
 
     def _process_group(self, json_node, path, this_group):
-        for node in json_node:
-            #print("_process_group %s %s" % (node, path))
+
+        for node_index, node in enumerate(json_node):
+            #print("_process_group %s " % (this_group['db_name']))
             this_node_type = type(node)
             flattened_list_item = None
             if this_node_type == unicodeType:
@@ -91,9 +93,22 @@ class SkedDictReader(object):
             standardized_group_dict = self._get_table_start()
 
             for xpath in flattened_list_item.keys():
-                if '@' in xpath or '#' in xpath:
+                if '@' in xpath:
                     continue
                 else:
+                    xpath = xpath.replace("/#text", "")
+                    value = flattened_list_item[xpath]
+
+                    if self.csv_format:
+                        this_var = {
+                            'xpath':xpath,
+                            'value':value,
+                            'in_group':True,
+                            'group_name':this_group['db_name'],
+                            'group_index':node_index
+                        }
+                        self.for_csv_list.append(this_var)
+
                     try:
                         this_var_data = self.standardizer.get_var(xpath)
                     except KeyError:
@@ -139,10 +154,11 @@ class SkedDictReader(object):
             self._process_group(json_node, parent_path, this_group)
 
         elif this_node_type == unicodeType:
-            # but ignore it if is an @ or # - we get @docId elsewhere
-            if '@' in element_path or '#' in element_path:
+            # but ignore it if is an @.
+            if '@' in element_path:
                 pass
             else:
+                element_path = element_path.replace("/#text", "")
                 try:
                     # is it a group?
                     this_group = self.groups[element_path]
@@ -153,6 +169,19 @@ class SkedDictReader(object):
                     )
 
                 except KeyError:
+
+                    # It's not a group so it should be a variable we know about
+                    
+                    if self.csv_format:
+                        this_var = {
+                            'xpath':element_path,
+                            'value':json_node,
+                            'in_group':False,
+                            'group_name':None,
+                            'group_index':None
+                        }
+                        self.for_csv_list.append(this_var)
+
                     # It's not a group so it should be a variable we know about
                     try:
                         var_data = self.standardizer.get_var(element_path)
@@ -216,6 +245,7 @@ class SkedDictReader(object):
         return ({
             'schedule_parts': self.schedule_parts,
             'groups': self.repeating_groups,
+            'csv_line_array':self.for_csv_list,    # This is empty if not csv
             'keyerrors':self.variable_keyerrors,
             'group_keyerrors':self.group_keyerrors
         })

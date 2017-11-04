@@ -145,7 +145,7 @@ class TestCommandLine:
 
     def test_cli_2(self):
         # dump only main 990 in bare json format
-        test_args = ['--schedule', 'IRS990', '201642229349300909']
+        test_args = ['--schedule', 'IRS990', '--no_doc', '201642229349300909']
         args = self.parser.parse_args(test_args)
         run_cli_main(args)
 
@@ -157,16 +157,39 @@ class TestCommandLine:
     def test_cli_4(self):
         # dump only main 990 in text format
         test_args = [
-            '--schedule',
-            'IRS990',
-            '--format',
-            'txt',
-            '--documentation',
+            '--schedule', 'IRS990',
+            '--format', 'txt',
             '201642229349300909'
         ]
         args = self.parser.parse_args(test_args)
         run_cli_main(args)
 
+
+    def test_cli_5(self):
+        test_args = [
+            '--schedule', 'IRS990', 
+            '--format', 'csv',
+            '201113139349301336'
+        ]
+        args = self.parser.parse_args(test_args)
+        run_cli_main(args)
+
+    def test_cli_6(self):
+        test_args = [
+            '--format', 'csv',
+            '201113139349301336'
+        ]
+        args = self.parser.parse_args(test_args)
+        run_cli_main(args)
+
+    def test_cli_5(self):
+        test_args = [
+            '--format', 'csv',
+            '--no_doc',
+            '201113139349301336'
+        ]
+        args = self.parser.parse_args(test_args)
+        run_cli_main(args)
 
 class TestCommandLine_Index:
 

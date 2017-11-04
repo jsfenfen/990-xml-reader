@@ -49,6 +49,7 @@ class Standardizer(object):
                     vardict[col]=row[col]
                 self.variables[row['xpath']] = vardict
 
+
         return True
 
     def get_groups(self):

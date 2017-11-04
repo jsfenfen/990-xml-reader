@@ -2,6 +2,10 @@ import json
 import sys
 import codecs
 import re
+import unicodecsv as csv
+ 
+from .standardizer import Standardizer, Documentizer, VersionDocumentizer
+
 
 BRACKET_RE = re.compile(r'\[.*?\]')
 
@@ -19,15 +23,15 @@ def most_recent(semicolon_delimited_string):
     return result
 
 
-# to_json stolen from jsvine: [ link ]
-def to_json(data, encoding=None):
-    if hasattr(sys.stdout, "buffer"):
-        sys.stdout = codecs.getwriter("utf-8")(sys.stdout.buffer, "strict")
-        json.dump(data, sys.stdout)
-    else:
-        json.dump(data, sys.stdout)
+def to_json(data):
+    if data:
+        if hasattr(sys.stdout, "buffer"):
+            sys.stdout = codecs.getwriter("utf-8")(sys.stdout.buffer, "strict")
+            json.dump(data, sys.stdout)
+        else:
+            json.dump(data, sys.stdout)
 
-
+"""
 def print_documented_vars(vardata):
     var_array = []
     for this_key in vardata.keys():
@@ -74,24 +78,123 @@ def write_ordered_documentation(data, standardizer):
                 print ("\nRepeating Group: %s\n" % grpkey)
 
                 print_documented_vars(grp)
+"""
 
-
-def format_for_text(data, standardizer=None, documentation=False):
-    """ If we're not showing documentation, just pretty print the json
-        But if we're showing the documentation, reorder it.
-    """
+def to_csv(parsed_filing, standardizer=None, documentation=True, vd=None):
+    if not vd:
+        vd = VersionDocumentizer()
+    #stdout = (sys.stdout.buffer if sys.version_info[0] >= 3 else sys.stdout)   # Also jsvine
+    stdout = sys.stdout
     if documentation:
-        if not standardizer:
-            raise Exception(
-                "Standardizer must be included to order documentation"
-            )
-        write_ordered_documentation(data, standardizer)
-
+        fieldnames = [ 
+            'form', 'line_number', 'description', 'value', 'variable_name',
+            'xpath', 'in_group', 'group_name', 'group_index'
+        ]
     else:
-        if hasattr(sys.stdout, "buffer"):
-            sys.stdout = codecs.getwriter("utf-8")(sys.stdout.buffer, "strict")
-            json.dump(data, sys.stdout, indent=4)
-        else:
-            json.dump(data, sys.stdout, indent=4)
+        fieldnames = [ 
+            'value', 'xpath', 'variable_name', 'in_group', 'group_name', 'group_index'
+        ]
+    writer = csv.DictWriter(
+        stdout,
+        fieldnames=fieldnames,
+        delimiter=',',
+        quotechar='"',
+        lineterminator='\n',
+        quoting=csv.QUOTE_MINIMAL
+    )
+    writer.writeheader()
+    results = parsed_filing.get_result()
 
-    print("\n\n")
+    for result in results:
+        for this_result in result['csv_line_array']:
+
+            vardata = None
+            try:
+                vardata = standardizer.get_var(this_result['xpath'])
+            except KeyError:
+                pass
+            if vardata:
+                this_result['variable_name'] = vardata['db_table'] + "__" + vardata['db_name']
+
+            if documentation:     # not sure why you'd want a csv without docs?
+                raw_line_num = vd.get_line_number(
+                    this_result['xpath'], 
+                    parsed_filing.get_version()
+                )
+                this_result['line_number'] =  debracket(raw_line_num)
+
+                raw_description = vd.get_description(
+                    this_result['xpath'], 
+                    parsed_filing.get_version()
+                )
+                this_result['description'] =  debracket(raw_description)
+                this_result['form'] = this_result['xpath'].split("/")[1]
+            writer.writerow(this_result)
+
+
+def to_txt(parsed_filing, standardizer=None, documentation=True, vd=None):
+    if not vd:
+        vd = VersionDocumentizer()
+    results = parsed_filing.get_result()
+    this_sked_name = None
+
+    for result in results:
+        for this_result in result['csv_line_array']:
+
+            #### Collect the variables we need
+            vardata = None
+            textoutput = ""     # This is what we'll eventually write out
+            this_result['form'] = this_result['xpath'].split("/")[1]
+            try:
+                vardata = standardizer.get_var(this_result['xpath'])
+            except KeyError:
+                pass
+            if vardata:
+                this_result['variable_name'] = vardata['db_table'] + "__" + vardata['db_name']
+
+            if documentation:     # not sure why you'd want a csv without docs?
+                raw_line_num = vd.get_line_number(
+                    this_result['xpath'], 
+                    parsed_filing.get_version()
+                )
+                this_result['line_number'] =  debracket(raw_line_num)
+
+                raw_description = vd.get_description(
+                    this_result['xpath'], 
+                    parsed_filing.get_version()
+                )
+                this_result['description'] =  debracket(raw_description)
+
+            #### Write the output, now that we've got the vars 
+
+            if this_sked_name != this_result['form']:
+                textoutput += "\n\n\tSchedule %s\n" % this_result['form']
+                this_sked_name = this_result['form']
+
+            
+            if documentation:
+
+                textoutput += "\nForm %s Line:%s Description:%s\nValue=%s" % (
+                    this_result['form'], 
+                    this_result['line_number'], 
+                    this_result['description'], 
+                    this_result['value'], 
+                )
+                
+                if this_result['in_group']:
+                    textoutput += "\nGroup: %s group_index %s" % (this_result['group_name'], this_result['group_index'])
+                else:
+                    textoutput += "\nGroup:"
+
+
+            else:
+                
+                textoutput += "\nValue:%s xpath:%s " % (this_result['value'], this_result['xpath'])
+                if this_result['in_group']:
+                    textoutput += "Group: %s group_index %s" % (this_result['group_name'], this_result['group_index'])
+
+
+            print(textoutput)
+
+
+
