@@ -168,7 +168,7 @@ class TestCommandLine:
     def test_cli_5(self):
         test_args = [
             '--schedule', 'IRS990', 
-            '--format', 'csv',
+            '--format', 'txt',
             '201113139349301336'
         ]
         args = self.parser.parse_args(test_args)
@@ -176,15 +176,15 @@ class TestCommandLine:
 
     def test_cli_6(self):
         test_args = [
-            '--format', 'csv',
+            '--format', 'txt',
             '201113139349301336'
         ]
         args = self.parser.parse_args(test_args)
         run_cli_main(args)
 
-    def test_cli_5(self):
+    def test_cli_7(self):
         test_args = [
-            '--format', 'csv',
+            '--format', 'txt',
             '--no_doc',
             '201113139349301336'
         ]

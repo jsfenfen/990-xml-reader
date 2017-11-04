@@ -2,7 +2,8 @@ import json
 import sys
 import codecs
 import re
-import unicodecsv as csv
+import csv
+import unicodecsv
  
 from .standardizer import Standardizer, Documentizer, VersionDocumentizer
 
@@ -80,11 +81,16 @@ def write_ordered_documentation(data, standardizer):
                 print_documented_vars(grp)
 """
 
-def to_csv(parsed_filing, standardizer=None, documentation=True, vd=None):
+def to_csv(parsed_filing, standardizer=None, documentation=True, vd=None, csvfilepath=None):
     if not vd:
         vd = VersionDocumentizer()
-    #stdout = (sys.stdout.buffer if sys.version_info[0] >= 3 else sys.stdout)   # Also jsvine
-    stdout = sys.stdout
+
+    stdout = getattr(sys.stdout, 'buffer', sys.stdout)
+
+    if csvfilepath:
+        stdout = open(csvfilepath, 'w')  # or 'wb' ?
+
+    fieldnames = []
     if documentation:
         fieldnames = [ 
             'form', 'line_number', 'description', 'value', 'variable_name',
@@ -94,42 +100,46 @@ def to_csv(parsed_filing, standardizer=None, documentation=True, vd=None):
         fieldnames = [ 
             'value', 'xpath', 'variable_name', 'in_group', 'group_name', 'group_index'
         ]
-    writer = csv.DictWriter(
+
+    header = ",".join(fieldnames)
+    print(header)
+
+    #   unicodecsv
+    writer = unicodecsv.DictWriter(
         stdout,
         fieldnames=fieldnames,
-        delimiter=',',
-        quotechar='"',
-        lineterminator='\n',
+        encoding='utf-8',
         quoting=csv.QUOTE_MINIMAL
     )
-    writer.writeheader()
+    writer.writeheader()   # this fails in python3? 
     results = parsed_filing.get_result()
 
-    for result in results:
-        for this_result in result['csv_line_array']:
+    if results:
+        for result in results:
+            for this_result in result['csv_line_array']:
 
-            vardata = None
-            try:
-                vardata = standardizer.get_var(this_result['xpath'])
-            except KeyError:
-                pass
-            if vardata:
-                this_result['variable_name'] = vardata['db_table'] + "__" + vardata['db_name']
+                vardata = None
+                try:
+                    vardata = standardizer.get_var(this_result['xpath'])
+                except KeyError:
+                    pass
+                if vardata:
+                    this_result['variable_name'] = vardata['db_table'] + "__" + vardata['db_name']
 
-            if documentation:     # not sure why you'd want a csv without docs?
-                raw_line_num = vd.get_line_number(
-                    this_result['xpath'], 
-                    parsed_filing.get_version()
-                )
-                this_result['line_number'] =  debracket(raw_line_num)
+                if documentation:     # not sure why you'd want a csv without docs?
+                    raw_line_num = vd.get_line_number(
+                        this_result['xpath'], 
+                        parsed_filing.get_version()
+                    )
+                    this_result['line_number'] =  debracket(raw_line_num)
 
-                raw_description = vd.get_description(
-                    this_result['xpath'], 
-                    parsed_filing.get_version()
-                )
-                this_result['description'] =  debracket(raw_description)
-                this_result['form'] = this_result['xpath'].split("/")[1]
-            writer.writerow(this_result)
+                    raw_description = vd.get_description(
+                        this_result['xpath'], 
+                        parsed_filing.get_version()
+                    )
+                    this_result['description'] =  debracket(raw_description)
+                    this_result['form'] = this_result['xpath'].split("/")[1]
+                writer.writerow(this_result)
 
 
 def to_txt(parsed_filing, standardizer=None, documentation=True, vd=None):
@@ -170,31 +180,20 @@ def to_txt(parsed_filing, standardizer=None, documentation=True, vd=None):
             if this_sked_name != this_result['form']:
                 textoutput += "\n\n\tSchedule %s\n" % this_result['form']
                 this_sked_name = this_result['form']
-
             
             if documentation:
-
                 textoutput += "\nForm %s Line:%s Description:%s\nValue=%s" % (
                     this_result['form'], 
                     this_result['line_number'], 
                     this_result['description'], 
                     this_result['value'], 
                 )
-                
                 if this_result['in_group']:
                     textoutput += "\nGroup: %s group_index %s" % (this_result['group_name'], this_result['group_index'])
                 else:
                     textoutput += "\nGroup:"
-
-
             else:
-                
                 textoutput += "\nValue:%s xpath:%s " % (this_result['value'], this_result['xpath'])
                 if this_result['in_group']:
                     textoutput += "Group: %s group_index %s" % (this_result['group_name'], this_result['group_index'])
-
-
             print(textoutput)
-
-
-

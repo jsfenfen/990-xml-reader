@@ -74,6 +74,7 @@ def run_main(args_read):
             this_filing = Filing(object_id)
             this_filing.process()
             print(this_filing.list_schedules())
+            return True  # we're done, ignore any other commands
 
         else:
             if args_read.schedule:

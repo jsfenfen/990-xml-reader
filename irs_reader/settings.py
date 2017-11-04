@@ -27,6 +27,12 @@ ALLOWED_VERSIONSTRINGS = [
     '2015v2.0', '2015v2.1', '2015v3.0', '2016v3.0'
 ]
 
+CSV_ALLOWED_VERSIONSTRINGS = ALLOWED_VERSIONSTRINGS + [
+    '2010v3.2', '2010v3.4', '2010v3.6', '2010v3.7', '2011v1.2', '2011v1.3',
+    '2011v1.4', '2011v1.5', '2012v2.0', '2012v2.1', '2012v2.2', '2012v2.3', 
+    '2012v3.0'
+]
+
 METADATA_DIRECTORY = (os.path.join(IRS_READER_ROOT, "metadata"))
 
 KEYERROR_LOG = os.path.join(IRS_READER_ROOT, "keyerrors.log")

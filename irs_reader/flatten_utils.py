@@ -10,6 +10,7 @@ def flatten(d, parent_key='', sep='/'):
             if isinstance(v, collections.MutableMapping):
                 items.extend(flatten(v, new_key, sep=sep).items())
             else:
+                new_key = new_key.replace("/#text","")
                 items.append((new_key, v))
         return dict(items)
     else:
