@@ -191,6 +191,24 @@ class TestCommandLine:
         test_args = [
             '--format', 'txt',
             '--no_doc',
+            '--verbose',
+            '201113139349301336'
+        ]
+        args = self.parser.parse_args(test_args)
+        run_cli_main(args)
+
+    def test_cli_8(self):
+        test_args = [
+            '--list_schedules',
+            '201113139349301336'
+        ]
+        args = self.parser.parse_args(test_args)
+        run_cli_main(args)
+
+    def test_cli_8(self):
+        test_args = [
+            '--no_doc',
+            '--format', 'txt',
             '201113139349301336'
         ]
         args = self.parser.parse_args(test_args)
