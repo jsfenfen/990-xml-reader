@@ -23,72 +23,24 @@ def most_recent(semicolon_delimited_string):
     result = semicolon_delimited_string.split(";")[-1]
     return result
 
-
-def to_json(data):
+def to_json(data, outfilepath=None):
     if data:
-        if hasattr(sys.stdout, "buffer"):
-            sys.stdout = codecs.getwriter("utf-8")(sys.stdout.buffer, "strict")
-            json.dump(data, sys.stdout)
+        if outfilepath:
+            with open(outfilepath, 'w') as outfile:
+                json.dump(data, outfile)
         else:
-            json.dump(data, sys.stdout)
+            if hasattr(sys.stdout, "buffer"):
+                sys.stdout = codecs.getwriter("utf-8")(sys.stdout.buffer, "strict")
+                json.dump(data, sys.stdout)
+            else:
+                json.dump(data, sys.stdout)
 
-"""
-def print_documented_vars(vardata):
-    var_array = []
-    for this_key in vardata.keys():
-        if this_key == 'name':
-            continue
-        this_var = vardata[this_key]
-        this_var['name'] = this_key
-        var_array.append(this_var)
-    sorted_vars = sorted(var_array, key=lambda k: int(k['ordering']))
-
-    for this_vardata in sorted_vars:
-        print("\n\t*%s*: value=%s \n\tLine '%s' Desc: '%s' Type: %s" % (
-            this_vardata['name'],
-            this_vardata['value'],
-            this_vardata.get('line_number') or '',
-            this_vardata.get('description') or '',
-            this_vardata.get('db_type') or '')
-        )
-
-
-def print_part_start(part_name):
-    print("\n%s\n" % part_name)
-
-
-def write_ordered_documentation(data, standardizer):
-    for schedule in data:
-        print("\nSchedule: %s\n" % schedule['schedule_name'])
-        schedule_parts = []
-        for key in schedule['schedule_parts'].keys():
-            this_part = schedule['schedule_parts'][key]
-            this_part['name'] = key
-            schedule_parts.append(this_part)
-
-        schedule_parts_sorted = sorted(
-            schedule_parts,
-            key=lambda k: standardizer.part_ordering(k['name']))
-
-        for part in schedule_parts_sorted:
-            print_part_start(part['name'])
-            print_documented_vars(part)
-
-        for grpkey in schedule['groups'].keys():
-            for grp in schedule['groups'][grpkey]:
-                print ("\nRepeating Group: %s\n" % grpkey)
-
-                print_documented_vars(grp)
-"""
-
-def to_csv(parsed_filing, standardizer=None, documentation=True, vd=None, csvfilepath=None):
+def to_csv(parsed_filing, standardizer=None, documentation=True, vd=None, outfilepath=None):
     if not vd:
         vd = VersionDocumentizer()
-
     stdout = getattr(sys.stdout, 'buffer', sys.stdout)
-
-    if csvfilepath:
-        stdout = open(csvfilepath, 'w')  # or 'wb' ?
+    if outfilepath:
+        stdout = open(outfilepath, 'wb')  # or 'wb' ?
 
     fieldnames = []
     if documentation:
@@ -101,10 +53,6 @@ def to_csv(parsed_filing, standardizer=None, documentation=True, vd=None, csvfil
             'value', 'xpath', 'variable_name', 'in_group', 'group_name', 'group_index'
         ]
 
-    header = ",".join(fieldnames)
-    print(header)
-
-    #   unicodecsv
     writer = unicodecsv.DictWriter(
         stdout,
         fieldnames=fieldnames,
@@ -142,58 +90,67 @@ def to_csv(parsed_filing, standardizer=None, documentation=True, vd=None, csvfil
                 writer.writerow(this_result)
 
 
-def to_txt(parsed_filing, standardizer=None, documentation=True, vd=None):
+def to_txt(parsed_filing, standardizer=None, documentation=True, vd=None, outfilepath=None):
     if not vd:
         vd = VersionDocumentizer()
     results = parsed_filing.get_result()
     this_sked_name = None
+    if outfilepath:
+        outfile = open(outfilepath, 'w')
+    if results:
+        for result in results:
+            for this_result in result['csv_line_array']:
 
-    for result in results:
-        for this_result in result['csv_line_array']:
+                #### Collect the variables we need
+                vardata = None
+                textoutput = "\n"     # This is what we'll eventually write out
+                this_result['form'] = this_result['xpath'].split("/")[1]
+                try:
+                    vardata = standardizer.get_var(this_result['xpath'])
+                except KeyError:
+                    pass
+                if vardata:
+                    this_result['variable_name'] = vardata['db_table'] + "__" + vardata['db_name']
 
-            #### Collect the variables we need
-            vardata = None
-            textoutput = ""     # This is what we'll eventually write out
-            this_result['form'] = this_result['xpath'].split("/")[1]
-            try:
-                vardata = standardizer.get_var(this_result['xpath'])
-            except KeyError:
-                pass
-            if vardata:
-                this_result['variable_name'] = vardata['db_table'] + "__" + vardata['db_name']
+                if documentation:     # not sure why you'd want a csv without docs?
+                    raw_line_num = vd.get_line_number(
+                        this_result['xpath'], 
+                        parsed_filing.get_version()
+                    )
+                    this_result['line_number'] =  debracket(raw_line_num)
 
-            if documentation:     # not sure why you'd want a csv without docs?
-                raw_line_num = vd.get_line_number(
-                    this_result['xpath'], 
-                    parsed_filing.get_version()
-                )
-                this_result['line_number'] =  debracket(raw_line_num)
+                    raw_description = vd.get_description(
+                        this_result['xpath'], 
+                        parsed_filing.get_version()
+                    )
+                    this_result['description'] =  debracket(raw_description)
 
-                raw_description = vd.get_description(
-                    this_result['xpath'], 
-                    parsed_filing.get_version()
-                )
-                this_result['description'] =  debracket(raw_description)
+                #### Write the output, now that we've got the vars 
 
-            #### Write the output, now that we've got the vars 
-
-            if this_sked_name != this_result['form']:
-                textoutput += "\n\n\tSchedule %s\n" % this_result['form']
-                this_sked_name = this_result['form']
-            
-            if documentation:
-                textoutput += "\nForm %s Line:%s Description:%s\nValue=%s" % (
-                    this_result['form'], 
-                    this_result['line_number'], 
-                    this_result['description'], 
-                    this_result['value'], 
-                )
-                if this_result['in_group']:
-                    textoutput += "\nGroup: %s group_index %s" % (this_result['group_name'], this_result['group_index'])
+                if this_sked_name != this_result['form']:
+                    textoutput += "\n\n\tSchedule %s\n" % this_result['form']
+                    this_sked_name = this_result['form']
+                
+                if documentation:
+                    textoutput += "\nForm %s Line:%s Description:%s\nValue=%s" % (
+                        this_result['form'], 
+                        this_result['line_number'], 
+                        this_result['description'], 
+                        this_result['value'], 
+                    )
+                    if this_result['in_group']:
+                        textoutput += "\nGroup: %s group_index %s" % (this_result['group_name'], this_result['group_index'])
+                    else:
+                        textoutput += "\nGroup:"
                 else:
-                    textoutput += "\nGroup:"
-            else:
-                textoutput += "\nValue:%s xpath:%s " % (this_result['value'], this_result['xpath'])
-                if this_result['in_group']:
-                    textoutput += "Group: %s group_index %s" % (this_result['group_name'], this_result['group_index'])
-            print(textoutput)
+                    textoutput += "\nValue:%s xpath:%s " % (this_result['value'], this_result['xpath'])
+                    if this_result['in_group']:
+                        textoutput += "\nGroup: %s group_index %s" % (this_result['group_name'], this_result['group_index'])
+
+                if outfilepath:
+                    outfile.write(textoutput)
+                else:
+                    sys.stdout.write(textoutput)
+
+    if outfilepath:
+        outfile.close()

@@ -42,6 +42,11 @@ def get_parser():
         help='Output format'
     )
     parser.add_argument(
+        "--file",
+        default=None,
+        help='Write result to file'
+    )
+    parser.add_argument(
         '--list_schedules',
         dest='list_schedules',
         action='store_const',
@@ -49,12 +54,6 @@ def get_parser():
         default=False,
         help='Only list schedules'
     )
-    #### Do we really wanna claim to support encodings... 
-    #parser.add_argument(
-    #    "--encoding",
-    #    default="utf-8",
-    #    help="encoding (probably utf-8)"
-    #)
     return parser
 
 
@@ -69,6 +68,8 @@ def run_main(args_read):
     for object_id in args_read.object_ids:
         if args_read.verbose:
             print("Processing filing %s" % object_id)
+            if args_read.file:
+                print("Printing result to file %s" % args_read.file)
 
         if args_read.list_schedules:
             this_filing = Filing(object_id)
@@ -90,13 +91,14 @@ def run_main(args_read):
                 )
 
         if args_read.format == 'json':
-            to_json(parsed_filing.get_result())
+            to_json(parsed_filing.get_result(), outfilepath=args_read.file)
 
         elif args_read.format=='csv':   
                 to_csv(
                     parsed_filing,
                     standardizer=standardizer,
                     documentation=args_read.documentation,
+                    outfilepath=args_read.file
                 )
 
         elif args_read.format=='txt':
@@ -104,6 +106,7 @@ def run_main(args_read):
                     parsed_filing,
                     standardizer=standardizer,
                     documentation=args_read.documentation,
+                    outfilepath=args_read.file
                 )
 
 
