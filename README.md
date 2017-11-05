@@ -6,9 +6,12 @@
 - [About](#about)
 - [Installation](#installation)
 - [Command line IRSx](#command-line-irsx)
+- [Output formats: json, csv, txt](#command-line-output-formats-json-csv-txt)
+- [CSV/TXT examples](#csv--txt-examples)
+- [JSON examples](#json-examples)
 - [Find a tax return's object_id](#getting-an-object-id)
 - [Variable errors and deprecated return values](#variable-errors-and-deprecated-values)
-- [IRSx from within python](#irsx-from-python)
+- [IRSx as a python library](#irsx-from-python)
 - [irsx_index: get yearly index files](#irsx_index) 
 - [Developer directions](#developer-directions)
 - [Testing](#testing)
@@ -54,7 +57,7 @@ The tax returns are complex--the easiest way to understand them is to consult th
 ## Command line IRSx
 Installing the library will also install the irsx command line tool, which uses the IRS' object\_ids to reference a particular filing. By default results are printed to the terminal, but can be saved to a specific file with the `--file` option. Using the `--verbose` flag will display a bit more information about what's happening, but should not be used if you're trying to capture the output into a file (as it won't follow the format needed). 
 
-### Command line output formats: json, csv, txt
+## CLI Output formats: json, csv, txt
 
 The command line tool supports three styles of 'displaying' a filing. The output can also be written out to a file specified with the `--file` option. 
 
@@ -64,14 +67,14 @@ The csv output is "transposed" from a normal csv--in other words, each *row* rep
 
 JSON output is only available for schema versions from 2013 and later. CSV and TXT output are available for 2010 schemas and later. 
 
-- __JSON__ The first is a nested-json structure that provides a consistent way of describing variables for all schema versions from 2013 and forwards. The down side of this is that json is not ordered, so it can be confusing for humans to view.
-- __CSV__ This isn't a 'real' csv file, it's really a listing of all the different variables found, along with metadata like line number and description. It's available for versions 2010 and forwards. This doesn't attempt to restructure the content, it just spits it out in the order that it appears. This is often more human readable than json. Because it's a listing of all variables, the xpaths to those variables may repeat. A group_index column keeps count of which repeating group each variable belongs to.
+- __JSON__ The first is a nested-json structure that provides a consistent way of describing variables for all schema versions from 2013 and forwards. The down side of this is that json is not ordered, so it can be confusing for humans to view. The description and line number fields are for the "canonical" version--2016v3.0--and so may vary from those seen on the form. 
+- __CSV__ This isn't a 'real' csv file, it's really a listing of all the different variables found, along with metadata like line number and description. It's available for versions 2010 and forwards. This doesn't attempt to restructure the content, it just spits it out in the order that it appears. This is often more human readable than json. Because it's a listing of all variables, the xpaths to those variables may repeat. A group_index column keeps count of which repeating group each variable belongs to. Both CSV and TXT formats use line numbers and descriptions that are specific to the version (these can both change over time) so it's 
 - __TXT__ There's also a txt format output that is very similar to csv in that it prints the rows it finds in an ordered dump, but makes it slightly more readable. CSV is intended to be viewed in a spreadsheet program, whereas TXT format translates better to a text editor / wider than normal terminal window.
 
 ### CSV / TXT examples
 
 
-CSV and TXT are often more useful for browsing a file--but first we need to know what schedules are present in this filing. Irsx has a shortcut, the --list_schedules option
+CSV and TXT are often more useful for browsing a file--we can eyeball the whole filing, but sometimes it's handy to zero in on just one schedule. Irsx has a shortcut, the --list_schedules option to show you what's available.
 		 
 	
 		$ irsx --list_schedules 201533089349301428
