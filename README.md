@@ -29,9 +29,11 @@ We're using the "object_id" 201533089349301428 to refer to the Dec. 2014 990 fil
 
 IRSx is a python library and command line tool to simplify working with nonprofit tax returns [released](https://aws.amazon.com/public-datasets/irs-990/) by the IRS in XML format. The library currently standarizes returns submitted in formats dating from 2013 and forwards into consistently named datastructures that follow the same format as the "paper" 990. Repeating elements, such as the salary disclosed for best compensated employees, appear at the end of each schedule. We plan to release updated metadata that will allow processing of earlier forms.
 
-Forms from schemas from years 2010 to the present are 'viewable' in CSV and TXT mode via the command line tool.
+Forms from schemas years ranging from 2010 to the present are 'viewable' in CSV and TXT mode via the command line tool.
 
 From the command line, xml files can be output as machine readable json, csv or human readable text. From within a python program, the results are returned as native data structures. 
+
+Filers are allowed to leave blank tax lines not applicable to them. IRSx returns only schedules and lines that have been completed by filers.
 
 The tax returns are complex--the easiest way to understand them is to consult the [metadata csv files](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata), and cross reference these to the forms in [sample\_schedules](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/sample_schedules) (which contains recent pdf versions of the schedules).  The data returned for each schedule read contains schedule parts (see the [schedule\_parts.csv](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata/schedule_parts.csv) for all possible parts) and repeating groups (see [groups.csv](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata/groups.csv)) that occur within that schedule. Both repeating groups and schedule\_parts contain variables, which are documented in the [variables.csv](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata/variables.csv) table. 
 
@@ -54,11 +56,54 @@ Installing the library will also install the irsx command line tool, which uses 
 
 ### Command line output formats: json, csv, txt
 
-The command line tool supports two styles of 'displaying' a filing. 
+The command line tool supports three styles of 'displaying' a filing. The output can also be written out to a file specified with the `--file` option. 
+
+For browsing and human-reference, csv or text is often easier to understand, because it maintains the order of the original filing. For bulk use or database entry, json is probably more relevant, because the "structure" of the original database--broken into parts, some repeating--is better replicated in those. 
+
+The csv output is "transposed" from a normal csv--in other words, each *row* represents a variable. Repeating variables may appear multiple times (though the 'group_index' should increment with each new occurence).
+
+JSON output is only available for schema versions from 2013 and later. CSV and TXT output are available for 2010 schemas and later. 
 
 - __JSON__ The first is a nested-json structure that provides a consistent way of describing variables for all schema versions from 2013 and forwards. The down side of this is that json is not ordered, so it can be confusing for humans to view.
 - __CSV__ This isn't a 'real' csv file, it's really a listing of all the different variables found, along with metadata like line number and description. It's available for versions 2010 and forwards. This doesn't attempt to restructure the content, it just spits it out in the order that it appears. This is often more human readable than json. Because it's a listing of all variables, the xpaths to those variables may repeat. A group_index column keeps count of which repeating group each variable belongs to.
-- __TXT__ There's also a txt format output that is very similar to csv in that it prints the rows it finds in an ordered dump, but makes it slightly more readable. 
+- __TXT__ There's also a txt format output that is very similar to csv in that it prints the rows it finds in an ordered dump, but makes it slightly more readable. CSV is intended to be viewed in a spreadsheet program, whereas TXT format translates better to a text editor / wider than normal terminal window.
+
+### CSV / TXT examples
+
+
+CSV and TXT are often more useful for browsing a file--but first we need to know what schedules are present in this filing. Irsx has a shortcut, the --list_schedules option
+		 
+	
+		$ irsx --list_schedules 201533089349301428
+	
+		['ReturnHeader990x', 'IRS990', 'IRS990ScheduleA', 'IRS990ScheduleB', 'IRS990ScheduleC', 'IRS990ScheduleD', 'IRS990ScheduleG', 'IRS990ScheduleH', 'IRS990ScheduleI', 'IRS990ScheduleJ', 'IRS990ScheduleK', 'IRS990ScheduleL', 'IRS990ScheduleM', 'IRS990ScheduleO', 'IRS990ScheduleR']
+	
+Now let's look at a human readable text version of schedule J
+
+	$ irsx --format=txt --schedule=IRS990ScheduleJ 201533089349301428
+
+Note that the --schedule argument also works in json or csv mode.
+
+The output is lengthy, but let's look at an excerpt:
+
+	Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+	Value=Patrick Fry 
+	Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+	
+	Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+	Value=Trustee, President & CEO SH 
+	Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+	
+	Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+	Value=0 
+	Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+	
+	Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+	Value=1523132 
+	Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+ 
+ Note the "Group" variable. This corresponds to the db_name in the groups.csv file in the metadata directory. It is only listed if a variable is part of a "repeating group" (like officers / trustees / key employees). The "group\_index" variable represents the number of times this variable has been seen.
+ 
 
 
 ### JSON examples
@@ -92,41 +137,6 @@ Each schedule part or repeating group includes the original object\_id and ein o
 
 Note that IRSX will download the file if it hasn't already--for more information about the location, use the --verbose option. IRSX by default will retrieve the file from the IRS' public Amazon S3 bucket. If you plan to work with a large collection of files, you may want to host xml on your own bucket, and use bulk tools like AWS CLI's sync to move many documents at once.
 
-### CSV / TXT examples
-
-
-We can narrow in on a single schedule, but first we need to know what is present in this filing, using the --list_schedules option
-		 
-	
-		$ irsx --list_schedules 201533089349301428
-	
-		['ReturnHeader990x', 'IRS990', 'IRS990ScheduleA', 'IRS990ScheduleB', 'IRS990ScheduleC', 'IRS990ScheduleD', 'IRS990ScheduleG', 'IRS990ScheduleH', 'IRS990ScheduleI', 'IRS990ScheduleJ', 'IRS990ScheduleK', 'IRS990ScheduleL', 'IRS990ScheduleM', 'IRS990ScheduleO', 'IRS990ScheduleR']
-	
-Now let's look at a human readable text version of schedule J
-
-	$ irsx --format=txt --schedule=IRS990ScheduleJ 201533089349301428
-
-Note that the --schedule argument also works in json or csv mode.
-
-The output is lengthy, but let's look at an excerpt:
-
-	Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
-	Value=Patrick Fry 
-	Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
-	
-	Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
-	Value=Trustee, President & CEO SH 
-	Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
-	
-	Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
-	Value=0 
-	Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
-	
-	Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
-	Value=1523132 
-	Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
- 
- 
 
 
 ### Complete command line usage
@@ -326,13 +336,13 @@ You can still add command line args, like this:
 Nosetests - Test coverage is incomplete, improve it with coverage.py ( so run 'pip install coverage' 
 then:
 
-$ nosetests --with-coverage --cover-erase --cover-package=irs_reader
+	$ nosetests --with-coverage --cover-erase --cover-package=irs_reader
 
 or
 
-$ coverage report -m 
+	$ coverage report -m 
 
 
 
-Tox -- see tox.ini; testing for: 2.7,3.4,3.5,3.6 . You may need to run `pip install tox` in the testing environment. 
+Tox -- see tox.ini; testing for: 2.7,3.4,3.5,3.6. You may need to run `pip install tox` in the testing environment. 
 
