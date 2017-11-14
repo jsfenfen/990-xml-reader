@@ -17,7 +17,25 @@
 - [Testing](#testing)
 
 ## Quickstart
-We're using the "object_id" 201533089349301428 to refer to the Dec. 2014 990 filed by "Sutter Health Sacramento Region", which is described in the [2016 index file](https://s3.amazonaws.com/irs-form-990/index_2016.csv). We can use it to pull out specific pieces of data, across versions
+We're using the "object_id" 201533089349301428 to refer to the Dec. 2014 990 filed by "Sutter Health Sacramento Region", which is described in the [2016 index file](https://s3.amazonaws.com/irs-form-990/index_2016.csv).  To make the file human readable, use the txt format option, and only display one schedule (the complete command line usage is available with --help). 
+
+	$ irsx --format=txt --schedule=IRS990ScheduleJ 201533089349301428
+
+The result should look something like:  
+
+		Schedule IRS990ScheduleJ
+	
+	Line:Part I Line 1a Description:Idemnification and gross-up payments Xpath:/IRS990ScheduleJ/IdemnificationGrossUpPmtsInd
+	Value=X 
+	Group:
+	
+	Line:Part I Line 1b Description:Written policy reference T and E expenses? Xpath:/IRS990ScheduleJ/WrittenPolicyRefTAndEExpnssInd
+	Value=true 
+	Group:
+	... [ truncated, the full output is quite lengthy ]
+	
+
+We can use it as a python library to pull out specific pieces of data, across versions
 
 	>>> from irsx.xmlrunner import XMLRunner
 	>>> xml_runner = XMLRunner()
