@@ -17,21 +17,32 @@
 - [Testing](#testing)
 
 ## Quickstart
-We're using the "object_id" 201533089349301428 to refer to the Dec. 2014 990 filed by "Sutter Health Sacramento Region", which is described in the [2016 index file](https://s3.amazonaws.com/irs-form-990/index_2016.csv).  To make the file human readable, use the txt format option, and only display one schedule (the complete command line usage is available with --help). 
+We're using the "object_id" 201533089349301428 assigned by the IRS to the Dec. 2014 annual nonprofit tax return (990) filed by "Sutter Health Sacramento Region", which is one of quite a few returns disclosed in the [2016 index file](https://s3.amazonaws.com/irs-form-990/index_2016.csv).  To make the file human readable, use the txt format option, and only display one schedule (the complete command line usage is available with --help). 
 
 	$ irsx --format=txt --schedule=IRS990ScheduleJ 201533089349301428
 
-The result should look something like:  
+The result should be a line by line reconstruction of the tax form that includes the IRS' description of line numbers and line descriptions, as well as the 'xpath' used, the repeating group name and the group_index if applicable. It should look something like this:
 
 		Schedule IRS990ScheduleJ
 	
-	Line:Part I Line 1a Description:Idemnification and gross-up payments Xpath:/IRS990ScheduleJ/IdemnificationGrossUpPmtsInd
-	Value=X 
-	Group:
+		... [ lengthy output for schedule J Part I ] ...
 	
-	Line:Part I Line 1b Description:Written policy reference T and E expenses? Xpath:/IRS990ScheduleJ/WrittenPolicyRefTAndEExpnssInd
-	Value=true 
-	Group:
+		Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+		Value=John Boyd 
+		Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+		
+		Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+		Value=CAO, MNTL HLTH & CONT CARE SSR 
+		Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+		
+		Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+		Value=0 
+		Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+		
+		Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+		Value=268967 
+		Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+
 	... [ truncated, the full output is quite lengthy ]
 	
 
@@ -41,8 +52,10 @@ We can use it as a python library to pull out specific pieces of data, across ve
 	>>> xml_runner = XMLRunner()
 	>>> parsed_filing = xml_runner.run_sked(201533089349301428, 'IRS990ScheduleJ')
 	>>> key_employees = parsed_filing.get_result()[0]['groups']['SkdJRltdOrgOffcrTrstKyEmpl']
-	>>> for employee in key_employees:                                                                
-		  print(employee['PrsnNm'])
+	>>> for employee in key_employees:
+	...  print(employee)
+	... 
+	{'object_id': 201533089349301428, 'ein': '941156621', 'PrsnNm': 'John Boyd', 'TtlTxt': 'CAO, MNTL HLTH & CONT CARE SSR', 'BsCmpnstnFlngOrgAmt': '0', 'CmpnstnBsdOnRltdOrgsAmt': '268967', 'BnsFlngOrgnztnAmnt': '0', 'BnsRltdOrgnztnsAmt': '116200', 'OthrCmpnstnFlngOrgAmt': '0', 'OthrCmpnstnRltdOrgsAmt': '13933', 'DfrrdCmpnstnFlngOrgAmt': '0', 'DfrrdCmpRltdOrgsAmt': '86894', 'NntxblBnftsFlngOrgAmt': '0', 'NntxblBnftsRltdOrgsAmt': '7303', 'TtlCmpnstnFlngOrgAmt': '0', 'TtlCmpnstnRltdOrgsAmt': '493297', 'CmpRprtPrr990FlngOrgAmt': '0', 'CmpRprtPrr990RltdOrgsAmt': '8400'}
 
 
 
@@ -51,6 +64,8 @@ We can use it as a python library to pull out specific pieces of data, across ve
 IRSx is a python library and command line tool to simplify working with nonprofit tax returns [released](https://aws.amazon.com/public-datasets/irs-990/) by the IRS in XML format. The library currently standarizes returns submitted in formats dating from 2013 and forwards into consistently named datastructures that follow the same format as the "paper" 990. Repeating elements, such as the salary disclosed for best compensated employees, appear at the end of each schedule. We plan to release updated metadata that will allow processing of earlier forms.
 
 Forms from schemas years ranging from 2010 to the present are 'viewable' in CSV and TXT mode via the command line tool.
+
+Forms 990, 990EZ, 990PF and all lettered schedules A-O and R are all supported (although schedule B is typically marked as 'restricted').
 
 From the command line, xml files can be output as machine readable json, csv or human readable text. From within a python program, the results are returned as native data structures. 
 
