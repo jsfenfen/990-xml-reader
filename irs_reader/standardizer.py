@@ -181,6 +181,8 @@ class VersionDocumentizer(object):
 
     def get_line_number(self, xpath, version_string):
         #print("get_line_number %s %s" % (xpath, version_string))
+        if version_string == '2016v3.1':
+            version_string = '2016v3.0'
 
         candidate_rows = []
         try:
@@ -196,6 +198,8 @@ class VersionDocumentizer(object):
         return None
 
     def get_description(self, xpath, version_string):
+        if version_string == '2016v3.1':
+            version_string = '2016v3.0'
         candidate_rows = []
         try:
             candidate_rows = self.descriptions[xpath]
