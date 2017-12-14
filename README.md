@@ -238,12 +238,43 @@ Much broader functionality is available by running from within python.
 
 	>>> from irsx.xmlrunner import XMLRunner
 	>>> xml_runner = XMLRunner()
-	>>> result = xml_runner.run_filing(201533089349301428)
+	>>> parsed_filing = xml_runner.run_filing(201533089349301428)
+	>>> result = parsed_filing.get_result()  # An array of parsed schedules
+	>>> schedule_list = parsed_filing.list_schedules() # an array of form names
 
-Result is an array of schedules; each schedule's name can be accessed as result[i]['schedule_name']. Note that this filing has *3* different schedule K's in it. Only schedule K is allowed to repeat--all other lettered schedules (i.e. Schedules A-O and R) may only appear once. If we only care about one schedule we can extract it (though note that the result will still be an array of schedules).
+Result is an array of parsed form schedules; each schedule's name can be accessed as result[i]['schedule_name']. 
+
+    >>> import json  # to format output
+	>>> for sked in result:
+	...  print("Schedule: %s" % sked['schedule_name'])  
+	...  print(json.dumps(sked, indent=4, sort_keys=True))   # make json more readable
+	
+	Schedule: ReturnHeader990x
+	{
+	    "csv_line_array": [],
+	    "groups": {},
+	    "schedule_name": "ReturnHeader990x",
+	    "schedule_parts": {
+	        "returnheader990x_part_i": {
+	            "BsnssNm_BsnssNmLn1Txt": "SUTTER HEALTH SACRAMENTO SIERRA REGION",
+	 		... [ full output is quite lengthy... ]
+
+	
+
+
+Note that this filing has *3* different schedule K's in it. 
+
+	>>> skedk = parsed_filing.get_schedule('IRS990ScheduleK')
+	>>> len(skedk)  # Bond schedule fits 4 entries/form; all must be listed
+	3
+	
+Only schedule K is allowed to repeat--all other lettered schedules (i.e. Schedules A-O and R) may only appear once. If we only care about one schedule we can extract only it (though note that the result will still be an array of schedules). 
 
 	>>> parsed_filing = xml_runner.run_sked(201533089349301428, 'IRS990ScheduleJ')
-	>>> result = parsed_filing.get_result()
+	>>> resultskedj = parsed_filing.get_result() # an array of ScheduleJ forms
+	>>> len(resultskedj)   # only schedule J's are returned.
+	1
+
 
 Show the repeating groups that are present this schedule:
 
