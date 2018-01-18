@@ -264,7 +264,7 @@ Result is an array of parsed form schedules; each schedule's name can be accesse
 
 Note that this filing has *3* different schedule K's in it. 
 
-	>>> skedk = parsed_filing.get_schedule('IRS990ScheduleK')
+	>>> skedk = parsed_filing.get_parsed_sked('IRS990ScheduleK')
 	>>> len(skedk)  # Bond schedule fits 4 entries/form; all must be listed
 	3
 	
