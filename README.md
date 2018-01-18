@@ -2,9 +2,9 @@
 
 ## Table of Contents
 
+- [Installation](#installation)
 - [Quickstart](#quickstart)
 - [About](#about)
-- [Installation](#installation)
 - [Command line IRSx](#command-line-irsx)
 - [Output formats: json, csv, txt](#command-line-output-formats-json-csv-txt)
 - [CSV/TXT examples](#csv--txt-examples)
@@ -16,6 +16,12 @@
 - [Developer directions](#developer-directions)
 - [Testing](#testing)
 
+## Installation
+
+	$ pip install irsx
+
+Read more about pip [here](https://packaging.python.org/tutorials/installing-packages/#use-pip-for-installing). 
+ 
 ## Quickstart
 We're using the "object_id" 201533089349301428 assigned by the IRS to the Dec. 2014 annual nonprofit tax return (990) filed by "Sutter Health Sacramento Region", which is one of quite a few returns disclosed in the [2016 index file](https://s3.amazonaws.com/irs-form-990/index_2016.csv).  To make the file human readable, use the txt format option, and only display one schedule (the complete command line usage is available with --help). 
 
@@ -73,18 +79,7 @@ Filers are allowed to leave blank tax lines not applicable to them. IRSx returns
 
 The tax returns are complex--the easiest way to understand them is to consult the [metadata csv files](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata), and cross reference these to the forms in [sample\_schedules](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/sample_schedules) (which contains recent pdf versions of the schedules).  The data returned for each schedule read contains schedule parts (see the [schedule\_parts.csv](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata/schedule_parts.csv) for all possible parts) and repeating groups (see [groups.csv](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata/groups.csv)) that occur within that schedule. Both repeating groups and schedule\_parts contain variables, which are documented in the [variables.csv](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata/variables.csv) table. 
 
-
-
-
-
-## Installation
-
-#### Will be easier once we put this on pypi
  
-- git clone the repo 
-- install locally using `$ pip install . ` from the directory with setup.py in it. It's painfully slow. You should now be able to run it as a command line utility, i.e. $ irsx --help or $ irsx_index --help
-- To uninstall use `$ pip uninstall irsx`
-- To see if it's installed, run `$ pip freeze`; if you see a line line 'irsx==0.0.1' it is installed. 
 
 
 ## Command line IRSx
