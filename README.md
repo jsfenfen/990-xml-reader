@@ -20,7 +20,9 @@
 
 	$ pip install irsx
 
-Read more about pip [here](https://packaging.python.org/tutorials/installing-packages/#use-pip-for-installing). 
+If you've previously IRSx, you might try updating it with `$ pip install irsx --upgrade` to get the latest version. 
+
+Read more about pip [here](https://packaging.python.org/tutorials/installing-packages/#use-pip-for-installing).
  
 ## Quickstart
 We're using the "object_id" 201533089349301428 assigned by the IRS to the Dec. 2014 annual nonprofit tax return (990) filed by "Sutter Health Sacramento Region", which is one of quite a few returns disclosed in the [2016 index file](https://s3.amazonaws.com/irs-form-990/index_2016.csv). See more in [finding an object id](#getting-an-object-id)  
