@@ -124,21 +124,19 @@ Note that the --schedule argument also works in json or csv mode.
 
 The output is lengthy, but let's look at an excerpt:
 
-	Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
-	Value=Patrick Fry 
-	Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+	****************
+	  Value: '296489'
+	Form: IRS990ScheduleJ
+	Line:Part II Column (B)(ii)
+	Description:Part II contents; Bonus and incentive compensation ($) from related organizations
+	Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 1
 	
-	Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
-	Value=Trustee, President & CEO SH 
-	Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
-	
-	Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
-	Value=0 
-	Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
-	
-	Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
-	Value=1523132 
-	Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+	****************
+	  Value: 'CEO, Reg Amb Care, SRR'
+	Form: IRS990ScheduleJ
+	Line:Part II Column (A)
+	Description:Part II contents; Title of Officer
+	Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 1
  
  Note the "Group" variable. This corresponds to the db_name in the groups.csv file in the metadata directory. It is only listed if a variable is part of a "repeating group" (like officers / trustees / key employees). The "group\_index" variable represents the number of times this variable has been seen.
  
