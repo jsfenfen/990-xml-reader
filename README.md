@@ -400,7 +400,7 @@ You can still add command line args, like this:
 
 ## Testing
 
-Nosetests - Test coverage is incomplete, improve it with coverage.py ( so run 'pip install coverage' 
+Nosetests - Test coverage is incomplete, improve it with coverage.py;  run 'pip install coverage' 
 then:
 
 	$ nosetests --with-coverage --cover-erase --cover-package=irs_reader
