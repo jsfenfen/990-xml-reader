@@ -27,7 +27,11 @@ We're using the "object_id" 201533089349301428 assigned by the IRS to the Dec. 2
 
 	$ irsx --format=txt --schedule=IRS990ScheduleJ 201533089349301428
 
-The result should be a line by line reconstruction of the tax form that includes the IRS' description of line numbers and line descriptions, as well as the 'xpath' used, the repeating group name and the group_index if applicable. It should look something like this:
+You can omit the schedule and it will print out information about each part of the filing, but adding it can help zero in on whatever part you are interested in. 
+
+Allowed output formats are 'csv', 'txt', and 'json'. [See the results as [.csv](samples/201533089349301428_ScheduleJ.csv), [.txt](samples/201533089349301428_ScheduleJ.txt)., or [.json](samples/201533089349301428_ScheduleJ.json) files]. CSV and TXT are "flat" formats for human readibility, whereas the json is nested like the original tax forms (although only available for schema years 2013 and forwards).
+
+The resulting txt file from the command above should be a line by line reconstruction of the tax form that includes the IRS' text describing the 'Line' and 'Description' of the variable, as well as the 'xpath' used, the repeating group name and the group_index if applicable. It should look something like this:
 
 		Schedule IRS990ScheduleJ
 	
@@ -52,7 +56,7 @@ The result should be a line by line reconstruction of the tax form that includes
 	... [ truncated, the full output is quite lengthy ]
 	
 
-We can use it as a python library to pull out specific pieces of data, across versions
+We can also it as a python library to pull out specific pieces of data, across versions
 
 	>>> from irsx.xmlrunner import XMLRunner
 	>>> xml_runner = XMLRunner()
