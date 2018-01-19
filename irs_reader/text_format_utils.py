@@ -10,6 +10,7 @@ from .standardizer import Standardizer, Documentizer, VersionDocumentizer
 
 BRACKET_RE = re.compile(r'\[.*?\]')
 
+ASTERISKS = "****************"
 
 def debracket(string):
     """ Eliminate the bracketed var names in doc, line strings """
@@ -43,16 +44,10 @@ def to_csv(parsed_filing, standardizer=None, documentation=True, vd=None, outfil
         stdout = open(outfilepath, 'wb')  # or 'wb' ?
 
     fieldnames = []
-    if documentation:
-        fieldnames = [ 
+    fieldnames = [ 
             'form', 'line_number', 'description', 'value', 'variable_name',
             'xpath', 'in_group', 'group_name', 'group_index'
         ]
-    else:
-        fieldnames = [ 
-            'value', 'xpath', 'variable_name', 'in_group', 'group_name', 'group_index'
-        ]
-
     writer = unicodecsv.DictWriter(
         stdout,
         fieldnames=fieldnames,
@@ -72,21 +67,21 @@ def to_csv(parsed_filing, standardizer=None, documentation=True, vd=None, outfil
                 except KeyError:
                     pass
                 if vardata:
-                    this_result['variable_name'] = vardata['db_table'] + "__" + vardata['db_name']
+                    this_result['variable_name'] = vardata['db_table'] + "." + vardata['db_name']
 
-                if documentation:     # not sure why you'd want a csv without docs?
-                    raw_line_num = vd.get_line_number(
-                        this_result['xpath'], 
-                        parsed_filing.get_version()
-                    )
-                    this_result['line_number'] =  debracket(raw_line_num)
+                raw_line_num = vd.get_line_number(
+                    this_result['xpath'], 
+                    parsed_filing.get_version()
+                )
+                this_result['line_number'] =  debracket(raw_line_num)
 
-                    raw_description = vd.get_description(
-                        this_result['xpath'], 
-                        parsed_filing.get_version()
-                    )
-                    this_result['description'] =  debracket(raw_description)
-                    this_result['form'] = this_result['xpath'].split("/")[1]
+                raw_description = vd.get_description(
+                    this_result['xpath'], 
+                    parsed_filing.get_version()
+                )
+                this_result['description'] =  debracket(raw_description)
+                this_result['form'] = this_result['xpath'].split("/")[1]
+
                 writer.writerow(this_result)
 
 
@@ -110,43 +105,44 @@ def to_txt(parsed_filing, standardizer=None, documentation=True, vd=None, outfil
                 except KeyError:
                     pass
                 if vardata:
-                    this_result['variable_name'] = vardata['db_table'] + "__" + vardata['db_name']
+                    this_result['variable_name'] = vardata['db_table'] + "." + vardata['db_name']
 
-                if documentation:     # not sure why you'd want a csv without docs?
-                    raw_line_num = vd.get_line_number(
-                        this_result['xpath'], 
-                        parsed_filing.get_version()
-                    )
-                    this_result['line_number'] =  debracket(raw_line_num)
+                raw_line_num = vd.get_line_number(
+                    this_result['xpath'], 
+                    parsed_filing.get_version()
+                )
+                this_result['line_number'] =  debracket(raw_line_num)
 
-                    raw_description = vd.get_description(
-                        this_result['xpath'], 
-                        parsed_filing.get_version()
-                    )
-                    this_result['description'] =  debracket(raw_description)
+                raw_description = vd.get_description(
+                    this_result['xpath'], 
+                    parsed_filing.get_version()
+                )
+                this_result['description'] =  debracket(raw_description)
 
                 #### Write the output, now that we've got the vars 
 
                 if this_sked_name != this_result['form']:
-                    textoutput += "\n\n\tSchedule %s\n" % this_result['form']
+                    textoutput += "\n\n\n" + ASTERISKS + "\tSchedule %s\n" % this_result['form']
                     this_sked_name = this_result['form']
                 
-                if documentation:
-                    textoutput += "\nLine:%s Description:%s Xpath:%s\nValue=%s " % (
-                        this_result['line_number'], 
-                        this_result['description'], 
-                        this_result['xpath'],
-                        this_result['value'], 
-                    )
-                    if this_result['in_group']:
-                        textoutput += "\nGroup: %s group_index %s" % (this_result['group_name'], this_result['group_index'])
-                    else:
-                        textoutput += "\nGroup:"
-                else:
-                    textoutput += "\nValue:%s xpath:%s " % (this_result['value'], this_result['xpath'])
-                    if this_result['in_group']:
-                        textoutput += "\nGroup: %s group_index %s" % (this_result['group_name'], this_result['group_index'])
+                textoutput += "\n" + ASTERISKS + "\n  Value: '%s'\nForm: %s\nLine:%s\nDescription:%s" % (
+                    this_result['value'], 
+                    this_result['form'],
+                    this_result['line_number'],
+                    this_result['description'], 
+                )
 
+                if documentation:
+                    textoutput += "\nXpath:%s" % (this_result['xpath'])
+
+                if this_result['in_group']:
+                    textoutput += "\nGroup: %s group_index %s" % (
+                        this_result['group_name'], 
+                        this_result['group_index']
+                    )
+                else:
+                    textoutput += "\nGroup:"
+                    
                 if outfilepath:
                     outfile.write(textoutput)
                 else:

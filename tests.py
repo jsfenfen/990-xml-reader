@@ -145,7 +145,7 @@ class TestCommandLine:
 
     def test_cli_2(self):
         # dump only main 990 in bare json format
-        test_args = ['--schedule', 'IRS990', '--no_doc', '201642229349300909']
+        test_args = ['--schedule', 'IRS990', '--xpath', '201642229349300909']
         args = self.parser.parse_args(test_args)
         run_cli_main(args)
 
@@ -192,7 +192,7 @@ class TestCommandLine:
     def test_cli_7(self):
         test_args = [
             '--format', 'txt',
-            '--no_doc',
+            '--xpath',
             '--verbose',
             '201113139349301336'
         ]
@@ -209,7 +209,6 @@ class TestCommandLine:
 
     def test_cli_8(self):
         test_args = [
-            '--no_doc',
             '--format', 'txt',
             '201113139349301336'
         ]

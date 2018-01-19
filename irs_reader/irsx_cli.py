@@ -29,11 +29,11 @@ def get_parser():
         help='Get only that schedule'
     )
     parser.add_argument(
-        "--no_doc",
+        "--xpath",
         dest='documentation',
         action='store_const',
-        const=False, default=True,
-        help='Hide line number, description, other documentation'
+        const=True, default=False,
+        help='show xpath in text format'
     )
     parser.add_argument(
         "--format",
@@ -114,6 +114,7 @@ def main(args=None):
     parser = get_parser()
     args_read = parser.parse_args()
     run_main(args_read)
+    print("\n")
 
 if __name__ == "__main__":
     main()
