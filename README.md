@@ -43,25 +43,16 @@ The resulting txt file from the command above should be a line by line reconstru
 
 		Schedule IRS990ScheduleJ
 	
-		... [ lengthy output for schedule J Part I ] ...
+		... [ lengthy output of many, many variables] ...
 	
-		Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
-		Value=John Boyd 
-		Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+		****************
+		  Value: '191624'
+		Form: IRS990ScheduleJ
+		Line:Part II Column (B)(ii)
+		Description:Part II contents; Bonus and incentive compensation ($) from related organizations
+		Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 16
 		
-		Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
-		Value=CAO, MNTL HLTH & CONT CARE SSR 
-		Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
-		
-		Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
-		Value=0 
-		Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
-		
-		Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
-		Value=268967 
-		Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
-
-	... [ truncated, the full output is quite lengthy ]
+		... [ truncated ]
 	
 
 We can also it as a python library to pull out specific pieces of data, across versions
@@ -71,9 +62,11 @@ We can also it as a python library to pull out specific pieces of data, across v
 	>>> parsed_filing = xml_runner.run_sked(201533089349301428, 'IRS990ScheduleJ')
 	>>> key_employees = parsed_filing.get_result()[0]['groups']['SkdJRltdOrgOffcrTrstKyEmpl']
 	>>> for employee in key_employees:
-	...  print(employee)
+	...  print("Name:%s, Base Compensation, related orgs $%s" % (employee['PrsnNm'], employee['CmpnstnBsdOnRltdOrgsAmt']))
 	... 
-	{'object_id': 201533089349301428, 'ein': '941156621', 'PrsnNm': 'John Boyd', 'TtlTxt': 'CAO, MNTL HLTH & CONT CARE SSR', 'BsCmpnstnFlngOrgAmt': '0', 'CmpnstnBsdOnRltdOrgsAmt': '268967', 'BnsFlngOrgnztnAmnt': '0', 'BnsRltdOrgnztnsAmt': '116200', 'OthrCmpnstnFlngOrgAmt': '0', 'OthrCmpnstnRltdOrgsAmt': '13933', 'DfrrdCmpnstnFlngOrgAmt': '0', 'DfrrdCmpRltdOrgsAmt': '86894', 'NntxblBnftsFlngOrgAmt': '0', 'NntxblBnftsRltdOrgsAmt': '7303', 'TtlCmpnstnFlngOrgAmt': '0', 'TtlCmpnstnRltdOrgsAmt': '493297', 'CmpRprtPrr990FlngOrgAmt': '0', 'CmpRprtPrr990RltdOrgsAmt': '8400'}
+	Name:John Boyd, Base Compensation, related orgs $268967
+	Name:Thomas Blinn, Base Compensation, related orgs $468913
+	... 
 
 
 
