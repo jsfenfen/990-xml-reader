@@ -23,13 +23,21 @@
 Read more about pip [here](https://packaging.python.org/tutorials/installing-packages/#use-pip-for-installing). 
  
 ## Quickstart
-We're using the "object_id" 201533089349301428 assigned by the IRS to the Dec. 2014 annual nonprofit tax return (990) filed by "Sutter Health Sacramento Region", which is one of quite a few returns disclosed in the [2016 index file](https://s3.amazonaws.com/irs-form-990/index_2016.csv).  To make the file human readable, use the txt format option, and only display one schedule (the complete command line usage is available with --help). 
+We're using the "object_id" 201533089349301428 assigned by the IRS to the Dec. 2014 annual nonprofit tax return (990) filed by "Sutter Health Sacramento Region", which is one of quite a few returns disclosed in the [2016 index file](https://s3.amazonaws.com/irs-form-990/index_2016.csv).  
+
+To dump the xml as a human-readable .csv file, use: 
+
+	$ irsx --format=csv 201533089349301428
+
+Which gives a csv file [like this](samples/201533089349301428_ScheduleJ.csv). To make the file readable in a text editor / on a screen, use the txt format option, and only display one schedule (the complete command line usage is available with --help). 
 
 	$ irsx --format=txt --schedule=IRS990ScheduleJ 201533089349301428
 
 You can omit the schedule and it will print out information about each part of the filing, but adding it can help zero in on whatever part you are interested in. 
 
 Allowed output formats are 'csv', 'txt', and 'json'. [See the results as [.csv](samples/201533089349301428_ScheduleJ.csv), [.txt](samples/201533089349301428_ScheduleJ.txt)., or [.json](samples/201533089349301428_ScheduleJ.json) files]. CSV and TXT are "flat" formats for human readibility, whereas the json is nested like the original tax forms (although only available for schema years 2013 and forwards).
+
+The JSON file output is 'standardized' in that it uses the same variable name to refer to the same quantity across tax versions, whereas the csv and txt representations just display the xpath, line numbers and variable descriptions assigned to them in the tax version they've used.
 
 The resulting txt file from the command above should be a line by line reconstruction of the tax form that includes the IRS' text describing the 'Line' and 'Description' of the variable, as well as the 'xpath' used, the repeating group name and the group_index if applicable. It should look something like this:
 
