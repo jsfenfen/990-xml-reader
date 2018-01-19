@@ -1,0 +1,1364 @@
+
+
+
+	Schedule IRS990ScheduleJ
+
+Line:Part I Line 1a Description:Idemnification and gross-up payments Xpath:/IRS990ScheduleJ/IdemnificationGrossUpPmtsInd
+Value=X 
+Group:
+
+Line:Part I Line 1b Description:Written policy reference T and E expenses? Xpath:/IRS990ScheduleJ/WrittenPolicyRefTAndEExpnssInd
+Value=true 
+Group:
+
+Line:Part I Line 2 Description:Substantiation required? Xpath:/IRS990ScheduleJ/SubstantiationRequiredInd
+Value=true 
+Group:
+
+Line:Part I Line 4a Description:Severance payment? Xpath:/IRS990ScheduleJ/SeverancePaymentInd
+Value=false 
+Group:
+
+Line:Part I Line 4b Description:Supplemental nonqualified retirement plan? Xpath:/IRS990ScheduleJ/SupplementalNonqualRtrPlanInd
+Value=true 
+Group:
+
+Line:Part I Line 4c Description:Equity based compensation arrangement? Xpath:/IRS990ScheduleJ/EquityBasedCompArrngmInd
+Value=false 
+Group:
+
+Line:Part I Line 5a Description:Compensation based on revenue of filing org? Xpath:/IRS990ScheduleJ/CompBasedOnRevenueOfFlngOrgInd
+Value=false 
+Group:
+
+Line:Part I Line 5b Description:Compensation based on revenue of related orgs? Xpath:/IRS990ScheduleJ/CompBsdOnRevRelatedOrgsInd
+Value=false 
+Group:
+
+Line:Part I Line 6a Description:Compensation based on net earnings of filing org? Xpath:/IRS990ScheduleJ/CompBsdNetEarnsFlngOrgInd
+Value=false 
+Group:
+
+Line:Part I Line 6b Description:Compensation based on net earnings of related orgs? Xpath:/IRS990ScheduleJ/CompBsdNetEarnsRltdOrgsInd
+Value=false 
+Group:
+
+Line:Part I Line 7 Description:Any non-fixed payments? Xpath:/IRS990ScheduleJ/AnyNonFixedPaymentsInd
+Value=true 
+Group:
+
+Line:Part I Line 8 Description:Initial contract exception? Xpath:/IRS990ScheduleJ/InitialContractExceptionInd
+Value=false 
+Group:
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=John Boyd 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=CAO, MNTL HLTH & CONT CARE SSR 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=268967 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=116200 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=13933 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=86894 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=7303 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=493297 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=8400 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 0
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=Thomas Blinn 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 1
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=CEO, Reg Amb Care, SRR 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 1
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 1
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=468913 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 1
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 1
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=296489 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 1
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 1
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=76381 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 1
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 1
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=148086 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 1
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 1
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=17785 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 1
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 1
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=1007654 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 1
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 1
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=60906 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 1
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=Pat Brady 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 2
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=CEO, Sutter Roseville Med. Ctr 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 2
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 2
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=478882 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 2
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 2
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=274146 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 2
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 2
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=77274 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 2
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 2
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=140741 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 2
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 2
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=18355 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 2
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 2
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=989398 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 2
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 2
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=65000 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 2
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=James Conforti 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 3
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=Regional President, SHSSR 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 3
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 3
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=594704 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 3
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 3
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=425250 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 3
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 3
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=54856 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 3
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 3
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=309954 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 3
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 3
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=22054 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 3
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 3
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=1406818 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 3
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 3
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=50081 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 3
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=Dennie Conrad 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 4
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=REG VP, PLNNG & BUS DEV SHSSR 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 4
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 4
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=261390 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 4
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 4
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=145629 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 4
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 4
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=15383 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 4
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 4
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=50337 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 4
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 4
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=13364 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 4
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 4
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=486103 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 4
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 4
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 4
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=Patrick Fry 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=Trustee, President & CEO SH 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=1523132 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=1687050 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=416185 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=2693377 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=34953 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=6354697 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=396136 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 5
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=Terry Glubka 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 6
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=CEO, Sutter Solano Medical Ctr 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 6
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 6
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=358148 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 6
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 6
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=208009 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 6
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 6
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=32940 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 6
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 6
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=89865 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 6
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 6
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=16480 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 6
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 6
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=705442 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 6
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 6
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=29000 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 6
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=Mitch Hanna 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 7
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=CAO, SAFH 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 7
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 7
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=321614 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 7
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 7
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=190523 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 7
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 7
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=46280 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 7
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 7
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=73344 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 7
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 7
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=15990 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 7
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 7
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=647751 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 7
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 7
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=34695 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 7
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=Sarah Krevans 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 8
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=COO Sutter Health 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 8
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 8
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=916159 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 8
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 8
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=689878 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 8
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 8
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=156449 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 8
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 8
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=399554 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 8
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 8
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=24683 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 8
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 8
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=2186723 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 8
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 8
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=142787 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 8
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=Shelly McGriff 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 9
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=CNE Sutter Med Ctr Sac. 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 9
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 9
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=287458 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 9
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 9
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=96589 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 9
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 9
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=31637 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 9
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 9
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=50192 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 9
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 9
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=11268 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 9
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 9
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=477144 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 9
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 9
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 9
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=John Mesic MD 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 10
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=CMO, Sac Sierra Region 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 10
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 10
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=493927 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 10
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 10
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=292347 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 10
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 10
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=63390 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 10
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 10
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=105951 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 10
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 10
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=13324 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 10
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 10
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=968939 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 10
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 10
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=51544 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 10
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=Carrie Owen-Plietz 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 11
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=CEO, Sutter Med Ctr Sacramento 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 11
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 11
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=475532 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 11
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 11
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=268324 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 11
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 11
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=37512 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 11
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 11
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=133541 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 11
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 11
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=19739 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 11
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 11
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=934648 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 11
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 11
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=22425 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 11
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=Anne Platt 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 12
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=CEO, SUTTER AMADOR HOSPITAL 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 12
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 12
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=267467 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 12
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 12
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=157205 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 12
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 12
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=75281 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 12
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 12
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=62144 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 12
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 12
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=17169 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 12
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 12
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=579266 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 12
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 12
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=47507 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 12
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=Thomas Ream II 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 13
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=Reg CIO, Sac Sierra Region 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 13
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 13
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=223039 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 13
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 13
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=132018 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 13
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 13
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=14308 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 13
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 13
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=45748 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 13
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 13
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=9734 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 13
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 13
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=424847 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 13
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 13
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=9600 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 13
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=Jeffrey Sprague 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 14
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=CFO, Sac Sierra Region (Pt Yr) 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 14
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 14
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=560401 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 14
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 14
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=340633 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 14
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 14
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=153835 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 14
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 14
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=379654 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 14
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 14
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=19907 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 14
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 14
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=1454430 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 14
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 14
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=146695 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 14
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=Jeffrey Szczesny 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 15
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=Reg VP HR, Sac Sierra Region 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 15
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 15
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=325405 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 15
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 15
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=189576 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 15
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 15
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=31347 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 15
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 15
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=72021 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 15
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 15
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=15034 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 15
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 15
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=633383 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 15
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 15
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=21456 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 15
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=Paige Terra 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 16
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=CFO (Part Year) 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 16
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 16
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=349201 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 16
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 16
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=191624 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 16
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 16
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=14895 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 16
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 16
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=86451 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 16
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 16
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=15117 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 16
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 16
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=657288 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 16
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 16
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=10967 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 16
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=Janet Wagner 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 17
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=CAO, Sutter Davis Hospital 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 17
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 17
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=313874 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 17
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 17
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=197846 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 17
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 17
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=40840 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 17
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 17
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=179957 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 17
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 17
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=13468 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 17
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 17
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=745985 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 17
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 17
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 17
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=PENNY WESTFALL 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 18
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=VP & REG COUNSEL, SSR 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 18
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 18
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=340787 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 18
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 18
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=195043 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 18
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 18
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=28967 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 18
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 18
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=62721 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 18
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 18
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=10671 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 18
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 18
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=638189 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 18
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 18
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 18
+
+Line:Part II Column (A) Description:Part II contents; Name of officer - person Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/PersonNm
+Value=BARBARA NELSON 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 19
+
+Line:Part II Column (A) Description:Part II contents; Title of Officer Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TitleTxt
+Value=CNE, SUTTER ROSEVILLE MED. CTR 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 19
+
+Line:Part II Column (B)(i) Description:Part II contents; Base compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BaseCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 19
+
+Line:Part II Column (B)(i) Description:Part II contents; Compensation based on related organizations? Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompensationBasedOnRltdOrgsAmt
+Value=276834 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 19
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusFilingOrganizationAmount
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 19
+
+Line:Part II Column (B)(ii) Description:Part II contents; Bonus and incentive compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/BonusRelatedOrganizationsAmt
+Value=98292 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 19
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 19
+
+Line:Part II Column (B)(iii) Description:Part II contents; Other compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/OtherCompensationRltdOrgsAmt
+Value=24266 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 19
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompensationFlngOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 19
+
+Line:Part II Column (C) Description:Part II contents; Deferred compensation ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/DeferredCompRltdOrgsAmt
+Value=43692 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 19
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from filing organization Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 19
+
+Line:Part II Column (D) Description:Part II contents; Nontaxable benefits ($) from related organizations Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/NontaxableBenefitsRltdOrgsAmt
+Value=7382 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 19
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationFilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 19
+
+Line:Part II Column (E) Description:Part II contents; Total of (B)(i) - (D), from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/TotalCompensationRltdOrgsAmt
+Value=450466 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 19
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from filing org Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990FilingOrgAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 19
+
+Line:Part II Column (F) Description:Part II contents; Comp reported prior 990 - from related orgs Xpath:/IRS990ScheduleJ/RltdOrgOfficerTrstKeyEmplGrp/CompReportPrior990RltdOrgsAmt
+Value=0 
+Group: SkdJRltdOrgOffcrTrstKyEmpl group_index 19
+
+Line:Part III Description:Part III contents; Form, Part and line number reference Xpath:/IRS990ScheduleJ/SupplementalInformationDetail/FormAndLineReferenceDesc
+Value=SCHEDULE J, PART I, LINE 1A 
+Group: SkdJSpplmntlInfrmtnDtl group_index 0
+
+Line:Part III Description:Part III contents; Form, Part and line number reference explanation Xpath:/IRS990ScheduleJ/SupplementalInformationDetail/ExplanationTxt
+Value=TAX INDEMNIFICATION: STANDARD POLICY FOR ALL SUTTER HEALTH EMPLOYEES IS THAT NON-CASH GIFTS AND AWARDS ARE GROSSED-UP FOR TAX PURPOSES. THE AMOUNT OF THE GROSS-UP IS ADDED TO THE EMPLOYEE'S WAGES AND TAXED ACCORDINGLY. 
+Group: SkdJSpplmntlInfrmtnDtl group_index 0
+
+Line:Part III Description:Part III contents; Form, Part and line number reference Xpath:/IRS990ScheduleJ/SupplementalInformationDetail/FormAndLineReferenceDesc
+Value=SCHEDULE J, PART I, LINE 3 
+Group: SkdJSpplmntlInfrmtnDtl group_index 1
+
+Line:Part III Description:Part III contents; Form, Part and line number reference explanation Xpath:/IRS990ScheduleJ/SupplementalInformationDetail/ExplanationTxt
+Value=SUPPLEMENTAL COMPENSATION INFORMATION: THE CEO OF THE ORGANIZATION IS AN EMPLOYEE OF SUTTER HEALTH, A RELATED TAX-EXEMPT ORGANIZATION. THE COMPENSATION COMMITTEE OF THE SUTTER HEALTH BOARD OF DIRECTORS RETAINS ULTIMATE DISCRETIONARY AUTHORITY OVER ALL ELEMENTS OF COMPENSATION TO ENSURE THAT ORGANIZATIONAL PURPOSES ARE APPROPRIATELY BEING SERVED. THE COMPENSATION COMMITTEE USES CREDIBLE DATA SOURCES AND MAINTAINS AN OBJECTIVE "ARMS LENGTH" DECISION-MAKING PROCESS, ENSURING THE INTEGRITY OF SUTTER'S EXECUTIVE PROGRAMS AND CONSISTENCY WITH THE ORGANIZATION'S OVERALL MISSION. SEE SCHEDULE O NARRATIVE PART VI, LINE 15 FOR A FULL DESCRIPTION OF THE COMPENSATION APPROVAL PROCESS COMPLETED BY SUTTER HEALTH. 
+Group: SkdJSpplmntlInfrmtnDtl group_index 1
+
+Line:Part III Description:Part III contents; Form, Part and line number reference Xpath:/IRS990ScheduleJ/SupplementalInformationDetail/FormAndLineReferenceDesc
+Value=SCHEDULE J, PART I, LINE 4B 
+Group: SkdJSpplmntlInfrmtnDtl group_index 2
+
+Line:Part III Description:Part III contents; Form, Part and line number reference explanation Xpath:/IRS990ScheduleJ/SupplementalInformationDetail/ExplanationTxt
+Value=NONQUALIFIED RETIREMENT PLAN: THE PURPOSE OF THE NONQUALIFIED RETIREMENT PLAN IS TO PROVIDE SUTTER HEALTH EXECUTIVES WITH A COMPETITIVE RETIREMENT BENEFIT CONSISTENT WITH SUTTER HEALTH'S OVERALL COMPENSATION PHILOSOPHY FOR ALL EMPLOYEES. CONTRIBUTIONS ARE DESIGNED TAKING INTO CONSIDERATION LOST RETIREMENT BENEFITS THAT WOULD OTHERWISE BE OBTAINED THROUGH THE QUALIFIED PENSION PLAN. SUTTER'S PLANS ARE DESIGNED CONSISTENT WITH COMPETITIVE INDUSTRY PRACTICES. THE RETIREMENT PLAN FOR SUTTER HEALTH EMPLOYEES IS A COMBINATION OF SOCIAL SECURITY, 403B EMPLOYER MATCH CONTRIBUTIONS AND QUALIFIED PLAN BENEFITS. SUTTER HEALTH EXECUTIVES ARE GENERALLY INELIGIBLE FOR EMPLOYER MATCH CONTRIBUTIONS. ADDITIONALLY, QUALIFIED PLAN BENEFITS CAPS HAVE THE EFFECT OF SUBSTANTIALLY REDUCING RETIREMENT BENEFITS THAT ARE OTHERWISE PROVIDED TO ALL EMPLOYEES. THE EFFECT IS THAT EXECUTIVES OFTEN DO NOT RECEIVE THE SAME LEVEL OF RETIREMENT BENEFIT ON AN INCOME REPLACEMENT BASIS AS OTHER EMPLOYEES. TO ENSURE A COMPETITIVE RETIREMENT BENEFIT AND TO ADDRESS THE SHORTFALLS DESCRIBED ABOVE, SUTTER HEALTH MAKES AN ANNUAL CONTRIBUTION TO A NON-QUALIFIED 457(F) PLAN FOR ITS EXECUTIVES. THE FORMULA HAS TWO PARTS: (1) 4% TO 7% OF BASE SALARY (COMMENSURATE WITH MANAGEMENT LEVEL), PLUS (2) A CONTRIBUTION STARTING AT 5% (BASED UPON TENURE) FOR EARNINGS BEYOND THE PENSION PAY CAP. THE LATTER OF WHICH IS DESIGNED TO HELP RESTORE LOST PENSION BENEFITS FORFEITED UNDER THE QUALIFIED PLAN FOR EARNINGS OVER THE PENSION PAY CAP LIMIT. CONTRIBUTIONS ARE ALSO MADE FOR A SMALL GROUP OF SENIOR LEVEL EXECUTIVES WHOSE ESTIMATED RETIREMENT BENEFIT (SOCIAL SECURITY PLUS QUALIFIED PLAN BENEFITS PLUS 457F) FALLS BELOW 50% - 65% OF FINAL 4-YEAR AVERAGE BASE SALARY WHEN RETIRING AT AGE 65. TARGET BENEFIT LEVELS VARY BY YEARS OF SERVICE. UNLIKE SUTTER HEALTH'S QUALIFIED PLAN WHERE EMPLOYEE BENEFITS ARE GUARANTEED (I.E., A DEFINED BENEFIT), SUTTER'S NON-QUALIFIED PLAN BENEFITS ARE NOT GUARANTEED BY SUTTER HEALTH. INVESTMENT RISK IS BORNE BY PARTICIPANTS AND BENEFITS ARE NOT PROTECTED SHOULD SUTTER HEALTH BECOME INSOLVENT. 
+Group: SkdJSpplmntlInfrmtnDtl group_index 2
+
+Line:Part III Description:Part III contents; Form, Part and line number reference Xpath:/IRS990ScheduleJ/SupplementalInformationDetail/FormAndLineReferenceDesc
+Value=SCHEDULE J, PART 1, LINE 7 
+Group: SkdJSpplmntlInfrmtnDtl group_index 3
+
+Line:Part III Description:Part III contents; Form, Part and line number reference explanation Xpath:/IRS990ScheduleJ/SupplementalInformationDetail/ExplanationTxt
+Value=NON-FIXED PAYMENTS: SPOT AWARDS ARE INFREQUENTLY USED TO REWARD EMPLOYEES. THERE ARE NO SPECIFIC GUIDELINES FOR THE AMOUNT OF THE SPOT AWARD BUT THE AMOUNT TENDS TO NOT EXCEED 5% OF GROSS PAY. ANNUAL INCENTIVE PLAN (AIP) THE PURPOSE OF THE PLAN IS TO FOCUS EXECUTIVES ON SPECIFIC, SHORTER-TERM GOALS THAT ARE CRITICAL TO THE ACHIEVEMENT OF AFFILIATE, REGION, AND SYSTEM-WIDE OBJECTIVES THAT DRIVE OVERALL ORGANIZATION PERFORMANCE. A PORTION OF THE PLAN AWARD IS DISCRETIONARY IN THAT THE SUPERVISOR MAY ADD +/- 5% TO THE AWARD PROVIDED THE TOTAL AWARD (FORMULA PORTION PLUS DISCRETIONARY) DOES NOT EXCEED THE MAXIMUM ESTABLISHED FOR ANY GIVEN EXECUTIVE. LONG TERM PERFORMANCE PLANS SUTTER HEALTH ALSO EMPLOYS LONG TERM PERFORMANCE PLANS WHICH ARE DESIGNED TO FOCUS ON LONGER TERM STRATEGIC OBJECTIVES OF THE ORGANIZATION. SUTTER'S LONG TERM PERFORMANCE PLAN APPROACH IS A COMBINATION OF BOTH LONGER TERM MEASURES OF ORGANIZATION SUCCESS AND KEY ORGANIZATION STRATEGIES WHICH REQUIRE THE COMBINED EFFORT OF ALL LEADERSHIP TO ACHIEVE SUCCESS. SUTTER USES A COMMON FATE APPROACH IN THAT ALL PLAN PARTICIPANTS ARE MEASURED AGAINST THE SAME, ORGANIZATION-WIDE CRITERIA VS. INDIVIDUAL EFFORTS. THIS FOSTERS A COMMON PURPOSE ACROSS LEADERSHIP AND A SHARED SENSE OF ACCOUNTABILITY FOR THE OVERALL SUCCESS OF SUTTER HEALTH. TO ENSURE THAT EXTRAORDINARY EFFORTS BY INDIVIDUALS CAN BE RECOGNIZED AND THAT ACTIONS OF LEADERSHIP ARE CONSISTENT WITH SUPPORTING SUTTER HEALTH'S OVERALL MISSION, VISION, AND VALUES, SUTTER'S LONG TERM INCENTIVE PLAN APPROACH ALSO INCORPORATES A COMBINATION OF CEO AND SUTTER HEALTH COMPENSATION COMMITTEE DISCRETION. IN SOME CASES, THE SUTTER HEALTH COMPENSATION COMMITTEE HAS DELEGATED AUTHORITY TO THE PRESIDENT & CEO TO MODIFY INDIVIDUAL AWARDS WITHIN LIMITS THAT HAVE BEEN PRE-APPROVED BY THE SUTTER HEALTH COMPENSATION COMMITTEE. THIS INCLUDES BOTH THE REDUCTION AND INCREASE OF AWARD AMOUNTS. SUCH MODIFICATIONS GENERALLY DO NOT EXCEED +/- 20% AND ARE EMPLOYED JUDICIOUSLY. IN ALL CASES, THE COMPENSATION COMMITTEE OF THE BOARD DETERMINES ACHIEVEMENT OF ORGANIZATION GOALS AND MAKES FINAL AWARD DETERMINATION WHICH MAY RESULT IN A REDUCTION OF AWARD IF APPROPRIATE. ALL SENIOR EXECUTIVE AWARDS ARE REVIEWED FOR COMPENSATION REASONABLENESS AND APPROVED PRIOR TO PAYMENT BY THE COMPENSATION COMMITTEE. 
+Group: SkdJSpplmntlInfrmtnDtl group_index 3
