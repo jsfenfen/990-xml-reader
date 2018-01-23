@@ -1,5 +1,6 @@
 import sys
 import os
+from .dir_utils import mkdir_p
 
 IRS_READER_ROOT = os.path.abspath(os.path.dirname(__file__))
 
@@ -38,7 +39,9 @@ METADATA_DIRECTORY = (os.path.join(IRS_READER_ROOT, "metadata"))
 KEYERROR_LOG = os.path.join(IRS_READER_ROOT, "keyerrors.log")
 LOG_KEY = 'xml'
 
+mkdir_p([WORKING_DIRECTORY, INDEX_DIRECTORY])
+
 try:
     from .local_settings import *
 except ImportError:
-    print("Error importing local_settings.py")
+    pass
