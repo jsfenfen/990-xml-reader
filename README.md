@@ -11,6 +11,7 @@
 - [JSON examples](#json-examples)
 - [Find a tax return's object_id](#getting-an-object-id)
 - [Variable errors and deprecated return values](#variable-errors-and-deprecated-values)
+- [Reconfiguring the local file cache](#configuring-the-file-cache-directory)
 - [IRSx as a python library](#irsx-from-python)
 - [irsx_index: get yearly index files](#irsx_index) 
 - [Developer directions](#developer-directions)
@@ -230,8 +231,25 @@ I'm looking for filings from "Sutter Health" (though note I use all caps to sear
 Let's use Sutter Health Sacramento Sierra Region's 12/2014 filing, which has an object id number of 201533089349301428 [ and an EIN of 941156621]. You can find the relevant filing via nonprofit explorer [here](https://projects.propublica.org/nonprofits/organizations/941156621). 
 
 
+## Configuring the file cache directory
 
-## irsx from python 
+IRSx ships with a default location to which each xml file is downloaded. But if you're dealing with these files in bulk you may wish to sync specific folders directly, and point irsx' default cache *at that folder*. That way you could download the files in bulk, and then runs irsx without it ever having to download the files, because they were already on disk.
+
+You can do that by setting the local_settings.py file. The catch is that this file is in the directory where IRSx is installed in your system. If you installed into a virtual environment virt, for instance, you might find it in a directory like this
+
+	$ which irsx
+	/path/to/your/virt/bin/irsx
+
+Then you could find the local_settings in /path/virt/lib/pythonX.X/site-packages/irsx . `cd` into that directory and run:
+
+	$ cp local_settings.py-example local_settings.py
+
+And edit that file to the values you want. XML_DIRECTORY is where the raw xml files are found. 
+
+This piece of configuration is annoying and may change if we can think of a better approach.
+
+
+## IRSx from python 
 
 Much broader functionality is available by running from within python.
 
