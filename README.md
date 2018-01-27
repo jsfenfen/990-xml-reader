@@ -11,11 +11,12 @@
 - [JSON examples](#json-examples)
 - [Find a tax return's object_id](#getting-an-object-id)
 - [Variable errors and deprecated return values](#variable-errors-and-deprecated-values)
-- [Reconfiguring the local file cache](#configuring-the-file-cache-directory)
+- [Changing the local XML file directory](#configuring-the-file-cache-directory)
 - [IRSx as a python library](#irsx-from-python)
 - [irsx_index: get yearly index files](#irsx_index) 
 - [Developer directions](#developer-directions)
 - [Testing](#testing)
+- [Acknowledgements(#acknowledgements)
 
 ## Installation
 
@@ -431,3 +432,10 @@ or
 
 Tox -- see tox.ini; testing for: 2.7,3.4,3.5,3.6. You may need to run `pip install tox` in the testing environment. 
 
+
+
+##Acknowledgements
+
+This project was originally built for ProPublica, an independent, nonprofit newsroom that runs [NonProfit Explorer](http://projects.propublica.com/nonprofits/), a database of nonprofit organizations, their tax returns, and federal audits of them when available. This repository was originally written by Jacob Fenton, who is responsible for any errors.
+
+Thanks also to Tyler Davis for testing an open source release candidate  and suggesting improvements. 

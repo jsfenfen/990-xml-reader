@@ -1,5 +1,5 @@
 #### Metadata
 
-These files are likely to move, perhaps to another repo altogether.
+These files are generated from the IRS schemas by a different repo--[see here](https://github.com/jsfenfen/irs990_admin).
 
-The files in this dir show the reader how to 'standardize' files. When new versions of the xml are released, the files in this dir may have to be refreshed to capture new xpaths. 
+While that repo uses an automatic process to extract values, the IRS has stopped providing the schema files for new versions. It's also possible to human edit the metadata files here (carefully!) to keep up with new versions etc. 
