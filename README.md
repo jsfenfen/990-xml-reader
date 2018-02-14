@@ -16,7 +16,7 @@
 - [irsx_index: get yearly index files](#irsx_index) 
 - [Developer directions](#developer-directions)
 - [Testing](#testing)
-- [Acknowledgements(#acknowledgements)
+- [Acknowledgements](#acknowledgements)
 
 ## Installation
 
