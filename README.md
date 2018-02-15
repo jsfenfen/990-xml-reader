@@ -434,7 +434,7 @@ Tox -- see tox.ini; testing for: 2.7,3.4,3.5,3.6. You may need to run `pip insta
 
 
 
-##Acknowledgements
+## Acknowledgements
 
 This project was originally built for ProPublica, an independent, nonprofit newsroom that runs [NonProfit Explorer](http://projects.propublica.com/nonprofits/), a database of nonprofit organizations, their tax returns, and federal audits of them when available. This repository was originally written by Jacob Fenton, who is responsible for any errors.
 
