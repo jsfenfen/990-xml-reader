@@ -22,7 +22,7 @@
 
 	$ pip install irsx
 
-If you've previously IRSx, you might try updating it with `$ pip install irsx --upgrade` to get the latest version. 
+If you've previously installed IRSx, you might try updating it with `$ pip install irsx --upgrade` to get the latest version. 
 
 Read more about pip [here](https://packaging.python.org/tutorials/installing-packages/#use-pip-for-installing).
  
