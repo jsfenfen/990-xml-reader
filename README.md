@@ -27,9 +27,11 @@ If you've previously installed IRSx, you might try updating it with `$ pip insta
 Read more about pip [here](https://packaging.python.org/tutorials/installing-packages/#use-pip-for-installing).
  
 ## Quickstart
+IRSx can be used as a command line tool or from within a python library. Let's start with the command line usage.
+
 We're using the "object_id" 201533089349301428 assigned by the IRS to the Dec. 2014 annual nonprofit tax return (990) filed by "Sutter Health Sacramento Region", which is one of quite a few returns disclosed in the [2016 index file](https://s3.amazonaws.com/irs-form-990/index_2016.csv). See more in [finding an object id](#getting-an-object-id)  
 
-To dump the xml as a human-readable .csv file, use: 
+To dump the xml as a human-readable .csv file at the command line, use: 
 
 	$ irsx --format=csv 201533089349301428
 
