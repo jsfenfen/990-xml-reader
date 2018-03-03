@@ -13,7 +13,8 @@
 - [Variable errors and deprecated return values](#variable-errors-and-deprecated-values)
 - [Changing the local XML file directory](#configuring-the-file-cache-directory)
 - [IRSx as a python library](#irsx-from-python)
-- [irsx_index: get yearly index files](#irsx_index) 
+- [IRSx Reference: Table, Variable Name From Tax Form ](#irsx-reference)
+- [IRSx_index: Tool to grab the yearly index files](#irsx_index) 
 - [Developer directions](#developer-directions)
 - [Testing](#testing)
 - [Acknowledgements](#acknowledgements)
@@ -105,7 +106,7 @@ The csv output is "transposed" from a normal csv--in other words, each *row* rep
 JSON output is only available for schema versions from 2013 and later. CSV and TXT output are available for 2010 schemas and later. 
 
 - __JSON__ The first is a nested-json structure that provides a consistent way of describing variables for all schema versions from 2013 and forwards. The down side of this is that json is not ordered, so it can be confusing for humans to view. The description and line number fields are for the "canonical" version--2016v3.0--and so may vary from those seen on the form. 
-- __CSV__ This isn't a 'real' csv file, it's really a listing of all the different variables found, along with metadata like line number and description. It's available for versions 2010 and forwards. This doesn't attempt to restructure the content, it just spits it out in the order that it appears. This is often more human readable than json. Because it's a listing of all variables, the xpaths to those variables may repeat. A group_index column keeps count of which repeating group each variable belongs to. Both CSV and TXT formats use line numbers and descriptions that are specific to the version (these can both change over time) so it's 
+- __CSV__ This isn't a 'real' csv file, it's really a listing of all the different variables found, along with metadata like line number and description. It's available for versions 2010 and forwards. This doesn't attempt to restructure the content, it just spits it out in the order that it appears. This is often more human readable than json. Because it's a listing of all variables, the xpaths to those variables may repeat. A group_index column keeps count of which repeating group each variable belongs to. Both CSV and TXT formats use line numbers and descriptions that are specific to the version (these can both change over time) so these come from the line_number.csv and description.csv that are version specific.
 - __TXT__ There's also a txt format output that is very similar to csv in that it prints the rows it finds in an ordered dump, but makes it slightly more readable. CSV is intended to be viewed in a spreadsheet program, whereas TXT format translates better to a text editor / wider than normal terminal window.
 
 ### CSV / TXT examples
@@ -340,6 +341,9 @@ Delve into one:
 	[BARBARA NELSON] [CNE, SUTTER ROSEVILLE MED. CTR] $450466
 
 
+### IRSX reference
+
+There are many, many variables; they are described in greater depth at [http://irsx.info/](http://irsx.info/)
 
 ### Variable errors and deprecated values
 
@@ -436,6 +440,6 @@ Tox -- see tox.ini; testing for: 2.7,3.4,3.5,3.6. You may need to run `pip insta
 
 ## Acknowledgements
 
-This project was originally built for ProPublica, an independent, nonprofit newsroom that runs [NonProfit Explorer](http://projects.propublica.com/nonprofits/), a database of nonprofit organizations, their tax returns, and federal audits of them when available. This repository was originally written by Jacob Fenton, who is responsible for any errors.
+This project was originally built for ProPublica, an independent, nonprofit newsroom that runs [NonProfit Explorer](http://projects.propublica.com/nonprofits/), a database of nonprofit organizations, their tax returns, and federal audits of them when available. This repository was originally written by Jacob Fenton, who's probably at fault for any bugs, just not in a legal sense. To be clear, please double check any 
 
 Thanks also to Tyler Davis for testing an open source release candidate  and suggesting improvements. 
