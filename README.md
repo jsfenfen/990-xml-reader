@@ -23,14 +23,16 @@
 
 	$ pip install irsx
 
-If you've previously IRSx, you might try updating it with `$ pip install irsx --upgrade` to get the latest version. 
+If you've previously installed IRSx, you might try updating it with `$ pip install irsx --upgrade` to get the latest version. 
 
 Read more about pip [here](https://packaging.python.org/tutorials/installing-packages/#use-pip-for-installing).
  
 ## Quickstart
+IRSx can be used as a command line tool or from within a python library. Let's start with the command line usage.
+
 We're using the "object_id" 201533089349301428 assigned by the IRS to the Dec. 2014 annual nonprofit tax return (990) filed by "Sutter Health Sacramento Region", which is one of quite a few returns disclosed in the [2016 index file](https://s3.amazonaws.com/irs-form-990/index_2016.csv). See more in [finding an object id](#getting-an-object-id)  
 
-To dump the xml as a human-readable .csv file, use: 
+To dump the xml as a human-readable .csv file at the command line, use: 
 
 	$ irsx --format=csv 201533089349301428
 
@@ -79,9 +81,9 @@ We can also it as a python library to pull out specific pieces of data, across v
 
 IRSx is a python library and command line tool to simplify working with nonprofit tax returns [released](https://aws.amazon.com/public-datasets/irs-990/) by the IRS in XML format. The library currently standarizes returns submitted in formats dating from 2013 and forwards into consistently named datastructures that follow the same format as the "paper" 990. Repeating elements, such as the salary disclosed for best compensated employees, appear at the end of each schedule. We plan to release updated metadata that will allow processing of earlier forms.
 
-Forms from schemas years ranging from 2010 to the present are 'viewable' in CSV and TXT mode via the command line tool.
+Forms from schema years ranging from 2010 to the present are 'viewable' in CSV and TXT mode via the command line tool.
 
-Forms 990, 990EZ, 990PF and all lettered schedules A-O and R are all supported (although schedule B is typically marked as 'restricted').
+Forms 990, 990EZ, 990PF and all lettered schedules A-O and R are all supported (although schedule B--donor information, which doesn't have to be disclosed--is typically marked as 'restricted').
 
 From the command line, xml files can be output as machine readable json, csv or human readable text. From within a python program, the results are returned as native data structures. 
 
