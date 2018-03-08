@@ -5,6 +5,7 @@
 - [Installation](#installation)
 - [Quickstart](#quickstart)
 - [About](#about)
+- [Cookbook](#cookbook)
 - [Command line IRSx](#command-line-irsx)
 - [Output formats: json, csv, txt](#command-line-output-formats-json-csv-txt)
 - [CSV/TXT examples](#csv--txt-examples)
@@ -92,7 +93,9 @@ Filers are allowed to leave blank tax lines not applicable to them. IRSx returns
 The tax returns are complex--the easiest way to understand them is to consult the [metadata csv files](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata), and cross reference these to the forms in [sample\_schedules](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/sample_schedules) (which contains recent pdf versions of the schedules).  The data returned for each schedule read contains schedule parts (see the [schedule\_parts.csv](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata/schedule_parts.csv) for all possible parts) and repeating groups (see [groups.csv](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata/groups.csv)) that occur within that schedule. Both repeating groups and schedule\_parts contain variables, which are documented in the [variables.csv](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata/variables.csv) table. 
 
  
+## Cookbook
 
+A collection of IRSx and related "recipes" is [online here](https://github.com/jsfenfen/irsx-cookbook/). If you're looking for examples, that might be a good place to start.
 
 ## Command line IRSx
 Installing the library will also install the irsx command line tool, which uses the IRS' object\_ids to reference a particular filing. By default results are printed to the terminal, but can be saved to a specific file with the `--file` option. Using the `--verbose` flag will display a bit more information about what's happening, but should not be used if you're trying to capture the output into a file (as it won't follow the format needed). 
