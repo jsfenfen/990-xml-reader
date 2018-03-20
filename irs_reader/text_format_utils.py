@@ -36,7 +36,7 @@ def to_json(data, outfilepath=None):
             else:
                 json.dump(data, sys.stdout)
 
-def to_csv(parsed_filing, standardizer=None, documentation=True, vd=None, outfilepath=None):
+def to_csv(parsed_filing, object_id=None, standardizer=None, documentation=True, vd=None, outfilepath=None):
     if not vd:
         vd = VersionDocumentizer()
     stdout = getattr(sys.stdout, 'buffer', sys.stdout)
@@ -45,7 +45,7 @@ def to_csv(parsed_filing, standardizer=None, documentation=True, vd=None, outfil
 
     fieldnames = []
     fieldnames = [ 
-            'form', 'line_number', 'description', 'value', 'variable_name',
+            'object_id', 'form', 'line_number', 'description', 'value', 'variable_name',
             'xpath', 'in_group', 'group_name', 'group_index'
         ]
     writer = unicodecsv.DictWriter(
@@ -81,7 +81,7 @@ def to_csv(parsed_filing, standardizer=None, documentation=True, vd=None, outfil
                 )
                 this_result['description'] =  debracket(raw_description)
                 this_result['form'] = this_result['xpath'].split("/")[1]
-
+                this_result['object_id'] = object_id
                 writer.writerow(this_result)
 
 

@@ -1,9 +1,10 @@
 import argparse
 
 from .filing import Filing
-from .settings import KNOWN_SCHEDULES
+from .settings import KNOWN_SCHEDULES, IRS_READER_ROOT
 from .xmlrunner import XMLRunner
-from .text_format_utils import * 
+from .text_format_utils import *
+
 
 def get_parser():
     parser = argparse.ArgumentParser("irsx")
@@ -59,8 +60,11 @@ def get_parser():
 
 def run_main(args_read):
 
-    csv_format= args_read.format=='csv' or args_read.format=='txt'
-    xml_runner = XMLRunner(documentation=args_read.documentation, csv_format=csv_format)
+    csv_format = args_read.format == 'csv' or args_read.format == 'txt'
+    xml_runner = XMLRunner(
+        documentation=args_read.documentation,
+        csv_format=csv_format
+    )
 
     # Use the standardizer that was init'ed by XMLRunner
     standardizer = xml_runner.get_standardizer()
@@ -71,7 +75,7 @@ def run_main(args_read):
             if args_read.file:
                 print("Printing result to file %s" % args_read.file)
 
-        if args_read.list_schedules:
+        elif args_read.settings:
             this_filing = Filing(object_id)
             this_filing.process()
             print(this_filing.list_schedules())
@@ -93,15 +97,16 @@ def run_main(args_read):
         if args_read.format == 'json':
             to_json(parsed_filing.get_result(), outfilepath=args_read.file)
 
-        elif args_read.format=='csv':   
+        elif args_read.format == 'csv':
                 to_csv(
                     parsed_filing,
+                    object_id=object_id,
                     standardizer=standardizer,
                     documentation=args_read.documentation,
                     outfilepath=args_read.file
                 )
 
-        elif args_read.format=='txt':
+        elif args_read.format == 'txt':
                 to_txt(
                     parsed_filing,
                     standardizer=standardizer,
