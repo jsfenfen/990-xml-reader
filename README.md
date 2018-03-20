@@ -242,16 +242,20 @@ Let's use Sutter Health Sacramento Sierra Region's 12/2014 filing, which has an 
 
 IRSx ships with a default location to which each xml file is downloaded. But if you're dealing with these files in bulk you may wish to sync specific folders directly, and point irsx' default cache *at that folder*. That way you could download the files in bulk, and then runs irsx without it ever having to download the files, because they were already on disk.
 
-You can do that by setting the local_settings.py file. The catch is that this file is in the directory where IRSx is installed in your system. If you installed into a virtual environment virt, for instance, you might find it in a directory like this
+You can do that by setting the local_settings.py file. To figure out where that settings file is, log in to a terminal and type:
 
-	$ which irsx
-	/path/to/your/virt/bin/irsx
+	>>> from irsx.settings import IRSX_SETTINGS_LOCATION
+	>>> IRSX_SETTINGS_LOCATION
+	'/long/path/to/lib/python3.6/site-packages/irsx/settings.py'
 
-Then you could find the local_settings in /path/virt/lib/pythonX.X/site-packages/irsx . `cd` into that directory and run:
+[ If you get an error, try upgrading irsx with `pip install irsx --upgrade` -- this feature was added in 0.1.1. ]
+
+
+Go to that directory. You can either modify the settings.py file or the local_settings.py file. To do the latter, first `cd` into the directory where the settings files live and run:
 
 	$ cp local_settings.py-example local_settings.py
 
-And edit that file to the values you want. XML_DIRECTORY is where the raw xml files are found. 
+Then edit local_settings.py to set XML_DIRECTORY to where the raw xml files are found. 
 
 This piece of configuration is annoying and may change if we can think of a better approach.
 
