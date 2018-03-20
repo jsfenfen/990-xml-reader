@@ -6,7 +6,7 @@ All notable changes are documented in this file.
 
 - Nothing
 
-## 0.1.0 - 2018-03-19
+## 0.1.1 - 2018-03-19
 
 - Added the object_id to the .csv output
 - Added IRSX\_SETTINGS\_LOCATION to allow: `from irs_reader.settings import IRSX_SETTINGS_LOCATION`
