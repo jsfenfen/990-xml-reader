@@ -37,7 +37,7 @@ To dump the xml as a human-readable .csv file at the command line, use:
 
 	$ irsx --format=csv 201533089349301428
 
-Which gives a csv file [like this](samples/201533089349301428_ScheduleJ.csv) with IRS form, line number and variable descriptions (as well as the value entered in this return). To make the file readable in a text editor / on a screen, use the txt format option, and only display one schedule (the complete command line usage is available with --help). 
+Which gives a csv file [like this](samples/201533089349301428.csv) with IRS form, line number and variable descriptions (as well as the value entered in this return). To make the file readable in a text editor / on a screen, use the txt format option, and only display one schedule (the complete command line usage is available with --help). 
 
 	$ irsx --format=txt --schedule=IRS990ScheduleJ 201533089349301428
 
