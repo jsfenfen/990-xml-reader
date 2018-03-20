@@ -9,7 +9,8 @@ IRS_XML_HTTP_BASE = "https://s3.amazonaws.com/irs-form-990"
 
 # The directory we put files in while we're processing them
 WORKING_DIRECTORY = (os.path.join(IRS_READER_ROOT, "XML"))
-
+# It can be hard to locate this.
+IRSX_SETTINGS_LOCATION = (os.path.join(IRS_READER_ROOT, "settings.py"))
 # Helpful to keep these around for lookup purposes
 INDEX_DIRECTORY = (os.path.join(IRS_READER_ROOT, "CSV"))
 
