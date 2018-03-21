@@ -29,7 +29,12 @@ If you've previously installed IRSx, you might try updating it with `$ pip insta
 Read more about pip [here](https://packaging.python.org/tutorials/installing-packages/#use-pip-for-installing).
  
 ## Quickstart
-IRSx can be used as a command line tool or from within a python library. Let's start with the command line usage.
+IRSx structures, standardizes, and documents the raw xml, but what to do with them is up to you. If you just want to load everything into a database, look at [990-xml-db](https://github.com/jsfenfen/990-xml-database/), which includes management command loading scripts.
+
+IRSx can be used as a command line tool or from within a python library. 
+
+
+Let's start with the command line usage.
 
 We're using the "object_id" 201533089349301428 assigned by the IRS to the Dec. 2014 annual nonprofit tax return (990) filed by "Sutter Health Sacramento Region", which is one of quite a few returns disclosed in the [2016 index file](https://s3.amazonaws.com/irs-form-990/index_2016.csv). See more in [finding an object id](#getting-an-object-id)  
 
@@ -255,7 +260,7 @@ Go to that directory. You can either modify the settings.py file or the local_se
 
 	$ cp local_settings.py-example local_settings.py
 
-Then edit local_settings.py to set XML_DIRECTORY to where the raw xml files are found. 
+Then edit local_settings.py to set WORKING\_DIRECTORY to where the raw xml files are found. 
 
 This piece of configuration is annoying and may change if we can think of a better approach.
 
