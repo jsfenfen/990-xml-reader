@@ -1,6 +1,6 @@
 ## Architectural Overview
 
-This is an overview of how different pieces of the irsx project work together. There are lots of different repos, on the theory that each do just one thing. Most users will need only worry about reading the files, and understanding all the connected pieces is not required for that.
+This is an overview of how different pieces of the IRSx project work together. There are lots of different repos, on the theory that each do just one thing. Most users will need only worry about reading the files, and understanding all the connected pieces is not required for that.
 
 ## Introduction
 

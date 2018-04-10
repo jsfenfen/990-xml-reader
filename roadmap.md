@@ -2,7 +2,7 @@
 
 This is a general guide to next steps on the IRSx project. Many of these improvements may entail changes to code in other (related) repositories, but I'm putting the whole thing here. 
 
-For more on how various related repositories relate, see the architectural overview [link TK]. This is probably a lot more information than most casual users will want--this guide is intended to help folks interesting in understanding the process and what lies ahead.
+For more on how various related repositories relate, see the [architectural overview](https://github.com/jsfenfen/990-xml-reader/blob/master/architecture.md). This is probably a lot more information than most casual users will want--this guide is intended to help folks interesting in understanding the process and what lies ahead.
 
 This is kinda just a collection of active tickets put in one place.
 
