@@ -4,7 +4,7 @@ All notable changes are documented in this file.
 
 ## Unreleased 
 
-- Nothing
+- Depend on metadata as a submodule instead of as a directory. 
 
 ## 0.1.1 - 2018-03-19
 
