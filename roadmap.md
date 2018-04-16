@@ -6,18 +6,15 @@ For more on how various related repositories relate, see the [architectural over
 
 This is kinda just a collection of active tickets put in one place.
 
-## Separate metadata from data
 
-The .csv files in the metadata directory: variables, groups, schedule\_parts, line\_numbers and descriptions represent a way of documenting the .xsd files, and are useful for turning the raw xml into something that can go into a database.
-
-While the IRSx project is written in python, the metadata .csv files should allow other folks to write code against them in other languages. 
 
 ## Add ground-truth testing
 
 The tests written to date assess whether the code runs error-free, but a more detailed approach is required to show that the output is correct. During the Aspen Institute's validatathon volunteers checked that some .csv files were in fact correct. They need to be posted (probably to a separate repo) and then code needs to be written to test that the output is correct. There may be minor bits of munging (not sure about spaces; the csv files were edited by humans in google spreadsheets); also note that the json output doesn't preserver original order (that's due to the json spec--it's not supposed to be ordered) so that will need to be addressed in the code as well.
 
 
-
+## Look into CI 
+It's probably worth adding some sorta CI thing, but unclear if this is coupled to the ground truth testing. Might consider adding a code checking only step first.
 
 ## Bootstrap across the 2012-2013 gap with Nonprofit Open Data Coalition files
 
