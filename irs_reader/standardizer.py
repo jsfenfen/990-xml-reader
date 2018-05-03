@@ -78,7 +78,7 @@ class Documentizer(Standardizer):
             'irs_type', 'xpath'
         ]
         if versions:
-            self.variable_columns = self.variable_columns + ['versions']
+            self.variable_columns = self.variable_columns + ['version_start', 'version_end']
 
         self._make_schedule_parts()
         self._make_groups()
@@ -147,10 +147,15 @@ class VersionDocumentizer(object):
         self.line_numbers = {}
         self.descriptions = {}
 
-
         self._make_line_numbers()
         self._make_descriptions()
 
+    def check_version(self, versionstring, start_year, end_year):
+        versionyear = int(versionstring.split("v")[0])
+        valid_start = versionyear >= int(start_year)
+        valid_end = not end_year or versionyear <= int(end_year)
+        result = valid_start and valid_end
+        return result
 
     def _make_line_numbers(self):
         filepath = os.path.join(METADATA_DIRECTORY, 'line_numbers.csv')
@@ -180,10 +185,6 @@ class VersionDocumentizer(object):
 
 
     def get_line_number(self, xpath, version_string):
-        #print("get_line_number %s %s" % (xpath, version_string))
-        if version_string == '2016v3.1':
-            version_string = '2016v3.0'
-
         candidate_rows = []
         try:
             candidate_rows = self.line_numbers[xpath]
@@ -191,26 +192,19 @@ class VersionDocumentizer(object):
             return None
 
         for row in candidate_rows:
-            if version_string in row['versions']:
-                #print("get_line_number %s %s = %s" % (xpath, version_string, row['line_number']))
+            if self.check_version(version_string, row['version_start'], row['version_end']):
                 return row['line_number']
 
         return None
 
     def get_description(self, xpath, version_string):
-        if version_string == '2016v3.1':
-            version_string = '2016v3.0'
         candidate_rows = []
         try:
             candidate_rows = self.descriptions[xpath]
         except KeyError:
             return None
         for row in candidate_rows:
-            if version_string in row['versions']:
+            if self.check_version(version_string, row['version_start'], row['version_end']):
                 return row['description']
         return None
-
-
-        
-
 

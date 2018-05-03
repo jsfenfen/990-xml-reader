@@ -75,6 +75,12 @@ def run_main(args_read):
             if args_read.file:
                 print("Printing result to file %s" % args_read.file)
 
+        if args_read.list_schedules:
+            this_filing = Filing(object_id)
+            this_filing.process()
+            print(this_filing.list_schedules())
+            return True  # we're done, ignore any other commands
+
         else:
             if args_read.schedule:
                 parsed_filing = xml_runner.run_sked(

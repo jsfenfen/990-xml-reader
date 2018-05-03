@@ -24,9 +24,11 @@ KNOWN_SCHEDULES = [
                 "ReturnHeader990x"
 ]
 
+# these should get pushed to metadata directory
 ALLOWED_VERSIONSTRINGS = [
     '2013v3.0', '2013v3.1', '2013v4.0', '2014v5.0', '2014v6.0',
     '2015v2.0', '2015v2.1', '2015v3.0', '2016v3.0', '2016v3.1',
+    '2017v2.0', '2017v2.1', '2017v2.2', '2017v2.3',
 ]
 
 CSV_ALLOWED_VERSIONSTRINGS = ALLOWED_VERSIONSTRINGS + [
