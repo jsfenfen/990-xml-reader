@@ -2,9 +2,13 @@
 
 All notable changes are documented in this file.
 
-## Unreleased 
+## Unreleased
+Nothing
+
+## 0.2.0 - 2018-05-03
 
 - Depend on metadata as a submodule instead of as a directory. 
+- Change in metadata; instead of a semicolon-delimited list of versions, files instead include version\_start and version\_end which includes the __year__ that a variable first appeared. The version_end is left blank unless the variable is no longer used.
 
 ## 0.1.1 - 2018-03-19
 
