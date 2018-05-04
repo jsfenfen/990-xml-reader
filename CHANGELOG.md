@@ -5,6 +5,10 @@ All notable changes are documented in this file.
 ## Unreleased
 Nothing
 
+## 0.2.1 - 2018-05-04
+
+- Updates in metadata to cover 2017; updates downstream. 
+
 ## 0.2.0 - 2018-05-03
 
 - Depend on metadata as a submodule instead of as a directory. 
