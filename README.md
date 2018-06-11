@@ -247,7 +247,39 @@ Let's use Sutter Health Sacramento Sierra Region's 12/2014 filing, which has an 
 
 IRSx ships with a default location to which each xml file is downloaded. But if you're dealing with these files in bulk you may wish to sync specific folders directly, and point irsx' default cache *at that folder*. That way you could download the files in bulk, and then runs irsx without it ever having to download the files, because they were already on disk.
 
-You can do that by setting the local_settings.py file. To figure out where that settings file is, log in to a terminal and type:
+### Environment variables ###
+
+You can set the `IRSX_CACHE_DIRECTORY` environment variable in order to control where
+IRSx saves and looks for data files. For example, on Linux and OS X, you could
+run the following before you run `irsx` or `irsx_index`:
+
+        $ export IRSX_CACHE_DIRECTORY=/absolute/path/to/arbitrary/directory/irsx
+
+        $ irsx --format=csv 201533089349301428
+        # XML will end up at /absolute/path/to/arbitrary/directory/irsx/XML/201533089349301428_public.xml
+
+        $ irsx_index --year 2017
+        # CSV will end up at /absolute/path/to/arbitrary/directory/irsx/CSV/index_2017.csv
+
+If you don't like the forced `XML` and `CSV` directories, you can have even more control by setting two other environment variables instead:
+
+*   Set `IRSX_WORKING_DIRECTORY` to an absolute path where tax returns' XML files will be stored.
+*   Set `IRSX_INDEX_DIRECTORY` to an absolute path where yearly indexes' CSV files will be stored.
+
+For example:
+
+        $ export IRSX_WORKING_DIRECTORY=/absolute/path/to/working/directory
+        $ irsx --format=csv 201533089349301428
+        # XML will end up at /absolute/path/to/working/directory/201533089349301428_public.xml
+
+        $ export IRSX_INDEX_DIRECTORY=/absolute/path/to/index/directory
+        $ irsx_index --year 2017
+        # CSV will end up at /absolute/path/to/index/directory/index_2017.csv
+
+
+### Legacy configuration ###
+
+You also can configure IRSx's cache location by setting the local_settings.py file. To figure out where that settings file is, log in to a terminal and type:
 
 	>>> from irsx.settings import IRSX_SETTINGS_LOCATION
 	>>> IRSX_SETTINGS_LOCATION
@@ -261,8 +293,6 @@ Go to that directory. You can either modify the settings.py file or the local_se
 	$ cp local_settings.py-example local_settings.py
 
 Then edit local_settings.py to set WORKING\_DIRECTORY to where the raw xml files are found. 
-
-This piece of configuration is annoying and may change if we can think of a better approach.
 
 
 ## IRSx from python 
