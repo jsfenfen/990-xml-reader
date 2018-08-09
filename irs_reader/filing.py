@@ -1,4 +1,6 @@
 import os
+import sys
+import io
 import xmltodict
 import json
 from xml.parsers.expat import ExpatError
@@ -66,7 +68,9 @@ class Filing(object):
         return True
 
     def _set_dict_from_xml(self):
-        with open(self.filepath, 'r') as fh:
+
+        # io works across python2 and 3, and allows an encoding arg        
+        with io.open(self.filepath, 'r', encoding='utf-8-sig') as fh:
             raw_file = fh.read()
             try:
                 self.raw_irs_dict = xmltodict.parse(raw_file)
