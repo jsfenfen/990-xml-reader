@@ -3,7 +3,8 @@
 All notable changes are documented in this file.
 
 ## Unreleased
-Nothing
+
+PR to accept file cache location as env var - https://github.com/jsfenfen/990-xml-reader/pull/20
 
 ## 0.2.2 - 2018-05-09
 
