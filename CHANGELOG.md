@@ -5,6 +5,10 @@ All notable changes are documented in this file.
 ## Unreleased
 Nothing
 
+## 0.2.2 - 2018-05-09
+
+- Incorporate metadata changes; still need better approach
+
 ## 0.2.1 - 2018-05-04
 
 - Updates in metadata to cover 2017; updates downstream. 
