@@ -5,6 +5,7 @@
 - [Installation](#installation)
 - [Quickstart](#quickstart)
 - [About](#about)
+- [Hype](#hype)
 - [Cookbook](#cookbook)
 - [Command line IRSx](#command-line-irsx)
 - [Output formats: json, csv, txt](#command-line-output-formats-json-csv-txt)
@@ -97,7 +98,11 @@ Filers are allowed to leave blank tax lines not applicable to them. IRSx returns
 
 The tax returns are complex--the easiest way to understand them is to consult the [metadata csv files](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata), and cross reference these to the forms in [sample\_schedules](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/sample_schedules) (which contains recent pdf versions of the schedules).  The data returned for each schedule read contains schedule parts (see the [schedule\_parts.csv](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata/schedule_parts.csv) for all possible parts) and repeating groups (see [groups.csv](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata/groups.csv)) that occur within that schedule. Both repeating groups and schedule\_parts contain variables, which are documented in the [variables.csv](https://github.com/jsfenfen/990-xml-reader/tree/master/irs_reader/metadata/variables.csv) table. 
 
- 
+
+## Hype
+
+12/3/18: [Tweetstorm](https://twitter.com/TimBroderick/status/1069387919608160256) from @TimBroderick, who used IRSx while working on an "analysis of about 100 Illinois hospitals' tax forms \[which\] revealed that measuring community benefit spending through Form 990 filings can provide an inconsistent and distorted view of a hospital's impact." [Related Article](https://www.modernhealthcare.com/article/20181201/NEWS/181119965)
+
 ## Cookbook
 
 A collection of IRSx and related "recipes" is [online here](https://github.com/jsfenfen/irsx_cookbook). If you're looking for examples, that might be a good place to start.
