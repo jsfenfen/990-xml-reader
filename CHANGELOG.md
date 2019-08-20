@@ -2,7 +2,12 @@
 
 All notable changes are documented in this file.
 
-## Unreleased
+## 0.2.4
+
+Allow version 2018v3.1 filings to be processed. A few new metadata lines will need to be added once I've processed the .xsd files.
+
+
+## 0.2.3 
 
 PR to accept file cache location as env var - https://github.com/jsfenfen/990-xml-reader/pull/20
 
