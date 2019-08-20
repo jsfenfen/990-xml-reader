@@ -2,7 +2,12 @@
 
 All notable changes are documented in this file.
 
-## 0.2.4
+
+## 0.2.5 - 2018-08-20
+
+Allow xml namespacing, as exhibited by 201940149349301304_public. 
+
+## 0.2.4 - 2018-08-20
 
 Allow version 2018v3.1 filings to be processed. A few new metadata lines will need to be added once I've processed the .xsd files.
 

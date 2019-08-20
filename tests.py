@@ -215,6 +215,14 @@ class TestCommandLine:
         args = self.parser.parse_args(test_args)
         run_cli_main(args)
 
+    def test_cli_namespaced(self):
+        test_args = [
+            '--format', 'txt',
+            '201940149349301304' # tags start with "irs:"
+        ]
+        args = self.parser.parse_args(test_args)
+        run_cli_main(args)
+
 class TestCommandLine_Index:
 
     def setUp(self):
