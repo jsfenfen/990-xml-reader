@@ -3,7 +3,10 @@ import sys
 import io
 import xmltodict
 import json
+from collections import OrderedDict
 from xml.parsers.expat import ExpatError
+from .type_utils import dictType, orderedDictType, listType, \
+    unicodeType, noneType, strType
 
 from .file_utils import stream_download, get_s3_URL, validate_object_id, \
     get_local_path
@@ -67,13 +70,43 @@ class Filing(object):
         stream_download(self.URL, self.filepath, verbose=verbose)
         return True
 
-    def _set_dict_from_xml(self):
+    def _denamespacify(self,entity):
+        """
+        It's legal to include namespaces in the xml tags, e.g. irs:Return instead of Return
+        This is very rare; see 201940149349301304_public.xml for an example.
+        """
+        thisentitytype = type(entity)
+        if thisentitytype == orderedDictType:
+            newOD = OrderedDict()
+            for key in entity.keys():
+                newkey = key
+                if ":" in key:
+                    newkey = key.split(":")[1]
+                newvalue = entity[key]
+                if type(newvalue) == listType or type(newvalue) == orderedDictType:
+                    newvalue = self._denamespacify(newvalue)
+                newOD[newkey] = newvalue
+            return newOD
 
+        elif thisentitytype == listType:
+            newlist = list()
+            for item in entity:
+                newvalue = item
+                if type(newvalue) == listType or type(newvalue) == orderedDictType:
+                    newvalue = self._denamespacify(newvalue)
+                newlist.append(newvalue)
+            return newlist
+        else: 
+            return entity
+
+
+    def _set_dict_from_xml(self):
         # io works across python2 and 3, and allows an encoding arg        
         with io.open(self.filepath, 'r', encoding='utf-8-sig') as fh:
             raw_file = fh.read()
             try:
-                self.raw_irs_dict = xmltodict.parse(raw_file)
+
+                self.raw_irs_dict = self._denamespacify(xmltodict.parse(raw_file))
             except ExpatError:
                 raise InvalidXMLException(
                     "\nXML Parse error in " + self.filepath \
@@ -89,7 +122,10 @@ class Filing(object):
                     + "Try erasing this file and downloading again."
                 )
 
+
+
     def _set_dict_from_json(self):
+
         self.raw_irs_dict = self.json
 
     def _set_version(self):
