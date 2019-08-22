@@ -3,6 +3,11 @@
 All notable changes are documented in this file.
 
 
+## 0.2.6 - 2018-08-22
+
+Allow version 2018v3.0 filings to be processed, these are also in production but were omitted in 0.2.4.
+
+
 ## 0.2.5 - 2018-08-20
 
 Allow xml namespacing, as exhibited by 201940149349301304_public. 
