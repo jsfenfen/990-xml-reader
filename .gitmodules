@@ -1,3 +1,4 @@
 [submodule "irs_reader/metadata"]
 	path = irs_reader/metadata
 	url = https://github.com/jsfenfen/990-xml-metadata
+	branch = master
