@@ -3,6 +3,10 @@
 All notable changes are documented in this file.
 
 
+## 0.2.7 - 2018-08-22
+
+Point to updated 990-xml-metadata repo, which includes xpaths for Tax Years 2017 and 2018. 
+
 ## 0.2.6 - 2018-08-22
 
 Allow version 2018v3.0 filings to be processed, these are also in production but were omitted in 0.2.4.
