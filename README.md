@@ -30,7 +30,7 @@ If you've previously installed IRSx, you might try updating it with `$ pip insta
 Read more about pip [here](https://packaging.python.org/tutorials/installing-packages/#use-pip-for-installing).
  
 ## Quickstart
-IRSx structures, standardizes, and documents the raw xml, but what to do with them is up to you. If you just want to load everything into a database, look at [990-xml-db](https://github.com/jsfenfen/990-xml-database/), which includes management command loading scripts.
+IRSx structures, standardizes, and documents the raw 990 tax filings released as xml documents, but what to do with that data is up to you. If you just want to load everything into a database, look at [990-xml-db](https://github.com/jsfenfen/990-xml-database/), which includes management command loading scripts.
 
 IRSx can be used as a command line tool or from within a python library. 
 
