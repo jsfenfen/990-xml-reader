@@ -30,7 +30,7 @@ If you've previously installed IRSx, you might try updating it with `$ pip insta
 Read more about pip [here](https://packaging.python.org/tutorials/installing-packages/#use-pip-for-installing).
  
 ## Quickstart
-IRSx structures, standardizes, and documents the raw xml, but what to do with them is up to you. If you just want to load everything into a database, look at [990-xml-db](https://github.com/jsfenfen/990-xml-database/), which includes management command loading scripts.
+IRSx structures, standardizes, and documents the raw 990 tax filings released as xml documents, but what to do with that data is up to you. If you just want to load everything into a database, look at [990-xml-db](https://github.com/jsfenfen/990-xml-database/), which includes management command loading scripts.
 
 IRSx can be used as a command line tool or from within a python library. 
 
@@ -100,6 +100,8 @@ The tax returns are complex--the easiest way to understand them is to consult th
 
 
 ## Hype
+
+10/15/2019: [Kaiser Health News](https://khn.org/news/patients-eligible-for-charity-care-instead-get-big-bills/) used data dumped with IRSx to find that among hospital in the US, "nearly half (45 percent) of nonprofit hospital organizations are routinely sending medical bills to patients whose incomes are low enough to qualify for charity care." Cross published with the [Washington Post](https://www.washingtonpost.com/business/economy/free-or-discounted-care-is-available-at-some-hospitals-but-they-dont-make-it-easy/2019/10/10/8ad4c540-e92a-11e9-9c6d-436a0df4f31d_story.html). 
 
 12/3/18: [Tweetstorm](https://twitter.com/TimBroderick/status/1069387919608160256) from @TimBroderick, who used IRSx while working on an "analysis of about 100 Illinois hospitals' tax forms \[which\] revealed that measuring community benefit spending through Form 990 filings can provide an inconsistent and distorted view of a hospital's impact." [Related Article](https://www.modernhealthcare.com/article/20181201/NEWS/181119965)
 
