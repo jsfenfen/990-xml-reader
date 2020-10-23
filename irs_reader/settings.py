@@ -40,8 +40,7 @@ ALLOWED_VERSIONSTRINGS = [
     '2019v5.2'
 ]
 
-# testing '2018v3.2', '2018v3.2', '2019v5.0', '2019v5.1', 
-    '2019v5.2'
+# testing '2018v3.2', '2018v3.2', '2019v5.0', '2019v5.1', '2019v5.2'
 
 CSV_ALLOWED_VERSIONSTRINGS = ALLOWED_VERSIONSTRINGS + [
     '2010v3.2', '2010v3.4', '2010v3.6', '2010v3.7', '2011v1.2', '2011v1.3',

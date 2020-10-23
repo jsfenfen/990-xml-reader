@@ -2,6 +2,12 @@
 
 All notable changes are documented in this file.
 
+
+## 0.2.11 - 2020-10-23
+
+Bugfix. 
+
+
 ## 0.2.10 - 2020-10-23
 
 Add support for 2018 schemas through 2018v3.2 and 2018v3.3. Add experimental support for 2019v5.0 through 2019v5.3. 
