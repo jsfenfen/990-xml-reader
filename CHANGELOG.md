@@ -3,6 +3,10 @@
 All notable changes are documented in this file.
 
 
+## 0.2.12 - 2020-10-23
+
+Bugfix.  
+
 ## 0.2.11 - 2020-10-23
 
 Bugfix. 
