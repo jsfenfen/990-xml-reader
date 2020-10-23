@@ -2,6 +2,18 @@
 
 All notable changes are documented in this file.
 
+## 0.2.10 - 2020-10-23
+
+Add support for 2018 schemas through 2018v3.2 and 2018v3.3. Add experimental support for 2019v5.0 through 2019v5.3. 
+
+
+## 0.2.9 - 2019-10-09
+
+Add support for 2018 schemas through 2018v3.1
+
+## 0.2.8 - 2019-09-15
+
+Update metadata submodule
 
 ## 0.2.7 - 2018-08-22
 
