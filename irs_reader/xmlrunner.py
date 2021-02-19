@@ -178,5 +178,6 @@ class XMLRunner(object):
             this_filing.set_keyerrors(self.filing_keyerr_data)
             return this_filing
         else:
-            print("Filing version %s isn't supported for this operation" % this_version )
+            if verbose:
+                print("Filing version %s isn't supported for this operation" % this_version )
             return this_filing
