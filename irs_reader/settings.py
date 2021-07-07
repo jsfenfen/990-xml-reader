@@ -31,17 +31,22 @@ KNOWN_SCHEDULES = [
                 "ReturnHeader990x"
 ]
 
-# these should get pushed to metadata directory
+# these could get pushed to metadata directory? 
+
 ALLOWED_VERSIONSTRINGS = [
     '2013v3.0', '2013v3.1', '2013v4.0', '2014v5.0', '2014v6.0',
     '2015v2.0', '2015v2.1', '2015v3.0', '2016v3.0', '2016v3.1',
     '2017v2.0', '2017v2.1', '2017v2.2', '2017v2.3', '2018v3.0',
     '2018v3.1', '2018v3.2', '2018v3.3', '2019v5.0', '2019v5.1', 
-    '2019v5.2'
+    '2019v5.2', '2020v1.0', '2020v2.0', '2020v3.0', '2020v4.0',
+    '2020v4.1'
 ]
 
-# testing '2018v3.2', '2018v3.2', '2019v5.0', '2019v5.1', '2019v5.2'
+# 2020 is experimental
+# see https://www.irs.gov/charities-non-profits/ty2020-xml-schemas-and-business-rules-for-exempt-organizations-modernized-e-file
 
+# We can capture the group structure for these so it doesn't break
+# but these versions ARE NOT supported and aren't mapped to IRSx variables
 CSV_ALLOWED_VERSIONSTRINGS = ALLOWED_VERSIONSTRINGS + [
     '2010v3.2', '2010v3.4', '2010v3.6', '2010v3.7', '2011v1.2', '2011v1.3',
     '2011v1.4', '2011v1.5', '2012v2.0', '2012v2.1', '2012v2.2', '2012v2.3', 
