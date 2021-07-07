@@ -3,6 +3,12 @@
 All notable changes are documented in this file.
 
 
+
+
+## 0.2.13 - 2021-07-21
+
+Add experimental support for schemas for TY 2020. IRSx will process these now; gathering info about missing xpaths.
+
 ## 0.2.12 - 2020-10-23
 
 Bugfix.  
