@@ -1,5 +1,8 @@
 # IRSx
 
+Update: 12/16. The IRS has announced it will no longer post xml 990 filings to AWS, thereby undermining irsx' ability to automatically retrieve filings. The IRS does appear to make the raw filings available in [bulk format on this page](https://www.irs.gov/charities-non-profits/form-990-series-downloads). It is possible to use IRSx by retrieving the files and placing them at the location that IRSX expects to find them. We are seeking additional information from IRS and plan to address this soon. 
+
+
 ## Table of Contents
 
 - [Installation](#installation)
