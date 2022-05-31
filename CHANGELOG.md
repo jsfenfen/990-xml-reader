@@ -3,6 +3,9 @@
 All notable changes are documented in this file.
 
 
+## 0.2.13 - 2022-05-31
+
+Allow version 2020v4.2 to run. Xpaths newly added in 2020 (very few) are still unsupported, but everything else appears to work.
 
 
 ## 0.2.13 - 2021-07-21
