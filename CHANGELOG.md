@@ -2,9 +2,11 @@
 
 All notable changes are documented in this file.
 
+## 0.3.2 - 2022-07-19
 
+Allow version 2020v1.1
 
-## 0.3.1 - 2022-07-20
+## 0.3.1 - 2022-07-19
 
 Removed IRSX' ability to retrieve filings from an S3 bucket. 
 Add irsx_retrieve to retrieve an entire year of filings from IRS' new location. This is experimental, it's not clear
