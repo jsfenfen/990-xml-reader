@@ -3,7 +3,7 @@ import os
 import requests
 
 from datetime import datetime
-from .settings import IRS_XML_HTTP_BASE, WORKING_DIRECTORY, INDEX_DIRECTORY
+from .settings import IRS_XML_HTTP_BASE, WORKING_DIRECTORY, INDEX_DIRECTORY, IRS_INDEX_BASE
 
 OBJECT_ID_RE = re.compile(r'20\d{16}')
 
@@ -33,6 +33,7 @@ def stream_download(url, target_path, verbose=False):
     for chunk in response.iter_content(chunk_size=512):
         if chunk:     # filter out keep-alive new chunks
             handle.write(chunk)
+
     if verbose:
         print(
             "Download completed to %s in %s" %
@@ -48,8 +49,9 @@ def validate_object_id(object_id):
     return object_id
 
 
-def get_s3_URL(object_id):
-    return ("%s/%s_public.xml" % (IRS_XML_HTTP_BASE, object_id))
+# Files are no longer available on S3
+# def get_s3_URL(object_id):
+#     return ("%s/%s_public.xml" % (IRS_XML_HTTP_BASE, object_id))
 
 
 def get_local_path(object_id):
@@ -58,7 +60,9 @@ def get_local_path(object_id):
 
 
 def get_index_file_URL(year):
-    return ("%s/index_%s.csv" % (IRS_XML_HTTP_BASE, year))
+    index_file = IRS_INDEX_BASE % (year, year)
+    print("index file %s %s" % (year, index_file))
+    return index_file
 
 
 def get_local_index_path(year):

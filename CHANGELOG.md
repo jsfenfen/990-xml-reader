@@ -3,6 +3,18 @@
 All notable changes are documented in this file.
 
 
+
+## 0.3.1 - 2022-07-20
+
+Removed IRSX' ability to retrieve filings from an S3 bucket. 
+Add irsx_retrieve to retrieve an entire year of filings from IRS' new location. This is experimental, it's not clear
+how IRS will add additional zip files, or why the number per year is so inconsistent. Also modify the irsx index command to 
+retrieve index files from the new locations. 
+
+
+
+
+
 ## 0.2.13 - 2022-05-31
 
 Allow version 2020v4.2 to run. Xpaths newly added in 2020 (very few) are still unsupported, but everything else appears to work.

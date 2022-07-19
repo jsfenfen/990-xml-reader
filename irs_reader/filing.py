@@ -8,7 +8,7 @@ from xml.parsers.expat import ExpatError
 from .type_utils import dictType, orderedDictType, listType, \
     unicodeType, noneType, strType
 
-from .file_utils import stream_download, get_s3_URL, validate_object_id, \
+from .file_utils import stream_download, validate_object_id, \
     get_local_path
 
 from .settings import KNOWN_SCHEDULES, IRS_READER_ROOT
@@ -17,6 +17,9 @@ from .settings import KNOWN_SCHEDULES, IRS_READER_ROOT
 class InvalidXMLException(Exception):
     pass
 
+
+class FileMissingException(Exception):
+    pass
 
 class Filing(object):
 
@@ -50,25 +53,20 @@ class Filing(object):
 
                 if URL:
                     self.URL = URL
-                else:
-                    self.URL = get_s3_URL(self.object_id)
+                
 
     def _download(self, force_overwrite=False, verbose=False):
         """
-        Download the file if it's not already there.
-        We shouldn't *need* to overwrite; the xml is not supposed to update.
+        Files are no longer downloadable. 
         """
-        if not force_overwrite:
-            # If the file is already there, we're done
-            if os.path.isfile(self.filepath):
-                if verbose:
-                    print(
-                        "File already available at %s -- skipping"
-                        % (self.filepath)
-                    )
-                return False
-        stream_download(self.URL, self.filepath, verbose=verbose)
-        return True
+        
+        if os.path.isfile(self.filepath):
+            return True
+        else: 
+            raise FileMissingException(
+                "Filing not available, try downloading with irsx_retrieve [ YEAR ]"
+                )
+        
 
     def _denamespacify(self,entity):
         """
@@ -229,6 +227,7 @@ class Filing(object):
             if self.json:
                 self._set_dict_from_json()
             else:
+                
                 self._download(verbose=verbose)
                 self._set_dict_from_xml()
 

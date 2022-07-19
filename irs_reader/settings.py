@@ -21,6 +21,8 @@ WORKING_DIRECTORY = os.environ.get(
 INDEX_DIRECTORY = os.environ.get(
     "IRSX_INDEX_DIRECTORY", os.path.join(IRSX_CACHE_DIRECTORY, "CSV"))
 
+IRS_INDEX_BASE = "https://apps.irs.gov/pub/epostcard/990/xml/%s/index_%s.csv"
+
 KNOWN_SCHEDULES = [
                 "IRS990", "IRS990EZ", "IRS990PF", "IRS990ScheduleA",
                 "IRS990ScheduleB", "IRS990ScheduleC", "IRS990ScheduleD",

@@ -25,7 +25,8 @@ setup(name=HUMAN_NAME,
       keywords = ['990', 'nonprofit', 'tax'],
       entry_points = {
           "console_scripts": ["irsx=irsx.irsx_cli:main",
-                              "irsx_index=irsx.irsx_index_cli:main"]
+                              "irsx_index=irsx.irsx_index_cli:main",
+                              "irsx_retrieve=irsx.irsx_retrieve_cli:main"]
       },
       classifiers=[
           # How mature is this project? Common values are
