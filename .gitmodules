@@ -1,8 +1,8 @@
 [submodule "irs_reader/metadata"]
 	path = irs_reader/metadata
-	url = https://github.com/jsfenfen/990-xml-metadata
+	url = https://github.com/propublica/990-xml-metadata
 	branch = master
 [submodule "metadata"]
 	path = metadata
-	url = https://github.com/jsfenfen/990-xml-metadata
+	url = https://github.com/propublica/990-xml-metadata
 	branch = master
