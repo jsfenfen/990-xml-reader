@@ -74,14 +74,14 @@ class Filing(object):
         This is very rare; see 201940149349301304_public.xml for an example.
         """
         thisentitytype = type(entity)
-        if thisentitytype == orderedDictType:
+        if thisentitytype == orderedDictType or thisentitytype == dictType:
             newOD = OrderedDict()
             for key in entity.keys():
                 newkey = key
                 if ":" in key:
                     newkey = key.split(":")[1]
                 newvalue = entity[key]
-                if type(newvalue) == listType or type(newvalue) == orderedDictType:
+                if type(newvalue) == listType or type(newvalue) == orderedDictType or type(newvalue) == dictType:
                     newvalue = self._denamespacify(newvalue)
                 newOD[newkey] = newvalue
             return newOD
