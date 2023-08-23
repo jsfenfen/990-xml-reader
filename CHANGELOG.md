@@ -2,6 +2,13 @@
 
 All notable changes are documented in this file.
 
+
+
+## 0.3.3 - 2023-08-23
+
+Allow all known 2021 and 2022 versions. This will introduce some unknown xpaths that we hope to id in a future update. 
+
+
 ## 0.3.2 - 2022-07-19
 
 Allow version 2020v1.1
