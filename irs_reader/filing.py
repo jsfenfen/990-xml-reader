@@ -1,6 +1,5 @@
 import os
 import sys
-import io
 import xmltodict
 import json
 from collections import OrderedDict
@@ -62,10 +61,14 @@ class Filing(object):
         
         if os.path.isfile(self.filepath):
             return True
-        else: 
+        else:
+            looked_in = os.path.dirname(os.path.abspath(self.filepath)) or "."
             raise FileMissingException(
-                "Filing not available, try downloading with irsx_retrieve [ YEAR ]"
-                )
+                "Filing not found at %s (looked in directory: %s). "
+                "Try downloading with irsx_retrieve [ YEAR ], "
+                "or pass --input-dir to point at where the XML lives."
+                % (self.filepath, looked_in)
+            )
         
 
     def _denamespacify(self,entity):
@@ -99,8 +102,7 @@ class Filing(object):
 
 
     def _set_dict_from_xml(self):
-        # io works across python2 and 3, and allows an encoding arg        
-        with io.open(self.filepath, 'r', encoding='utf-8-sig') as fh:
+        with open(self.filepath, 'r', encoding='utf-8-sig') as fh:
             raw_file = fh.read()
             try:
 

@@ -99,12 +99,29 @@ class SkedDictReader(object):
                     xpath = xpath.replace("/#text", "")
                     value = flattened_list_item[xpath]
 
+                    # Skip empty/None values — these come from empty XML
+                    # elements (e.g. <SomeGrp/>) that flatten produces as
+                    # None. They carry no data and would cause false keyerrors.
+                    if value is None or value == '':
+                        continue
+
+                    # Handle nested groups within a parent group. When a
+                    # sub-group has multiple instances, xmltodict makes it
+                    # a list which flatten() doesn't recurse into. Process
+                    # these as their own repeating group. (Singleton dicts
+                    # are already flattened into leaf xpaths by flatten(),
+                    # so only lists reach here.)
+                    if type(value) == listType and xpath in self.groups:
+                        nested_group = self.groups[xpath]
+                        self._process_group(value, xpath, nested_group)
+                        continue
+
                     if self.csv_format:
                         this_var = {
                             'xpath':xpath,
                             'value':value,
                             'in_group':True,
-                            'group_name':this_group['db_name'],
+                            'group_name':this_group['db_name'] if this_group else None,
                             'group_index':node_index
                         }
                         self.for_csv_list.append(this_var)
@@ -159,8 +176,13 @@ class SkedDictReader(object):
                 pass
             else:
                 element_path = element_path.replace("/#text", "")
-                try:
-                    # is it a group?
+
+                # Skip empty values for known groups (empty group wrappers
+                # like <Post1975UBTIGrp></Post1975UBTIGrp> with no children)
+                if element_path in self.groups and (json_node is None or json_node == ''):
+                    pass
+
+                elif element_path in self.groups:
                     this_group = self.groups[element_path]
                     self._process_group(
                         [{parent_path: json_node}],
@@ -168,8 +190,7 @@ class SkedDictReader(object):
                         this_group
                     )
 
-                except KeyError:
-
+                else:
                     # It's not a group so it should be a variable we know about
                     
                     if self.csv_format:

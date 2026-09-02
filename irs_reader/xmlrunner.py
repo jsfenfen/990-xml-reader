@@ -4,7 +4,7 @@ from .sked_dict_reader import SkedDictReader
 # from .log_utils import configure_logging
 from .type_utils import listType
 
-from .settings import WORKING_DIRECTORY, ALLOWED_VERSIONSTRINGS, CSV_ALLOWED_VERSIONSTRINGS
+from .settings import WORKING_DIRECTORY, version_is_supported
 
 class XMLRunner(object):
     """ Load a Standardizer just once while running multiple filings
@@ -104,15 +104,15 @@ class XMLRunner(object):
                     'keyerrors':result['keyerrors'],
                 })
 
-    def run_filing(self, object_id, verbose=False):
+    def run_filing(self, object_id, verbose=False, filepath=None):
         self.whole_filing_data = []
         self.filing_keyerr_data = []
-        this_filing = Filing(object_id)
+        this_filing = Filing(object_id, filepath=filepath)
         this_filing.process(verbose=verbose)
         this_version = this_filing.get_version()
         if verbose:
             print("Filing %s is version %s" % (object_id, this_version))
-        if this_version in ALLOWED_VERSIONSTRINGS or ( self.csv_format and this_version in CSV_ALLOWED_VERSIONSTRINGS ):
+        if version_is_supported(this_version):
             this_version = this_filing.get_version()
             schedules = this_filing.list_schedules()
             ein = this_filing.get_ein()
@@ -123,14 +123,14 @@ class XMLRunner(object):
 
             this_filing.set_result(self.whole_filing_data)
             this_filing.set_keyerrors(self.filing_keyerr_data)
-            if verbose and not self.csv_format:   # csv format works on years with many, many keyerrors, 
+            if verbose and not self.csv_format:
                 if len(self.filing_keyerr_data)>0:
                     print("In %s keyerrors: %s" % (object_id, self.filing_keyerr_data))
                 else:
                     print("No keyerrors found")
             return this_filing
         else:
-            print("Filing version %s isn't supported for this operation" % this_version )
+            print("Filing version %s isn't supported (requires >= 2013)" % this_version)
             return this_filing
 
     """
@@ -158,17 +158,17 @@ class XMLRunner(object):
     """
 
 
-    def run_sked(self, object_id, sked, verbose=False):
+    def run_sked(self, object_id, sked, verbose=False, filepath=None):
         """
         sked is the proper name of the schedule:
         IRS990, IRS990EZ, IRS990PF, IRS990ScheduleA, etc.
         """
         self.whole_filing_data = []
         self.filing_keyerr_data = []
-        this_filing = Filing(object_id)
+        this_filing = Filing(object_id, filepath=filepath)
         this_filing.process(verbose=verbose)
         this_version = this_filing.get_version()
-        if this_version in ALLOWED_VERSIONSTRINGS or ( self.csv_format and this_version in CSV_ALLOWED_VERSIONSTRINGS ):
+        if version_is_supported(this_version):
             this_version = this_filing.get_version()
             ein = this_filing.get_ein()
             sked_dict = this_filing.get_schedule(sked)
@@ -178,5 +178,5 @@ class XMLRunner(object):
             this_filing.set_keyerrors(self.filing_keyerr_data)
             return this_filing
         else:
-            print("Filing version %s isn't supported for this operation" % this_version )
+            print("Filing version %s isn't supported (requires >= 2013)" % this_version)
             return this_filing

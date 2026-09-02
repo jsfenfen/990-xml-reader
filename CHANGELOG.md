@@ -4,6 +4,18 @@ All notable changes are documented in this file.
 
 
 
+## 0.5.1 - 2026-04-17
+
+Update to support python 3.10+. Fix bug affecting repeating groups that appear once.
+
+Change ergonomics downstream of IRS' removal of an S3 bucket, and instead expect to retrieve files to a local dir from the irs or the internet archive. More robust testing across a greater range of versions. 
+
+Update to allow all version strings. Corresponds to metadata update covering all variables available thru the present. 
+
+## 0.4.0 2025-05-12 
+
+Add version strings encountered in the wild without corresponding metadata.
+
 ## 0.3.3 - 2023-08-23
 
 Allow all known 2021 and 2022 versions. This will introduce some unknown xpaths that we hope to id in a future update. 

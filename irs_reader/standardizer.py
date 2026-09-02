@@ -1,15 +1,10 @@
 import os
-import sys
+import csv
 import collections
-#import logging
 from datetime import datetime
 from .settings import METADATA_DIRECTORY, KEYERROR_LOG
 from .sked_dict_reader import SkedDictReader
 from .type_utils import listType
-if sys.version_info >= (3, 0):
-    import csv
-else:
-    import unicodecsv as csv
 
 
 class Standardizer(object):

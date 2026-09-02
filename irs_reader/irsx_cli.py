@@ -55,10 +55,25 @@ def get_parser():
         default=False,
         help='Only list schedules'
     )
+    parser.add_argument(
+        '--input-dir',
+        dest='input_dir',
+        default=None,
+        help='Directory to find XML files (overrides default working directory)'
+    )
     return parser
 
 
 def run_main(args_read):
+
+    # If --input-dir is provided, make it authoritative: override the
+    # settings-derived working directory so any code path that still reads
+    # it (e.g. get_local_path) points at the user-supplied directory.
+    if args_read.input_dir:
+        from . import settings as _irsx_settings
+        from . import file_utils as _irsx_file_utils
+        _irsx_settings.WORKING_DIRECTORY = args_read.input_dir
+        _irsx_file_utils.WORKING_DIRECTORY = args_read.input_dir
 
     csv_format = args_read.format == 'csv' or args_read.format == 'txt'
     xml_runner = XMLRunner(
@@ -75,8 +90,14 @@ def run_main(args_read):
             if args_read.file:
                 print("Printing result to file %s" % args_read.file)
 
+        # Build filepath from --input-dir if provided
+        filepath = None
+        if args_read.input_dir:
+            import os
+            filepath = os.path.join(args_read.input_dir, "%s_public.xml" % object_id)
+
         if args_read.list_schedules:
-            this_filing = Filing(object_id)
+            this_filing = Filing(object_id, filepath=filepath)
             this_filing.process()
             print(this_filing.list_schedules())
             return True  # we're done, ignore any other commands
@@ -86,12 +107,14 @@ def run_main(args_read):
                 parsed_filing = xml_runner.run_sked(
                     object_id,
                     args_read.schedule,
-                    verbose=args_read.verbose
+                    verbose=args_read.verbose,
+                    filepath=filepath
                 )
             else:
                 parsed_filing = xml_runner.run_filing(
                     object_id,
-                    verbose=args_read.verbose
+                    verbose=args_read.verbose,
+                    filepath=filepath
                 )
 
         if args_read.format == 'json':

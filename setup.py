@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 import os
 
 NAME = 'irsx'
@@ -16,9 +16,9 @@ setup(name=HUMAN_NAME,
       author_email = 'jsfenfen@gmail.com',
       url = 'https://github.com/jsfenfen/990-xml-reader',
       license = 'MIT',
-      setup_requires = ["setuptools", ],
-      install_requires = ['requests', 'xmltodict', 'unicodecsv'],
-      tests_require = ['nose', 'requests', 'xmltodict', 'unicodecsv', 'tox', 'tox-pyenv',],
+      python_requires = '>=3.10',
+      install_requires = ['requests', 'xmltodict'],
+      tests_require = ['pytest'],
       packages = ['irsx'],
       package_dir = {'irsx': 'irs_reader'},
       package_data = {'irsx': ['metadata/*.csv']},
@@ -26,19 +26,15 @@ setup(name=HUMAN_NAME,
       entry_points = {
           "console_scripts": ["irsx=irsx.irsx_cli:main",
                               "irsx_index=irsx.irsx_index_cli:main",
-                              "irsx_retrieve=irsx.irsx_retrieve_cli:main"]
+                              "irsx_retrieve=irsx.irsx_retrieve_cli:main",
+                              "irsx_bulk=irsx.irsx_bulk_cli:main"]
       },
       classifiers=[
-          # How mature is this project? Common values are
-          #   3 - Alpha
-          #   4 - Beta
-          #   5 - Production/Stable
           'Development Status :: 3 - Alpha',
           'License :: OSI Approved :: MIT License',
-          'Programming Language :: Python :: 2.7',
-          'Programming Language :: Python :: 3.4',
-          'Programming Language :: Python :: 3.5',
-          'Programming Language :: Python :: 3.6',
-
+          'Programming Language :: Python :: 3.10',
+          'Programming Language :: Python :: 3.11',
+          'Programming Language :: Python :: 3.12',
+          'Programming Language :: Python :: 3.13',
         ],
       )

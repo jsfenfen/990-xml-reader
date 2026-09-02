@@ -3,8 +3,7 @@ import sys
 import codecs
 import re
 import csv
-import unicodecsv
- 
+
 from .standardizer import Standardizer, Documentizer, VersionDocumentizer
 
 
@@ -30,31 +29,27 @@ def to_json(data, outfilepath=None):
             with open(outfilepath, 'w') as outfile:
                 json.dump(data, outfile)
         else:
-            if hasattr(sys.stdout, "buffer"):
-                sys.stdout = codecs.getwriter("utf-8")(sys.stdout.buffer, "strict")
-                json.dump(data, sys.stdout)
-            else:
-                json.dump(data, sys.stdout)
+            sys.stdout = codecs.getwriter("utf-8")(sys.stdout.buffer, "strict")
+            json.dump(data, sys.stdout)
 
 def to_csv(parsed_filing, object_id=None, standardizer=None, documentation=True, vd=None, outfilepath=None):
     if not vd:
         vd = VersionDocumentizer()
-    stdout = getattr(sys.stdout, 'buffer', sys.stdout)
+    stdout = sys.stdout
     if outfilepath:
-        stdout = open(outfilepath, 'wb')  # or 'wb' ?
+        stdout = open(outfilepath, 'w', newline='')
 
     fieldnames = []
     fieldnames = [ 
             'object_id', 'form', 'line_number', 'description', 'value', 'variable_name',
             'xpath', 'in_group', 'group_name', 'group_index'
         ]
-    writer = unicodecsv.DictWriter(
+    writer = csv.DictWriter(
         stdout,
         fieldnames=fieldnames,
-        encoding='utf-8',
         quoting=csv.QUOTE_MINIMAL
     )
-    writer.writeheader()   # this fails in python3? 
+    writer.writeheader()
     results = parsed_filing.get_result()
 
     if results:

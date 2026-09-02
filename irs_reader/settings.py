@@ -33,32 +33,16 @@ KNOWN_SCHEDULES = [
                 "ReturnHeader990x"
 ]
 
-# these could get pushed to metadata directory? 
+MIN_SUPPORTED_VERSION_YEAR = 2013
 
-ALLOWED_VERSIONSTRINGS = [
-    '2013v3.0', '2013v3.1', '2013v4.0', '2014v5.0', '2014v6.0',
-    '2015v2.0', '2015v2.1', '2015v3.0', '2016v3.0', '2016v3.1',
-    '2017v2.0', '2017v2.1', '2017v2.2', '2017v2.3', '2018v3.0',
-    '2018v3.1', '2018v3.2', '2018v3.3', '2019v5.0', '2019v5.1',
-    '2019v5.2', '2020v1.0', '2020v1.2', '2020v1.3', '2020v2.0', 
-    '2020v3.0', '2020v4.0', '2020v4.1', '2020v4.2', '2020v1.1', 
-    '2021v4.3', '2021v4.2', '2021v4.1', '2021v4.0', '2021v3.0', 
-    '2021v2.0', '2021v1.0', '2022v7.1', '2022v7.0', '2022v5.0', 
-    '2022v4.1', '2022v4.0', '2022v3.0', '2022v2.0', '2022v1.0', 
-    '2023v4.0', '2023v5.0', '2023v5.1', '2023v6.0','2023v7.0', 
-    '2023v8.0', '2024v3.0', '2024v4.0', '2024v5.0', '2024v5.1', 
-    '2024v6.0', '2024v7.0'
-]
-# 2020 is experimental
-# see https://www.irs.gov/charities-non-profits/ty2020-xml-schemas-and-business-rules-for-exempt-organizations-modernized-e-file
 
-# We can capture the group structure for these so it doesn't break
-# but these versions ARE NOT supported and aren't mapped to IRSx variables
-CSV_ALLOWED_VERSIONSTRINGS = ALLOWED_VERSIONSTRINGS + [
-    '2010v3.2', '2010v3.4', '2010v3.6', '2010v3.7', '2011v1.2', '2011v1.3',
-    '2011v1.4', '2011v1.5', '2012v2.0', '2012v2.1', '2012v2.2', '2012v2.3', 
-    '2012v3.0'
-]
+def version_is_supported(version_string):
+    """Return True if a version string is >= 2013 (e.g. '2013v3.0')."""
+    try:
+        year = int(version_string.split('v')[0])
+        return year >= MIN_SUPPORTED_VERSION_YEAR
+    except (ValueError, IndexError):
+        return False
 
 METADATA_DIRECTORY = (os.path.join(IRS_READER_ROOT, "metadata"))
 
