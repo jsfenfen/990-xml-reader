@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Return xmlns="http://www.irs.gov/efile" returnVersion="2015v2.1">
+  <ReturnHeader binaryAttachmentCnt="0">
+    <ReturnTs>2016-01-05T14:55:33-05:00</ReturnTs>
+    <TaxPeriodEndDt>2015-12-31</TaxPeriodEndDt>
+    <PreparerFirmGrp>
+      <PreparerFirmEIN>275389904</PreparerFirmEIN>
+      <PreparerFirmName>
+        <BusinessNameLine1Txt>AL BEAVERS TAX SERVICE</BusinessNameLine1Txt>
+      </PreparerFirmName>
+      <PreparerUSAddress>
+        <AddressLine1Txt>830 Harding Ave</AddressLine1Txt>
+        <CityNm>Lancaster</CityNm>
+        <StateAbbreviationCd>OH</StateAbbreviationCd>
+        <ZIPCd>43130</ZIPCd>
+      </PreparerUSAddress>
+    </PreparerFirmGrp>
+    <ReturnTypeCd>990EZ</ReturnTypeCd>
+    <TaxPeriodBeginDt>2015-01-01</TaxPeriodBeginDt>
+    <Filer>
+      <EIN>311224642</EIN>
+      <BusinessName>
+        <BusinessNameLine1Txt>FAIRFIELD COUNTY BASEBALL COMPLEX</BusinessNameLine1Txt>
+      </BusinessName>
+      <BusinessNameControlTxt>FAIR</BusinessNameControlTxt>
+      <USAddress>
+        <AddressLine1Txt>830 HARDING AVE</AddressLine1Txt>
+        <CityNm>LANCASTER</CityNm>
+        <StateAbbreviationCd>OH</StateAbbreviationCd>
+        <ZIPCd>43130</ZIPCd>
+      </USAddress>
+    </Filer>
+    <BusinessOfficerGrp>
+      <PersonNm>ALVA E BEAVERS</PersonNm>
+      <PersonTitleTxt>PRESIDENT</PersonTitleTxt>
+      <PhoneNum>7406533646</PhoneNum>
+      <SignatureDt>2016-01-05</SignatureDt>
+      <DiscussWithPaidPreparerInd>false</DiscussWithPaidPreparerInd>
+    </BusinessOfficerGrp>
+    <PreparerPersonGrp>
+      <PreparerPersonNm>AL BEAVERS</PreparerPersonNm>
+      <PTIN>P01006096</PTIN>
+      <PhoneNum>7406533646</PhoneNum>
+      <PreparationDt>2016-01-05</PreparationDt>
+      <SelfEmployedInd>X</SelfEmployedInd>
+    </PreparerPersonGrp>
+    <TaxYr>2015</TaxYr>
+    <BuildTS>2016-08-17 19:52:53Z</BuildTS>
+  </ReturnHeader>
+  <ReturnData documentCnt="3">
+    <IRS990EZ documentId="IRS990EZ">
+      <MethodOfAccountingCashInd>X</MethodOfAccountingCashInd>
+      <ScheduleBNotRequiredInd>X</ScheduleBNotRequiredInd>
+      <Organization501c3Ind referenceDocumentId="990A">X</Organization501c3Ind>
+      <TypeOfOrganizationCorpInd>X</TypeOfOrganizationCorpInd>
+      <GrossReceiptsAmt>90707</GrossReceiptsAmt>
+      <InfoInScheduleOPartIInd>X</InfoInScheduleOPartIInd>
+      <ContributionsGiftsGrantsEtcAmt>13800</ContributionsGiftsGrantsEtcAmt>
+      <ProgramServiceRevenueAmt>76907</ProgramServiceRevenueAmt>
+      <TotalRevenueAmt>90707</TotalRevenueAmt>
+      <OtherExpensesTotalAmt>91263</OtherExpensesTotalAmt>
+      <TotalExpensesAmt>91263</TotalExpensesAmt>
+      <ExcessOrDeficitForYearAmt>-556</ExcessOrDeficitForYearAmt>
+      <NetAssetsOrFundBalancesBOYAmt>260694</NetAssetsOrFundBalancesBOYAmt>
+      <OtherChangesInNetAssetsAmt>65076</OtherChangesInNetAssetsAmt>
+      <NetAssetsOrFundBalancesEOYAmt>325214</NetAssetsOrFundBalancesEOYAmt>
+      <InfoInScheduleOPartIIInd>X</InfoInScheduleOPartIIInd>
+      <CashSavingsAndInvestmentsGrp>
+        <BOYAmt>8281</BOYAmt>
+        <EOYAmt>7726</EOYAmt>
+      </CashSavingsAndInvestmentsGrp>
+      <LandAndBuildingsGrp>
+        <BOYAmt>58781</BOYAmt>
+        <EOYAmt>58781</EOYAmt>
+      </LandAndBuildingsGrp>
+      <OtherAssetsTotalDetail>
+        <BOYAmt>327673</BOYAmt>
+        <EOYAmt>365602</EOYAmt>
+      </OtherAssetsTotalDetail>
+      <Form990TotalAssetsGrp>
+        <BOYAmt>394735</BOYAmt>
+        <EOYAmt>432109</EOYAmt>
+      </Form990TotalAssetsGrp>
+      <SumOfTotalLiabilitiesGrp>
+        <BOYAmt>134041</BOYAmt>
+        <EOYAmt>106895</EOYAmt>
+      </SumOfTotalLiabilitiesGrp>
+      <NetAssetsOrFundBalancesGrp>
+        <BOYAmt>260694</BOYAmt>
+        <EOYAmt>325214</EOYAmt>
+      </NetAssetsOrFundBalancesGrp>
+      <PrimaryExemptPurposeTxt>BUILD- MAINTAIN COMMUNITY BASEBALL FIELD</PrimaryExemptPurposeTxt>
+      <ProgramSrvcAccomplishmentGrp>
+        <DescriptionProgramSrvcAccomTxt>PROVIDE YOUTH WITH A BASEBALL COMPLEX TO PLAY BASEBALL - 183GAMES WERE PLAYED IN 2015 WITH OVER 8500 YOUTH PARTICIPATING AND MANY OTHER INDIVIDUALS WHO ENJOY WATCHING BASEBALL</DescriptionProgramSrvcAccomTxt>
+        <ProgramServiceExpensesAmt>91263</ProgramServiceExpensesAmt>
+      </ProgramSrvcAccomplishmentGrp>
+      <TotalProgramServiceExpensesAmt>91263</TotalProgramServiceExpensesAmt>
+      <OfficerDirectorTrusteeEmplGrp>
+        <PersonNm>ALVA E BEAVERS</PersonNm>
+        <TitleTxt>PRESIDENTTREASURER</TitleTxt>
+        <AverageHrsPerWkDevotedToPosRt>35.00</AverageHrsPerWkDevotedToPosRt>
+        <CompensationAmt>0</CompensationAmt>
+        <EmployeeBenefitProgramAmt>0</EmployeeBenefitProgramAmt>
+        <ExpenseAccountOtherAllwncAmt>0</ExpenseAccountOtherAllwncAmt>
+      </OfficerDirectorTrusteeEmplGrp>
+      <OfficerDirectorTrusteeEmplGrp>
+        <PersonNm>TYLER J SISSON</PersonNm>
+        <TitleTxt>VICE PRESIDENT OPERATIONS</TitleTxt>
+        <AverageHrsPerWkDevotedToPosRt>10.00</AverageHrsPerWkDevotedToPosRt>
+        <CompensationAmt>0</CompensationAmt>
+        <EmployeeBenefitProgramAmt>0</EmployeeBenefitProgramAmt>
+        <ExpenseAccountOtherAllwncAmt>0</ExpenseAccountOtherAllwncAmt>
+      </OfficerDirectorTrusteeEmplGrp>
+      <OfficerDirectorTrusteeEmplGrp>
+        <PersonNm>PHYLLIS J BEAVERS</PersonNm>
+        <TitleTxt>SECRETARY</TitleTxt>
+        <AverageHrsPerWkDevotedToPosRt>20.00</AverageHrsPerWkDevotedToPosRt>
+        <CompensationAmt>0</CompensationAmt>
+        <EmployeeBenefitProgramAmt>0</EmployeeBenefitProgramAmt>
+        <ExpenseAccountOtherAllwncAmt>0</ExpenseAccountOtherAllwncAmt>
+      </OfficerDirectorTrusteeEmplGrp>
+      <OfficerDirectorTrusteeEmplGrp>
+        <PersonNm>JARROD C REDDING</PersonNm>
+        <TitleTxt>VICE PRESIDENT MAINTENANCE</TitleTxt>
+        <AverageHrsPerWkDevotedToPosRt>5.00</AverageHrsPerWkDevotedToPosRt>
+        <CompensationAmt>0</CompensationAmt>
+        <EmployeeBenefitProgramAmt>0</EmployeeBenefitProgramAmt>
+        <ExpenseAccountOtherAllwncAmt>0</ExpenseAccountOtherAllwncAmt>
+      </OfficerDirectorTrusteeEmplGrp>
+      <ActivitiesNotPreviouslyRptInd>false</ActivitiesNotPreviouslyRptInd>
+      <ChgMadeToOrgnzngDocNotRptInd>false</ChgMadeToOrgnzngDocNotRptInd>
+      <OrganizationHadUBIInd>false</OrganizationHadUBIInd>
+      <SubjectToProxyTaxInd>false</SubjectToProxyTaxInd>
+      <OrganizationDissolvedEtcInd>false</OrganizationDissolvedEtcInd>
+      <Form1120PolFiledInd>false</Form1120PolFiledInd>
+      <MadeLoansToFromOfficersInd>false</MadeLoansToFromOfficersInd>
+      <EngagedInExcessBenefitTransInd>false</EngagedInExcessBenefitTransInd>
+      <ProhibitedTaxShelterTransInd>false</ProhibitedTaxShelterTransInd>
+      <StatesWhereCopyOfReturnIsFldCd>OH</StatesWhereCopyOfReturnIsFldCd>
+      <BooksInCareOfDetail>
+        <PersonNm>ALVA E BEAVERS</PersonNm>
+        <USAddress>
+          <AddressLine1Txt>830 HARDING AVE</AddressLine1Txt>
+          <CityNm>LANCASTER</CityNm>
+          <StateAbbreviationCd>OH</StateAbbreviationCd>
+          <ZIPCd>43130</ZIPCd>
+        </USAddress>
+        <PhoneNum>7406533646</PhoneNum>
+      </BooksInCareOfDetail>
+      <ForeignFinancialAccountInd>false</ForeignFinancialAccountInd>
+      <ForeignOfficeInd>false</ForeignOfficeInd>
+      <DonorAdvisedFndsInd>false</DonorAdvisedFndsInd>
+      <OperateHospitalInd>false</OperateHospitalInd>
+      <TanningServicesProvidedInd>false</TanningServicesProvidedInd>
+      <RelatedOrganizationCtrlEntInd>false</RelatedOrganizationCtrlEntInd>
+      <TransactionWithControlEntInd>false</TransactionWithControlEntInd>
+      <PoliticalCampaignActyInd>false</PoliticalCampaignActyInd>
+      <SchoolOperatingInd>false</SchoolOperatingInd>
+      <PartVIOfCompOfHghstPdEmplTxt>NONE</PartVIOfCompOfHghstPdEmplTxt>
+      <PartVIHghstPdCntrctProfSrvcTxt>NONE</PartVIHghstPdCntrctProfSrvcTxt>
+      <FiledScheduleAInd>true</FiledScheduleAInd>
+    </IRS990EZ>
+    <IRS990ScheduleA documentId="990A">
+      <PubliclySupportedOrg509a2Ind>X</PubliclySupportedOrg509a2Ind>
+      <GiftsGrantsContrisRcvd509Grp>
+        <CurrentTaxYearMinus4YearsAmt>5400</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>7200</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>20800</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>20500</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>13800</CurrentTaxYearAmt>
+        <TotalAmt>67700</TotalAmt>
+      </GiftsGrantsContrisRcvd509Grp>
+      <GrossReceiptsAdmissionsGrp>
+        <CurrentTaxYearMinus4YearsAmt>55900</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>58803</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>74407</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>76816</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>76907</CurrentTaxYearAmt>
+        <TotalAmt>342833</TotalAmt>
+      </GrossReceiptsAdmissionsGrp>
+      <Total509Grp>
+        <CurrentTaxYearMinus4YearsAmt>61300</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>66003</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>95207</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>97316</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>90707</CurrentTaxYearAmt>
+        <TotalAmt>410533</TotalAmt>
+      </Total509Grp>
+      <PublicSupportTotal509Amt>410533</PublicSupportTotal509Amt>
+      <OtherIncome509Grp>
+        <CurrentTaxYearMinus4YearsAmt>80918</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>18423</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>97875</CurrentTaxYearMinus2YearsAmt>
+        <TotalAmt>197216</TotalAmt>
+      </OtherIncome509Grp>
+      <TotalSupportCalendarYearGrp>
+        <CurrentTaxYearMinus4YearsAmt>142218</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>84426</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>193082</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>97316</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>90707</CurrentTaxYearAmt>
+        <TotalAmt>607749</TotalAmt>
+      </TotalSupportCalendarYearGrp>
+      <PublicSupportCY509Pct>0.67550</PublicSupportCY509Pct>
+      <PublicSupportPY509Pct>0.64000</PublicSupportPY509Pct>
+      <InvestmentIncomeCYPct>0.00000</InvestmentIncomeCYPct>
+      <InvestmentIncomePYPct>0.00000</InvestmentIncomePYPct>
+      <ThirtyThrPctSuprtTestsCY509Ind>X</ThirtyThrPctSuprtTestsCY509Ind>
+    </IRS990ScheduleA>
+    <IRS990ScheduleO documentId="990O">
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Description of other expenses Part I line 16</FormAndLineReferenceDesc>
+        <ExplanationTxt>Description AmountPROGRAM SERVICES 91,263</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Other changes in net assets or fund balances Part I line 20</FormAndLineReferenceDesc>
+        <ExplanationTxt>Description AmountADDED ASSETS (FIELD TURF) 65,076</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Description of other assets Part II line 24</FormAndLineReferenceDesc>
+        <ExplanationTxt>Category Beginning of Year End of YearEQUIPMENT &amp; FIXTURES 327,673 365,602</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Description of total liabilities Part II line 26</FormAndLineReferenceDesc>
+        <ExplanationTxt>Category Beginning of Year End of YearLOANS 134,041 106,895</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleO>
+  </ReturnData>
+</Return>

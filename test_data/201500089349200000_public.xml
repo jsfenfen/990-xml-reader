@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Return xmlns="http://www.irs.gov/efile" returnVersion="2014v5.0">
+  <ReturnHeader binaryAttachmentCnt="0">
+    <ReturnTs>2015-01-07T08:30:07-06:00</ReturnTs>
+    <TaxPeriodEndDt>2014-12-31</TaxPeriodEndDt>
+    <ReturnTypeCd>990EZ</ReturnTypeCd>
+    <TaxPeriodBeginDt>2014-01-01</TaxPeriodBeginDt>
+    <Filer>
+      <EIN>453658221</EIN>
+      <BusinessName>
+        <BusinessNameLine1Txt>Transformational Opportunities Inc</BusinessNameLine1Txt>
+      </BusinessName>
+      <BusinessNameControlTxt>TRAN</BusinessNameControlTxt>
+      <USAddress>
+        <AddressLine1Txt>25028 County Highway 24</AddressLine1Txt>
+        <CityNm>Pine Island</CityNm>
+        <StateAbbreviationCd>MN</StateAbbreviationCd>
+        <ZIPCd>55963</ZIPCd>
+      </USAddress>
+    </Filer>
+    <BusinessOfficerGrp>
+      <PersonNm>Brian Beyst</PersonNm>
+      <PersonTitleTxt>Executive Direc</PersonTitleTxt>
+      <PhoneNum>5072510851</PhoneNum>
+      <SignatureDt>2015-01-06</SignatureDt>
+    </BusinessOfficerGrp>
+    <TaxYr>2014</TaxYr>
+    <BuildTS>2016-03-07 17:11:31Z</BuildTS>
+  </ReturnHeader>
+  <ReturnData documentCnt="6">
+    <IRS990EZ documentId="IRS990EZ">
+      <MethodOfAccountingAccrualInd>X</MethodOfAccountingAccrualInd>
+      <ScheduleBNotRequiredInd>X</ScheduleBNotRequiredInd>
+      <WebsiteAddressTxt>topportunities.org</WebsiteAddressTxt>
+      <Organization501c3Ind referenceDocumentId="990A">X</Organization501c3Ind>
+      <TypeOfOrganizationCorpInd>X</TypeOfOrganizationCorpInd>
+      <GrossReceiptsAmt>11382</GrossReceiptsAmt>
+      <InfoInScheduleOPartIInd>X</InfoInScheduleOPartIInd>
+      <ContributionsGiftsGrantsEtcAmt>10734</ContributionsGiftsGrantsEtcAmt>
+      <ProgramServiceRevenueAmt>648</ProgramServiceRevenueAmt>
+      <TotalRevenueAmt>11382</TotalRevenueAmt>
+      <GrantsAndSimilarAmountsPaidAmt>12505</GrantsAndSimilarAmountsPaidAmt>
+      <BenefitsPaidToOrForMembersAmt>217</BenefitsPaidToOrForMembersAmt>
+      <SalariesOtherCompEmplBnftAmt>1143</SalariesOtherCompEmplBnftAmt>
+      <OccupancyRentUtltsAndMaintAmt>500</OccupancyRentUtltsAndMaintAmt>
+      <OtherExpensesTotalAmt>1963</OtherExpensesTotalAmt>
+      <TotalExpensesAmt>16328</TotalExpensesAmt>
+      <ExcessOrDeficitForYearAmt>-4946</ExcessOrDeficitForYearAmt>
+      <NetAssetsOrFundBalancesBOYAmt>15171</NetAssetsOrFundBalancesBOYAmt>
+      <NetAssetsOrFundBalancesEOYAmt>10225</NetAssetsOrFundBalancesEOYAmt>
+      <InfoInScheduleOPartIIInd>X</InfoInScheduleOPartIIInd>
+      <CashSavingsAndInvestmentsGrp>
+        <BOYAmt>7768</BOYAmt>
+        <EOYAmt>9549</EOYAmt>
+      </CashSavingsAndInvestmentsGrp>
+      <LandAndBuildingsGrp>
+        <BOYAmt>0</BOYAmt>
+        <EOYAmt>0</EOYAmt>
+      </LandAndBuildingsGrp>
+      <OtherAssetsTotalDetail>
+        <BOYAmt>7514</BOYAmt>
+        <EOYAmt>3508</EOYAmt>
+      </OtherAssetsTotalDetail>
+      <Form990TotalAssetsGrp>
+        <BOYAmt>15282</BOYAmt>
+        <EOYAmt>13057</EOYAmt>
+      </Form990TotalAssetsGrp>
+      <SumOfTotalLiabilitiesGrp>
+        <BOYAmt>111</BOYAmt>
+        <EOYAmt>2832</EOYAmt>
+      </SumOfTotalLiabilitiesGrp>
+      <NetAssetsOrFundBalancesGrp>
+        <BOYAmt>15171</BOYAmt>
+        <EOYAmt>10225</EOYAmt>
+      </NetAssetsOrFundBalancesGrp>
+      <PrimaryExemptPurposeTxt>Educational &amp; religious services</PrimaryExemptPurposeTxt>
+      <ProgramSrvcAccomplishmentGrp>
+        <DescriptionProgramSrvcAccomTxt>Provided six scholarships for targeted skills training &amp; educational purposes</DescriptionProgramSrvcAccomTxt>
+        <GrantsAndAllocationsAmt>12505</GrantsAndAllocationsAmt>
+        <ProgramServiceExpensesAmt>1087</ProgramServiceExpensesAmt>
+      </ProgramSrvcAccomplishmentGrp>
+      <ProgramSrvcAccomplishmentGrp>
+        <DescriptionProgramSrvcAccomTxt>Provided physical &amp; mental skills training for 11 program participants</DescriptionProgramSrvcAccomTxt>
+        <ProgramServiceExpensesAmt>462</ProgramServiceExpensesAmt>
+      </ProgramSrvcAccomplishmentGrp>
+      <ProgramSrvcAccomplishmentGrp>
+        <DescriptionProgramSrvcAccomTxt>Initiated program with two locations that will provide cognitive skills training and educational services</DescriptionProgramSrvcAccomTxt>
+        <ProgramServiceExpensesAmt>590</ProgramServiceExpensesAmt>
+      </ProgramSrvcAccomplishmentGrp>
+      <TotalProgramServiceExpensesAmt>2139</TotalProgramServiceExpensesAmt>
+      <OfficerDirectorTrusteeEmplGrp>
+        <PersonNm referenceDocumentId="STMA01">Brian Beyst</PersonNm>
+        <TitleTxt>Executive Director</TitleTxt>
+        <AverageHrsPerWkDevotedToPosRt>40.00</AverageHrsPerWkDevotedToPosRt>
+        <CompensationAmt>0</CompensationAmt>
+        <EmployeeBenefitProgramAmt>0</EmployeeBenefitProgramAmt>
+        <ExpenseAccountOtherAllwncAmt>1300</ExpenseAccountOtherAllwncAmt>
+      </OfficerDirectorTrusteeEmplGrp>
+      <InfoInScheduleOPartVInd>X</InfoInScheduleOPartVInd>
+      <ActivitiesNotPreviouslyRptInd>false</ActivitiesNotPreviouslyRptInd>
+      <ChgMadeToOrgnzngDocNotRptInd>false</ChgMadeToOrgnzngDocNotRptInd>
+      <OrganizationHadUBIInd>false</OrganizationHadUBIInd>
+      <SubjectToProxyTaxInd>false</SubjectToProxyTaxInd>
+      <OrganizationDissolvedEtcInd>false</OrganizationDissolvedEtcInd>
+      <Form1120PolFiledInd>false</Form1120PolFiledInd>
+      <MadeLoansToFromOfficersInd>false</MadeLoansToFromOfficersInd>
+      <EngagedInExcessBenefitTransInd>false</EngagedInExcessBenefitTransInd>
+      <ProhibitedTaxShelterTransInd>false</ProhibitedTaxShelterTransInd>
+      <StatesWhereCopyOfReturnIsFldCd>MN</StatesWhereCopyOfReturnIsFldCd>
+      <BooksInCareOfDetail>
+        <PersonNm>Brian Beyst</PersonNm>
+        <USAddress>
+          <AddressLine1Txt>25028 County Highway 24</AddressLine1Txt>
+          <CityNm>Pine Island</CityNm>
+          <StateAbbreviationCd>MN</StateAbbreviationCd>
+          <ZIPCd>55963</ZIPCd>
+        </USAddress>
+        <PhoneNum>5072510851</PhoneNum>
+      </BooksInCareOfDetail>
+      <ForeignFinancialAccountInd>false</ForeignFinancialAccountInd>
+      <ForeignOfficeInd>false</ForeignOfficeInd>
+      <DonorAdvisedFndsInd>false</DonorAdvisedFndsInd>
+      <OperateHospitalInd>false</OperateHospitalInd>
+      <TanningServicesProvidedInd>false</TanningServicesProvidedInd>
+      <RelatedOrganizationCtrlEntInd>false</RelatedOrganizationCtrlEntInd>
+      <TransactionWithControlEntInd>false</TransactionWithControlEntInd>
+      <PoliticalCampaignActyInd>false</PoliticalCampaignActyInd>
+      <LobbyingActivitiesInd>false</LobbyingActivitiesInd>
+      <SchoolOperatingInd>false</SchoolOperatingInd>
+      <TrnsfrExmptNonChrtblRltdOrgInd>false</TrnsfrExmptNonChrtblRltdOrgInd>
+      <PartVIOfCompOfHghstPdEmplTxt>NONE</PartVIOfCompOfHghstPdEmplTxt>
+      <PartVIHghstPdCntrctProfSrvcTxt>NONE</PartVIHghstPdCntrctProfSrvcTxt>
+      <FiledScheduleAInd>true</FiledScheduleAInd>
+    </IRS990EZ>
+    <IRS990ScheduleA documentId="990A">
+      <PublicOrganization170Ind>X</PublicOrganization170Ind>
+      <GiftsGrantsContriRcvd170Grp>
+        <CurrentTaxYearMinus1YearAmt>26001</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>10848</CurrentTaxYearAmt>
+        <TotalAmt>36849</TotalAmt>
+      </GiftsGrantsContriRcvd170Grp>
+      <TotalCalendarYear170Grp>
+        <CurrentTaxYearMinus1YearAmt>26001</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>10848</CurrentTaxYearAmt>
+        <TotalAmt>36849</TotalAmt>
+      </TotalCalendarYear170Grp>
+      <SubstantialContributorsTotAmt>5352</SubstantialContributorsTotAmt>
+      <PublicSupportTotal170Amt>31497</PublicSupportTotal170Amt>
+      <TotalSupportAmt>36849</TotalSupportAmt>
+      <GrossReceiptsRltdActivitiesAmt>37489</GrossReceiptsRltdActivitiesAmt>
+      <First5Years170Ind>X</First5Years170Ind>
+      <PublicSupportCY170Pct>0.00000</PublicSupportCY170Pct>
+      <DistributableAmountGrp>
+        <CYAdjNetIncomeDistributableAmt>0</CYAdjNetIncomeDistributableAmt>
+        <CYPct85AdjustedNetIncomeAmt>0</CYPct85AdjustedNetIncomeAmt>
+        <CYTotalMinAstDistributableAmt>0</CYTotalMinAstDistributableAmt>
+        <CYGreaterAdjustedMinimumAmt>0</CYGreaterAdjustedMinimumAmt>
+        <CYIncomeTaxImposedPYAmt>0</CYIncomeTaxImposedPYAmt>
+        <CYDistributableAsAdjustedAmt>0</CYDistributableAsAdjustedAmt>
+      </DistributableAmountGrp>
+    </IRS990ScheduleA>
+    <IRS990ScheduleC documentId="990C">
+      <VolunteersInd>false</VolunteersInd>
+      <PaidStaffOrManagementInd>false</PaidStaffOrManagementInd>
+      <MediaAdvertisementsInd>false</MediaAdvertisementsInd>
+      <MailingsMembersInd>false</MailingsMembersInd>
+      <PublicationsOrBroadcastInd>false</PublicationsOrBroadcastInd>
+      <GrantsOtherOrganizationsInd>false</GrantsOtherOrganizationsInd>
+      <DirectContactLegislatorsInd>false</DirectContactLegislatorsInd>
+      <RalliesDemonstrationsInd>false</RalliesDemonstrationsInd>
+      <OtherActivitiesInd>false</OtherActivitiesInd>
+      <NotDescribedSection501c3Ind>false</NotDescribedSection501c3Ind>
+    </IRS990ScheduleC>
+    <IRS990ScheduleG documentId="990G" />
+    <IRS990ScheduleO documentId="990O">
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>List of grants and similar amounts paid Part I line 10</FormAndLineReferenceDesc>
+        <ExplanationTxt>Activity Cognitive Skills Training Scholarships Grantee various (4 awardees) Relationship none Amount 5,245Activity Cognitive Skills Training Scholarship Grantee Ryan Rasmussen Street 34 Mountain Blvd City, State, Zip Warren, NJ 07059Relationship none Amount 6,210Activity Youth Fitness Skills Training Scholarship Grantee Alan Molina, etal Street 16526 W 78th St. Box 150 City, State, Zip Eden Prairie, MN 55346Relationship none Amount 1,050</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Description of other expenses Part I line 16</FormAndLineReferenceDesc>
+        <ExplanationTxt>Description AmountBank fees 280Software 937Refunds 40State filing fees 90Program supplies 427books, subscriptions, references 56postage 95Internet 38</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Description of other assets Part II line 24</FormAndLineReferenceDesc>
+        <ExplanationTxt>Category Beginning of Year End of YearUndeposited funds 7,020 3,000Scholarship funds escrowed 494 0Computer 0 508</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Description of total liabilities Part II line 26</FormAndLineReferenceDesc>
+        <ExplanationTxt>Category Beginning of Year End of YearCurrent liab. -- service fee 27 0Program fees on deposit 84 2,832</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Business income not reported on 990-T Part V line 35</FormAndLineReferenceDesc>
+        <ExplanationTxt>As reported on Part I line 2, the organization received $648 in monthly program fees related to providing physical and mental targeted skills training of 11 individuals (as mentioned in Part II line 29).</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleO>
+    <CompensationExplanation documentId="STMA01">
+      <CompensationExplanationGrp>
+        <PersonNm>Brian Beyst</PersonNm>
+        <ShortExplanationTxt>Ministerial expense account detail Cell phone $150.00 Mileage $179.20 Ministry related meals and expenses $200.00 Office supplies $400 Other reimbursable ministry expenses $153.80 Pre-tax charitable deduction $217.00</ShortExplanationTxt>
+      </CompensationExplanationGrp>
+    </CompensationExplanation>
+  </ReturnData>
+</Return>

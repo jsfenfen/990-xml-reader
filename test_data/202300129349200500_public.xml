@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Return xmlns="http://www.irs.gov/efile" returnVersion="2021v4.2">
+  <ReturnHeader binaryAttachmentCnt="0">
+    <ReturnTs>2023-01-12T05:20:20-05:00</ReturnTs>
+    <TaxPeriodEndDt>2022-06-30</TaxPeriodEndDt>
+    <PreparerFirmGrp>
+      <PreparerFirmEIN>874303984</PreparerFirmEIN>
+      <PreparerFirmName>
+        <BusinessNameLine1Txt>Perfect Cents LLC</BusinessNameLine1Txt>
+      </PreparerFirmName>
+      <PreparerUSAddress>
+        <AddressLine1Txt>107 Cook Rd</AddressLine1Txt>
+        <CityNm>Duncannon</CityNm>
+        <StateAbbreviationCd>PA</StateAbbreviationCd>
+        <ZIPCd>17020</ZIPCd>
+      </PreparerUSAddress>
+    </PreparerFirmGrp>
+    <ReturnTypeCd>990EZ</ReturnTypeCd>
+    <TaxPeriodBeginDt>2021-07-01</TaxPeriodBeginDt>
+    <Filer>
+      <EIN>811795570</EIN>
+      <BusinessName>
+        <BusinessNameLine1Txt>UNDEFEATED COURAGE</BusinessNameLine1Txt>
+      </BusinessName>
+      <BusinessNameControlTxt>UNDE</BusinessNameControlTxt>
+      <USAddress>
+        <AddressLine1Txt>230 YOUNGS CHURCH RD</AddressLine1Txt>
+        <CityNm>SHERMANS DALE</CityNm>
+        <StateAbbreviationCd>PA</StateAbbreviationCd>
+        <ZIPCd>17090</ZIPCd>
+      </USAddress>
+    </Filer>
+    <BusinessOfficerGrp>
+      <PersonNm>SHAWN BITER</PersonNm>
+      <PersonTitleTxt>CHAIRMAN</PersonTitleTxt>
+      <PhoneNum>7173860037</PhoneNum>
+      <SignatureDt>2022-11-10</SignatureDt>
+      <DiscussWithPaidPreparerInd>true</DiscussWithPaidPreparerInd>
+    </BusinessOfficerGrp>
+    <SigningOfficerGrp>
+      <PersonFullName>
+        <PersonFirstNm>SHAWN</PersonFirstNm>
+        <PersonLastNm>BITER</PersonLastNm>
+      </PersonFullName>
+      <SSN>XXX-XX-XXXX</SSN>
+    </SigningOfficerGrp>
+    <PreparerPersonGrp>
+      <PreparerPersonNm>Phyllis Krieger</PreparerPersonNm>
+      <PTIN>P02390093</PTIN>
+      <PhoneNum>7173791135</PhoneNum>
+      <PreparationDt>2023-01-12</PreparationDt>
+      <SelfEmployedInd>X</SelfEmployedInd>
+    </PreparerPersonGrp>
+    <AdditionalFilerInformation>
+      <TrustedCustomerGrp>
+        <TrustedCustomerCd>0</TrustedCustomerCd>
+        <OOBSecurityVerificationCd>00</OOBSecurityVerificationCd>
+        <AuthenticationAssuranceLevelCd>AAL2</AuthenticationAssuranceLevelCd>
+        <IdentityAssuranceLevelCd>IAL1</IdentityAssuranceLevelCd>
+      </TrustedCustomerGrp>
+    </AdditionalFilerInformation>
+    <TaxYr>2021</TaxYr>
+    <BuildTS>2023-03-07 01:45:13Z</BuildTS>
+  </ReturnHeader>
+  <ReturnData documentCnt="5">
+    <IRS990EZ documentId="IRS990EZ">
+      <MethodOfAccountingAccrualInd>X</MethodOfAccountingAccrualInd>
+      <WebsiteAddressTxt>WWW.UNDEFEATEDCOURAGE.ORG</WebsiteAddressTxt>
+      <Organization501c3Ind referenceDocumentId="990A">X</Organization501c3Ind>
+      <TypeOfOrganizationCorpInd>X</TypeOfOrganizationCorpInd>
+      <GrossReceiptsAmt>192569</GrossReceiptsAmt>
+      <InfoInScheduleOPartIInd>X</InfoInScheduleOPartIInd>
+      <ContributionsGiftsGrantsEtcAmt>191604</ContributionsGiftsGrantsEtcAmt>
+      <InvestmentIncomeAmt>965</InvestmentIncomeAmt>
+      <TotalRevenueAmt>192569</TotalRevenueAmt>
+      <SalariesOtherCompEmplBnftAmt>54000</SalariesOtherCompEmplBnftAmt>
+      <FeesAndOtherPymtToIndCntrctAmt>4148</FeesAndOtherPymtToIndCntrctAmt>
+      <OccupancyRentUtltsAndMaintAmt>16645</OccupancyRentUtltsAndMaintAmt>
+      <PrintingPublicationsPostageAmt>5760</PrintingPublicationsPostageAmt>
+      <OtherExpensesTotalAmt>101139</OtherExpensesTotalAmt>
+      <TotalExpensesAmt>181692</TotalExpensesAmt>
+      <ExcessOrDeficitForYearAmt>10877</ExcessOrDeficitForYearAmt>
+      <NetAssetsOrFundBalancesBOYAmt>286746</NetAssetsOrFundBalancesBOYAmt>
+      <NetAssetsOrFundBalancesEOYAmt>297623</NetAssetsOrFundBalancesEOYAmt>
+      <InfoInScheduleOPartIIInd>X</InfoInScheduleOPartIIInd>
+      <CashSavingsAndInvestmentsGrp>
+        <BOYAmt>182879</BOYAmt>
+        <EOYAmt>203848</EOYAmt>
+      </CashSavingsAndInvestmentsGrp>
+      <LandAndBuildingsGrp>
+        <BOYAmt>0</BOYAmt>
+        <EOYAmt>0</EOYAmt>
+      </LandAndBuildingsGrp>
+      <OtherAssetsTotalDetail>
+        <BOYAmt>107119</BOYAmt>
+        <EOYAmt>96937</EOYAmt>
+      </OtherAssetsTotalDetail>
+      <Form990TotalAssetsGrp>
+        <BOYAmt>289998</BOYAmt>
+        <EOYAmt>300785</EOYAmt>
+      </Form990TotalAssetsGrp>
+      <SumOfTotalLiabilitiesGrp>
+        <BOYAmt>3252</BOYAmt>
+        <EOYAmt>3162</EOYAmt>
+      </SumOfTotalLiabilitiesGrp>
+      <NetAssetsOrFundBalancesGrp>
+        <BOYAmt>286746</BOYAmt>
+        <EOYAmt>297623</EOYAmt>
+      </NetAssetsOrFundBalancesGrp>
+      <PrimaryExemptPurposeTxt>SUPPORT FOR CRISIS PREGNANCY</PrimaryExemptPurposeTxt>
+      <ProgramSrvcAccomplishmentGrp>
+        <DescriptionProgramSrvcAccomTxt>YORK APARTMENT PROVIDES A PLACE FOR OUR SIDEWALK ADVOCATES TO OFFER PRAYER,PREGNANCY INFO AND ASSISTANCE AS WELL AS LOVING SUPPORT RIGHT OUTSIDE OF ABORTION CLINIC IN THE YORK AREA</DescriptionProgramSrvcAccomTxt>
+        <ProgramServiceExpensesAmt>8076</ProgramServiceExpensesAmt>
+      </ProgramSrvcAccomplishmentGrp>
+      <ProgramSrvcAccomplishmentGrp>
+        <DescriptionProgramSrvcAccomTxt>MOBILE UNIT OFFERS PREGNANCY TESTS, UNTRASOUND AND COUNSELING FREE OF CHARGE TO ALL THOSE IN NEED REGARLESS OF MARITAL, FINANCIAL OR OTHER STATUS.</DescriptionProgramSrvcAccomTxt>
+        <ProgramServiceExpensesAmt>19280</ProgramServiceExpensesAmt>
+      </ProgramSrvcAccomplishmentGrp>
+      <ProgramSrvcAccomplishmentGrp>
+        <DescriptionProgramSrvcAccomTxt>RACHELS VINEYARD-A PLACE WHERE WOMEN/MEN CAN RENEW,REBUILD AND REDEEM HEARTS BROKEN BY ABORTION.RETREATS OFFER CONFIDENTIAL SUPPORT TO RECONCILE PAINFUL POST-ABORTIVE EMOTIONS</DescriptionProgramSrvcAccomTxt>
+        <ProgramServiceExpensesAmt>3957</ProgramServiceExpensesAmt>
+      </ProgramSrvcAccomplishmentGrp>
+      <TotalProgramServiceExpensesAmt>31313</TotalProgramServiceExpensesAmt>
+      <OfficerDirectorTrusteeEmplGrp>
+        <PersonNm referenceDocumentId="STMA01">BECKY BITER</PersonNm>
+        <TitleTxt>EXECUTIVE DIRECTOR</TitleTxt>
+        <AverageHrsPerWkDevotedToPosRt>40.00</AverageHrsPerWkDevotedToPosRt>
+        <CompensationAmt>14560</CompensationAmt>
+        <EmployeeBenefitProgramAmt>0</EmployeeBenefitProgramAmt>
+        <ExpenseAccountOtherAllwncAmt>0</ExpenseAccountOtherAllwncAmt>
+      </OfficerDirectorTrusteeEmplGrp>
+      <OfficerDirectorTrusteeEmplGrp>
+        <PersonNm>SHAWN BITER</PersonNm>
+        <TitleTxt>CHAIRMAN</TitleTxt>
+        <AverageHrsPerWkDevotedToPosRt>0.00</AverageHrsPerWkDevotedToPosRt>
+        <CompensationAmt>0</CompensationAmt>
+        <EmployeeBenefitProgramAmt>0</EmployeeBenefitProgramAmt>
+        <ExpenseAccountOtherAllwncAmt>0</ExpenseAccountOtherAllwncAmt>
+      </OfficerDirectorTrusteeEmplGrp>
+      <OfficerDirectorTrusteeEmplGrp>
+        <PersonNm>SHARON KAERCHER</PersonNm>
+        <TitleTxt>SECRETARY</TitleTxt>
+        <AverageHrsPerWkDevotedToPosRt>0.00</AverageHrsPerWkDevotedToPosRt>
+        <CompensationAmt>0</CompensationAmt>
+        <EmployeeBenefitProgramAmt>0</EmployeeBenefitProgramAmt>
+        <ExpenseAccountOtherAllwncAmt>0</ExpenseAccountOtherAllwncAmt>
+      </OfficerDirectorTrusteeEmplGrp>
+      <OfficerDirectorTrusteeEmplGrp>
+        <PersonNm>PHYLLIS KRIEGER</PersonNm>
+        <TitleTxt>ACCOUNTANT</TitleTxt>
+        <AverageHrsPerWkDevotedToPosRt>0.00</AverageHrsPerWkDevotedToPosRt>
+        <CompensationAmt>0</CompensationAmt>
+        <EmployeeBenefitProgramAmt>0</EmployeeBenefitProgramAmt>
+        <ExpenseAccountOtherAllwncAmt>0</ExpenseAccountOtherAllwncAmt>
+      </OfficerDirectorTrusteeEmplGrp>
+      <OfficerDirectorTrusteeEmplGrp>
+        <PersonNm>CHARLENE TALLMAN</PersonNm>
+        <TitleTxt>TREASURER</TitleTxt>
+        <AverageHrsPerWkDevotedToPosRt>0.00</AverageHrsPerWkDevotedToPosRt>
+        <CompensationAmt>0</CompensationAmt>
+        <EmployeeBenefitProgramAmt>0</EmployeeBenefitProgramAmt>
+        <ExpenseAccountOtherAllwncAmt>0</ExpenseAccountOtherAllwncAmt>
+      </OfficerDirectorTrusteeEmplGrp>
+      <OfficerDirectorTrusteeEmplGrp>
+        <PersonNm>SUSAN KEENY</PersonNm>
+        <TitleTxt>NURSE MANAGER</TitleTxt>
+        <AverageHrsPerWkDevotedToPosRt>20.00</AverageHrsPerWkDevotedToPosRt>
+        <CompensationAmt>13809</CompensationAmt>
+        <EmployeeBenefitProgramAmt>0</EmployeeBenefitProgramAmt>
+        <ExpenseAccountOtherAllwncAmt>0</ExpenseAccountOtherAllwncAmt>
+      </OfficerDirectorTrusteeEmplGrp>
+      <OfficerDirectorTrusteeEmplGrp>
+        <PersonNm>HOLLY WOLFGANG</PersonNm>
+        <TitleTxt>ADMINISTRATIVE ASSISTANT</TitleTxt>
+        <AverageHrsPerWkDevotedToPosRt>10.00</AverageHrsPerWkDevotedToPosRt>
+        <CompensationAmt>11160</CompensationAmt>
+        <EmployeeBenefitProgramAmt>0</EmployeeBenefitProgramAmt>
+        <ExpenseAccountOtherAllwncAmt>0</ExpenseAccountOtherAllwncAmt>
+      </OfficerDirectorTrusteeEmplGrp>
+      <InfoInScheduleOPartVInd>X</InfoInScheduleOPartVInd>
+      <ActivitiesNotPreviouslyRptInd>false</ActivitiesNotPreviouslyRptInd>
+      <ChgMadeToOrgnzngDocNotRptInd>true</ChgMadeToOrgnzngDocNotRptInd>
+      <OrganizationHadUBIInd>false</OrganizationHadUBIInd>
+      <SubjectToProxyTaxInd>false</SubjectToProxyTaxInd>
+      <OrganizationDissolvedEtcInd>false</OrganizationDissolvedEtcInd>
+      <Form1120PolFiledInd>false</Form1120PolFiledInd>
+      <MadeLoansToFromOfficersInd>false</MadeLoansToFromOfficersInd>
+      <EngagedInExcessBenefitTransInd>false</EngagedInExcessBenefitTransInd>
+      <ProhibitedTaxShelterTransInd>false</ProhibitedTaxShelterTransInd>
+      <StatesWhereCopyOfReturnIsFldCd>PA</StatesWhereCopyOfReturnIsFldCd>
+      <BooksInCareOfDetail>
+        <PersonNm>PHYLLIS KRIEGER</PersonNm>
+        <USAddress>
+          <AddressLine1Txt>107 COOK RD</AddressLine1Txt>
+          <CityNm>DUNCANNON</CityNm>
+          <StateAbbreviationCd>PA</StateAbbreviationCd>
+          <ZIPCd>17020</ZIPCd>
+        </USAddress>
+        <PhoneNum>7178349433</PhoneNum>
+      </BooksInCareOfDetail>
+      <ForeignFinancialAccountInd>false</ForeignFinancialAccountInd>
+      <ForeignOfficeInd>false</ForeignOfficeInd>
+      <DonorAdvisedFndsInd>false</DonorAdvisedFndsInd>
+      <OperateHospitalInd>false</OperateHospitalInd>
+      <TanningServicesProvidedInd>false</TanningServicesProvidedInd>
+      <RelatedOrganizationCtrlEntInd>false</RelatedOrganizationCtrlEntInd>
+      <TransactionWithControlEntInd>false</TransactionWithControlEntInd>
+      <PoliticalCampaignActyInd>false</PoliticalCampaignActyInd>
+      <LobbyingActivitiesInd>false</LobbyingActivitiesInd>
+      <SchoolOperatingInd>false</SchoolOperatingInd>
+      <TrnsfrExmptNonChrtblRltdOrgInd>false</TrnsfrExmptNonChrtblRltdOrgInd>
+      <PartVIOfCompOfHghstPdEmplTxt>NONE</PartVIOfCompOfHghstPdEmplTxt>
+      <PartVIHghstPdCntrctProfSrvcTxt>NONE</PartVIHghstPdCntrctProfSrvcTxt>
+      <FiledScheduleAInd>true</FiledScheduleAInd>
+    </IRS990EZ>
+    <IRS990ScheduleA documentId="990A">
+      <PubliclySupportedOrg509a2Ind>X</PubliclySupportedOrg509a2Ind>
+      <GiftsGrantsContrisRcvd509Grp>
+        <CurrentTaxYearMinus4YearsAmt>114155</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>88419</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>164851</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>129728</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>191604</CurrentTaxYearAmt>
+        <TotalAmt>688757</TotalAmt>
+      </GiftsGrantsContrisRcvd509Grp>
+      <Total509Grp>
+        <CurrentTaxYearMinus4YearsAmt>114155</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>88419</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>164851</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>129728</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>191604</CurrentTaxYearAmt>
+        <TotalAmt>688757</TotalAmt>
+      </Total509Grp>
+      <PublicSupportTotal509Amt>688757</PublicSupportTotal509Amt>
+      <GrossInvestmentIncome509Grp>
+        <CurrentTaxYearMinus4YearsAmt>174</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>1285</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>1123</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>518</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>965</CurrentTaxYearAmt>
+        <TotalAmt>4065</TotalAmt>
+      </GrossInvestmentIncome509Grp>
+      <InvestmentIncomeAndUBTIGrp>
+        <CurrentTaxYearMinus4YearsAmt>174</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>1285</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>1123</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>518</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>965</CurrentTaxYearAmt>
+        <TotalAmt>4065</TotalAmt>
+      </InvestmentIncomeAndUBTIGrp>
+      <TotalSupportCalendarYearGrp>
+        <CurrentTaxYearMinus4YearsAmt>114329</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>89704</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>165974</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>130246</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>192569</CurrentTaxYearAmt>
+        <TotalAmt>692822</TotalAmt>
+      </TotalSupportCalendarYearGrp>
+      <PublicSupportCY509Pct>0.99410</PublicSupportCY509Pct>
+      <PublicSupportPY509Pct>0.99440</PublicSupportPY509Pct>
+      <InvestmentIncomeCYPct>0.01000</InvestmentIncomeCYPct>
+      <InvestmentIncomePYPct>0.01000</InvestmentIncomePYPct>
+      <ThirtyThrPctSuprtTestsCY509Ind>X</ThirtyThrPctSuprtTestsCY509Ind>
+    </IRS990ScheduleA>
+    <IRS990ScheduleB documentId="990B">
+      <ContributorInformationGrp>
+        <ContributorNum>RESTRICTED</ContributorNum>
+        <ContributorBusinessName>
+          <BusinessNameLine1>RESTRICTED</BusinessNameLine1>
+        </ContributorBusinessName>
+        <ContributorUSAddress>
+          <AddressLine1>RESTRICTED</AddressLine1>
+          <AddressLine2>RESTRICTED</AddressLine2>
+          <City>RESTRICTED</City>
+          <State>RESTRICTED</State>
+          <ZIPCode>RESTRICTED</ZIPCode>
+        </ContributorUSAddress>
+        <TotalContributionsAmt>RESTRICTED</TotalContributionsAmt>
+      </ContributorInformationGrp>
+    </IRS990ScheduleB>
+    <IRS990ScheduleO documentId="990O">
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Description of other expenses Part I line 16</FormAndLineReferenceDesc>
+        <ExplanationTxt>DESCRIPTION AMOUNTDEPRECIATION 12,693TRAVEL 2,168FUNDRAISING 48,040INSURANCE 4,761PROGRAM SERVICES 22,310TRAINING 9,736GENERAL &amp; ADMINISTRATIVE 1,431</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Description of other assets Part II line 24</FormAndLineReferenceDesc>
+        <ExplanationTxt>CATEGORY BEGINNING OF YEAR END OF YEARFURNITURE AND EQUIPMENT 107,119 96,937</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Description of total liabilities Part II line 26</FormAndLineReferenceDesc>
+        <ExplanationTxt>CATEGORY BEGINNING OF YEAR END OF YEARPAYROLL LIAB 942 3,162ACCOUNTS PAYABLE 20 0CREDIT CARD 2,290 0</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>Changes to governing documents Part V line 34</FormAndLineReferenceDesc>
+        <ExplanationTxt>CHANGE OF ADDRESSUPDATED BY LAWS</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleO>
+    <CompensationExplanation documentId="STMA01">
+      <CompensationExplanationGrp>
+        <PersonNm>BECKY BITER</PersonNm>
+        <ShortExplanationTxt>POSITION AND SALARY STARTED APRIL 4TH</ShortExplanationTxt>
+      </CompensationExplanationGrp>
+    </CompensationExplanation>
+  </ReturnData>
+</Return>

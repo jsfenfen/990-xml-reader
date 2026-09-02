@@ -1,0 +1,824 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Return xmlns="http://www.irs.gov/efile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.irs.gov/efile" returnVersion="2008v2.7">
+  <ReturnHeader binaryAttachmentCount="0">
+    <Timestamp>2009-11-09T10:03:22-06:00</Timestamp>
+    <TaxPeriodEndDate>2008-12-31</TaxPeriodEndDate>
+    <PreparerFirm>
+      <PreparerFirmBusinessName>
+        <BusinessNameLine1>Piascik &amp; Associates PC</BusinessNameLine1>
+      </PreparerFirmBusinessName>
+      <PreparerFirmUSAddress>
+        <AddressLine1>4470 Cox Road Suite 250</AddressLine1>
+        <City>Glen Allen</City>
+        <State>VA</State>
+        <ZIPCode>23060</ZIPCode>
+      </PreparerFirmUSAddress>
+    </PreparerFirm>
+    <ReturnType>990</ReturnType>
+    <TaxPeriodBeginDate>2008-01-01</TaxPeriodBeginDate>
+    <Filer>
+      <EIN>541599550</EIN>
+      <Name>
+        <BusinessNameLine1>Greater Richmond Technology Council</BusinessNameLine1>
+      </Name>
+      <NameControl>GREA</NameControl>
+      <Phone>8042284178</Phone>
+      <USAddress>
+        <AddressLine1>c/o Piascik Assoc PC 4470 Cox Rd No</AddressLine1>
+        <AddressLine2>250</AddressLine2>
+        <City>Glen Allen</City>
+        <State>VA</State>
+        <ZIPCode>23060</ZIPCode>
+      </USAddress>
+    </Filer>
+    <Officer>
+      <Name>Chip Farmer</Name>
+      <Title>Executive Director</Title>
+      <Phone>8042284178</Phone>
+      <DateSigned>2009-11-02</DateSigned>
+      <AuthorizeThirdParty>1</AuthorizeThirdParty>
+    </Officer>
+    <Preparer>
+      <Name>Steven M Piascik CPA MT</Name>
+      <Phone>8045271815</Phone>
+    </Preparer>
+    <TaxYear>2008</TaxYear>
+    <BuildTS>2016-02-24 21:20:13Z</BuildTS>
+  </ReturnHeader>
+  <ReturnData documentCount="4">
+    <IRS990 documentId="RetDoc1038000001" referenceDocumentId="RetDoc1044400001">
+      <NameOfPrincipalOfficerPerson>Chip Farmer</NameOfPrincipalOfficerPerson>
+      <AddressPrincipalOfficerUS>
+        <AddressLine1>c/o Piascik Assoc PC 4470 Cox Rd No</AddressLine1>
+        <AddressLine2>250</AddressLine2>
+        <City>Glen Allen</City>
+        <State>VA</State>
+        <ZIPCode>23060</ZIPCode>
+      </AddressPrincipalOfficerUS>
+      <GrossReceipts>534115</GrossReceipts>
+      <GroupReturnForAffiliates>0</GroupReturnForAffiliates>
+      <Organization501c typeOf501cOrganization="6">X</Organization501c>
+      <WebSite>www.richtech.com</WebSite>
+      <TypeOfOrganizationCorporation>X</TypeOfOrganizationCorporation>
+      <YearFormation>1995</YearFormation>
+      <StateLegalDomicile>VA</StateLegalDomicile>
+      <ActivityOrMissionDescription>To assist the owners of high technology businesses by providing a forum to network with other members and exchange opportunities and solutions to the challenges facing technology businesses.</ActivityOrMissionDescription>
+      <NbrVotingMembersGoverningBody>47</NbrVotingMembersGoverningBody>
+      <NbrIndependentVotingMembers>0</NbrIndependentVotingMembers>
+      <TotalNbrEmployees>2</TotalNbrEmployees>
+      <TotalNbrVolunteers>0</TotalNbrVolunteers>
+      <TotalGrossUBI>0</TotalGrossUBI>
+      <NetUnrelatedBusinessTxblIncome>0</NetUnrelatedBusinessTxblIncome>
+      <ContributionsGrantsPriorYear>127185</ContributionsGrantsPriorYear>
+      <ContributionsGrantsCurrentYear>169215</ContributionsGrantsCurrentYear>
+      <ProgramServiceRevenuePriorYear>257065</ProgramServiceRevenuePriorYear>
+      <ProgramServiceRevenueCY>302590</ProgramServiceRevenueCY>
+      <InvestmentIncomeCurrentYear>0</InvestmentIncomeCurrentYear>
+      <OtherRevenuePriorYear>89043</OtherRevenuePriorYear>
+      <OtherRevenueCurrentYear>29119</OtherRevenueCurrentYear>
+      <TotalRevenuePriorYear>473293</TotalRevenuePriorYear>
+      <TotalRevenueCurrentYear>500924</TotalRevenueCurrentYear>
+      <GrantsAndSimilarAmntsCY>0</GrantsAndSimilarAmntsCY>
+      <BenefitsPaidToMembersCY>0</BenefitsPaidToMembersCY>
+      <SalariesEtcPriorYear>131628</SalariesEtcPriorYear>
+      <SalariesEtcCurrentYear>121540</SalariesEtcCurrentYear>
+      <TotalProfFundrsngExpCY>0</TotalProfFundrsngExpCY>
+      <TotalFundrsngExpCurrentYear>0</TotalFundrsngExpCurrentYear>
+      <OtherExpensePriorYear>352293</OtherExpensePriorYear>
+      <OtherExpensesCurrentYear>358226</OtherExpensesCurrentYear>
+      <TotalExpensesPriorYear>483921</TotalExpensesPriorYear>
+      <TotalExpensesCurrentYear>479766</TotalExpensesCurrentYear>
+      <RevenuesLessExpensesPriorYear>-10628</RevenuesLessExpensesPriorYear>
+      <RevenuesLessExpensesCY>21158</RevenuesLessExpensesCY>
+      <TotalAssetsBOY>72976</TotalAssetsBOY>
+      <TotalAssetsEOY>71546</TotalAssetsEOY>
+      <TotalLiabilitiesBOY>49549</TotalLiabilitiesBOY>
+      <TotalLiabilitiesEOY>26961</TotalLiabilitiesEOY>
+      <NetAssetsOrFundBalancesBOY>23427</NetAssetsOrFundBalancesBOY>
+      <NetAssetsOrFundBalancesEOY>44585</NetAssetsOrFundBalancesEOY>
+      <MissionDescription>The organization's mission is to serve as a catalyst to stimulate and connect innovative, creative and technical people.</MissionDescription>
+      <SignificantNewProgramServices>0</SignificantNewProgramServices>
+      <SignificantChange>0</SignificantChange>
+      <Revenue>174835</Revenue>
+      <Description>Bimonthly technology breakfasts, which offer both formal and informal networking opportunities.</Description>
+      <Activity2>
+        <Revenue>71025</Revenue>
+        <Description>Half-day seminars that are targeted to a specific topic.</Description>
+      </Activity2>
+      <Activity3>
+        <Description>Provide a newsletter for members to keep them informed of the council's expanded activities.</Description>
+      </Activity3>
+      <DescribedIn501C3>0</DescribedIn501C3>
+      <ScheduleBRequired referenceDocumentId="RetDoc1234500001">1</ScheduleBRequired>
+      <PoliticalActivities>0</PoliticalActivities>
+      <SubjectToProxyTax>0</SubjectToProxyTax>
+      <DonorAdvisedFunds referenceDocumentId="RetDoc1040000001">0</DonorAdvisedFunds>
+      <ConservationEasements>0</ConservationEasements>
+      <CollectionsOfArt referenceDocumentId="RetDoc1040000001">0</CollectionsOfArt>
+      <CreditCounseling referenceDocumentId="RetDoc1040000001">0</CreditCounseling>
+      <TermOrPermanentEndowments referenceDocumentId="RetDoc1040000001">0</TermOrPermanentEndowments>
+      <BalanceSheetAmountsReported referenceDocumentId="RetDoc1040000001">1</BalanceSheetAmountsReported>
+      <AuditedFinancialStatements referenceDocumentId="RetDoc1040000001">0</AuditedFinancialStatements>
+      <School>0</School>
+      <ForeignOffice>0</ForeignOffice>
+      <ForeignActivities>0</ForeignActivities>
+      <MoreThan5000KToOrganizations>0</MoreThan5000KToOrganizations>
+      <MoreThan5000KToIndividuals>0</MoreThan5000KToIndividuals>
+      <ProfessionalFundraising>0</ProfessionalFundraising>
+      <FundraisingActivities>0</FundraisingActivities>
+      <Gaming>0</Gaming>
+      <Hospital>0</Hospital>
+      <GrantsToOrganizations>0</GrantsToOrganizations>
+      <GrantsToIndividuals>0</GrantsToIndividuals>
+      <ScheduleJRequired>0</ScheduleJRequired>
+      <TaxExemptBonds>0</TaxExemptBonds>
+      <LoanToOfficerOrDQP>0</LoanToOfficerOrDQP>
+      <GrantToRelatedPerson>0</GrantToRelatedPerson>
+      <BsnssRltnshpWithOrganization>0</BsnssRltnshpWithOrganization>
+      <BsnssRltnshpThruFamilyMember>0</BsnssRltnshpThruFamilyMember>
+      <OfficerEntityWithBsnssRltnshp>0</OfficerEntityWithBsnssRltnshp>
+      <DeductibleNonCashContributions>0</DeductibleNonCashContributions>
+      <DeductibleContributionsOfArt>0</DeductibleContributionsOfArt>
+      <Terminated>0</Terminated>
+      <PartialLiquidation>0</PartialLiquidation>
+      <DisregardedEntity>0</DisregardedEntity>
+      <RelatedEntity>0</RelatedEntity>
+      <RelatedOrgControlledEntity>0</RelatedOrgControlledEntity>
+      <ActivitiesConductedPartnership>0</ActivitiesConductedPartnership>
+      <NumberFormsTransmittedWith1096>0</NumberFormsTransmittedWith1096>
+      <NumberW2GIncluded>0</NumberW2GIncluded>
+      <ComplianceWithBackupWitholding>0</ComplianceWithBackupWitholding>
+      <NumberOfEmployees>2</NumberOfEmployees>
+      <EmploymentTaxReturnsFiled>1</EmploymentTaxReturnsFiled>
+      <UnrelatedBusinessIncome>0</UnrelatedBusinessIncome>
+      <ForeignFinancialAccount>0</ForeignFinancialAccount>
+      <ProhibitedTaxShelterTrans>0</ProhibitedTaxShelterTrans>
+      <TaxablePartyNotification>0</TaxablePartyNotification>
+      <NonDeductibleContributions>0</NonDeductibleContributions>
+      <NbrVotingGoverningBodyMembers>47</NbrVotingGoverningBodyMembers>
+      <NumberIndependentVotingMembers>0</NumberIndependentVotingMembers>
+      <FamilyOrBusinessRelationship>0</FamilyOrBusinessRelationship>
+      <DelegationOfManagementDuties>0</DelegationOfManagementDuties>
+      <ChangesToOrganizingDocs>0</ChangesToOrganizingDocs>
+      <MaterialDiversionOrMisuse>0</MaterialDiversionOrMisuse>
+      <MembersOrStockholders>0</MembersOrStockholders>
+      <ElectionOfBoardMembers>0</ElectionOfBoardMembers>
+      <DecisionsSubjectToApproval>0</DecisionsSubjectToApproval>
+      <MinutesOfGoverningBody>1</MinutesOfGoverningBody>
+      <MinutesOfCommittees>1</MinutesOfCommittees>
+      <LocalChapters>0</LocalChapters>
+      <Form990ProvidedToGoverningBody>1</Form990ProvidedToGoverningBody>
+      <OfficerMailingAddress>1</OfficerMailingAddress>
+      <ConflictOfInterestPolicy>1</ConflictOfInterestPolicy>
+      <AnnualDisclosureCoveredPersons>1</AnnualDisclosureCoveredPersons>
+      <RegularMonitoringEnforcement>1</RegularMonitoringEnforcement>
+      <WhistleblowerPolicy>0</WhistleblowerPolicy>
+      <DocumentRetentionPolicy>0</DocumentRetentionPolicy>
+      <CompensationProcessCEO>0</CompensationProcessCEO>
+      <CompensationProcessOther>0</CompensationProcessOther>
+      <InvestmentInJointVenture>0</InvestmentInJointVenture>
+      <UponRequest>X</UponRequest>
+      <TheBooksAreInCareOf>
+        <NamePerson>Piascik Associates PC</NamePerson>
+        <TelephoneNumber>8045271815</TelephoneNumber>
+        <AddressUS>
+          <AddressLine1>4470 Cox Road Suite 250</AddressLine1>
+          <City>Glen Allen</City>
+          <State>VA</State>
+          <ZIPCode>23060</ZIPCode>
+        </AddressUS>
+      </TheBooksAreInCareOf>
+      <Form990PartVIISectionA>
+        <NamePerson>Robert Stolle</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>40.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>4874</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>161</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>MARGARET E MCDERMID</NamePerson>
+        <Title>Board Chair</Title>
+        <AverageHoursPerWeek>4.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <Officer>X</Officer>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>KEITH M WARMAN</NamePerson>
+        <Title>Exec Vice Chair</Title>
+        <AverageHoursPerWeek>4.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <Officer>X</Officer>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>STEVEN M PIASCIK</NamePerson>
+        <Title>Treasurer</Title>
+        <AverageHoursPerWeek>4.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <Officer>X</Officer>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Joseph S Joe Amado</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Bryan T Bostic</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Deborah Cassidy</NamePerson>
+        <Title>Vice Chair Communication</Title>
+        <AverageHoursPerWeek>4.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <Officer>X</Officer>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Joe T Cipolla</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Thomas J Tom Cricchi</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Glenn A Davis</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Kristin N Downer</NamePerson>
+        <Title>Vice Chair Community Pro</Title>
+        <AverageHoursPerWeek>4.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <Officer>X</Officer>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Mark Farnsworth</NamePerson>
+        <Title>Vice Chair Member Develo</Title>
+        <AverageHoursPerWeek>4.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <Officer>X</Officer>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Chip Farmer</NamePerson>
+        <Title>Executive Director</Title>
+        <AverageHoursPerWeek>40.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <Officer>X</Officer>
+        <ReportableCompFromOrganization>100833</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>7475</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Lori D Ford</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>KC Funk</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Paula Gulak</NamePerson>
+        <Title>Vice Chair Member Servic</Title>
+        <AverageHoursPerWeek>4.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Skip Goodwille</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Michael L Mike Jones</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Michael D King</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>CARL CW Laugerbaum J</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Steve Lestyan</NamePerson>
+        <Title>Vice Chair Member Progra</Title>
+        <AverageHoursPerWeek>4.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <Officer>X</Officer>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Chris Little</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Dave Lohr</NamePerson>
+        <Title>Vice Chair Community Dev</Title>
+        <AverageHoursPerWeek>4.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <Officer>X</Officer>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Kevin Macri</NamePerson>
+        <Title>director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Bob Magnussen</NamePerson>
+        <Title>director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Chellam Manickam</NamePerson>
+        <Title>director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Susan Mastrincola</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Robert J Mattauch</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>William E Bill McCore</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Scott McKay</NamePerson>
+        <Title>director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Rick Mears</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Dan R Mills</NamePerson>
+        <Title>director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Samuel A Sam Nixon</NamePerson>
+        <Title>director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Larry Pastor</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Casey Quinlan</NamePerson>
+        <Title>director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Richard T Rich Reinec</NamePerson>
+        <Title>director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Ranjit K Sen</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Marsha S Shuler</NamePerson>
+        <Title>director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Robert T Bob Skunda</NamePerson>
+        <Title>director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Robert I Turner</NamePerson>
+        <Title>director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Robert W Wadell</NamePerson>
+        <Title>director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Keith M Warman</NamePerson>
+        <Title>director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Austin B Welder</NamePerson>
+        <Title>director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Gary L Bo Williams II</NamePerson>
+        <Title>director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Charles A Sandy Willi</NamePerson>
+        <Title>director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Gregory H Greg Wingfi</NamePerson>
+        <Title>director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <Form990PartVIISectionA>
+        <NamePerson>Kae Zulager</NamePerson>
+        <Title>Director</Title>
+        <AverageHoursPerWeek>0.00</AverageHoursPerWeek>
+        <IndividualTrusteeOrDirector>X</IndividualTrusteeOrDirector>
+        <ReportableCompFromOrganization>0</ReportableCompFromOrganization>
+        <ReportableCompFromRelatedOrgs>0</ReportableCompFromRelatedOrgs>
+        <OtherCompensation>0</OtherCompensation>
+      </Form990PartVIISectionA>
+      <TotalReportableCompFromOrg>105707</TotalReportableCompFromOrg>
+      <TotalReportableCompFrmRltdOrgs>0</TotalReportableCompFrmRltdOrgs>
+      <TotalOtherCompensation>7636</TotalOtherCompensation>
+      <NumberIndividualsGT100K>1</NumberIndividualsGT100K>
+      <FormersListed>0</FormersListed>
+      <TotalCompGT150K>0</TotalCompGT150K>
+      <CompensationFromOtherSources>0</CompensationFromOtherSources>
+      <NumberOfContractorsGT100K>0</NumberOfContractorsGT100K>
+      <MembershipDues>83735</MembershipDues>
+      <AllOtherContributions>85480</AllOtherContributions>
+      <TotalContributions>169215</TotalContributions>
+      <ProgramServiceRevenue>
+        <Description>LUNCH, DINNER, BREAKFA</Description>
+        <BusinessCode>900099</BusinessCode>
+        <TotalRevenueColumn>174835</TotalRevenueColumn>
+        <RelatedOrExemptFunctionIncome>174835</RelatedOrExemptFunctionIncome>
+      </ProgramServiceRevenue>
+      <ProgramServiceRevenue>
+        <Description>TRADE SHOWS/SEMINARS</Description>
+        <BusinessCode>900099</BusinessCode>
+        <TotalRevenueColumn>71025</TotalRevenueColumn>
+        <RelatedOrExemptFunctionIncome>71025</RelatedOrExemptFunctionIncome>
+      </ProgramServiceRevenue>
+      <ProgramServiceRevenue>
+        <Description>LEGISLATIVE RECEPTION</Description>
+        <BusinessCode>900099</BusinessCode>
+        <TotalRevenueColumn>56730</TotalRevenueColumn>
+        <RelatedOrExemptFunctionIncome>56730</RelatedOrExemptFunctionIncome>
+      </ProgramServiceRevenue>
+      <TotalProgramServiceRevenue>302590</TotalProgramServiceRevenue>
+      <GrossIncomeFundraisingEvents>61715</GrossIncomeFundraisingEvents>
+      <FundraisingDirectExpenses>33191</FundraisingDirectExpenses>
+      <NetIncomeFromFundraisingEvents>
+        <TotalRevenueColumn>28524</TotalRevenueColumn>
+        <RelatedOrExemptFunctionIncome>28524</RelatedOrExemptFunctionIncome>
+      </NetIncomeFromFundraisingEvents>
+      <OtherRevenueMisc>
+        <Description>Miscellaneous</Description>
+        <BusinessCode>900099</BusinessCode>
+        <TotalRevenueColumn>595</TotalRevenueColumn>
+        <RelatedOrExemptFunctionIncome>595</RelatedOrExemptFunctionIncome>
+      </OtherRevenueMisc>
+      <TotalOtherRevenue>595</TotalOtherRevenue>
+      <TotalRevenue>
+        <TotalRevenueColumn>500924</TotalRevenueColumn>
+        <RelatedOrExemptFunctionIncome>331709</RelatedOrExemptFunctionIncome>
+        <UnrelatedBusinessRevenue>0</UnrelatedBusinessRevenue>
+        <ExclusionAmount>0</ExclusionAmount>
+      </TotalRevenue>
+      <CompCurrentOfficersDirectors>
+        <Total>105707</Total>
+      </CompCurrentOfficersDirectors>
+      <OtherEmployeeBenefits>
+        <Total>7636</Total>
+      </OtherEmployeeBenefits>
+      <PayrollTaxes>
+        <Total>8197</Total>
+      </PayrollTaxes>
+      <FeesForServicesManagement>
+        <Total>168000</Total>
+      </FeesForServicesManagement>
+      <Advertising>
+        <Total>2500</Total>
+      </Advertising>
+      <OfficeExpenses>
+        <Total>4639</Total>
+      </OfficeExpenses>
+      <Occupancy>
+        <Total>15446</Total>
+      </Occupancy>
+      <Travel>
+        <Total>6728</Total>
+      </Travel>
+      <ConferencesMeetings>
+        <Total>141396</Total>
+      </ConferencesMeetings>
+      <DepreciationDepletion>
+        <Total>361</Total>
+      </DepreciationDepletion>
+      <OtherExpenses>
+        <Description>Bank and Credit Card Fe</Description>
+        <Total>6781</Total>
+      </OtherExpenses>
+      <OtherExpenses>
+        <Description>MEALS &amp; ENTERTAINMENT</Description>
+        <Total>5301</Total>
+      </OtherExpenses>
+      <OtherExpenses>
+        <Description>DUES &amp; SUBSCRIPTIONS</Description>
+        <Total>2599</Total>
+      </OtherExpenses>
+      <OtherExpenses>
+        <Description>Printing</Description>
+        <Total>1498</Total>
+      </OtherExpenses>
+      <OtherExpenses>
+        <Description>PAYROLL FEES</Description>
+        <Total>1466</Total>
+      </OtherExpenses>
+      <AllOtherExpenses>
+        <Total>1511</Total>
+      </AllOtherExpenses>
+      <TotalFunctionalExpenses>
+        <Total>479766</Total>
+      </TotalFunctionalExpenses>
+      <CashNonInterestBearing>
+        <BOY>32816</BOY>
+        <EOY>24826</EOY>
+      </CashNonInterestBearing>
+      <AccountsReceivable>
+        <BOY>39345</BOY>
+        <EOY>46265</EOY>
+      </AccountsReceivable>
+      <LandBuildingsEquipmentBasis>2447</LandBuildingsEquipmentBasis>
+      <LandBldgEquipmentAccumDeprec>1992</LandBldgEquipmentAccumDeprec>
+      <LandBuildingsEquipmentBasisNet>
+        <BOY>815</BOY>
+        <EOY>455</EOY>
+      </LandBuildingsEquipmentBasisNet>
+      <TotalAssets>
+        <BOY>72976</BOY>
+        <EOY>71546</EOY>
+      </TotalAssets>
+      <AccountsPayableAccruedExpenses>
+        <BOY>49549</BOY>
+        <EOY>26961</EOY>
+      </AccountsPayableAccruedExpenses>
+      <TotalLiabilities>
+        <BOY>49549</BOY>
+        <EOY>26961</EOY>
+      </TotalLiabilities>
+      <DoNotFollowSFAS117>X</DoNotFollowSFAS117>
+      <CapStckTrstPrinCurrentFunds>
+        <BOY>0</BOY>
+        <EOY>0</EOY>
+      </CapStckTrstPrinCurrentFunds>
+      <PaidInCapSrplsLandBldgEqpFund>
+        <BOY>0</BOY>
+        <EOY>0</EOY>
+      </PaidInCapSrplsLandBldgEqpFund>
+      <RetainedEarningsEndowmentEtc>
+        <BOY>23427</BOY>
+        <EOY>44585</EOY>
+      </RetainedEarningsEndowmentEtc>
+      <TotalNetAssetsFundBalances>
+        <BOY>23427</BOY>
+        <EOY>44585</EOY>
+      </TotalNetAssetsFundBalances>
+      <TotalLiabNetAssetsFundBalances>
+        <BOY>72976</BOY>
+        <EOY>71546</EOY>
+      </TotalLiabNetAssetsFundBalances>
+      <MethodOfAccountingAccrual>X</MethodOfAccountingAccrual>
+      <AccountantCompileOrReview>0</AccountantCompileOrReview>
+      <FSAudited>0</FSAudited>
+      <FederalGrantAuditRequired>0</FederalGrantAuditRequired>
+    </IRS990>
+    <IRS990ScheduleB documentId="RetDoc1234500001">
+      <ContributorInfo>
+        <ContributorNumber>RESTRICTED</ContributorNumber>
+        <ContributorNameBusiness>
+          <BusinessNameLine1>RESTRICTED</BusinessNameLine1>
+        </ContributorNameBusiness>
+        <ContributorAddressUS>
+          <AddressLine1>RESTRICTED</AddressLine1>
+          <AddressLine2>RESTRICTED</AddressLine2>
+          <City>RESTRICTED</City>
+          <State>RESTRICTED</State>
+          <ZIPCode>RESTRICTED</ZIPCode>
+        </ContributorAddressUS>
+        <AggregateContributions>RESTRICTED</AggregateContributions>
+      </ContributorInfo>
+    </IRS990ScheduleB>
+    <IRS990ScheduleD documentId="RetDoc1040000001">
+      <OtherLandBuildings>
+        <OtherCostOrOtherBasis>2447</OtherCostOrOtherBasis>
+        <Depreciation>1992</Depreciation>
+        <BookValue>455</BookValue>
+      </OtherLandBuildings>
+      <TotalOfBookValueLandBuildings>455</TotalOfBookValueLandBuildings>
+    </IRS990ScheduleD>
+    <IRS990ScheduleO documentId="RetDoc1044400001">
+      <GeneralExplanation>
+        <Identifier>Form 990, Part VI, Section A, line 10</Identifier>
+        <Explanation>Form 990 is thoroughly reviewed by the organization's executive director prior to filing.</Explanation>
+      </GeneralExplanation>
+      <GeneralExplanation>
+        <Identifier>Form 990, Part VI, Section B, line 12c</Identifier>
+        <Explanation>Any potential conflict of interest is reviewed prior to a vote.</Explanation>
+      </GeneralExplanation>
+      <GeneralExplanation>
+        <Identifier>Form 990, Part VI, Section C, line 19</Identifier>
+        <Explanation>All documents are made available upon request.</Explanation>
+      </GeneralExplanation>
+      <GeneralExplanation>
+        <Identifier>Form 990, Part VII</Identifier>
+        <ReturnReference>Contact Addresses for Officers, Directors, Etc</ReturnReference>
+        <Explanation>Robert Stolle - 2510 Professional Road Richmond, VA 23235 MARGARET E. MCDERMID - 701 E. Cary Street Richmond, VA 23218 KEITH M. WARMAN - 4190 Innslake Drive Glen Allen, VA 23060 STEVEN M. PIASCIK - 4470 Cox Road, Suite 250 Glen Allen, VA 23060 Joseph S. (Joe) Amado - 6601 Broad Street Richmond, VA 23230 Bryan T. Bostic - 6500 Westham Station Road Richmond, VA 23229 Deborah Cassidy - 2805 North Parham Road Richmond, VA 23294 Joe T. Cipolla - 1015 Floyd Avenue Richmond, VA 23284 Thomas J. (Tom) Cricchi - 7204 Glen Forest Drive, Suite 304 Richmond, VA 23226 Glenn A. Davis - 501 E. Franklin Street, Suite 301 Richmond, VA 23219 Kristin N. Downer - 700 E. Main Street, Suite 1600 Richmond, VA 23219 Mark Farnsworth - 1001 Boulders Parkway, Suite 300 Richmond, VA 23230 Lori D. Ford - 2808 Valley Springs Road Powhatan, VA 23139 K.C. Funk - 4101 Cox Road, Suite 105 Glen Allen, VA 23060 Paula Gulak - 7204 Glen Forest Drive, Suite 304 Richmond, VA 23226 Skip Goodwille - 9830 Mayland Drive, Suite J Richmond, VA 23233 Michael L. (Mike) Jones - 2510 Professional Road richmond, VA 23235 Michael D. King - 707 East Main Street, Suite 1450 Richmond, VA 23219 CARL (C.W.) Laugerbaum Jr. - 408 West Franklin Street Richmond, VA 23220 Steve Lestyan - 6620 W. Broad St. Richmond, VA 23230 Chris Little - 4501 Highwoods Parkway Glen Allen, VA 23060 Dave Lohr - 800 E. Leigh Street Richmond, VA 23219 Kevin Macri - 1051 E. Cary Street, Suite 502 Richmond, VA 23219 Bob Magnussen - 10900 Nuckols Road, Suite 210 Glen Allen, VA 23060 Chellam Manickam - 2001 Maywill Street, Suite 100 Richmond, VA 23230 Susan Mastrincola - 10900 Nuckols Road, Suite 210 glen Allen, VA 23060 Robert J. Mattauch - P.O. Box 843068 Richmond, VA 23284-3068 William E. (Bill) McCorey, Jr. - 9950 Mayland Drive Richmond, VA 23233 Scott McKay - 6604 W. Broad Street, 3rd Floor Richmond, VA 23230 Rick Mears - 9120 Lockwood Boulevard Mechanicsville, VA 23116 Dan R. Mills - 9097 Atlee Station Road, Suite 204 Mechanicsville, VA 23116 Samuel A. (Sam) Nixon - 1525 Huguenot Road Midlothian, VA 23113 Larry Pastor - 2005 Market Street, 10th Floor Philadelphia, PA 19103 Casey Quinlan - 9101 Patterson Avenue, Suite 57 Richmond, VA 23229 Richard T. (Rich) Reinecke - 9100 Arboretum Parkway, Suite 155 Richmond, VA 23236 Ranjit K. Sen - 408 West Franklin Street Richmond, VA 23220 Marsha S. Shuler - 701 East Byrd Street Richmond, VA 23219 Robert T. (Bob) Skunda - 800 E. Leigh Street Richmond, VA 23219 Robert I. Turner - 15000 Capital One Drive Richmond, VA 23238 Robert W. Wadell - 4400 Cox Road, Suite 100 Glen Allen, VA 23060 Keith M. Warman - 4190 Innslake Drive glen Allen, VA 23060 Austin B. Welder - 1111 EAst Main Street, 18th Floor Richmond, VA 23219 Gary L. (Bo) Williams III - 4401 Sarellen Road Richmond, VA 23231 Charles A. (Sandy) Williamson - 1419 W. Main Street Richmond, VA 23220 Gregory H. (Greg) Wingfield - 901 E. Byrd Street, Suite 801 Richmond, VA 23219 Kae Zulager - PO Box 29069 Richmond, VA 23242</Explanation>
+      </GeneralExplanation>
+    </IRS990ScheduleO>
+  </ReturnData>
+</Return>

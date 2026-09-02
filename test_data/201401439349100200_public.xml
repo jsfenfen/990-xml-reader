@@ -1,0 +1,846 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Return xmlns="http://www.irs.gov/efile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.irs.gov/efile" returnVersion="2013v3.0">
+  <ReturnHeader binaryAttachmentCnt="0">
+    <ReturnTs>2014-05-23T07:11:08-05:00</ReturnTs>
+    <TaxPeriodEndDt>2013-12-31</TaxPeriodEndDt>
+    <PreparerFirmGrp>
+      <PreparerFirmEIN>141619319</PreparerFirmEIN>
+      <PreparerFirmName>
+        <BusinessNameLine1>JUDELSON GIORDANO &amp; SIEGEL CPA PC</BusinessNameLine1>
+      </PreparerFirmName>
+      <PreparerUSAddress>
+        <AddressLine1>633 ROUTE 211 EAST</AddressLine1>
+        <City>MIDDLETOWN</City>
+        <State>NY</State>
+        <ZIPCode>10941</ZIPCode>
+      </PreparerUSAddress>
+    </PreparerFirmGrp>
+    <ReturnTypeCd>990PF</ReturnTypeCd>
+    <TaxPeriodBeginDt>2013-01-01</TaxPeriodBeginDt>
+    <Filer>
+      <EIN>141833603</EIN>
+      <BusinessName>
+        <BusinessNameLine1>THE MILLMAN-HARRIS-ROMANO FOUNDATION</BusinessNameLine1>
+      </BusinessName>
+      <BusinessNameControlTxt>MILL</BusinessNameControlTxt>
+      <PhoneNum>8454526343</PhoneNum>
+      <USAddress>
+        <AddressLine1>10 CIRCULAR RD</AddressLine1>
+        <City>POUGHKEEPSIE</City>
+        <State>NY</State>
+        <ZIPCode>12601</ZIPCode>
+      </USAddress>
+    </Filer>
+    <BusinessOfficerGrp>
+      <PersonNm>JODE MILLMAN</PersonNm>
+      <PersonTitleTxt>PRES/DIRECTOR</PersonTitleTxt>
+      <PhoneNum>8454526343</PhoneNum>
+      <SignatureDt>2014-05-19</SignatureDt>
+      <DiscussWithPaidPreparerInd>1</DiscussWithPaidPreparerInd>
+    </BusinessOfficerGrp>
+    <PreparerPersonGrp>
+      <PreparerPersonNm>ROBERT UNGER</PreparerPersonNm>
+      <PTIN>P00971190</PTIN>
+      <PhoneNum>8456929500</PhoneNum>
+    </PreparerPersonGrp>
+    <TaxYr>2013</TaxYr>
+    <BuildTS>2015-12-30 17:16:21Z</BuildTS>
+  </ReturnHeader>
+  <ReturnData documentCount="8">
+    <IRS990PF documentId="RetDoc1235000001">
+      <Organization501c3ExemptPFInd>X</Organization501c3ExemptPFInd>
+      <FMVAssetsEOYAmt>1212306</FMVAssetsEOYAmt>
+      <MethodOfAccountingCashInd>X</MethodOfAccountingCashInd>
+      <AnalysisOfRevenueAndExpenses>
+        <ContriRcvdRevAndExpnssAmt>150</ContriRcvdRevAndExpnssAmt>
+        <ScheduleBNotRequiredInd>X</ScheduleBNotRequiredInd>
+        <InterestOnSavRevAndExpnssAmt>2532</InterestOnSavRevAndExpnssAmt>
+        <InterestOnSavNetInvstIncmAmt>2532</InterestOnSavNetInvstIncmAmt>
+        <DividendsRevAndExpnssAmt>21546</DividendsRevAndExpnssAmt>
+        <DividendsNetInvstIncmAmt>21546</DividendsNetInvstIncmAmt>
+        <NetGainSaleAstRevAndExpnssAmt>4252</NetGainSaleAstRevAndExpnssAmt>
+        <GrossSalesPriceAmt>119750</GrossSalesPriceAmt>
+        <CapGainNetIncmNetInvstIncmAmt>4252</CapGainNetIncmNetInvstIncmAmt>
+        <TotalRevAndExpnssAmt>28480</TotalRevAndExpnssAmt>
+        <TotalNetInvstIncmAmt>28330</TotalNetInvstIncmAmt>
+        <CompOfcrDirTrstRevAndExpnssAmt>12000</CompOfcrDirTrstRevAndExpnssAmt>
+        <CompOfcrDirTrstNetInvstIncmAmt>1620</CompOfcrDirTrstNetInvstIncmAmt>
+        <CompOfcrDirTrstDsbrsChrtblAmt>10380</CompOfcrDirTrstDsbrsChrtblAmt>
+        <AccountingFeesRevAndExpnssAmt referenceDocumentId="RetDoc2002200001">3750</AccountingFeesRevAndExpnssAmt>
+        <AccountingFeesNetInvstIncmAmt>0</AccountingFeesNetInvstIncmAmt>
+        <AccountingFeesChrtblPrpsAmt>3750</AccountingFeesChrtblPrpsAmt>
+        <OtherProfFeesRevAndExpnssAmt referenceDocumentId="RetDoc2002300001">575</OtherProfFeesRevAndExpnssAmt>
+        <OtherProfFeesNetInvstIncmAmt>0</OtherProfFeesNetInvstIncmAmt>
+        <OtherProfFeesDsbrsChrtblAmt>575</OtherProfFeesDsbrsChrtblAmt>
+        <TaxesRevAndExpnssAmt referenceDocumentId="RetDoc2002500001">4129</TaxesRevAndExpnssAmt>
+        <TaxesNetInvstIncmAmt>3118</TaxesNetInvstIncmAmt>
+        <TaxesDsbrsChrtblAmt>1011</TaxesDsbrsChrtblAmt>
+        <OtherExpensesRevAndExpnssAmt referenceDocumentId="RetDoc2003200001">18391</OtherExpensesRevAndExpnssAmt>
+        <OtherExpensesNetInvstIncmAmt>12290</OtherExpensesNetInvstIncmAmt>
+        <OtherExpensesDsbrsChrtblAmt>6101</OtherExpensesDsbrsChrtblAmt>
+        <TotOprExpensesRevAndExpnssAmt>38845</TotOprExpensesRevAndExpnssAmt>
+        <TotOprExpensesNetInvstIncmAmt>17028</TotOprExpensesNetInvstIncmAmt>
+        <TotOprExpensesDsbrsChrtblAmt>21817</TotOprExpensesDsbrsChrtblAmt>
+        <ContriPaidRevAndExpnssAmt>53374</ContriPaidRevAndExpnssAmt>
+        <ContriPaidDsbrsChrtblAmt>53374</ContriPaidDsbrsChrtblAmt>
+        <TotalExpensesRevAndExpnssAmt>92219</TotalExpensesRevAndExpnssAmt>
+        <TotalExpensesNetInvstIncmAmt>17028</TotalExpensesNetInvstIncmAmt>
+        <TotalExpensesDsbrsChrtblAmt>75191</TotalExpensesDsbrsChrtblAmt>
+        <ExcessRevenueOverExpensesAmt>-63739</ExcessRevenueOverExpensesAmt>
+        <NetInvestmentIncomeAmt>11302</NetInvestmentIncomeAmt>
+      </AnalysisOfRevenueAndExpenses>
+      <Form990PFBalanceSheetsGrp>
+        <CashBOYAmt>6</CashBOYAmt>
+        <CashEOYAmt>10189</CashEOYAmt>
+        <CashEOYFMVAmt>10189</CashEOYFMVAmt>
+        <SavAndTempCashInvstBOYAmt>115598</SavAndTempCashInvstBOYAmt>
+        <SavAndTempCashInvstEOYAmt>4179</SavAndTempCashInvstEOYAmt>
+        <SavAndTempCashInvstEOYFMVAmt>4179</SavAndTempCashInvstEOYFMVAmt>
+        <USGovernmentObligationsBOYAmt>51942</USGovernmentObligationsBOYAmt>
+        <USGovernmentObligationsEOYAmt referenceDocumentId="RetDoc2210400001">51942</USGovernmentObligationsEOYAmt>
+        <USGovtObligationsEOYFMVAmt>55799</USGovtObligationsEOYFMVAmt>
+        <CorporateStockBOYAmt>748540</CorporateStockBOYAmt>
+        <CorporateStockEOYAmt referenceDocumentId="RetDoc2018900001">786097</CorporateStockEOYAmt>
+        <CorporateStockEOYFMVAmt>1142139</CorporateStockEOYFMVAmt>
+        <TotalAssetsBOYAmt>916086</TotalAssetsBOYAmt>
+        <TotalAssetsEOYAmt>852407</TotalAssetsEOYAmt>
+        <TotalAssetsEOYFMVAmt>1212306</TotalAssetsEOYFMVAmt>
+        <OtherLiabilitiesBOYAmt referenceDocumentId="RetDoc2065700001">399</OtherLiabilitiesBOYAmt>
+        <OtherLiabilitiesEOYAmt referenceDocumentId="RetDoc2065700001">459</OtherLiabilitiesEOYAmt>
+        <TotalLiabilitiesBOYAmt>399</TotalLiabilitiesBOYAmt>
+        <TotalLiabilitiesEOYAmt>459</TotalLiabilitiesEOYAmt>
+        <OrgDoesNotFollowSFAS117Ind>X</OrgDoesNotFollowSFAS117Ind>
+        <CapitalStockBOYAmt>0</CapitalStockBOYAmt>
+        <CapitalStockEOYAmt>0</CapitalStockEOYAmt>
+        <AdditionalPaidInCapitalBOYAmt>0</AdditionalPaidInCapitalBOYAmt>
+        <AdditionalPaidInCapitalEOYAmt>0</AdditionalPaidInCapitalEOYAmt>
+        <RetainedEarningBOYAmt>915687</RetainedEarningBOYAmt>
+        <RetainedEarningEOYAmt>851948</RetainedEarningEOYAmt>
+        <TotNetAstOrFundBalancesBOYAmt>915687</TotNetAstOrFundBalancesBOYAmt>
+        <TotNetAstOrFundBalancesEOYAmt>851948</TotNetAstOrFundBalancesEOYAmt>
+        <TotalLiabilitiesNetAstBOYAmt>916086</TotalLiabilitiesNetAstBOYAmt>
+        <TotalLiabilitiesNetAstEOYAmt>852407</TotalLiabilitiesNetAstEOYAmt>
+      </Form990PFBalanceSheetsGrp>
+      <ChgInNetAssetsFundBalancesGrp>
+        <TotNetAstOrFundBalancesBOYAmt>915687</TotNetAstOrFundBalancesBOYAmt>
+        <ExcessRevenueOverExpensesAmt>-63739</ExcessRevenueOverExpensesAmt>
+        <OtherIncreasesAmt>0</OtherIncreasesAmt>
+        <SubtotalAmt>851948</SubtotalAmt>
+        <OtherDecreasesAmt>0</OtherDecreasesAmt>
+        <TotNetAstOrFundBalancesEOYAmt>851948</TotNetAstOrFundBalancesEOYAmt>
+      </ChgInNetAssetsFundBalancesGrp>
+      <CapGainsLossTxInvstIncmDetail>
+        <CapGainsLossTxInvstIncmGrp>
+          <PropertyDesc>600 SHS RECKITT BENCKISER GROUP</PropertyDesc>
+          <HowAcquiredCd>P</HowAcquiredCd>
+          <AcquiredDt>2012-09-26</AcquiredDt>
+          <SoldDt>2013-08-15</SoldDt>
+          <GrossSalesPriceAmt>41552</GrossSalesPriceAmt>
+          <CostOrOtherBasisAmt>34945</CostOrOtherBasisAmt>
+          <GainOrLossAmt>6607</GainOrLossAmt>
+          <GainsMinusExcessOrLossesAmt>6607</GainsMinusExcessOrLossesAmt>
+        </CapGainsLossTxInvstIncmGrp>
+        <CapGainsLossTxInvstIncmGrp>
+          <PropertyDesc>800 SHS ABB LTD SPONSORED AD R</PropertyDesc>
+          <HowAcquiredCd>P</HowAcquiredCd>
+          <AcquiredDt>2012-09-25</AcquiredDt>
+          <SoldDt>2013-04-12</SoldDt>
+          <GrossSalesPriceAmt>18123</GrossSalesPriceAmt>
+          <CostOrOtherBasisAmt>15337</CostOrOtherBasisAmt>
+          <GainOrLossAmt>2786</GainOrLossAmt>
+          <GainsMinusExcessOrLossesAmt>2786</GainsMinusExcessOrLossesAmt>
+        </CapGainsLossTxInvstIncmGrp>
+        <CapGainsLossTxInvstIncmGrp>
+          <PropertyDesc>70 SHS CRIMSON WINE GROUP LTD COM</PropertyDesc>
+          <HowAcquiredCd>P</HowAcquiredCd>
+          <AcquiredDt>2013-01-14</AcquiredDt>
+          <SoldDt>2013-02-28</SoldDt>
+          <GrossSalesPriceAmt>547</GrossSalesPriceAmt>
+          <CostOrOtherBasisAmt>482</CostOrOtherBasisAmt>
+          <GainOrLossAmt>65</GainOrLossAmt>
+          <GainsMinusExcessOrLossesAmt>65</GainsMinusExcessOrLossesAmt>
+        </CapGainsLossTxInvstIncmGrp>
+        <CapGainsLossTxInvstIncmGrp>
+          <PropertyDesc>400 SHS ST JUDE MED INC COM</PropertyDesc>
+          <HowAcquiredCd>P</HowAcquiredCd>
+          <AcquiredDt>2012-09-25</AcquiredDt>
+          <SoldDt>2013-01-03</SoldDt>
+          <GrossSalesPriceAmt>14691</GrossSalesPriceAmt>
+          <CostOrOtherBasisAmt>16975</CostOrOtherBasisAmt>
+          <GainOrLossAmt>-2284</GainOrLossAmt>
+          <GainsMinusExcessOrLossesAmt>-2284</GainsMinusExcessOrLossesAmt>
+        </CapGainsLossTxInvstIncmGrp>
+        <CapGainsLossTxInvstIncmGrp>
+          <PropertyDesc>100 SHS LOWES COS INC COM</PropertyDesc>
+          <HowAcquiredCd>P</HowAcquiredCd>
+          <AcquiredDt>2012-09-25</AcquiredDt>
+          <SoldDt>2013-12-02</SoldDt>
+          <GrossSalesPriceAmt>4678</GrossSalesPriceAmt>
+          <CostOrOtherBasisAmt>2985</CostOrOtherBasisAmt>
+          <GainOrLossAmt>1693</GainOrLossAmt>
+          <GainsMinusExcessOrLossesAmt>1693</GainsMinusExcessOrLossesAmt>
+        </CapGainsLossTxInvstIncmGrp>
+        <CapGainsLossTxInvstIncmGrp>
+          <PropertyDesc>400 SHS POTASH CORP OF SASKA TCHEWAN INC COM</PropertyDesc>
+          <HowAcquiredCd>P</HowAcquiredCd>
+          <AcquiredDt>2012-09-25</AcquiredDt>
+          <SoldDt>2013-12-02</SoldDt>
+          <GrossSalesPriceAmt>12904</GrossSalesPriceAmt>
+          <CostOrOtherBasisAmt>17381</CostOrOtherBasisAmt>
+          <GainOrLossAmt>-4477</GainOrLossAmt>
+          <GainsMinusExcessOrLossesAmt>-4477</GainsMinusExcessOrLossesAmt>
+        </CapGainsLossTxInvstIncmGrp>
+        <CapGainsLossTxInvstIncmGrp>
+          <PropertyDesc>20 SHS ACCENTURE PLC IRELAN D</PropertyDesc>
+          <HowAcquiredCd>P</HowAcquiredCd>
+          <AcquiredDt>2012-03-19</AcquiredDt>
+          <SoldDt>2013-04-10</SoldDt>
+          <GrossSalesPriceAmt>1505</GrossSalesPriceAmt>
+          <CostOrOtherBasisAmt>1269</CostOrOtherBasisAmt>
+          <GainOrLossAmt>236</GainOrLossAmt>
+          <GainsMinusExcessOrLossesAmt>236</GainsMinusExcessOrLossesAmt>
+        </CapGainsLossTxInvstIncmGrp>
+        <CapGainsLossTxInvstIncmGrp>
+          <PropertyDesc>28 SHS BROOKFIELD PPTY PARTNERS</PropertyDesc>
+          <HowAcquiredCd>P</HowAcquiredCd>
+          <AcquiredDt>2013-04-16</AcquiredDt>
+          <SoldDt>2013-04-29</SoldDt>
+          <GrossSalesPriceAmt>572</GrossSalesPriceAmt>
+          <CostOrOtherBasisAmt>611</CostOrOtherBasisAmt>
+          <GainOrLossAmt>-39</GainOrLossAmt>
+          <GainsMinusExcessOrLossesAmt>-39</GainsMinusExcessOrLossesAmt>
+        </CapGainsLossTxInvstIncmGrp>
+        <CapGainsLossTxInvstIncmGrp>
+          <PropertyDesc>0.700 SHS BROOKFIELD CASH IN LIEU</PropertyDesc>
+          <HowAcquiredCd>P</HowAcquiredCd>
+          <AcquiredDt>2013-04-16</AcquiredDt>
+          <SoldDt>2013-04-18</SoldDt>
+          <GrossSalesPriceAmt>15</GrossSalesPriceAmt>
+          <GainOrLossAmt>15</GainOrLossAmt>
+          <GainsMinusExcessOrLossesAmt>15</GainsMinusExcessOrLossesAmt>
+        </CapGainsLossTxInvstIncmGrp>
+        <CapGainsLossTxInvstIncmGrp>
+          <PropertyDesc>130 SHS ABB LTD SPONSORED ADR</PropertyDesc>
+          <HowAcquiredCd>P</HowAcquiredCd>
+          <AcquiredDt>2010-12-22</AcquiredDt>
+          <SoldDt>2013-04-12</SoldDt>
+          <GrossSalesPriceAmt>2945</GrossSalesPriceAmt>
+          <CostOrOtherBasisAmt>3047</CostOrOtherBasisAmt>
+          <GainOrLossAmt>-102</GainOrLossAmt>
+          <GainsMinusExcessOrLossesAmt>-102</GainsMinusExcessOrLossesAmt>
+        </CapGainsLossTxInvstIncmGrp>
+        <CapGainsLossTxInvstIncmGrp>
+          <PropertyDesc>850 SHS GENERAL ELEC CAP CORP NT 6.05% PFD</PropertyDesc>
+          <HowAcquiredCd>P</HowAcquiredCd>
+          <AcquiredDt>2009-11-23</AcquiredDt>
+          <SoldDt>2013-01-18</SoldDt>
+          <GrossSalesPriceAmt>21250</GrossSalesPriceAmt>
+          <CostOrOtherBasisAmt>20782</CostOrOtherBasisAmt>
+          <GainOrLossAmt>468</GainOrLossAmt>
+          <GainsMinusExcessOrLossesAmt>468</GainsMinusExcessOrLossesAmt>
+        </CapGainsLossTxInvstIncmGrp>
+        <CapGainsLossTxInvstIncmGrp>
+          <PropertyDesc>30 SHS POTASH CORP OF SASKA TCHEWAN INC</PropertyDesc>
+          <HowAcquiredCd>P</HowAcquiredCd>
+          <AcquiredDt>2011-05-02</AcquiredDt>
+          <SoldDt>2013-10-09</SoldDt>
+          <GrossSalesPriceAmt>968</GrossSalesPriceAmt>
+          <CostOrOtherBasisAmt>1684</CostOrOtherBasisAmt>
+          <GainOrLossAmt>-716</GainOrLossAmt>
+          <GainsMinusExcessOrLossesAmt>-716</GainsMinusExcessOrLossesAmt>
+        </CapGainsLossTxInvstIncmGrp>
+        <CapitalGainNetIncomeAmt>4252</CapitalGainNetIncomeAmt>
+      </CapGainsLossTxInvstIncmDetail>
+      <QlfyUndSect4940eReducedTaxGrp>
+        <LiableSection4942TaxInd>0</LiableSection4942TaxInd>
+        <AdjustedQlfyDistriYr1Amt>59448</AdjustedQlfyDistriYr1Amt>
+        <NetVlNoncharitableAssetsYr1Amt>970741</NetVlNoncharitableAssetsYr1Amt>
+        <DistributionYr1Rt>0.061240</DistributionYr1Rt>
+        <AdjustedQlfyDistriYr2Amt>66668</AdjustedQlfyDistriYr2Amt>
+        <NetVlNoncharitableAssetsYr2Amt>835204</NetVlNoncharitableAssetsYr2Amt>
+        <DistributionYr2Rt>0.079822</DistributionYr2Rt>
+        <AdjustedQlfyDistriYr3Amt>42858</AdjustedQlfyDistriYr3Amt>
+        <NetVlNoncharitableAssetsYr3Amt>1043757</NetVlNoncharitableAssetsYr3Amt>
+        <DistributionYr3Rt>0.041061</DistributionYr3Rt>
+        <AdjustedQlfyDistriYr4Amt>27705</AdjustedQlfyDistriYr4Amt>
+        <NetVlNoncharitableAssetsYr4Amt>846049</NetVlNoncharitableAssetsYr4Amt>
+        <DistributionYr4Rt>0.032746</DistributionYr4Rt>
+        <AdjustedQlfyDistriYr5Amt>34043</AdjustedQlfyDistriYr5Amt>
+        <NetVlNoncharitableAssetsYr5Amt>1095749</NetVlNoncharitableAssetsYr5Amt>
+        <DistributionYr5Rt>0.031068</DistributionYr5Rt>
+        <TotalDistributionRt>0.245937</TotalDistributionRt>
+        <AverageDistributionRt>0.049187</AverageDistributionRt>
+        <NetVlNoncharitableAssetsAmt>1120565</NetVlNoncharitableAssetsAmt>
+        <AdjNetVlNoncharitableAssetsAmt>55117</AdjNetVlNoncharitableAssetsAmt>
+        <NetInvestmentIncomePctAmt>113</NetInvestmentIncomePctAmt>
+        <AdjNonchrtblNetInvstIncmPctAmt>55230</AdjNonchrtblNetInvstIncmPctAmt>
+        <QualifyingDistributionsAmt>92219</QualifyingDistributionsAmt>
+      </QlfyUndSect4940eReducedTaxGrp>
+      <ExciseTaxBasedOnInvstIncmGrp>
+        <DomesticOrgMeetingSect4940eInd>X</DomesticOrgMeetingSect4940eInd>
+        <InvestmentIncomeExciseTaxAmt>113</InvestmentIncomeExciseTaxAmt>
+        <TaxUnderSection511Amt>0</TaxUnderSection511Amt>
+        <SubtotalAmt>113</SubtotalAmt>
+        <SubtitleATaxAmt>0</SubtitleATaxAmt>
+        <TaxBasedOnInvestmentIncomeAmt>113</TaxBasedOnInvestmentIncomeAmt>
+        <AppliedToEsTaxAmt>113</AppliedToEsTaxAmt>
+        <TotalPaymentsAndCreditsAmt>113</TotalPaymentsAndCreditsAmt>
+        <TaxDueAmt>0</TaxDueAmt>
+      </ExciseTaxBasedOnInvstIncmGrp>
+      <StatementsRegardingActyGrp>
+        <LegislativePoliticalActyInd>0</LegislativePoliticalActyInd>
+        <MoreThan100SpentInd>0</MoreThan100SpentInd>
+        <Form1120POLFiledInd>0</Form1120POLFiledInd>
+        <Section4955OrganizationTaxAmt>0</Section4955OrganizationTaxAmt>
+        <Section4955ManagersTaxAmt>0</Section4955ManagersTaxAmt>
+        <TaxReimbursedAmt>0</TaxReimbursedAmt>
+        <ActivitiesNotPreviouslyRptInd>0</ActivitiesNotPreviouslyRptInd>
+        <ChangesToArticlesOrBylawsInd>0</ChangesToArticlesOrBylawsInd>
+        <UnrelatedBusIncmOverLimitInd>0</UnrelatedBusIncmOverLimitInd>
+        <OrganizationDissolvedEtcInd>0</OrganizationDissolvedEtcInd>
+        <Section508eRqrSatisfiedInd>0</Section508eRqrSatisfiedInd>
+        <AtLeast5000InAssetsInd>1</AtLeast5000InAssetsInd>
+        <OrgReportOrRegisterStateCd>NY</OrgReportOrRegisterStateCd>
+        <Form990PFFiledWithAttyGenInd>1</Form990PFFiledWithAttyGenInd>
+        <PrivateOperatingFoundationInd>0</PrivateOperatingFoundationInd>
+        <NewSubstantialContributorsInd>0</NewSubstantialContributorsInd>
+        <OwnControlledEntityInd>0</OwnControlledEntityInd>
+        <DonorAdvisedFundInd>0</DonorAdvisedFundInd>
+        <ComplyWithPublicInspRqrInd>1</ComplyWithPublicInspRqrInd>
+        <WebsiteAddressTxt>MHRFOUNDATION.ORG</WebsiteAddressTxt>
+        <PersonsWithBooksName>
+          <BusinessNameLine1>THE MILLMAN HARRIS ROMANO FDN</BusinessNameLine1>
+        </PersonsWithBooksName>
+        <PhoneNum>8454526343</PhoneNum>
+        <LocationOfBooksUSAddress>
+          <AddressLine1>10 CIRCULAR ROAD</AddressLine1>
+          <City>POUGHKEEPSIE</City>
+          <State>NY</State>
+          <ZIPCode>12601</ZIPCode>
+        </LocationOfBooksUSAddress>
+        <ForeignAccountsQuestionInd>0</ForeignAccountsQuestionInd>
+      </StatementsRegardingActyGrp>
+      <StatementsRegardingActy4720Grp>
+        <SaleOrExchDisqualifiedPrsnInd>0</SaleOrExchDisqualifiedPrsnInd>
+        <BrrwOrLendDisqualifiedPrsnInd>0</BrrwOrLendDisqualifiedPrsnInd>
+        <FurnGoodsDisqualifiedPrsnInd>0</FurnGoodsDisqualifiedPrsnInd>
+        <PayCompDisqualifiedPrsnInd>0</PayCompDisqualifiedPrsnInd>
+        <TransferAstDisqualifiedPrsnInd>0</TransferAstDisqualifiedPrsnInd>
+        <PaymentToGovernmentOfficialInd>0</PaymentToGovernmentOfficialInd>
+        <UncorrectedPriorActsInd>0</UncorrectedPriorActsInd>
+        <UndistributedIncomePYInd>0</UndistributedIncomePYInd>
+        <BusinessHoldingsInd>0</BusinessHoldingsInd>
+        <JeopardyInvestmentsInd>0</JeopardyInvestmentsInd>
+        <UncorrectedPYJeopardyInvstInd>0</UncorrectedPYJeopardyInvstInd>
+        <InfluenceLegislationInd>0</InfluenceLegislationInd>
+        <InfluenceElectionInd>0</InfluenceElectionInd>
+        <GrantsToIndividualsInd>0</GrantsToIndividualsInd>
+        <GrantsToOrganizationsInd>0</GrantsToOrganizationsInd>
+        <NoncharitablePurposeInd>0</NoncharitablePurposeInd>
+        <RcvFndsToPayPrsnlBnftCntrctInd>0</RcvFndsToPayPrsnlBnftCntrctInd>
+        <PayPremiumsPrsnlBnftCntrctInd>0</PayPremiumsPrsnlBnftCntrctInd>
+        <ProhibitedTaxShelterTransInd>0</ProhibitedTaxShelterTransInd>
+      </StatementsRegardingActy4720Grp>
+      <OfficerDirTrstKeyEmplInfoGrp>
+        <OfficerDirTrstKeyEmplGrp>
+          <PersonNm>JODE MILLMAN</PersonNm>
+          <USAddress>
+            <AddressLine1>10 CIRCULAR ROAD</AddressLine1>
+            <City>POUGHKEEPSIE</City>
+            <State>NY</State>
+            <ZIPCode>126013315</ZIPCode>
+          </USAddress>
+          <TitleTxt>PRESIDENT, DIRECTOR</TitleTxt>
+          <AverageHrsPerWkDevotedToPosRt>20.00</AverageHrsPerWkDevotedToPosRt>
+          <CompensationAmt>12000</CompensationAmt>
+          <EmployeeBenefitProgramAmt>0</EmployeeBenefitProgramAmt>
+          <ExpenseAccountOtherAllwncAmt>0</ExpenseAccountOtherAllwncAmt>
+        </OfficerDirTrstKeyEmplGrp>
+        <OfficerDirTrstKeyEmplGrp>
+          <PersonNm>MICHAEL J HARRIS</PersonNm>
+          <USAddress>
+            <AddressLine1>10 CIRCULAR ROAD</AddressLine1>
+            <City>POUGHKEEPSIE</City>
+            <State>NY</State>
+            <ZIPCode>126013315</ZIPCode>
+          </USAddress>
+          <TitleTxt>SECRETARY, TREASURER, DIRE</TitleTxt>
+          <AverageHrsPerWkDevotedToPosRt>0.00</AverageHrsPerWkDevotedToPosRt>
+          <CompensationAmt>0</CompensationAmt>
+          <EmployeeBenefitProgramAmt>0</EmployeeBenefitProgramAmt>
+          <ExpenseAccountOtherAllwncAmt>0</ExpenseAccountOtherAllwncAmt>
+        </OfficerDirTrstKeyEmplGrp>
+        <OfficerDirTrstKeyEmplGrp>
+          <PersonNm>ELLIN R MILLMAN</PersonNm>
+          <USAddress>
+            <AddressLine1>7 ADRIANCE AVENUE</AddressLine1>
+            <City>POUGHKEEPSIE</City>
+            <State>NY</State>
+            <ZIPCode>126013315</ZIPCode>
+          </USAddress>
+          <TitleTxt>VICE PRESIDENT, DIRECTOR</TitleTxt>
+          <AverageHrsPerWkDevotedToPosRt>0.00</AverageHrsPerWkDevotedToPosRt>
+          <CompensationAmt>0</CompensationAmt>
+          <EmployeeBenefitProgramAmt>0</EmployeeBenefitProgramAmt>
+          <ExpenseAccountOtherAllwncAmt>0</ExpenseAccountOtherAllwncAmt>
+        </OfficerDirTrstKeyEmplGrp>
+        <OfficerDirTrstKeyEmplGrp>
+          <PersonNm>WENDY BERGER</PersonNm>
+          <USAddress>
+            <AddressLine1>10 CIRCULAR ROAD</AddressLine1>
+            <City>POUGHKEEPSIE</City>
+            <State>NY</State>
+            <ZIPCode>126013315</ZIPCode>
+          </USAddress>
+          <TitleTxt>DIRECTOR</TitleTxt>
+          <AverageHrsPerWkDevotedToPosRt>0.00</AverageHrsPerWkDevotedToPosRt>
+          <CompensationAmt>0</CompensationAmt>
+          <EmployeeBenefitProgramAmt>0</EmployeeBenefitProgramAmt>
+          <ExpenseAccountOtherAllwncAmt>0</ExpenseAccountOtherAllwncAmt>
+        </OfficerDirTrstKeyEmplGrp>
+        <CompOfHghstPdEmplOrNONETxt>NONE</CompOfHghstPdEmplOrNONETxt>
+        <OtherEmployeePaidOver50kCnt>0</OtherEmployeePaidOver50kCnt>
+        <CompOfHghstPdCntrctOrNONETxt>NONE</CompOfHghstPdCntrctOrNONETxt>
+        <ContractorPaidOver50kCnt>0</ContractorPaidOver50kCnt>
+      </OfficerDirTrstKeyEmplInfoGrp>
+      <SumOfProgramRelatedInvstGrp>
+        <TotalAmt>0</TotalAmt>
+      </SumOfProgramRelatedInvstGrp>
+      <MinimumInvestmentReturnGrp>
+        <AverageMonthlyFMVOfSecAmt>1077740</AverageMonthlyFMVOfSecAmt>
+        <AverageMonthlyCashBalancesAmt>59889</AverageMonthlyCashBalancesAmt>
+        <FMVAllOtherNoncharitableAstAmt>0</FMVAllOtherNoncharitableAstAmt>
+        <TotalFMVOfUnusedAssetsAmt>1137629</TotalFMVOfUnusedAssetsAmt>
+        <ReductionClaimedAmt>0</ReductionClaimedAmt>
+        <AcquisitionIndebtednessAmt>0</AcquisitionIndebtednessAmt>
+        <AdjustedTotalFMVOfUnusedAstAmt>1137629</AdjustedTotalFMVOfUnusedAstAmt>
+        <CashDeemedCharitableAmt>17064</CashDeemedCharitableAmt>
+        <NetVlNoncharitableAssetsAmt>1120565</NetVlNoncharitableAssetsAmt>
+        <MinimumInvestmentReturnAmt>56028</MinimumInvestmentReturnAmt>
+      </MinimumInvestmentReturnGrp>
+      <DistributableAmountGrp>
+        <MinimumInvestmentReturnAmt>56028</MinimumInvestmentReturnAmt>
+        <TaxBasedOnInvestmentIncomeAmt>113</TaxBasedOnInvestmentIncomeAmt>
+        <TotalTaxAmt>113</TotalTaxAmt>
+        <DistributableBeforeAdjAmt>55915</DistributableBeforeAdjAmt>
+        <RecoveriesQualfiedDistriAmt>0</RecoveriesQualfiedDistriAmt>
+        <DistributableBeforeDedAmt>55915</DistributableBeforeDedAmt>
+        <DeductionFromDistributableAmt>0</DeductionFromDistributableAmt>
+        <DistributableAsAdjustedAmt>55915</DistributableAsAdjustedAmt>
+      </DistributableAmountGrp>
+      <QualifyingDistriPartXIIGrp>
+        <ExpensesAndContributionsAmt>75191</ExpensesAndContributionsAmt>
+        <ProgramRelatedInvstTotalAmt>0</ProgramRelatedInvstTotalAmt>
+        <CharitableAssetsAcquisPaidAmt>17028</CharitableAssetsAcquisPaidAmt>
+        <QualifyingDistributionsAmt>92219</QualifyingDistributionsAmt>
+        <PctSect4940eOrgNetInvstIncmAmt>113</PctSect4940eOrgNetInvstIncmAmt>
+        <AdjustedQualifyingDistriAmt>92106</AdjustedQualifyingDistriAmt>
+      </QualifyingDistriPartXIIGrp>
+      <UndistributedIncomeGrp>
+        <DistributableAsAdjustedAmt>55915</DistributableAsAdjustedAmt>
+        <UndistributedIncomePYAmt>0</UndistributedIncomePYAmt>
+        <TotalForPriorYearsAmt>0</TotalForPriorYearsAmt>
+        <ExcessDistributionCyovYr2Amt>12272</ExcessDistributionCyovYr2Amt>
+        <ExcessDistributionCyovYr1Amt>11896</ExcessDistributionCyovYr1Amt>
+        <TotalExcessDistributionCyovAmt>24168</TotalExcessDistributionCyovAmt>
+        <QualifyingDistributionsAmt>92219</QualifyingDistributionsAmt>
+        <AppliedToYear1Amt>0</AppliedToYear1Amt>
+        <AppliedToPriorYearsAmt>0</AppliedToPriorYearsAmt>
+        <TreatedAsDistriFromCorpusAmt>0</TreatedAsDistriFromCorpusAmt>
+        <AppliedToCurrentYearAmt>55915</AppliedToCurrentYearAmt>
+        <RemainingDistriFromCorpusAmt>36304</RemainingDistriFromCorpusAmt>
+        <ExcessDistriCyovAppCYCorpusAmt>0</ExcessDistriCyovAppCYCorpusAmt>
+        <ExcessDistributionCyovAppCYAmt>0</ExcessDistributionCyovAppCYAmt>
+        <TotalCorpusAmt>60472</TotalCorpusAmt>
+        <PriorYearUndistributedIncmAmt>0</PriorYearUndistributedIncmAmt>
+        <PriorYearDeficiencyOrTaxAmt>0</PriorYearDeficiencyOrTaxAmt>
+        <Taxable1Amt>0</Taxable1Amt>
+        <Taxable2Amt>0</Taxable2Amt>
+        <UndistributedIncomeCYAmt>0</UndistributedIncomeCYAmt>
+        <CorpusDistri170b1EOr4942g3Amt>0</CorpusDistri170b1EOr4942g3Amt>
+        <ExcessDistriCyovFromYr5Amt>0</ExcessDistriCyovFromYr5Amt>
+        <ExcessDistriCyovToNextYrAmt>60472</ExcessDistriCyovToNextYrAmt>
+        <ExcessFromYear2Amt>12272</ExcessFromYear2Amt>
+        <ExcessFromYear1Amt>11896</ExcessFromYear1Amt>
+        <ExcessFromCurrentYearAmt>36304</ExcessFromCurrentYearAmt>
+      </UndistributedIncomeGrp>
+      <SupplementaryInformationGrp>
+        <OnlyContriToPreselectedInd>X</OnlyContriToPreselectedInd>
+        <GrantOrContributionPdDurYrGrp>
+          <RecipientBusinessName>
+            <BusinessNameLine1>BARDAVON 1869 OPERAHOUSE</BusinessNameLine1>
+          </RecipientBusinessName>
+          <RecipientUSAddress>
+            <AddressLine1>35 MARKET STREET</AddressLine1>
+            <City>POUGHKEEPSIE</City>
+            <State>NY</State>
+            <ZIPCode>12603</ZIPCode>
+          </RecipientUSAddress>
+          <RecipientRelationshipTxt>NONE</RecipientRelationshipTxt>
+          <RecipientFoundationStatusTxt>PUBLIC</RecipientFoundationStatusTxt>
+          <GrantOrContributionPurposeTxt>SUPPORT OF MUSICAL PROGRAMS</GrantOrContributionPurposeTxt>
+          <Amt>8500</Amt>
+        </GrantOrContributionPdDurYrGrp>
+        <GrantOrContributionPdDurYrGrp>
+          <RecipientBusinessName>
+            <BusinessNameLine1>CHILDREN'S MEDIA PROJECT</BusinessNameLine1>
+          </RecipientBusinessName>
+          <RecipientUSAddress>
+            <AddressLine1>42 CATHERINE STREET STOP 9</AddressLine1>
+            <City>POUGHKEEPSIE</City>
+            <State>NY</State>
+            <ZIPCode>12601</ZIPCode>
+          </RecipientUSAddress>
+          <RecipientRelationshipTxt>NONE</RecipientRelationshipTxt>
+          <RecipientFoundationStatusTxt>PUBLIC</RecipientFoundationStatusTxt>
+          <GrantOrContributionPurposeTxt>PROVIDE SPACE AND OPPORTUNITY FOR CHILDREN TO USE MEDIA</GrantOrContributionPurposeTxt>
+          <Amt>5000</Amt>
+        </GrantOrContributionPdDurYrGrp>
+        <GrantOrContributionPdDurYrGrp>
+          <RecipientBusinessName>
+            <BusinessNameLine1>DUTCHESS COMMUNITY COLLEGE FOUNDATION</BusinessNameLine1>
+          </RecipientBusinessName>
+          <RecipientUSAddress>
+            <AddressLine1>53 PENDELL ROAD</AddressLine1>
+            <City>POUGHKEEPSIE</City>
+            <State>NY</State>
+            <ZIPCode>12601</ZIPCode>
+          </RecipientUSAddress>
+          <RecipientRelationshipTxt>NONE</RecipientRelationshipTxt>
+          <RecipientFoundationStatusTxt>PUBLIC</RecipientFoundationStatusTxt>
+          <GrantOrContributionPurposeTxt>BENEFIT COLLEGE &amp; SPONSORSHIP PROGRAM</GrantOrContributionPurposeTxt>
+          <Amt>500</Amt>
+        </GrantOrContributionPdDurYrGrp>
+        <GrantOrContributionPdDurYrGrp>
+          <RecipientBusinessName>
+            <BusinessNameLine1>ELTON JOHN AIDS FOUNDATION</BusinessNameLine1>
+          </RecipientBusinessName>
+          <RecipientUSAddress>
+            <AddressLine1>584 BROADWAY SUITE 906</AddressLine1>
+            <City>NEW YORK</City>
+            <State>NY</State>
+            <ZIPCode>10012</ZIPCode>
+          </RecipientUSAddress>
+          <RecipientRelationshipTxt>NONE</RecipientRelationshipTxt>
+          <RecipientFoundationStatusTxt>PUBLIC</RecipientFoundationStatusTxt>
+          <GrantOrContributionPurposeTxt>SUPPORTS TREATMENT AND PREVENTION OF HIV/AIDS</GrantOrContributionPurposeTxt>
+          <Amt>16000</Amt>
+        </GrantOrContributionPdDurYrGrp>
+        <GrantOrContributionPdDurYrGrp>
+          <RecipientBusinessName>
+            <BusinessNameLine1>FILM INDEPENDENT</BusinessNameLine1>
+          </RecipientBusinessName>
+          <RecipientUSAddress>
+            <AddressLine1>9911 WEST PICO BLVD</AddressLine1>
+            <City>LOS ANGELES</City>
+            <State>CA</State>
+            <ZIPCode>90035</ZIPCode>
+          </RecipientUSAddress>
+          <RecipientRelationshipTxt>NONE</RecipientRelationshipTxt>
+          <RecipientFoundationStatusTxt>PUBLIC</RecipientFoundationStatusTxt>
+          <GrantOrContributionPurposeTxt>PROMOTES FILMMAKERS</GrantOrContributionPurposeTxt>
+          <Amt>10000</Amt>
+        </GrantOrContributionPdDurYrGrp>
+        <GrantOrContributionPdDurYrGrp>
+          <RecipientBusinessName>
+            <BusinessNameLine1>FIRST CONGREGATIONAL CHURCH</BusinessNameLine1>
+          </RecipientBusinessName>
+          <RecipientUSAddress>
+            <AddressLine1>269 MILL STREET</AddressLine1>
+            <City>POUGHKEEPSIE</City>
+            <State>NY</State>
+            <ZIPCode>12601</ZIPCode>
+          </RecipientUSAddress>
+          <RecipientRelationshipTxt>NONE</RecipientRelationshipTxt>
+          <RecipientFoundationStatusTxt>PUBLIC</RecipientFoundationStatusTxt>
+          <GrantOrContributionPurposeTxt>SUPPORT MEMORIAL AMANI AFRICA</GrantOrContributionPurposeTxt>
+          <Amt>500</Amt>
+        </GrantOrContributionPdDurYrGrp>
+        <GrantOrContributionPdDurYrGrp>
+          <RecipientBusinessName>
+            <BusinessNameLine1>GRACE CHURCH FOUNDATION</BusinessNameLine1>
+          </RecipientBusinessName>
+          <RecipientUSAddress>
+            <AddressLine1>FRANKLIN AVE</AddressLine1>
+            <City>MILLBROOK</City>
+            <State>NY</State>
+            <ZIPCode>12545</ZIPCode>
+          </RecipientUSAddress>
+          <RecipientRelationshipTxt>NONE</RecipientRelationshipTxt>
+          <RecipientFoundationStatusTxt>PUBLIC</RecipientFoundationStatusTxt>
+          <GrantOrContributionPurposeTxt>ADVANCE KINGDOM OF GOD</GrantOrContributionPurposeTxt>
+          <Amt>500</Amt>
+        </GrantOrContributionPdDurYrGrp>
+        <GrantOrContributionPdDurYrGrp>
+          <RecipientBusinessName>
+            <BusinessNameLine1>JUVENILE DIABETES RESEARCH FOUNDATION</BusinessNameLine1>
+          </RecipientBusinessName>
+          <RecipientUSAddress>
+            <AddressLine1>30 GLENN ST</AddressLine1>
+            <City>WHITE PLAINS</City>
+            <State>NY</State>
+            <ZIPCode>10603</ZIPCode>
+          </RecipientUSAddress>
+          <RecipientRelationshipTxt>NONE</RecipientRelationshipTxt>
+          <RecipientFoundationStatusTxt>PUBLIC</RecipientFoundationStatusTxt>
+          <GrantOrContributionPurposeTxt>PROMOTE RESEARCH FOR JUVENILE DIABETES</GrantOrContributionPurposeTxt>
+          <Amt>1000</Amt>
+        </GrantOrContributionPdDurYrGrp>
+        <GrantOrContributionPdDurYrGrp>
+          <RecipientBusinessName>
+            <BusinessNameLine1>MEDIATION CENTER OF DUCTHESS COUNTY</BusinessNameLine1>
+          </RecipientBusinessName>
+          <RecipientUSAddress>
+            <AddressLine1>147 UNION STREET</AddressLine1>
+            <City>POUGHKEEPSIE</City>
+            <State>NY</State>
+            <ZIPCode>12601</ZIPCode>
+          </RecipientUSAddress>
+          <RecipientRelationshipTxt>NONE</RecipientRelationshipTxt>
+          <RecipientFoundationStatusTxt>PUBLIC</RecipientFoundationStatusTxt>
+          <GrantOrContributionPurposeTxt>TO PROVIDE AND PROMOTE CONFLICT PREVENTION, MANAGEMENT AND RESOULUTION SERVICES</GrantOrContributionPurposeTxt>
+          <Amt>2000</Amt>
+        </GrantOrContributionPdDurYrGrp>
+        <GrantOrContributionPdDurYrGrp>
+          <RecipientBusinessName>
+            <BusinessNameLine1>MILES OF HOPE BREAST CANCER FOUNDATION</BusinessNameLine1>
+          </RecipientBusinessName>
+          <RecipientUSAddress>
+            <AddressLine1>PO BOX 405</AddressLine1>
+            <City>LAGRANGEVILLE</City>
+            <State>NY</State>
+            <ZIPCode>12540</ZIPCode>
+          </RecipientUSAddress>
+          <RecipientRelationshipTxt>NONE</RecipientRelationshipTxt>
+          <RecipientFoundationStatusTxt>PUBLIC</RecipientFoundationStatusTxt>
+          <GrantOrContributionPurposeTxt>SUPPORT BREAST CANCER RESEARCH AND CURE</GrantOrContributionPurposeTxt>
+          <Amt>874</Amt>
+        </GrantOrContributionPdDurYrGrp>
+        <GrantOrContributionPdDurYrGrp>
+          <RecipientBusinessName>
+            <BusinessNameLine1>ORT AMERICA</BusinessNameLine1>
+          </RecipientBusinessName>
+          <RecipientUSAddress>
+            <AddressLine1>75 MAIDEN LANE</AddressLine1>
+            <City>NEW YORK</City>
+            <State>NY</State>
+            <ZIPCode>10038</ZIPCode>
+          </RecipientUSAddress>
+          <RecipientRelationshipTxt>NONE</RecipientRelationshipTxt>
+          <RecipientFoundationStatusTxt>PUBLIC</RecipientFoundationStatusTxt>
+          <GrantOrContributionPurposeTxt>A JEWISH ORGANIZATION COMMITTED TO STRENGTHENING COMMUNITIES THROUGH EDUCATON</GrantOrContributionPurposeTxt>
+          <Amt>1000</Amt>
+        </GrantOrContributionPdDurYrGrp>
+        <GrantOrContributionPdDurYrGrp>
+          <RecipientBusinessName>
+            <BusinessNameLine1>PARENTS OF AUTISTIC CHILDREN</BusinessNameLine1>
+          </RecipientBusinessName>
+          <RecipientUSAddress>
+            <AddressLine1>PO BOX 73</AddressLine1>
+            <City>WAPPINGERS FALLS</City>
+            <State>NY</State>
+            <ZIPCode>12590</ZIPCode>
+          </RecipientUSAddress>
+          <RecipientRelationshipTxt>NONE</RecipientRelationshipTxt>
+          <RecipientFoundationStatusTxt>PUBLIC</RecipientFoundationStatusTxt>
+          <GrantOrContributionPurposeTxt>SPONSOR AUTISM WALK</GrantOrContributionPurposeTxt>
+          <Amt>250</Amt>
+        </GrantOrContributionPdDurYrGrp>
+        <GrantOrContributionPdDurYrGrp>
+          <RecipientBusinessName>
+            <BusinessNameLine1>POUGHKEEPSIE LIBRARY DISTRICT</BusinessNameLine1>
+          </RecipientBusinessName>
+          <RecipientUSAddress>
+            <AddressLine1>93 MARKET STREET</AddressLine1>
+            <City>POUGHKEEPSIE</City>
+            <State>NY</State>
+            <ZIPCode>12601</ZIPCode>
+          </RecipientUSAddress>
+          <RecipientRelationshipTxt>NONE</RecipientRelationshipTxt>
+          <RecipientFoundationStatusTxt>PUBLIC</RecipientFoundationStatusTxt>
+          <GrantOrContributionPurposeTxt>PROMOTES READING AND LITERACY</GrantOrContributionPurposeTxt>
+          <Amt>3500</Amt>
+        </GrantOrContributionPdDurYrGrp>
+        <GrantOrContributionPdDurYrGrp>
+          <RecipientBusinessName>
+            <BusinessNameLine1>THE HOLE IN THE WALL GANG CAMP</BusinessNameLine1>
+          </RecipientBusinessName>
+          <RecipientUSAddress>
+            <AddressLine1>565 ASHFORD CENTER ROAD</AddressLine1>
+            <City>ASHFORD</City>
+            <State>CT</State>
+            <ZIPCode>06278</ZIPCode>
+          </RecipientUSAddress>
+          <RecipientRelationshipTxt>NONE</RecipientRelationshipTxt>
+          <RecipientFoundationStatusTxt>PUBLIC</RecipientFoundationStatusTxt>
+          <GrantOrContributionPurposeTxt>PROVIDE HEALING TO SERIOUSLY ILL CHILDREN</GrantOrContributionPurposeTxt>
+          <Amt>3000</Amt>
+        </GrantOrContributionPdDurYrGrp>
+        <GrantOrContributionPdDurYrGrp>
+          <RecipientBusinessName>
+            <BusinessNameLine1>WALK OVER THE HUDSON</BusinessNameLine1>
+          </RecipientBusinessName>
+          <RecipientUSAddress>
+            <AddressLine1>82 WASHINGTON STREET</AddressLine1>
+            <City>POUGHKEEPSIE</City>
+            <State>NY</State>
+            <ZIPCode>12601</ZIPCode>
+          </RecipientUSAddress>
+          <RecipientRelationshipTxt>NONE</RecipientRelationshipTxt>
+          <RecipientFoundationStatusTxt>PUBLIC</RecipientFoundationStatusTxt>
+          <GrantOrContributionPurposeTxt>SUPPORT AND IMPROVE WALKWAY OVER THE HUDSON STATE HISTORIC PARK</GrantOrContributionPurposeTxt>
+          <Amt>600</Amt>
+        </GrantOrContributionPdDurYrGrp>
+        <GrantOrContributionPdDurYrGrp>
+          <RecipientBusinessName>
+            <BusinessNameLine1>WFUVORG FORDHAM UNIVERSITY</BusinessNameLine1>
+          </RecipientBusinessName>
+          <RecipientUSAddress>
+            <AddressLine1>FORDHAM UNIVERSITY</AddressLine1>
+            <City>BRONX</City>
+            <State>NY</State>
+            <ZIPCode>10458</ZIPCode>
+          </RecipientUSAddress>
+          <RecipientRelationshipTxt>NONE</RecipientRelationshipTxt>
+          <RecipientFoundationStatusTxt>PUBLIC</RecipientFoundationStatusTxt>
+          <GrantOrContributionPurposeTxt>MEMBER SUPPORTED PUBLIC MEDIA SERVICE OF FORDHAM UNIVERSITY</GrantOrContributionPurposeTxt>
+          <Amt>150</Amt>
+        </GrantOrContributionPdDurYrGrp>
+        <TotalGrantOrContriPdDurYrAmt>53374</TotalGrantOrContriPdDurYrAmt>
+        <TotalGrantOrContriApprvFutAmt>0</TotalGrantOrContriApprvFutAmt>
+      </SupplementaryInformationGrp>
+      <AnalysisIncomeProducingActyGrp>
+        <IntOnSavAndTempCashInvstGrp>
+          <ExclusionCd>14</ExclusionCd>
+          <ExclusionAmt>2532</ExclusionAmt>
+        </IntOnSavAndTempCashInvstGrp>
+        <DivAndIntFromSecPartVIIGrp>
+          <ExclusionCd>14</ExclusionCd>
+          <ExclusionAmt>21546</ExclusionAmt>
+        </DivAndIntFromSecPartVIIGrp>
+        <GainSalesAstOthThanInvntryGrp>
+          <ExclusionCd>18</ExclusionCd>
+          <ExclusionAmt>8867</ExclusionAmt>
+          <RelatedOrExemptFunctionIncmAmt>-4615</RelatedOrExemptFunctionIncmAmt>
+        </GainSalesAstOthThanInvntryGrp>
+        <SubtotalsIncmProducingActyGrp>
+          <UnrelatedBusinessTaxblIncmAmt>0</UnrelatedBusinessTaxblIncmAmt>
+          <ExclusionAmt>32945</ExclusionAmt>
+          <RelatedOrExemptFunctionIncmAmt>-4615</RelatedOrExemptFunctionIncmAmt>
+        </SubtotalsIncmProducingActyGrp>
+        <TotalIncomeProducingActyAmt>28330</TotalIncomeProducingActyAmt>
+      </AnalysisIncomeProducingActyGrp>
+      <RlnOfActyToAccomOfExmptPrpsGrp>
+        <RlnOfActyToAccomOfExmptPrpsGrp>
+          <LineNumberTxt>8</LineNumberTxt>
+          <RelationshipStatementTxt>LOSS ON SALE OF SECURITIES</RelationshipStatementTxt>
+        </RlnOfActyToAccomOfExmptPrpsGrp>
+      </RlnOfActyToAccomOfExmptPrpsGrp>
+      <TrnsfrTransRlnNonchrtblEOGrp>
+        <TrnsfrOfCashToNonchrtblEOInd>0</TrnsfrOfCashToNonchrtblEOInd>
+        <TrnsfrOtherAssetNonchrtblEOInd>0</TrnsfrOtherAssetNonchrtblEOInd>
+        <SalesOrExchangesOfAssetsInd>0</SalesOrExchangesOfAssetsInd>
+        <PurchaseOfAssetsNonchrtblEOInd>0</PurchaseOfAssetsNonchrtblEOInd>
+        <RentalOfFacilitiesOthAssetsInd>0</RentalOfFacilitiesOthAssetsInd>
+        <ReimbursementArrangementsInd>0</ReimbursementArrangementsInd>
+        <LoansOrLoanGuaranteesInd>0</LoansOrLoanGuaranteesInd>
+        <PerformanceOfServicesEtcInd>0</PerformanceOfServicesEtcInd>
+        <SharingOfFacilitiesEtcInd>0</SharingOfFacilitiesEtcInd>
+        <RelationshipsNonchrtblEOInd>0</RelationshipsNonchrtblEOInd>
+      </TrnsfrTransRlnNonchrtblEOGrp>
+    </IRS990PF>
+    <AccountingFeesSchedule documentId="RetDoc2002200001">
+      <AccountingFeesDetail>
+        <CategoryTxt>ACCOUNTING</CategoryTxt>
+        <Amt>3750</Amt>
+        <NetInvestmentIncomeAmt>0</NetInvestmentIncomeAmt>
+        <DisbursementsCharitablePrpsAmt>3750</DisbursementsCharitablePrpsAmt>
+      </AccountingFeesDetail>
+    </AccountingFeesSchedule>
+    <InvestmentsCorpStockSchedule documentId="RetDoc2018900001">
+      <InvestmentsCorporateStockGrp>
+        <StockNm>IBM</StockNm>
+        <EOYBookValueAmt>105257</EOYBookValueAmt>
+        <EOYFMVAmt>233988</EOYFMVAmt>
+      </InvestmentsCorporateStockGrp>
+      <InvestmentsCorporateStockGrp>
+        <StockNm>FIRST MANHATTAN PORTFOLIO</StockNm>
+        <EOYBookValueAmt>680840</EOYBookValueAmt>
+        <EOYFMVAmt>908151</EOYFMVAmt>
+      </InvestmentsCorporateStockGrp>
+    </InvestmentsCorpStockSchedule>
+    <InvestmentsGovtObligationsSch documentId="RetDoc2210400001">
+      <USGovtObligationsBookVlEOYAmt>51942</USGovtObligationsBookVlEOYAmt>
+      <USGovtObligationsEOYFMVAmt>55799</USGovtObligationsEOYFMVAmt>
+      <StateLocalSecBookVlEOYAmt>0</StateLocalSecBookVlEOYAmt>
+      <StateLocalSecEOYFMVAmt>0</StateLocalSecEOYFMVAmt>
+    </InvestmentsGovtObligationsSch>
+    <OtherExpensesSchedule documentId="RetDoc2003200001">
+      <OtherExpensesScheduleGrp>
+        <Desc>BROKERAGE FEES</Desc>
+        <RevenueAndExpensesPerBooksAmt>12290</RevenueAndExpensesPerBooksAmt>
+        <NetInvestmentIncomeAmt>12290</NetInvestmentIncomeAmt>
+        <DisbursementsCharitablePrpsAmt>0</DisbursementsCharitablePrpsAmt>
+      </OtherExpensesScheduleGrp>
+      <OtherExpensesScheduleGrp>
+        <Desc>TELEPHONE</Desc>
+        <RevenueAndExpensesPerBooksAmt>1984</RevenueAndExpensesPerBooksAmt>
+        <NetInvestmentIncomeAmt>0</NetInvestmentIncomeAmt>
+        <DisbursementsCharitablePrpsAmt>1984</DisbursementsCharitablePrpsAmt>
+      </OtherExpensesScheduleGrp>
+      <OtherExpensesScheduleGrp>
+        <Desc>ANNUAL REPORT</Desc>
+        <RevenueAndExpensesPerBooksAmt>250</RevenueAndExpensesPerBooksAmt>
+        <NetInvestmentIncomeAmt>0</NetInvestmentIncomeAmt>
+        <DisbursementsCharitablePrpsAmt>250</DisbursementsCharitablePrpsAmt>
+      </OtherExpensesScheduleGrp>
+      <OtherExpensesScheduleGrp>
+        <Desc>OFFICE EXPENSES</Desc>
+        <RevenueAndExpensesPerBooksAmt>3267</RevenueAndExpensesPerBooksAmt>
+        <NetInvestmentIncomeAmt>0</NetInvestmentIncomeAmt>
+        <DisbursementsCharitablePrpsAmt>3267</DisbursementsCharitablePrpsAmt>
+      </OtherExpensesScheduleGrp>
+      <OtherExpensesScheduleGrp>
+        <Desc>MEMBERSHIPS</Desc>
+        <RevenueAndExpensesPerBooksAmt>600</RevenueAndExpensesPerBooksAmt>
+        <NetInvestmentIncomeAmt>0</NetInvestmentIncomeAmt>
+        <DisbursementsCharitablePrpsAmt>600</DisbursementsCharitablePrpsAmt>
+      </OtherExpensesScheduleGrp>
+    </OtherExpensesSchedule>
+    <OtherLiabilitiesSchedule documentId="RetDoc2065700001">
+      <OtherLiabilitiesDetail>
+        <Desc>PAYROLL LIABILITIES</Desc>
+        <BOYBookValueAmt>399</BOYBookValueAmt>
+        <EOYBookValueAmt>459</EOYBookValueAmt>
+      </OtherLiabilitiesDetail>
+    </OtherLiabilitiesSchedule>
+    <OtherProfessionalFeesSchedule documentId="RetDoc2002300001">
+      <OtherProfessionalFeesDetail>
+        <CategoryTxt>OUTSIDE CONTRACTORS</CategoryTxt>
+        <Amt>575</Amt>
+        <NetInvestmentIncomeAmt>0</NetInvestmentIncomeAmt>
+        <DisbursementsCharitablePrpsAmt>575</DisbursementsCharitablePrpsAmt>
+      </OtherProfessionalFeesDetail>
+    </OtherProfessionalFeesSchedule>
+    <TaxesSchedule documentId="RetDoc2002500001">
+      <TaxesDetail>
+        <CategoryTxt>PAYROLL TAX</CategoryTxt>
+        <Amt>1190</Amt>
+        <NetInvestmentIncomeAmt>179</NetInvestmentIncomeAmt>
+        <DisbursementsCharitablePrpsAmt>1011</DisbursementsCharitablePrpsAmt>
+      </TaxesDetail>
+      <TaxesDetail>
+        <CategoryTxt>FOREIGN TAX WITHHELD</CategoryTxt>
+        <Amt>926</Amt>
+        <NetInvestmentIncomeAmt>926</NetInvestmentIncomeAmt>
+        <DisbursementsCharitablePrpsAmt>0</DisbursementsCharitablePrpsAmt>
+      </TaxesDetail>
+      <TaxesDetail>
+        <CategoryTxt>2012 TAX ON 990PF</CategoryTxt>
+        <Amt>2013</Amt>
+        <NetInvestmentIncomeAmt>2013</NetInvestmentIncomeAmt>
+        <DisbursementsCharitablePrpsAmt>0</DisbursementsCharitablePrpsAmt>
+      </TaxesDetail>
+    </TaxesSchedule>
+  </ReturnData>
+</Return>

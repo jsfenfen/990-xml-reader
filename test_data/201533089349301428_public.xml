@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Return xmlns="http://www.irs.gov/efile" returnVersion="2014v5.0">
+  <ReturnHeader binaryAttachmentCnt="0">
+    <ReturnTs>2015-11-04T20:09:01-06:00</ReturnTs>
+    <TaxPeriodEndDt>2014-12-31</TaxPeriodEndDt>
+    <PreparerFirmGrp>
+      <PreparerFirmName>
+        <BusinessNameLine1Txt>ERNST &amp; YOUNG US LLP</BusinessNameLine1Txt>
+      </PreparerFirmName>
+      <PreparerUSAddress>
+        <AddressLine1Txt>4370 LA JOLLA VILLAGE DR SUITE 500</AddressLine1Txt>
+        <CityNm>SAN DIEGO</CityNm>
+        <StateAbbreviationCd>CA</StateAbbreviationCd>
+        <ZIPCd>92122</ZIPCd>
+      </PreparerUSAddress>
+    </PreparerFirmGrp>
+    <ReturnTypeCd>990</ReturnTypeCd>
+    <TaxPeriodBeginDt>2014-01-01</TaxPeriodBeginDt>
+    <Filer>
+      <EIN>941156621</EIN>
+      <BusinessName>
+        <BusinessNameLine1Txt>SUTTER HEALTH SACRAMENTO SIERRA REGION</BusinessNameLine1Txt>
+      </BusinessName>
+      <InCareOfNm>% CHRIS BOUDREAUX</InCareOfNm>
+      <BusinessNameControlTxt>SUTT</BusinessNameControlTxt>
+      <PhoneNum>9162866665</PhoneNum>
+      <USAddress>
+        <AddressLine1Txt>PO BOX 160727</AddressLine1Txt>
+        <CityNm>SACRAMENTO</CityNm>
+        <StateAbbreviationCd>CA</StateAbbreviationCd>
+        <ZIPCd>95816</ZIPCd>
+      </USAddress>
+    </Filer>
+    <BusinessOfficerGrp>
+      <PersonNm>Paige Terra</PersonNm>
+      <PersonTitleTxt>CFO</PersonTitleTxt>
+      <PhoneNum>9162866665</PhoneNum>
+      <SignatureDt>2015-11-02</SignatureDt>
+      <DiscussWithPaidPreparerInd>true</DiscussWithPaidPreparerInd>
+    </BusinessOfficerGrp>
+    <PreparerPersonGrp>
+      <PreparerPersonNm>DEBRA HEISKALA</PreparerPersonNm>
+      <PTIN>P00649485</PTIN>
+      <PhoneNum>8585357200</PhoneNum>
+    </PreparerPersonGrp>
+    <TaxYr>2014</TaxYr>
+    <BuildTS>2016-04-25 22:37:26Z</BuildTS>
+  </ReturnHeader>
+  <ReturnData documentCnt="14">
+    <IRS990 documentId="RetDoc1">
+      <PrincipalOfficerNm>JAMES CONFORTI</PrincipalOfficerNm>
+      <ActivityOrMissionDesc>SUTTER HEALTH SACRAMENTO SIERRA REGION OPERATES ACUTE CARE HOSPITALS AND CLINICS.</ActivityOrMissionDesc>
+      <GrossReceiptsAmt>4246318454</GrossReceiptsAmt>
+      <Organization501c3Ind>X</Organization501c3Ind>
+      <TotalEmployeeCnt>12345</TotalEmployeeCnt>
+      <TotalVolunteersCnt>500</TotalVolunteersCnt>
+    </IRS990>
+    <IRS990ScheduleJ documentId="RetDoc8">
+      <IdmnfctnGrssUpPmtsInd>X</IdmnfctnGrssUpPmtsInd>
+      <WrttnPlcyRfTAndEExpnssInd>true</WrttnPlcyRfTAndEExpnssInd>
+      <SbstnttnRqrdInd>true</SbstnttnRqrdInd>
+      <SvrncPymntInd>false</SvrncPymntInd>
+      <SpplmntlNnqlRtrPlnInd>true</SpplmntlNnqlRtrPlnInd>
+      <EqtyBsdCmpArrngmInd>false</EqtyBsdCmpArrngmInd>
+      <CmpBsdOnRvnOfFlngOrgInd>false</CmpBsdOnRvnOfFlngOrgInd>
+      <CmpBsdOnRvRltdOrgsInd>false</CmpBsdOnRvRltdOrgsInd>
+      <CmpBsdNtErnsFlngOrgInd>false</CmpBsdNtErnsFlngOrgInd>
+      <CmpBsdNtErnsRltdOrgsInd>false</CmpBsdNtErnsRltdOrgsInd>
+      <AnyNnFxdPymntsInd>true</AnyNnFxdPymntsInd>
+      <IntlCntrctExcptnInd>false</IntlCntrctExcptnInd>
+      <RltdOrgOffcrTrstKyEmplGrp>
+        <PersonNm>John Boyd</PersonNm>
+        <TitleTxt>CAO, MNTL HLTH &amp; CONT CARE SSR</TitleTxt>
+        <BaseCompensationFilingOrgAmt>0</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRelatedOrgsAmt>268967</CompensationBasedOnRelatedOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>116200</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>0</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>13933</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>0</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>86894</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>0</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>7303</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>0</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>493297</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>8400</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOffcrTrstKyEmplGrp>
+      <RltdOrgOffcrTrstKyEmplGrp>
+        <PersonNm>Thomas Blinn</PersonNm>
+        <TitleTxt>CEO, Reg Amb Care, SRR</TitleTxt>
+        <BaseCompensationFilingOrgAmt>0</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRelatedOrgsAmt>468913</CompensationBasedOnRelatedOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>296489</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>0</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>76381</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>0</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>148086</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>0</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>17785</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>0</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>1007654</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>60906</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOffcrTrstKyEmplGrp>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>SCHEDULE J, PART I, LINE 1A</FormAndLineReferenceDesc>
+        <ExplanationTxt>TAX INDEMNIFICATION: STANDARD POLICY FOR ALL SUTTER HEALTH EMPLOYEES.</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleJ>
+  </ReturnData>
+</Return>

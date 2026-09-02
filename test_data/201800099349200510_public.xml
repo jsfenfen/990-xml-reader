@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Return xmlns="http://www.irs.gov/efile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" returnVersion="2016v3.0">
+  <ReturnHeader binaryAttachmentCnt="0">
+    <ReturnTs>2018-01-09T10:36:11-05:00</ReturnTs>
+    <TaxPeriodEndDt>2017-08-31</TaxPeriodEndDt>
+    <PreparerFirmGrp>
+      <PreparerFirmEIN>208054423</PreparerFirmEIN>
+      <PreparerFirmName>
+        <BusinessNameLine1Txt>MJ MILLER &amp; CO CPA'S LLC</BusinessNameLine1Txt>
+      </PreparerFirmName>
+      <PreparerUSAddress>
+        <AddressLine1Txt>700 S PROSPECT AVE PO BOX 367</AddressLine1Txt>
+        <CityNm>HARTVILLE</CityNm>
+        <StateAbbreviationCd>OH</StateAbbreviationCd>
+        <ZIPCd>446320367</ZIPCd>
+      </PreparerUSAddress>
+    </PreparerFirmGrp>
+    <ReturnTypeCd>990EZ</ReturnTypeCd>
+    <TaxPeriodBeginDt>2016-09-01</TaxPeriodBeginDt>
+    <Filer>
+      <EIN>204982165</EIN>
+      <BusinessName>
+        <BusinessNameLine1Txt>HARTVILLE ELEMENTARY PARENT-TEACHER</BusinessNameLine1Txt>
+        <BusinessNameLine2Txt>ORGANIZATION</BusinessNameLine2Txt>
+      </BusinessName>
+      <BusinessNameControlTxt>HART</BusinessNameControlTxt>
+      <USAddress>
+        <AddressLine1Txt>245 BELLE ST SW</AddressLine1Txt>
+        <CityNm>HARTVILLE</CityNm>
+        <StateAbbreviationCd>OH</StateAbbreviationCd>
+        <ZIPCd>44632</ZIPCd>
+      </USAddress>
+    </Filer>
+    <BusinessOfficerGrp>
+      <PersonNm>KIM HALL</PersonNm>
+      <PersonTitleTxt>TREASURER</PersonTitleTxt>
+      <SignatureDt>2017-12-28</SignatureDt>
+      <DiscussWithPaidPreparerInd>true</DiscussWithPaidPreparerInd>
+    </BusinessOfficerGrp>
+    <PreparerPersonGrp>
+      <PreparerPersonNm>WENDY J MANN CPA</PreparerPersonNm>
+      <PTIN>P00098604</PTIN>
+      <PhoneNum>3308779433</PhoneNum>
+      <PreparationDt>2018-01-09</PreparationDt>
+    </PreparerPersonGrp>
+    <FilingSecurityInformation>
+      <AtSubmissionCreationDeviceId>0056DA67572A65F6A7D817DD217DF6064BBBFD6A</AtSubmissionCreationDeviceId>
+      <AtSubmissionFilingDeviceId>0056DA67572A65F6A7D817DD217DF6064BBBFD6A</AtSubmissionFilingDeviceId>
+    </FilingSecurityInformation>
+    <TaxYr>2016</TaxYr>
+    <BuildTS>2018-03-14 21:41:22Z</BuildTS>
+  </ReturnHeader>
+  <ReturnData documentCnt="4">
+    <IRS990EZ documentId="RetDoc1" referenceDocumentId="RetDoc3">
+      <MethodOfAccountingCashInd>X</MethodOfAccountingCashInd>
+      <ScheduleBNotRequiredInd>X</ScheduleBNotRequiredInd>
+      <WebsiteAddressTxt>N/A</WebsiteAddressTxt>
+      <Organization501c3Ind referenceDocumentId="RetDoc4">X</Organization501c3Ind>
+      <TypeOfOrganizationCorpInd>X</TypeOfOrganizationCorpInd>
+      <GrossReceiptsAmt>66188</GrossReceiptsAmt>
+      <InfoInScheduleOPartIInd>X</InfoInScheduleOPartIInd>
+      <ContributionsGiftsGrantsEtcAmt>1204</ContributionsGiftsGrantsEtcAmt>
+      <ProgramServiceRevenueAmt>28836</ProgramServiceRevenueAmt>
+      <InvestmentIncomeAmt>1</InvestmentIncomeAmt>
+      <FundraisingGrossIncomeAmt referenceDocumentId="RetDoc2">36147</FundraisingGrossIncomeAmt>
+      <SpecialEventsDirectExpensesAmt>9062</SpecialEventsDirectExpensesAmt>
+      <SpecialEventsNetIncomeLossAmt>27085</SpecialEventsNetIncomeLossAmt>
+      <TotalRevenueAmt>57126</TotalRevenueAmt>
+      <GrantsAndSimilarAmountsPaidAmt>13415</GrantsAndSimilarAmountsPaidAmt>
+      <FeesAndOtherPymtToIndCntrctAmt>390</FeesAndOtherPymtToIndCntrctAmt>
+      <OtherExpensesTotalAmt>42125</OtherExpensesTotalAmt>
+      <TotalExpensesAmt>55930</TotalExpensesAmt>
+      <ExcessOrDeficitForYearAmt>1196</ExcessOrDeficitForYearAmt>
+      <NetAssetsOrFundBalancesBOYAmt>4430</NetAssetsOrFundBalancesBOYAmt>
+      <NetAssetsOrFundBalancesEOYAmt>5626</NetAssetsOrFundBalancesEOYAmt>
+      <CashSavingsAndInvestmentsGrp>
+        <BOYAmt>4430</BOYAmt>
+        <EOYAmt>5626</EOYAmt>
+      </CashSavingsAndInvestmentsGrp>
+      <Form990TotalAssetsGrp>
+        <BOYAmt>4430</BOYAmt>
+        <EOYAmt>5626</EOYAmt>
+      </Form990TotalAssetsGrp>
+      <NetAssetsOrFundBalancesGrp>
+        <BOYAmt>4430</BOYAmt>
+        <EOYAmt>5626</EOYAmt>
+      </NetAssetsOrFundBalancesGrp>
+      <PrimaryExemptPurposeTxt>SUPPORT HARTVILLE ELEMENTARY SCHOOL</PrimaryExemptPurposeTxt>
+      <ProgramSrvcAccomplishmentGrp>
+        <DescriptionProgramSrvcAccomTxt>PROMOTING PARENT PARTICIPATION IN HARTVILLE ELEMENTARY SCHOOL THROUGH THE PURCHASE OF CLASSROOM MATERIALS, FINANCIAL SUPPORT OF CLASSROOM ACTIVITIES, AND PROMOTING THE OVERALL EDUCATIONAL WELFARE OF THE STUDENTS.</DescriptionProgramSrvcAccomTxt>
+        <GrantsAndAllocationsAmt>11415</GrantsAndAllocationsAmt>
+        <ProgramServiceExpensesAmt>51746</ProgramServiceExpensesAmt>
+      </ProgramSrvcAccomplishmentGrp>
+      <ProgramSrvcAccomplishmentGrp>
+        <DescriptionProgramSrvcAccomTxt>SUPPORT THE ADMINISTRATION OF HARTVILLE ELEMENTARY SCHOOL THROUGH THE PURCHASE OF EQUIPMENT AND THE FUNDING OF IMPROVEMENTS TO THE SCHOOL.</DescriptionProgramSrvcAccomTxt>
+        <ProgramServiceExpensesAmt>1766</ProgramServiceExpensesAmt>
+      </ProgramSrvcAccomplishmentGrp>
+      <ProgramSrvcAccomplishmentGrp>
+        <DescriptionProgramSrvcAccomTxt>SUPPORT THE CONTINUING EDUCATION OF FORMER HARTVILLE ELEMENTARY STUDENTS BY AWARDING TWO ANNUAL COLLEGE SCHOLARSHIPS.</DescriptionProgramSrvcAccomTxt>
+        <GrantsAndAllocationsAmt>2000</GrantsAndAllocationsAmt>
+        <ProgramServiceExpensesAmt>2000</ProgramServiceExpensesAmt>
+      </ProgramSrvcAccomplishmentGrp>
+      <TotalProgramServiceExpensesAmt>55512</TotalProgramServiceExpensesAmt>
+      <OfficerDirectorTrusteeEmplGrp>
+        <PersonNm>MANDI STEPHENSON</PersonNm>
+        <TitleTxt>VICE PRESIDE</TitleTxt>
+        <AverageHrsPerWkDevotedToPosRt>2.00</AverageHrsPerWkDevotedToPosRt>
+        <CompensationAmt>0</CompensationAmt>
+      </OfficerDirectorTrusteeEmplGrp>
+      <OfficerDirectorTrusteeEmplGrp>
+        <PersonNm>JENNIFER MATSON</PersonNm>
+        <TitleTxt>PRESIDENT</TitleTxt>
+        <AverageHrsPerWkDevotedToPosRt>2.00</AverageHrsPerWkDevotedToPosRt>
+        <CompensationAmt>0</CompensationAmt>
+      </OfficerDirectorTrusteeEmplGrp>
+      <OfficerDirectorTrusteeEmplGrp>
+        <PersonNm>AMY KUNES</PersonNm>
+        <TitleTxt>TREASURER</TitleTxt>
+        <AverageHrsPerWkDevotedToPosRt>2.00</AverageHrsPerWkDevotedToPosRt>
+        <CompensationAmt>0</CompensationAmt>
+      </OfficerDirectorTrusteeEmplGrp>
+      <OfficerDirectorTrusteeEmplGrp>
+        <PersonNm>MEGAN MOORE</PersonNm>
+        <TitleTxt>CORRES SECRE</TitleTxt>
+        <AverageHrsPerWkDevotedToPosRt>2.00</AverageHrsPerWkDevotedToPosRt>
+        <CompensationAmt>0</CompensationAmt>
+      </OfficerDirectorTrusteeEmplGrp>
+      <OfficerDirectorTrusteeEmplGrp>
+        <PersonNm>JEANNIE GOBELBECKER</PersonNm>
+        <TitleTxt>RECORDING SE</TitleTxt>
+        <AverageHrsPerWkDevotedToPosRt>2.00</AverageHrsPerWkDevotedToPosRt>
+        <CompensationAmt>0</CompensationAmt>
+      </OfficerDirectorTrusteeEmplGrp>
+      <ActivitiesNotPreviouslyRptInd>false</ActivitiesNotPreviouslyRptInd>
+      <ChgMadeToOrgnzngDocNotRptInd>false</ChgMadeToOrgnzngDocNotRptInd>
+      <OrganizationHadUBIInd>false</OrganizationHadUBIInd>
+      <SubjectToProxyTaxInd>false</SubjectToProxyTaxInd>
+      <OrganizationDissolvedEtcInd>false</OrganizationDissolvedEtcInd>
+      <Form1120PolFiledInd>false</Form1120PolFiledInd>
+      <MadeLoansToFromOfficersInd>false</MadeLoansToFromOfficersInd>
+      <EngagedInExcessBenefitTransInd>false</EngagedInExcessBenefitTransInd>
+      <ProhibitedTaxShelterTransInd>false</ProhibitedTaxShelterTransInd>
+      <StatesWhereCopyOfReturnIsFldCd>OH</StatesWhereCopyOfReturnIsFldCd>
+      <BooksInCareOfDetail>
+        <PersonNm>KIM HALL</PersonNm>
+        <USAddress>
+          <AddressLine1Txt>245 BELLE STREET SW</AddressLine1Txt>
+          <CityNm>HARTVILLE</CityNm>
+          <StateAbbreviationCd>OH</StateAbbreviationCd>
+          <ZIPCd>44632</ZIPCd>
+        </USAddress>
+        <PhoneNum>3309499515</PhoneNum>
+      </BooksInCareOfDetail>
+      <ForeignFinancialAccountInd>false</ForeignFinancialAccountInd>
+      <ForeignOfficeInd>false</ForeignOfficeInd>
+      <DonorAdvisedFndsInd>false</DonorAdvisedFndsInd>
+      <OperateHospitalInd>false</OperateHospitalInd>
+      <TanningServicesProvidedInd>false</TanningServicesProvidedInd>
+      <RelatedOrganizationCtrlEntInd>false</RelatedOrganizationCtrlEntInd>
+      <TransactionWithControlEntInd>false</TransactionWithControlEntInd>
+      <PoliticalCampaignActyInd>false</PoliticalCampaignActyInd>
+      <LobbyingActivitiesInd>false</LobbyingActivitiesInd>
+      <SchoolOperatingInd>false</SchoolOperatingInd>
+      <TrnsfrExmptNonChrtblRltdOrgInd>false</TrnsfrExmptNonChrtblRltdOrgInd>
+      <PartVIOfCompOfHghstPdEmplTxt>NONE</PartVIOfCompOfHghstPdEmplTxt>
+      <PartVIHghstPdCntrctProfSrvcTxt>NONE</PartVIHghstPdCntrctProfSrvcTxt>
+      <FiledScheduleAInd>true</FiledScheduleAInd>
+    </IRS990EZ>
+    <IRS990ScheduleA documentId="RetDoc4">
+      <PubliclySupportedOrg509a2Ind>X</PubliclySupportedOrg509a2Ind>
+      <GiftsGrantsContrisRcvd509Grp>
+        <CurrentTaxYearMinus4YearsAmt>1324</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>23006</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>2001</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>281</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>1204</CurrentTaxYearAmt>
+        <TotalAmt>27816</TotalAmt>
+      </GiftsGrantsContrisRcvd509Grp>
+      <GrossReceiptsAdmissionsGrp>
+        <CurrentTaxYearMinus3YearsAmt>28821</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>36569</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>38835</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>47792</CurrentTaxYearAmt>
+        <TotalAmt>152017</TotalAmt>
+      </GrossReceiptsAdmissionsGrp>
+      <GrossReceiptsNonUnrltBusGrp>
+        <CurrentTaxYearMinus4YearsAmt>44226</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>52396</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>29206</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>22563</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>17192</CurrentTaxYearAmt>
+        <TotalAmt>165583</TotalAmt>
+      </GrossReceiptsNonUnrltBusGrp>
+      <Total509Grp>
+        <CurrentTaxYearMinus4YearsAmt>45550</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>104223</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>67776</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>61679</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>66188</CurrentTaxYearAmt>
+        <TotalAmt>345416</TotalAmt>
+      </Total509Grp>
+      <PublicSupportTotal509Amt>345416</PublicSupportTotal509Amt>
+      <GrossInvestmentIncome509Grp>
+        <CurrentTaxYearMinus3YearsAmt>5</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>1</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>1</CurrentTaxYearMinus1YearAmt>
+        <TotalAmt>7</TotalAmt>
+      </GrossInvestmentIncome509Grp>
+      <InvestmentIncomeAndUBTIGrp>
+        <CurrentTaxYearMinus3YearsAmt>5</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>1</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>1</CurrentTaxYearMinus1YearAmt>
+        <TotalAmt>7</TotalAmt>
+      </InvestmentIncomeAndUBTIGrp>
+      <TotalSupportCalendarYearGrp>
+        <CurrentTaxYearMinus4YearsAmt>45550</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>104228</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>67777</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>61680</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>66188</CurrentTaxYearAmt>
+        <TotalAmt>345423</TotalAmt>
+      </TotalSupportCalendarYearGrp>
+      <PublicSupportCY509Pct>1.00000</PublicSupportCY509Pct>
+      <PublicSupportPY509Pct>1.00000</PublicSupportPY509Pct>
+      <InvestmentIncomeCYPct>0.00000</InvestmentIncomeCYPct>
+      <InvestmentIncomePYPct>0.00000</InvestmentIncomePYPct>
+      <ThirtyThrPctSuprtTestsCY509Ind>X</ThirtyThrPctSuprtTestsCY509Ind>
+    </IRS990ScheduleA>
+    <IRS990ScheduleG documentId="RetDoc2">
+      <FundraisingEventInformationGrp>
+        <Event1Nm>ZAP SNACK FUNDR</Event1Nm>
+        <GrossReceiptsEvent1Amt>18955</GrossReceiptsEvent1Amt>
+        <GrossRevenueEvent1Amt>18955</GrossRevenueEvent1Amt>
+        <Event2Nm>SANTA SHOP/SANT</Event2Nm>
+        <GrossReceiptsEvent2Amt>8716</GrossReceiptsEvent2Amt>
+        <GrossRevenueEvent2Amt>8716</GrossRevenueEvent2Amt>
+        <OtherDirectExpensesEvent2Amt>3493</OtherDirectExpensesEvent2Amt>
+        <OtherEventsTotalCnt>1</OtherEventsTotalCnt>
+        <GrossReceiptsOtherEventsAmt>6748</GrossReceiptsOtherEventsAmt>
+        <GrossRevenueOtherEventsAmt>6748</GrossRevenueOtherEventsAmt>
+        <OthDirectExpnssOtherEventsAmt>5569</OthDirectExpnssOtherEventsAmt>
+        <GrossReceiptsTotalAmt>34419</GrossReceiptsTotalAmt>
+        <GrossRevenueTotalEventsAmt>34419</GrossRevenueTotalEventsAmt>
+        <OthDirectExpnssTotalEventsAmt>9062</OthDirectExpnssTotalEventsAmt>
+        <DirectExpenseSummaryEventsAmt>9062</DirectExpenseSummaryEventsAmt>
+        <NetIncomeSummaryAmt>25357</NetIncomeSummaryAmt>
+      </FundraisingEventInformationGrp>
+    </IRS990ScheduleG>
+    <IRS990ScheduleO documentId="RetDoc3">
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990-EZ, PART I, LINE 10</FormAndLineReferenceDesc>
+        <ExplanationTxt>HARTVILLE ELEMENTARY SCHOOL 245 BELLE ST SW HARTVILLE, OH 44632 10,915 0 0</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990-EZ, PART I, LINE 16</FormAndLineReferenceDesc>
+        <ExplanationTxt>BOOK FAIR COST OF GOODS SOLD 5,939 READ MOVE GROOVE COST OF GOODS SOLD 1,428 EXPENSES OFFICE SUPPLIES 18 INSURANCE 135 ROOM PARTIES 917 STUDENT REWARDS 572 TEACHER SUPPLY REIMBURSEM 2,962 CARNIVAL 2,941 FLOWERS &amp; APPRECIATION GI 1,243 BANK &amp; MERCHANT FEES-MG 10 PRINCIPAL FUND 18,133 STUDENT EXTRACURRICULAR 6,061 SCHOOL EQUIPMENT/FURNISH 1,766 TOTAL 42,125</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleO>
+  </ReturnData>
+</Return>

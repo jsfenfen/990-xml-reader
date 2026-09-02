@@ -1,0 +1,1142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Return xmlns="http://www.irs.gov/efile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.irs.gov/efile" returnVersion="2023v5.1">
+  <ReturnHeader binaryAttachmentCnt="0">
+    <ReturnTs>2024-12-23T09:44:23-06:00</ReturnTs>
+    <TaxPeriodEndDt>2024-06-30</TaxPeriodEndDt>
+    <PreparerFirmGrp>
+      <PreparerFirmEIN>381357951</PreparerFirmEIN>
+      <PreparerFirmName>
+        <BusinessNameLine1Txt>PLANTE &amp; MORAN PLLC</BusinessNameLine1Txt>
+      </PreparerFirmName>
+      <PreparerUSAddress>
+        <AddressLine1Txt>8181 E TUFTS AVE SUITE 600</AddressLine1Txt>
+        <CityNm>DENVER</CityNm>
+        <StateAbbreviationCd>CO</StateAbbreviationCd>
+        <ZIPCd>80237</ZIPCd>
+      </PreparerUSAddress>
+    </PreparerFirmGrp>
+    <ReturnTypeCd>990</ReturnTypeCd>
+    <TaxPeriodBeginDt>2023-07-01</TaxPeriodBeginDt>
+    <Filer>
+      <EIN>741894581</EIN>
+      <BusinessName>
+        <BusinessNameLine1Txt>UCHEALTH NORTHERN COLORADO FOUNDATION</BusinessNameLine1Txt>
+      </BusinessName>
+      <BusinessNameControlTxt>UCHE</BusinessNameControlTxt>
+      <PhoneNum>9702377400</PhoneNum>
+      <USAddress>
+        <AddressLine1Txt>2315 E HARMONY RD 200</AddressLine1Txt>
+        <CityNm>FORT COLLINS</CityNm>
+        <StateAbbreviationCd>CO</StateAbbreviationCd>
+        <ZIPCd>80528</ZIPCd>
+      </USAddress>
+    </Filer>
+    <BusinessOfficerGrp>
+      <PersonNm>DAVID THOMPSON</PersonNm>
+      <PersonTitleTxt>CFO</PersonTitleTxt>
+      <PhoneNum>9702377400</PhoneNum>
+      <SignatureDt>2024-12-18</SignatureDt>
+      <DiscussWithPaidPreparerInd>1</DiscussWithPaidPreparerInd>
+    </BusinessOfficerGrp>
+    <IRSResponsiblePrtyInfoCurrInd>0</IRSResponsiblePrtyInfoCurrInd>
+    <PreparerPersonGrp>
+      <PreparerPersonNm>RYAN C HARRIS</PreparerPersonNm>
+      <PTIN>P00614618</PTIN>
+      <PhoneNum>3037409400</PhoneNum>
+      <PreparationDt>2024-12-18</PreparationDt>
+    </PreparerPersonGrp>
+    <TaxYr>2023</TaxYr>
+    <BuildTS>2024-10-15 13:58:12Z</BuildTS>
+  </ReturnHeader>
+  <ReturnData documentCnt="10">
+    <IRS990 documentId="RetDoc1038000001" referenceDocumentId="RetDoc1044400001">
+      <PrincipalOfficerNm>DAVID THOMPSON</PrincipalOfficerNm>
+      <USAddress>
+        <AddressLine1Txt>2315 E HARMONY RD</AddressLine1Txt>
+        <CityNm>FORT COLLINS</CityNm>
+        <StateAbbreviationCd>CO</StateAbbreviationCd>
+        <ZIPCd>80528</ZIPCd>
+      </USAddress>
+      <GrossReceiptsAmt>6577136</GrossReceiptsAmt>
+      <GroupReturnForAffiliatesInd>0</GroupReturnForAffiliatesInd>
+      <Organization501c3Ind>X</Organization501c3Ind>
+      <WebsiteAddressTxt>WWW.UCHEALTH.ORG</WebsiteAddressTxt>
+      <TypeOfOrganizationCorpInd>X</TypeOfOrganizationCorpInd>
+      <FormationYr>1976</FormationYr>
+      <LegalDomicileStateCd>CO</LegalDomicileStateCd>
+      <ActivityOrMissionDesc>SUPPORT &amp; PROMOTE ACTIVITIES THAT BEST SERVE THE HEALTH INTERESTS OF THE HOSPITALS.</ActivityOrMissionDesc>
+      <VotingMembersGoverningBodyCnt>12</VotingMembersGoverningBodyCnt>
+      <VotingMembersIndependentCnt>11</VotingMembersIndependentCnt>
+      <TotalEmployeeCnt>12</TotalEmployeeCnt>
+      <TotalVolunteersCnt>10</TotalVolunteersCnt>
+      <TotalGrossUBIAmt>0</TotalGrossUBIAmt>
+      <NetUnrelatedBusTxblIncmAmt>0</NetUnrelatedBusTxblIncmAmt>
+      <PYContributionsGrantsAmt>5562561</PYContributionsGrantsAmt>
+      <CYContributionsGrantsAmt>4840555</CYContributionsGrantsAmt>
+      <PYProgramServiceRevenueAmt>0</PYProgramServiceRevenueAmt>
+      <CYProgramServiceRevenueAmt>0</CYProgramServiceRevenueAmt>
+      <PYInvestmentIncomeAmt>746596</PYInvestmentIncomeAmt>
+      <CYInvestmentIncomeAmt>1670883</CYInvestmentIncomeAmt>
+      <PYOtherRevenueAmt>-109490</PYOtherRevenueAmt>
+      <CYOtherRevenueAmt>32317</CYOtherRevenueAmt>
+      <PYTotalRevenueAmt>6199667</PYTotalRevenueAmt>
+      <CYTotalRevenueAmt>6543755</CYTotalRevenueAmt>
+      <PYGrantsAndSimilarPaidAmt>2618778</PYGrantsAndSimilarPaidAmt>
+      <CYGrantsAndSimilarPaidAmt>8355996</CYGrantsAndSimilarPaidAmt>
+      <PYBenefitsPaidToMembersAmt>0</PYBenefitsPaidToMembersAmt>
+      <CYBenefitsPaidToMembersAmt>0</CYBenefitsPaidToMembersAmt>
+      <PYSalariesCompEmpBnftPaidAmt>1012975</PYSalariesCompEmpBnftPaidAmt>
+      <CYSalariesCompEmpBnftPaidAmt>759988</CYSalariesCompEmpBnftPaidAmt>
+      <PYTotalProfFndrsngExpnsAmt>60000</PYTotalProfFndrsngExpnsAmt>
+      <CYTotalProfFndrsngExpnsAmt>40624</CYTotalProfFndrsngExpnsAmt>
+      <CYTotalFundraisingExpenseAmt>535337</CYTotalFundraisingExpenseAmt>
+      <PYOtherExpensesAmt>289859</PYOtherExpensesAmt>
+      <CYOtherExpensesAmt>174636</CYOtherExpensesAmt>
+      <PYTotalExpensesAmt>3981612</PYTotalExpensesAmt>
+      <CYTotalExpensesAmt>9331244</CYTotalExpensesAmt>
+      <PYRevenuesLessExpensesAmt>2218055</PYRevenuesLessExpensesAmt>
+      <CYRevenuesLessExpensesAmt>-2787489</CYRevenuesLessExpensesAmt>
+      <TotalAssetsBOYAmt>28323578</TotalAssetsBOYAmt>
+      <TotalAssetsEOYAmt>26533347</TotalAssetsEOYAmt>
+      <TotalLiabilitiesBOYAmt>1119216</TotalLiabilitiesBOYAmt>
+      <TotalLiabilitiesEOYAmt>895940</TotalLiabilitiesEOYAmt>
+      <NetAssetsOrFundBalancesBOYAmt>27204362</NetAssetsOrFundBalancesBOYAmt>
+      <NetAssetsOrFundBalancesEOYAmt>25637407</NetAssetsOrFundBalancesEOYAmt>
+      <InfoInScheduleOPartIIIInd>X</InfoInScheduleOPartIIIInd>
+      <MissionDesc>SEE SCHEDULE O THE MISSION OF UCHEALTH NORTHERN COLORADO FOUNDATION IS TO SUPPORT ITS AFFILIATED HOSPITALS AND CLINICS IN THE DELIVERY AND ADVANCEMENT OF WORLD-CLASS HEALTH CARE IN NORTHERN COLORADO. THE FOUNDATION REALIZES ITS MISSION THROUGH THE DEVELOPMENT AND STEWARDSHIP OF PHILANTHROPIC RESOURCES IN SUPPORT OF THE HOSPITALS' MISSION AND STRATEGIC GOALS.</MissionDesc>
+      <SignificantNewProgramSrvcInd>0</SignificantNewProgramSrvcInd>
+      <SignificantChangeInd>0</SignificantChangeInd>
+      <ExpenseAmt>8065399</ExpenseAmt>
+      <GrantAmt>8030602</GrantAmt>
+      <Desc>RESTRICTED FUND (USE OF FUNDS IS RESTRICTED BY DONOR/GRANTOR PURPOSE) - THE BREADTH OF SUPPORT INCLUDES FUNDING FOR EDUCATION MATERIALS, MEDICAL EQUIPMENT AND SERVICES, ACCESS TO HEALTHCARE, EMPLOYEE SCHOLARSHIPS, CONTINUING EDUCATION, PATIENT EDUCATION PROGRAMS, EQUIPMENT, BASIC NEEDS FOR PERSONS WITH CANCER, PRESCRIPTION ASSISTANCE, RESEARCH, NEWBORN HOME VISITATION, CHILDREN'S PROSTHETICS AND ORTHOTICS, BEHAVIORAL HEALTH PROFESSIONAL CO-RESPONDER IN PARTNERSHIP WITH LAW ENFORCEMENT, POUDRE VALLEY HOSPITAL BUILDING RENOVATION CAPITAL CAMPAIGN, MEDICAL CENTER OF THE ROCKIES CAPITAL EXPANSION, EQUIPMENT TECHNOLOGY, SUPPLIES, PATIENT ASSISTANCE, SHORT-TERM FINANCIAL ASSISTANCE FOR CRITICAL BASIC NEEDS TO ELIGIBLE EMPLOYEES, AND MANY OTHERS.</Desc>
+      <ProgSrvcAccomActy2Grp>
+        <ExpenseAmt>397623</ExpenseAmt>
+        <GrantAmt>325394</GrantAmt>
+        <Desc>UNRESTRICTED FUND - (USE OF FUNDS NOT RESTRICTED BY THE DONOR, USED FOR THE GREATEST NEED OF THE HOSPITALS) - PROVIDES FUNDING FOR HOSPITAL PROGRAM SERVICES INCLUDING BEHAVIORAL HEALTH PROFESSIONAL CO-RESPONDER IN PARTNERSHIP WITH LAW ENFORCEMENT AND CAPITAL EQUIPMENT.</Desc>
+      </ProgSrvcAccomActy2Grp>
+      <TotalProgramServiceExpensesAmt>8463022</TotalProgramServiceExpensesAmt>
+      <DescribedInSection501c3Ind referenceDocumentId="RetDoc1039100001">1</DescribedInSection501c3Ind>
+      <ScheduleBRequiredInd referenceDocumentId="RetDoc1234500001">1</ScheduleBRequiredInd>
+      <PoliticalCampaignActyInd>0</PoliticalCampaignActyInd>
+      <LobbyingActivitiesInd>0</LobbyingActivitiesInd>
+      <SubjectToProxyTaxInd>0</SubjectToProxyTaxInd>
+      <DonorAdvisedFundInd referenceDocumentId="RetDoc1040000001">0</DonorAdvisedFundInd>
+      <ConservationEasementsInd referenceDocumentId="RetDoc1040000001">0</ConservationEasementsInd>
+      <CollectionsOfArtInd referenceDocumentId="RetDoc1040000001">0</CollectionsOfArtInd>
+      <CreditCounselingInd referenceDocumentId="RetDoc1040000001">0</CreditCounselingInd>
+      <DonorRstrOrQuasiEndowmentsInd>1</DonorRstrOrQuasiEndowmentsInd>
+      <ReportLandBuildingEquipmentInd referenceDocumentId="RetDoc1040000001">0</ReportLandBuildingEquipmentInd>
+      <ReportInvestmentsOtherSecInd referenceDocumentId="RetDoc1040000001">0</ReportInvestmentsOtherSecInd>
+      <ReportProgramRelatedInvstInd referenceDocumentId="RetDoc1040000001">0</ReportProgramRelatedInvstInd>
+      <ReportOtherAssetsInd referenceDocumentId="RetDoc1040000001">0</ReportOtherAssetsInd>
+      <ReportOtherLiabilitiesInd referenceDocumentId="RetDoc1040000001">1</ReportOtherLiabilitiesInd>
+      <IncludeFIN48FootnoteInd referenceDocumentId="RetDoc1040000001">0</IncludeFIN48FootnoteInd>
+      <IndependentAuditFinclStmtInd referenceDocumentId="RetDoc1040000001">0</IndependentAuditFinclStmtInd>
+      <ConsolidatedAuditFinclStmtInd referenceDocumentId="RetDoc1040000001">1</ConsolidatedAuditFinclStmtInd>
+      <SchoolOperatingInd>0</SchoolOperatingInd>
+      <ForeignOfficeInd>0</ForeignOfficeInd>
+      <ForeignActivitiesInd>0</ForeignActivitiesInd>
+      <MoreThan5000KToOrgInd>0</MoreThan5000KToOrgInd>
+      <MoreThan5000KToIndividualsInd>0</MoreThan5000KToIndividualsInd>
+      <ProfessionalFundraisingInd referenceDocumentId="RetDoc1041200001">1</ProfessionalFundraisingInd>
+      <FundraisingActivitiesInd referenceDocumentId="RetDoc1041200001">1</FundraisingActivitiesInd>
+      <GamingActivitiesInd referenceDocumentId="RetDoc1041200001">0</GamingActivitiesInd>
+      <OperateHospitalInd>0</OperateHospitalInd>
+      <GrantsToOrganizationsInd referenceDocumentId="RetDoc1041900001">1</GrantsToOrganizationsInd>
+      <GrantsToIndividualsInd referenceDocumentId="RetDoc1041900001">1</GrantsToIndividualsInd>
+      <ScheduleJRequiredInd referenceDocumentId="RetDoc1042400001">1</ScheduleJRequiredInd>
+      <TaxExemptBondsInd>0</TaxExemptBondsInd>
+      <EngagedInExcessBenefitTransInd>0</EngagedInExcessBenefitTransInd>
+      <PYExcessBenefitTransInd>0</PYExcessBenefitTransInd>
+      <LoanOutstandingInd>0</LoanOutstandingInd>
+      <GrantToRelatedPersonInd>0</GrantToRelatedPersonInd>
+      <BusinessRlnWithOrgMemInd>0</BusinessRlnWithOrgMemInd>
+      <BusinessRlnWithFamMemInd>0</BusinessRlnWithFamMemInd>
+      <BusinessRlnWith35CtrlEntInd>0</BusinessRlnWith35CtrlEntInd>
+      <DeductibleNonCashContriInd referenceDocumentId="RetDoc1042900001">1</DeductibleNonCashContriInd>
+      <DeductibleArtContributionInd referenceDocumentId="RetDoc1042900001">0</DeductibleArtContributionInd>
+      <TerminateOperationsInd>0</TerminateOperationsInd>
+      <PartialLiquidationInd>0</PartialLiquidationInd>
+      <DisregardedEntityInd referenceDocumentId="RetDoc1043400001">0</DisregardedEntityInd>
+      <RelatedEntityInd referenceDocumentId="RetDoc1043400001">1</RelatedEntityInd>
+      <RelatedOrganizationCtrlEntInd>0</RelatedOrganizationCtrlEntInd>
+      <TrnsfrExmptNonChrtblRltdOrgInd referenceDocumentId="RetDoc1043400001">0</TrnsfrExmptNonChrtblRltdOrgInd>
+      <ActivitiesConductedPrtshpInd referenceDocumentId="RetDoc1043400001">0</ActivitiesConductedPrtshpInd>
+      <ScheduleORequiredInd>1</ScheduleORequiredInd>
+      <IRPDocumentCnt>233</IRPDocumentCnt>
+      <IRPDocumentW2GCnt>0</IRPDocumentW2GCnt>
+      <BackupWthldComplianceInd>1</BackupWthldComplianceInd>
+      <EmployeeCnt>12</EmployeeCnt>
+      <EmploymentTaxReturnsFiledInd>1</EmploymentTaxReturnsFiledInd>
+      <UnrelatedBusIncmOverLimitInd>0</UnrelatedBusIncmOverLimitInd>
+      <ForeignFinancialAccountInd>0</ForeignFinancialAccountInd>
+      <ProhibitedTaxShelterTransInd>0</ProhibitedTaxShelterTransInd>
+      <TaxablePartyNotificationInd>0</TaxablePartyNotificationInd>
+      <NondeductibleContributionsInd>0</NondeductibleContributionsInd>
+      <QuidProQuoContributionsInd>1</QuidProQuoContributionsInd>
+      <QuidProQuoContriDisclInd>1</QuidProQuoContriDisclInd>
+      <Form8282PropertyDisposedOfInd>0</Form8282PropertyDisposedOfInd>
+      <RcvFndsToPayPrsnlBnftCntrctInd>0</RcvFndsToPayPrsnlBnftCntrctInd>
+      <PayPremiumsPrsnlBnftCntrctInd>0</PayPremiumsPrsnlBnftCntrctInd>
+      <IndoorTanningServicesInd>0</IndoorTanningServicesInd>
+      <SubjToTaxRmnrtnExPrchtPymtInd>0</SubjToTaxRmnrtnExPrchtPymtInd>
+      <SubjectToExcsTaxNetInvstIncInd>0</SubjectToExcsTaxNetInvstIncInd>
+      <InfoInScheduleOPartVIInd>X</InfoInScheduleOPartVIInd>
+      <GoverningBodyVotingMembersCnt>12</GoverningBodyVotingMembersCnt>
+      <IndependentVotingMemberCnt>11</IndependentVotingMemberCnt>
+      <FamilyOrBusinessRlnInd>0</FamilyOrBusinessRlnInd>
+      <DelegationOfMgmtDutiesInd>0</DelegationOfMgmtDutiesInd>
+      <ChangeToOrgDocumentsInd>0</ChangeToOrgDocumentsInd>
+      <MaterialDiversionOrMisuseInd>0</MaterialDiversionOrMisuseInd>
+      <MembersOrStockholdersInd>1</MembersOrStockholdersInd>
+      <ElectionOfBoardMembersInd>1</ElectionOfBoardMembersInd>
+      <DecisionsSubjectToApprovaInd>1</DecisionsSubjectToApprovaInd>
+      <MinutesOfGoverningBodyInd>1</MinutesOfGoverningBodyInd>
+      <MinutesOfCommitteesInd>1</MinutesOfCommitteesInd>
+      <OfficerMailingAddressInd>0</OfficerMailingAddressInd>
+      <LocalChaptersInd>0</LocalChaptersInd>
+      <Form990ProvidedToGvrnBodyInd>1</Form990ProvidedToGvrnBodyInd>
+      <ConflictOfInterestPolicyInd>1</ConflictOfInterestPolicyInd>
+      <AnnualDisclosureCoveredPrsnInd>1</AnnualDisclosureCoveredPrsnInd>
+      <RegularMonitoringEnfrcInd>1</RegularMonitoringEnfrcInd>
+      <WhistleblowerPolicyInd>1</WhistleblowerPolicyInd>
+      <DocumentRetentionPolicyInd>1</DocumentRetentionPolicyInd>
+      <CompensationProcessCEOInd>0</CompensationProcessCEOInd>
+      <CompensationProcessOtherInd>0</CompensationProcessOtherInd>
+      <InvestmentInJointVentureInd>0</InvestmentInJointVentureInd>
+      <UponRequestInd>X</UponRequestInd>
+      <BooksInCareOfDetail>
+        <PersonNm>DAVID THOMPSON</PersonNm>
+        <PhoneNum>9702377400</PhoneNum>
+        <USAddress>
+          <AddressLine1Txt>2315 E HARMONY RD SUITE 200</AddressLine1Txt>
+          <CityNm>FORT COLLINS</CityNm>
+          <StateAbbreviationCd>CO</StateAbbreviationCd>
+          <ZIPCd>80528</ZIPCd>
+        </USAddress>
+      </BooksInCareOfDetail>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>KEVIN UNGER</PersonNm>
+        <TitleTxt>PVHC CEO</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>33.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>714494</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>118999</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>CHRIS OSBORN</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>2.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>2424</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>LISA CLAY</PersonNm>
+        <TitleTxt>BOARD CHAIR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>2.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>2422</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>MIKE DELLENBACH</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>2.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>1986</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>CHRISTINE CHIN</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>2.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>1404</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>DENNIS HOUSKA</PersonNm>
+        <TitleTxt>PAST BOARD CHAIR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>2.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>1271</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>DAN STROH</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>2.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>235</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>JIM PARKE</PersonNm>
+        <TitleTxt>BOARD VICE CHAIR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>2.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>121</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>DOUG ERION</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>2.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>119</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>FARAZ NAQVI</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>2.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>JOHN MCKAY</PersonNm>
+        <TitleTxt>PVH BOARD ONLY/HEALTH DISTRICT</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>2.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>BRAD OLDEMEYER</PersonNm>
+        <TitleTxt>DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>2.00</AverageHoursPerWeekRltdOrgRt>
+        <IndividualTrusteeOrDirectorInd>X</IndividualTrusteeOrDirectorInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>DAVID THOMPSON</PersonNm>
+        <TitleTxt>BOARD TREASURER &amp; CFO</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>29.00</AverageHoursPerWeekRltdOrgRt>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>437812</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>57204</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>DAVID CRUM TERM END 1023</PersonNm>
+        <TitleTxt>FORMER NCF SENIOR DIRECTOR</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>194528</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>36625</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>MICHELLE ALBRIGHT</PersonNm>
+        <TitleTxt>BOARD SECRETARY (TERM END 7/24)</TitleTxt>
+        <AverageHoursPerWeekRt>1.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>40.00</AverageHoursPerWeekRltdOrgRt>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>59477</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>12163</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>AMANDA GIACALONE</PersonNm>
+        <TitleTxt>NCF SENIOR DIRECTOR (TERM BEGIN 2/24)</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <OfficerInd>X</OfficerInd>
+        <ReportableCompFromOrgAmt>0</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>0</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <Form990PartVIISectionAGrp>
+        <PersonNm>ANNETTE GEISELMAN</PersonNm>
+        <TitleTxt>DEVELOPMENT MANAGER</TitleTxt>
+        <AverageHoursPerWeekRt>40.00</AverageHoursPerWeekRt>
+        <AverageHoursPerWeekRltdOrgRt>0.00</AverageHoursPerWeekRltdOrgRt>
+        <HighestCompensatedEmployeeInd>X</HighestCompensatedEmployeeInd>
+        <ReportableCompFromOrgAmt>115875</ReportableCompFromOrgAmt>
+        <ReportableCompFromRltdOrgAmt>0</ReportableCompFromRltdOrgAmt>
+        <OtherCompensationAmt>28754</OtherCompensationAmt>
+      </Form990PartVIISectionAGrp>
+      <TotalReportableCompFromOrgAmt>310403</TotalReportableCompFromOrgAmt>
+      <TotReportableCompRltdOrgAmt>1221765</TotReportableCompRltdOrgAmt>
+      <TotalOtherCompensationAmt>253745</TotalOtherCompensationAmt>
+      <IndivRcvdGreaterThan100KCnt>2</IndivRcvdGreaterThan100KCnt>
+      <FormerOfcrEmployeesListedInd>0</FormerOfcrEmployeesListedInd>
+      <TotalCompGreaterThan150KInd>1</TotalCompGreaterThan150KInd>
+      <CompensationFromOtherSrcsInd>0</CompensationFromOtherSrcsInd>
+      <CntrctRcvdGreaterThan100KCnt>0</CntrctRcvdGreaterThan100KCnt>
+      <FundraisingAmt>24840</FundraisingAmt>
+      <RelatedOrganizationsAmt>1235471</RelatedOrganizationsAmt>
+      <AllOtherContributionsAmt>3580244</AllOtherContributionsAmt>
+      <NoncashContributionsAmt>101539</NoncashContributionsAmt>
+      <TotalContributionsAmt>4840555</TotalContributionsAmt>
+      <InvestmentIncomeGrp>
+        <TotalRevenueColumnAmt>786264</TotalRevenueColumnAmt>
+        <ExclusionAmt>786264</ExclusionAmt>
+      </InvestmentIncomeGrp>
+      <GrossRentsGrp>
+        <RealAmt>50118</RealAmt>
+      </GrossRentsGrp>
+      <LessRentalExpensesGrp>
+        <RealAmt>22838</RealAmt>
+      </LessRentalExpensesGrp>
+      <RentalIncomeOrLossGrp>
+        <RealAmt>27280</RealAmt>
+      </RentalIncomeOrLossGrp>
+      <NetRentalIncomeOrLossGrp>
+        <TotalRevenueColumnAmt>27280</TotalRevenueColumnAmt>
+        <ExclusionAmt>27280</ExclusionAmt>
+      </NetRentalIncomeOrLossGrp>
+      <GrossAmountSalesAssetsGrp>
+        <SecuritiesAmt>884619</SecuritiesAmt>
+      </GrossAmountSalesAssetsGrp>
+      <LessCostOthBasisSalesExpnssGrp>
+        <SecuritiesAmt>0</SecuritiesAmt>
+      </LessCostOthBasisSalesExpnssGrp>
+      <GainOrLossGrp>
+        <SecuritiesAmt>884619</SecuritiesAmt>
+      </GainOrLossGrp>
+      <NetGainOrLossInvestmentsGrp>
+        <TotalRevenueColumnAmt>884619</TotalRevenueColumnAmt>
+        <ExclusionAmt>884619</ExclusionAmt>
+      </NetGainOrLossInvestmentsGrp>
+      <FundraisingGrossIncomeAmt>15580</FundraisingGrossIncomeAmt>
+      <ContriRptFundraisingEventAmt>24840</ContriRptFundraisingEventAmt>
+      <FundraisingDirectExpensesAmt>10543</FundraisingDirectExpensesAmt>
+      <NetIncmFromFundraisingEvtGrp>
+        <TotalRevenueColumnAmt>5037</TotalRevenueColumnAmt>
+        <ExclusionAmt>5037</ExclusionAmt>
+      </NetIncmFromFundraisingEvtGrp>
+      <TotalRevenueGrp>
+        <TotalRevenueColumnAmt>6543755</TotalRevenueColumnAmt>
+        <RelatedOrExemptFuncIncomeAmt>0</RelatedOrExemptFuncIncomeAmt>
+        <UnrelatedBusinessRevenueAmt>0</UnrelatedBusinessRevenueAmt>
+        <ExclusionAmt>1703200</ExclusionAmt>
+      </TotalRevenueGrp>
+      <GrantsToDomesticOrgsGrp>
+        <TotalAmt>5820758</TotalAmt>
+        <ProgramServicesAmt>5820758</ProgramServicesAmt>
+      </GrantsToDomesticOrgsGrp>
+      <GrantsToDomesticIndividualsGrp>
+        <TotalAmt>2535238</TotalAmt>
+        <ProgramServicesAmt>2535238</ProgramServicesAmt>
+      </GrantsToDomesticIndividualsGrp>
+      <CompCurrentOfcrDirectorsGrp>
+        <TotalAmt>231478</TotalAmt>
+        <ManagementAndGeneralAmt>115739</ManagementAndGeneralAmt>
+        <FundraisingAmt>115739</FundraisingAmt>
+      </CompCurrentOfcrDirectorsGrp>
+      <OtherSalariesAndWagesGrp>
+        <TotalAmt>420791</TotalAmt>
+        <ProgramServicesAmt>57543</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>110630</ManagementAndGeneralAmt>
+        <FundraisingAmt>252618</FundraisingAmt>
+      </OtherSalariesAndWagesGrp>
+      <PensionPlanContributionsGrp>
+        <TotalAmt>41830</TotalAmt>
+        <ProgramServicesAmt>5822</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>10450</ManagementAndGeneralAmt>
+        <FundraisingAmt>25558</FundraisingAmt>
+      </PensionPlanContributionsGrp>
+      <OtherEmployeeBenefitsGrp>
+        <TotalAmt>54985</TotalAmt>
+        <ProgramServicesAmt>7346</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>15390</ManagementAndGeneralAmt>
+        <FundraisingAmt>32249</FundraisingAmt>
+      </OtherEmployeeBenefitsGrp>
+      <PayrollTaxesGrp>
+        <TotalAmt>10904</TotalAmt>
+        <ProgramServicesAmt>1518</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>2724</ManagementAndGeneralAmt>
+        <FundraisingAmt>6662</FundraisingAmt>
+      </PayrollTaxesGrp>
+      <FeesForServicesAccountingGrp>
+        <TotalAmt>5700</TotalAmt>
+        <ManagementAndGeneralAmt>5700</ManagementAndGeneralAmt>
+      </FeesForServicesAccountingGrp>
+      <FeesForServicesProfFundraising>
+        <TotalAmt>40624</TotalAmt>
+        <FundraisingAmt>40624</FundraisingAmt>
+      </FeesForServicesProfFundraising>
+      <FeesForSrvcInvstMgmntFeesGrp>
+        <TotalAmt>41380</TotalAmt>
+        <ManagementAndGeneralAmt>41380</ManagementAndGeneralAmt>
+      </FeesForSrvcInvstMgmntFeesGrp>
+      <FeesForServicesOtherGrp>
+        <TotalAmt>2114</TotalAmt>
+        <ManagementAndGeneralAmt>2114</ManagementAndGeneralAmt>
+      </FeesForServicesOtherGrp>
+      <AdvertisingGrp>
+        <TotalAmt>61887</TotalAmt>
+        <FundraisingAmt>61887</FundraisingAmt>
+      </AdvertisingGrp>
+      <OfficeExpensesGrp>
+        <TotalAmt>12687</TotalAmt>
+        <ManagementAndGeneralAmt>12687</ManagementAndGeneralAmt>
+      </OfficeExpensesGrp>
+      <TravelGrp>
+        <TotalAmt>7394</TotalAmt>
+        <ManagementAndGeneralAmt>7394</ManagementAndGeneralAmt>
+      </TravelGrp>
+      <ConferencesMeetingsGrp>
+        <TotalAmt>640</TotalAmt>
+        <ManagementAndGeneralAmt>640</ManagementAndGeneralAmt>
+      </ConferencesMeetingsGrp>
+      <OtherExpensesGrp>
+        <Desc>HOSPITAL INITIATIVES</Desc>
+        <TotalAmt>34797</TotalAmt>
+        <ProgramServicesAmt>34797</ProgramServicesAmt>
+      </OtherExpensesGrp>
+      <OtherExpensesGrp>
+        <Desc>CORPORATE ALLOCATION</Desc>
+        <TotalAmt>371</TotalAmt>
+        <ManagementAndGeneralAmt>371</ManagementAndGeneralAmt>
+      </OtherExpensesGrp>
+      <AllOtherExpensesGrp>
+        <TotalAmt>7666</TotalAmt>
+        <ManagementAndGeneralAmt>7666</ManagementAndGeneralAmt>
+      </AllOtherExpensesGrp>
+      <TotalFunctionalExpensesGrp>
+        <TotalAmt>9331244</TotalAmt>
+        <ProgramServicesAmt>8463022</ProgramServicesAmt>
+        <ManagementAndGeneralAmt>332885</ManagementAndGeneralAmt>
+        <FundraisingAmt>535337</FundraisingAmt>
+      </TotalFunctionalExpensesGrp>
+      <SavingsAndTempCashInvstGrp>
+        <BOYAmt>3377446</BOYAmt>
+        <EOYAmt>402511</EOYAmt>
+      </SavingsAndTempCashInvstGrp>
+      <PledgesAndGrantsReceivableGrp>
+        <BOYAmt>1562049</BOYAmt>
+        <EOYAmt>1424709</EOYAmt>
+      </PledgesAndGrantsReceivableGrp>
+      <PrepaidExpensesDefrdChargesGrp>
+        <BOYAmt>269</BOYAmt>
+        <EOYAmt>0</EOYAmt>
+      </PrepaidExpensesDefrdChargesGrp>
+      <InvestmentsPubTradedSecGrp>
+        <BOYAmt>23318857</BOYAmt>
+        <EOYAmt>24706127</EOYAmt>
+      </InvestmentsPubTradedSecGrp>
+      <OtherAssetsTotalGrp>
+        <BOYAmt>64957</BOYAmt>
+        <EOYAmt>0</EOYAmt>
+      </OtherAssetsTotalGrp>
+      <TotalAssetsGrp>
+        <BOYAmt>28323578</BOYAmt>
+        <EOYAmt>26533347</EOYAmt>
+      </TotalAssetsGrp>
+      <AccountsPayableAccrExpnssGrp>
+        <BOYAmt>253241</BOYAmt>
+        <EOYAmt>243331</EOYAmt>
+      </AccountsPayableAccrExpnssGrp>
+      <DeferredRevenueGrp>
+        <BOYAmt>865975</BOYAmt>
+        <EOYAmt>343861</EOYAmt>
+      </DeferredRevenueGrp>
+      <OtherLiabilitiesGrp>
+        <BOYAmt>0</BOYAmt>
+        <EOYAmt>308748</EOYAmt>
+      </OtherLiabilitiesGrp>
+      <TotalLiabilitiesGrp>
+        <BOYAmt>1119216</BOYAmt>
+        <EOYAmt>895940</EOYAmt>
+      </TotalLiabilitiesGrp>
+      <OrganizationFollowsFASB117Ind>X</OrganizationFollowsFASB117Ind>
+      <NoDonorRestrictionNetAssetsGrp>
+        <BOYAmt>6843594</BOYAmt>
+        <EOYAmt>9137282</EOYAmt>
+      </NoDonorRestrictionNetAssetsGrp>
+      <DonorRestrictionNetAssetsGrp>
+        <BOYAmt>20360768</BOYAmt>
+        <EOYAmt>16500125</EOYAmt>
+      </DonorRestrictionNetAssetsGrp>
+      <TotalNetAssetsFundBalanceGrp>
+        <BOYAmt>27204362</BOYAmt>
+        <EOYAmt>25637407</EOYAmt>
+      </TotalNetAssetsFundBalanceGrp>
+      <TotLiabNetAssetsFundBalanceGrp>
+        <BOYAmt>28323578</BOYAmt>
+        <EOYAmt>26533347</EOYAmt>
+      </TotLiabNetAssetsFundBalanceGrp>
+      <ReconcilationRevenueExpnssAmt>-2787489</ReconcilationRevenueExpnssAmt>
+      <NetUnrlzdGainsLossesInvstAmt>1220534</NetUnrlzdGainsLossesInvstAmt>
+      <OtherChangesInNetAssetsAmt>0</OtherChangesInNetAssetsAmt>
+      <MethodOfAccountingAccrualInd>X</MethodOfAccountingAccrualInd>
+      <AccountantCompileOrReviewInd>0</AccountantCompileOrReviewInd>
+      <FSAuditedInd>1</FSAuditedInd>
+      <FSAuditedBasisGrp>
+        <ConsolidatedBasisFinclStmtInd>X</ConsolidatedBasisFinclStmtInd>
+      </FSAuditedBasisGrp>
+      <AuditCommitteeInd>1</AuditCommitteeInd>
+      <FederalGrantAuditRequiredInd>0</FederalGrantAuditRequiredInd>
+    </IRS990>
+    <IRS990ScheduleA documentId="RetDoc1039100001">
+      <PublicOrganization170Ind>X</PublicOrganization170Ind>
+      <GiftsGrantsContriRcvd170Grp>
+        <CurrentTaxYearMinus4YearsAmt>5334907</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>6392205</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>6654050</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>5562561</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>4840555</CurrentTaxYearAmt>
+        <TotalAmt>28784278</TotalAmt>
+      </GiftsGrantsContriRcvd170Grp>
+      <TotalCalendarYear170Grp>
+        <CurrentTaxYearMinus4YearsAmt>5334907</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>6392205</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>6654050</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>5562561</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>4840555</CurrentTaxYearAmt>
+        <TotalAmt>28784278</TotalAmt>
+      </TotalCalendarYear170Grp>
+      <SubstantialContributorsTotAmt>4258059</SubstantialContributorsTotAmt>
+      <PublicSupportTotal170Amt>24526219</PublicSupportTotal170Amt>
+      <GrossInvestmentIncome170Grp>
+        <CurrentTaxYearMinus4YearsAmt>352859</CurrentTaxYearMinus4YearsAmt>
+        <CurrentTaxYearMinus3YearsAmt>229170</CurrentTaxYearMinus3YearsAmt>
+        <CurrentTaxYearMinus2YearsAmt>325749</CurrentTaxYearMinus2YearsAmt>
+        <CurrentTaxYearMinus1YearAmt>631016</CurrentTaxYearMinus1YearAmt>
+        <CurrentTaxYearAmt>836382</CurrentTaxYearAmt>
+        <TotalAmt>2375176</TotalAmt>
+      </GrossInvestmentIncome170Grp>
+      <UnrelatedBusinessNetIncm170Grp>
+        <CurrentTaxYearAmt>5037</CurrentTaxYearAmt>
+        <TotalAmt>5037</TotalAmt>
+      </UnrelatedBusinessNetIncm170Grp>
+      <TotalSupportAmt>31164491</TotalSupportAmt>
+      <PublicSupportCY170Pct>0.78700</PublicSupportCY170Pct>
+      <PublicSupportPY170Pct>0.80530</PublicSupportPY170Pct>
+      <ThirtyThrPctSuprtTestsCY170Ind>X</ThirtyThrPctSuprtTestsCY170Ind>
+    </IRS990ScheduleA>
+    <IRS990ScheduleB documentId="RetDoc1234500001">
+      <ContributorInformationGrp>
+        <ContributorNum>RESTRICTED</ContributorNum>
+        <ContributorBusinessName>
+          <BusinessNameLine1>RESTRICTED</BusinessNameLine1>
+        </ContributorBusinessName>
+        <ContributorUSAddress>
+          <AddressLine1>RESTRICTED</AddressLine1>
+          <AddressLine2>RESTRICTED</AddressLine2>
+          <City>RESTRICTED</City>
+          <State>RESTRICTED</State>
+          <ZIPCode>RESTRICTED</ZIPCode>
+        </ContributorUSAddress>
+        <TotalContributionsAmt>RESTRICTED</TotalContributionsAmt>
+      </ContributorInformationGrp>
+    </IRS990ScheduleB>
+    <IRS990ScheduleD documentId="RetDoc1040000001">
+      <CYEndwmtFundGrp>
+        <BeginningYearBalanceAmt>7951438</BeginningYearBalanceAmt>
+        <ContributionsAmt>115564</ContributionsAmt>
+        <InvestmentEarningsOrLossesAmt>788252</InvestmentEarningsOrLossesAmt>
+        <GrantsOrScholarshipsAmt>15783</GrantsOrScholarshipsAmt>
+        <OtherExpendituresAmt>162891</OtherExpendituresAmt>
+        <AdministrativeExpensesAmt>37217</AdministrativeExpensesAmt>
+        <EndYearBalanceAmt>8639363</EndYearBalanceAmt>
+      </CYEndwmtFundGrp>
+      <CYMinus1YrEndwmtFundGrp>
+        <BeginningYearBalanceAmt>7505139</BeginningYearBalanceAmt>
+        <ContributionsAmt>15248</ContributionsAmt>
+        <InvestmentEarningsOrLossesAmt>739495</InvestmentEarningsOrLossesAmt>
+        <GrantsOrScholarshipsAmt>51797</GrantsOrScholarshipsAmt>
+        <OtherExpendituresAmt>256647</OtherExpendituresAmt>
+        <EndYearBalanceAmt>7951438</EndYearBalanceAmt>
+      </CYMinus1YrEndwmtFundGrp>
+      <CYMinus2YrEndwmtFundGrp>
+        <BeginningYearBalanceAmt>8519574</BeginningYearBalanceAmt>
+        <ContributionsAmt>80607</ContributionsAmt>
+        <InvestmentEarningsOrLossesAmt>-772629</InvestmentEarningsOrLossesAmt>
+        <GrantsOrScholarshipsAmt>45447</GrantsOrScholarshipsAmt>
+        <OtherExpendituresAmt>242696</OtherExpendituresAmt>
+        <AdministrativeExpensesAmt>34270</AdministrativeExpensesAmt>
+        <EndYearBalanceAmt>7505139</EndYearBalanceAmt>
+      </CYMinus2YrEndwmtFundGrp>
+      <CYMinus3YrEndwmtFundGrp>
+        <BeginningYearBalanceAmt>7696043</BeginningYearBalanceAmt>
+        <ContributionsAmt>67691</ContributionsAmt>
+        <InvestmentEarningsOrLossesAmt>1053774</InvestmentEarningsOrLossesAmt>
+        <GrantsOrScholarshipsAmt>36975</GrantsOrScholarshipsAmt>
+        <OtherExpendituresAmt>222882</OtherExpendituresAmt>
+        <AdministrativeExpensesAmt>38077</AdministrativeExpensesAmt>
+        <EndYearBalanceAmt>8519574</EndYearBalanceAmt>
+      </CYMinus3YrEndwmtFundGrp>
+      <CYMinus4YrEndwmtFundGrp>
+        <BeginningYearBalanceAmt>7552046</BeginningYearBalanceAmt>
+        <ContributionsAmt>76521</ContributionsAmt>
+        <InvestmentEarningsOrLossesAmt>186928</InvestmentEarningsOrLossesAmt>
+        <GrantsOrScholarshipsAmt>28707</GrantsOrScholarshipsAmt>
+        <OtherExpendituresAmt>55954</OtherExpendituresAmt>
+        <AdministrativeExpensesAmt>34791</AdministrativeExpensesAmt>
+        <EndYearBalanceAmt>7696043</EndYearBalanceAmt>
+      </CYMinus4YrEndwmtFundGrp>
+      <BoardDesignatedBalanceEOYPct>0.05290</BoardDesignatedBalanceEOYPct>
+      <PrmnntEndowmentBalanceEOYPct>0.79940</PrmnntEndowmentBalanceEOYPct>
+      <TermEndowmentBalanceEOYPct>0.14770</TermEndowmentBalanceEOYPct>
+      <EndowmentsHeldUnrelatedOrgInd>1</EndowmentsHeldUnrelatedOrgInd>
+      <EndowmentsHeldRelatedOrgInd>0</EndowmentsHeldRelatedOrgInd>
+      <TotalBookValueLandBuildingsAmt>0</TotalBookValueLandBuildingsAmt>
+      <OtherLiabilitiesOrgGrp>
+        <Desc>RELATED PARTY PAYABLE</Desc>
+        <Amt>308748</Amt>
+      </OtherLiabilitiesOrgGrp>
+      <TotalLiabilityAmt>308748</TotalLiabilityAmt>
+      <TotalRevEtcAuditedFinclStmtAmt>7756290</TotalRevEtcAuditedFinclStmtAmt>
+      <NetUnrealizedGainsInvstAmt>1220534</NetUnrealizedGainsInvstAmt>
+      <RevenueNotReportedAmt>1220534</RevenueNotReportedAmt>
+      <RevenueSubtotalAmt>6535756</RevenueSubtotalAmt>
+      <InvestmentExpensesNotIncldAmt>41380</InvestmentExpensesNotIncldAmt>
+      <OtherRevenuesNotIncludedAmt>-33381</OtherRevenuesNotIncludedAmt>
+      <RevenueNotReportedFinclStmtAmt>7999</RevenueNotReportedFinclStmtAmt>
+      <TotalRevenuePerForm990Amt>6543755</TotalRevenuePerForm990Amt>
+      <TotExpnsEtcAuditedFinclStmtAmt>9323245</TotExpnsEtcAuditedFinclStmtAmt>
+      <OtherExpensesIncludedAmt>33381</OtherExpensesIncludedAmt>
+      <ExpensesNotReportedAmt>33381</ExpensesNotReportedAmt>
+      <ExpensesSubtotalAmt>9289864</ExpensesSubtotalAmt>
+      <InvestmentExpensesNotIncld2Amt>41380</InvestmentExpensesNotIncld2Amt>
+      <ExpensesNotRptFinclStmtAmt>41380</ExpensesNotRptFinclStmtAmt>
+      <TotalExpensesPerForm990Amt>9331244</TotalExpensesPerForm990Amt>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART V, LINE 4:</FormAndLineReferenceDesc>
+        <ExplanationTxt>ENDOWMENT FUNDS ARE USED FOR THE INTENDED PURPOSE TO FUND SCHOLARSHIPS, EDUCATION, PROGRAMS, AND COMMUNITY BENEFIT.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART XI, LINE 4B - OTHER ADJUSTMENTS:</FormAndLineReferenceDesc>
+        <ExplanationTxt>FUNDRAISING EXPENSES -10,543. RENTAL EXPENSE -22,838.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART XII, LINE 2D - OTHER ADJUSTMENTS:</FormAndLineReferenceDesc>
+        <ExplanationTxt>RENTAL EXPENSES 22,838. FUNDRAISING EXPENSES 10,543.</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleD>
+    <IRS990ScheduleG documentId="RetDoc1041200001">
+      <MailSolicitationsInd>X</MailSolicitationsInd>
+      <EmailSolicitationsInd>X</EmailSolicitationsInd>
+      <PhoneSolicitationsInd>X</PhoneSolicitationsInd>
+      <InPersonSolicitationsInd>X</InPersonSolicitationsInd>
+      <SolicitationOfNonGovtGrantsInd>X</SolicitationOfNonGovtGrantsInd>
+      <SolicitationOfGovtGrantsInd>X</SolicitationOfGovtGrantsInd>
+      <SpecialFundraisingEventsInd>X</SpecialFundraisingEventsInd>
+      <AgrmtProfFundraisingActyInd>1</AgrmtProfFundraisingActyInd>
+      <FundraiserActivityInfoGrp>
+        <OrganizationBusinessName>
+          <BusinessNameLine1Txt>ALLIANCE PHILANTHROPY</BusinessNameLine1Txt>
+        </OrganizationBusinessName>
+        <USAddress>
+          <AddressLine1Txt>27459 FRONTAGE ROAD</AddressLine1Txt>
+          <CityNm>BOZEMAN</CityNm>
+          <StateAbbreviationCd>MT</StateAbbreviationCd>
+          <ZIPCd>59715</ZIPCd>
+        </USAddress>
+        <ActivityTxt>MCR CAMPAIGN</ActivityTxt>
+        <FundraiserControlOfFundsInd>0</FundraiserControlOfFundsInd>
+        <GrossReceiptsAmt>0</GrossReceiptsAmt>
+        <RetainedByContractorAmt>40624</RetainedByContractorAmt>
+        <NetToOrganizationAmt>0</NetToOrganizationAmt>
+      </FundraiserActivityInfoGrp>
+      <TotalRetainedByContractorsAmt>40624</TotalRetainedByContractorsAmt>
+      <LicensedStatesCd>CO</LicensedStatesCd>
+      <FundraisingEventInformationGrp>
+        <Event1Nm>NORTHERN COLORADO GOLF TOURNAMENT</Event1Nm>
+        <GrossReceiptsEvent1Amt>40420</GrossReceiptsEvent1Amt>
+        <CharitableContriEvent1Amt>24840</CharitableContriEvent1Amt>
+        <GrossRevenueEvent1Amt>15580</GrossRevenueEvent1Amt>
+        <RentFacilityCostsEvent1Amt>5966</RentFacilityCostsEvent1Amt>
+        <FoodAndBeverageEvent1Amt>4140</FoodAndBeverageEvent1Amt>
+        <OtherDirectExpensesEvent1Amt>437</OtherDirectExpensesEvent1Amt>
+        <GrossReceiptsTotalAmt>40420</GrossReceiptsTotalAmt>
+        <CharitableContributionsTotAmt>24840</CharitableContributionsTotAmt>
+        <GrossRevenueTotalEventsAmt>15580</GrossRevenueTotalEventsAmt>
+        <RentFcltyCostsTotalEventsAmt>5966</RentFcltyCostsTotalEventsAmt>
+        <FoodAndBeverageTotalEventsAmt>4140</FoodAndBeverageTotalEventsAmt>
+        <OthDirectExpnssTotalEventsAmt>437</OthDirectExpnssTotalEventsAmt>
+        <DirectExpenseSummaryEventsAmt>10543</DirectExpenseSummaryEventsAmt>
+        <NetIncomeSummaryAmt>5037</NetIncomeSummaryAmt>
+      </FundraisingEventInformationGrp>
+    </IRS990ScheduleG>
+    <IRS990ScheduleI documentId="RetDoc1041900001">
+      <GrantRecordsMaintainedInd>1</GrantRecordsMaintainedInd>
+      <RecipientTable>
+        <RecipientBusinessName>
+          <BusinessNameLine1Txt>POUDRE VALLEY HEALTH CARE INC</BusinessNameLine1Txt>
+        </RecipientBusinessName>
+        <USAddress>
+          <AddressLine1Txt>2315 E HARMONY RD SUITE 200</AddressLine1Txt>
+          <CityNm>FORT COLLINS</CityNm>
+          <StateAbbreviationCd>CO</StateAbbreviationCd>
+          <ZIPCd>80528</ZIPCd>
+        </USAddress>
+        <RecipientEIN>841262971</RecipientEIN>
+        <IRCSectionDesc>501 (C)(3)</IRCSectionDesc>
+        <CashGrantAmt>877418</CashGrantAmt>
+        <NonCashAssistanceAmt>269673</NonCashAssistanceAmt>
+        <ValuationMethodUsedDesc>FMV</ValuationMethodUsedDesc>
+        <NonCashAssistanceDesc>MEDICAL EQUIPMENT</NonCashAssistanceDesc>
+        <PurposeOfGrantTxt>VARIOUS PROGRAM SUPPORT</PurposeOfGrantTxt>
+      </RecipientTable>
+      <RecipientTable>
+        <RecipientBusinessName>
+          <BusinessNameLine1Txt>MEDICAL CENTER OF THE ROCKIES</BusinessNameLine1Txt>
+        </RecipientBusinessName>
+        <USAddress>
+          <AddressLine1Txt>2315 E HARMONY RD SUITE 200</AddressLine1Txt>
+          <CityNm>FORT COLLINS</CityNm>
+          <StateAbbreviationCd>CO</StateAbbreviationCd>
+          <ZIPCd>80528</ZIPCd>
+        </USAddress>
+        <RecipientEIN>043730045</RecipientEIN>
+        <IRCSectionDesc>501 (C)(3)</IRCSectionDesc>
+        <CashGrantAmt>926</CashGrantAmt>
+        <NonCashAssistanceAmt>5191</NonCashAssistanceAmt>
+        <ValuationMethodUsedDesc>FMV</ValuationMethodUsedDesc>
+        <NonCashAssistanceDesc>MEDICAL EQUIPMENT</NonCashAssistanceDesc>
+        <PurposeOfGrantTxt>VARIOUS PROGRAM SUPPORT</PurposeOfGrantTxt>
+      </RecipientTable>
+      <RecipientTable>
+        <RecipientBusinessName>
+          <BusinessNameLine1Txt>POUDRE VALLEY HEALTH CARE INC PVH CAMPAIGN</BusinessNameLine1Txt>
+        </RecipientBusinessName>
+        <USAddress>
+          <AddressLine1Txt>2315 E HARMONY RD SUITE 200</AddressLine1Txt>
+          <CityNm>FORT COLLINS</CityNm>
+          <StateAbbreviationCd>CO</StateAbbreviationCd>
+          <ZIPCd>80528</ZIPCd>
+        </USAddress>
+        <RecipientEIN>841262971</RecipientEIN>
+        <IRCSectionDesc>501 (C)(3)</IRCSectionDesc>
+        <CashGrantAmt>0</CashGrantAmt>
+        <NonCashAssistanceAmt>4650000</NonCashAssistanceAmt>
+        <ValuationMethodUsedDesc>FMV</ValuationMethodUsedDesc>
+        <NonCashAssistanceDesc>BUILDING CAPITAL IMPROVEMENT</NonCashAssistanceDesc>
+        <PurposeOfGrantTxt>VARIOUS PROGRAM SUPPORT</PurposeOfGrantTxt>
+      </RecipientTable>
+      <RecipientTable>
+        <RecipientBusinessName>
+          <BusinessNameLine1Txt>UCH HEALTH GREELEY HOSPITAL</BusinessNameLine1Txt>
+        </RecipientBusinessName>
+        <USAddress>
+          <AddressLine1Txt>6767 W 29TH STREET</AddressLine1Txt>
+          <CityNm>GREELEY</CityNm>
+          <StateAbbreviationCd>CO</StateAbbreviationCd>
+          <ZIPCd>80634</ZIPCd>
+        </USAddress>
+        <RecipientEIN>822666059</RecipientEIN>
+        <IRCSectionDesc>501 (C)(3)</IRCSectionDesc>
+        <CashGrantAmt>0</CashGrantAmt>
+        <NonCashAssistanceAmt>17549</NonCashAssistanceAmt>
+        <ValuationMethodUsedDesc>FMV</ValuationMethodUsedDesc>
+        <NonCashAssistanceDesc>MEDICAL EQUIPMENT</NonCashAssistanceDesc>
+        <PurposeOfGrantTxt>VARIOUS PROGRAM SUPPORT</PurposeOfGrantTxt>
+      </RecipientTable>
+      <Total501c3OrgCnt>4</Total501c3OrgCnt>
+      <GrantsOtherAsstToIndivInUSGrp>
+        <GrantTypeTxt>EMPLOYEE ASSISTANCE</GrantTypeTxt>
+        <RecipientCnt>243</RecipientCnt>
+        <CashGrantAmt>350165</CashGrantAmt>
+      </GrantsOtherAsstToIndivInUSGrp>
+      <GrantsOtherAsstToIndivInUSGrp>
+        <GrantTypeTxt>SCHOLARSHIPS</GrantTypeTxt>
+        <RecipientCnt>40</RecipientCnt>
+        <CashGrantAmt>62260</CashGrantAmt>
+      </GrantsOtherAsstToIndivInUSGrp>
+      <GrantsOtherAsstToIndivInUSGrp>
+        <GrantTypeTxt>CANCER PATIENT ASSISTANCE</GrantTypeTxt>
+        <RecipientCnt>777</RecipientCnt>
+        <CashGrantAmt>312052</CashGrantAmt>
+      </GrantsOtherAsstToIndivInUSGrp>
+      <GrantsOtherAsstToIndivInUSGrp>
+        <GrantTypeTxt>MEDICARE COUNSELING</GrantTypeTxt>
+        <RecipientCnt>1155</RecipientCnt>
+        <CashGrantAmt>31908</CashGrantAmt>
+      </GrantsOtherAsstToIndivInUSGrp>
+      <GrantsOtherAsstToIndivInUSGrp>
+        <GrantTypeTxt>NEWBORN FAMILY VISITS</GrantTypeTxt>
+        <RecipientCnt>336</RecipientCnt>
+        <CashGrantAmt>2536</CashGrantAmt>
+      </GrantsOtherAsstToIndivInUSGrp>
+      <GrantsOtherAsstToIndivInUSGrp>
+        <GrantTypeTxt>CHILDREN'S BICYCLE HELMETS &amp; CAR SEATS</GrantTypeTxt>
+        <RecipientCnt>864</RecipientCnt>
+        <CashGrantAmt>37695</CashGrantAmt>
+      </GrantsOtherAsstToIndivInUSGrp>
+      <GrantsOtherAsstToIndivInUSGrp>
+        <GrantTypeTxt>DIABETES EDUCATION</GrantTypeTxt>
+        <RecipientCnt>294</RecipientCnt>
+        <CashGrantAmt>16242</CashGrantAmt>
+      </GrantsOtherAsstToIndivInUSGrp>
+      <GrantsOtherAsstToIndivInUSGrp>
+        <GrantTypeTxt>BREAST PUMP RENTALS</GrantTypeTxt>
+        <RecipientCnt>56</RecipientCnt>
+        <CashGrantAmt>1400</CashGrantAmt>
+      </GrantsOtherAsstToIndivInUSGrp>
+      <GrantsOtherAsstToIndivInUSGrp>
+        <GrantTypeTxt>PATIENT EDUCATION-ENHANCE WELLNESS</GrantTypeTxt>
+        <RecipientCnt>2169</RecipientCnt>
+        <CashGrantAmt>36945</CashGrantAmt>
+      </GrantsOtherAsstToIndivInUSGrp>
+      <GrantsOtherAsstToIndivInUSGrp>
+        <GrantTypeTxt>ACCESS TO HEALTHCARE</GrantTypeTxt>
+        <RecipientCnt>960</RecipientCnt>
+        <CashGrantAmt>1403341</CashGrantAmt>
+      </GrantsOtherAsstToIndivInUSGrp>
+      <GrantsOtherAsstToIndivInUSGrp>
+        <GrantTypeTxt>CHOLESTEROL/HEART HEALTH SCREENING</GrantTypeTxt>
+        <RecipientCnt>12939</RecipientCnt>
+        <CashGrantAmt>44788</CashGrantAmt>
+      </GrantsOtherAsstToIndivInUSGrp>
+      <GrantsOtherAsstToIndivInUSGrp>
+        <GrantTypeTxt>FOOD PANTRY</GrantTypeTxt>
+        <RecipientCnt>9827</RecipientCnt>
+        <CashGrantAmt>79838</CashGrantAmt>
+      </GrantsOtherAsstToIndivInUSGrp>
+      <GrantsOtherAsstToIndivInUSGrp>
+        <GrantTypeTxt>PATIENT ASSISTANCE</GrantTypeTxt>
+        <RecipientCnt>1027</RecipientCnt>
+        <CashGrantAmt>156068</CashGrantAmt>
+      </GrantsOtherAsstToIndivInUSGrp>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART I, LINE 2:</FormAndLineReferenceDesc>
+        <ExplanationTxt>THE FOUNDATION REQUESTS GRANT RECIPIENTS TO REPORT BACK TO THE FOUNDATION ON USE AND OUTCOME OF FUNDING.</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleI>
+    <IRS990ScheduleJ documentId="RetDoc1042400001">
+      <SeverancePaymentInd>1</SeverancePaymentInd>
+      <SupplementalNonqualRtrPlanInd>0</SupplementalNonqualRtrPlanInd>
+      <EquityBasedCompArrngmInd>0</EquityBasedCompArrngmInd>
+      <CompBasedOnRevenueOfFlngOrgInd>0</CompBasedOnRevenueOfFlngOrgInd>
+      <CompBsdOnRevRelatedOrgsInd>0</CompBsdOnRevRelatedOrgsInd>
+      <CompBsdNetEarnsFlngOrgInd>0</CompBsdNetEarnsFlngOrgInd>
+      <CompBsdNetEarnsRltdOrgsInd>0</CompBsdNetEarnsRltdOrgsInd>
+      <AnyNonFixedPaymentsInd>1</AnyNonFixedPaymentsInd>
+      <InitialContractExceptionInd>0</InitialContractExceptionInd>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>KEVIN UNGER</PersonNm>
+        <TitleTxt>PVHC CEO</TitleTxt>
+        <BaseCompensationFilingOrgAmt>0</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>504539</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>193905</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>0</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>16050</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>0</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>100766</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>0</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>18233</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>0</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>833493</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>DAVID THOMPSON</PersonNm>
+        <TitleTxt>BOARD TREASURER &amp; CFO</TitleTxt>
+        <BaseCompensationFilingOrgAmt>0</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>358113</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>0</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>76154</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>0</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>3545</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>0</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>37015</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>0</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>20189</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>0</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>495016</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <RltdOrgOfficerTrstKeyEmplGrp>
+        <PersonNm>DAVID CRUM TERM END 1023</PersonNm>
+        <TitleTxt>FORMER NCF SENIOR DIRECTOR</TitleTxt>
+        <BaseCompensationFilingOrgAmt>132396</BaseCompensationFilingOrgAmt>
+        <CompensationBasedOnRltdOrgsAmt>0</CompensationBasedOnRltdOrgsAmt>
+        <BonusFilingOrganizationAmount>13413</BonusFilingOrganizationAmount>
+        <BonusRelatedOrganizationsAmt>0</BonusRelatedOrganizationsAmt>
+        <OtherCompensationFilingOrgAmt>48719</OtherCompensationFilingOrgAmt>
+        <OtherCompensationRltdOrgsAmt>0</OtherCompensationRltdOrgsAmt>
+        <DeferredCompensationFlngOrgAmt>17383</DeferredCompensationFlngOrgAmt>
+        <DeferredCompRltdOrgsAmt>0</DeferredCompRltdOrgsAmt>
+        <NontaxableBenefitsFilingOrgAmt>19242</NontaxableBenefitsFilingOrgAmt>
+        <NontaxableBenefitsRltdOrgsAmt>0</NontaxableBenefitsRltdOrgsAmt>
+        <TotalCompensationFilingOrgAmt>231153</TotalCompensationFilingOrgAmt>
+        <TotalCompensationRltdOrgsAmt>0</TotalCompensationRltdOrgsAmt>
+        <CompReportPrior990FilingOrgAmt>0</CompReportPrior990FilingOrgAmt>
+        <CompReportPrior990RltdOrgsAmt>0</CompReportPrior990RltdOrgsAmt>
+      </RltdOrgOfficerTrstKeyEmplGrp>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART I, LINE 4A</FormAndLineReferenceDesc>
+        <ExplanationTxt>DAVID CRUM RECEIVED A SEVERANCE PAYMENT OF $33,384.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>PART I, LINE 7</FormAndLineReferenceDesc>
+        <ExplanationTxt>THE ORGANIZATION OFFERS A BONUS PLAN THAT PAYS A PERCENTAGE OF AN EMPLOYEE'S BASE PAY. THE INTENT OF THE PLAN IS TO REWARD AN EMPLOYEE'S PERFORMANCE TOWARDS ACHIEVEMENT OF STRATEGIC GOALS DURING THE FISCAL YEAR. SUCCESSFUL ACCOMPLISHMENT OF GOALS THAT CONTRIBUTE TO THE ORGANIZATION'S OVERALL STRATEGIC DIRECTION RESULT IN VARIABLE PAYMENTS ALIGNED WITH THE ORGANIZATION'S TOTAL COMPENSATION STRATEGY. THIS PROGRAM REWARDS EMPLOYEES BASED ON ORGANIZATIONAL PERFORMANCE MEASURES AND INDIVIDUAL EMPLOYEE GOAL PERFORMANCE. ALL PAYOUTS ARE CONTINGENT BASED ON THE UCHEALTH BOARD OF DIRECTORS APPROVAL EACH FISCAL YEAR.</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleJ>
+    <IRS990ScheduleM documentId="RetDoc1042900001">
+      <SecuritiesPubliclyTradedGrp>
+        <NonCashCheckboxInd>X</NonCashCheckboxInd>
+        <ContributionCnt>1</ContributionCnt>
+        <NoncashContributionsRptF990Amt>16799</NoncashContributionsRptF990Amt>
+        <MethodOfDeterminingRevenuesTxt>FMV</MethodOfDeterminingRevenuesTxt>
+      </SecuritiesPubliclyTradedGrp>
+      <OtherNonCashContriTableGrp>
+        <NonCashCheckboxInd>X</NonCashCheckboxInd>
+        <Desc>DUST CONTAINMENT UNITS</Desc>
+        <ContributionCnt>20</ContributionCnt>
+        <NoncashContributionsRptF990Amt>60800</NoncashContributionsRptF990Amt>
+        <MethodOfDeterminingRevenuesTxt>FMV</MethodOfDeterminingRevenuesTxt>
+      </OtherNonCashContriTableGrp>
+      <OtherNonCashContriTableGrp>
+        <NonCashCheckboxInd>X</NonCashCheckboxInd>
+        <Desc>AIR MACHINES</Desc>
+        <ContributionCnt>12</ContributionCnt>
+        <NoncashContributionsRptF990Amt>13440</NoncashContributionsRptF990Amt>
+        <MethodOfDeterminingRevenuesTxt>FMV</MethodOfDeterminingRevenuesTxt>
+      </OtherNonCashContriTableGrp>
+      <OtherNonCashContriTableGrp>
+        <NonCashCheckboxInd>X</NonCashCheckboxInd>
+        <Desc>REFIRGERATOR FOR FMC FOOD PANTRY</Desc>
+        <ContributionCnt>1</ContributionCnt>
+        <NoncashContributionsRptF990Amt>10500</NoncashContributionsRptF990Amt>
+        <MethodOfDeterminingRevenuesTxt>FMV</MethodOfDeterminingRevenuesTxt>
+      </OtherNonCashContriTableGrp>
+      <AnyPropertyThatMustBeHeldInd>0</AnyPropertyThatMustBeHeldInd>
+      <ReviewProcessUnusualNCGiftsInd>1</ReviewProcessUnusualNCGiftsInd>
+      <ThirdPartiesUsedInd>0</ThirdPartiesUsedInd>
+    </IRS990ScheduleM>
+    <IRS990ScheduleO documentId="RetDoc1044400001">
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART VI, SECTION A, LINE 6</FormAndLineReferenceDesc>
+        <ExplanationTxt>POUDRE VALLEY HEALTH CARE, INC., DBA THE POUDRE VALLEY HEALTH SYSTEM, A 501(C)(3) ORGANIZATION, IS THE SOLE MEMBER OF UCHEALTH NORTHERN COLORADO FOUNDATION.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART VI, SECTION A, LINE 7A</FormAndLineReferenceDesc>
+        <ExplanationTxt>AS THE SOLE MEMBER OF UCHEALTH NORTHERN COLORADO FOUNDATION, POUDRE VALLEY HEALTH CARE INC. APPOINTS ALL BOARD MEMBERS.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART VI, SECTION A, LINE 7B</FormAndLineReferenceDesc>
+        <ExplanationTxt>A UNANIMOUS VOTE OF THE MEMBERS IS REQUIRED FOR AMENDMENTS TO THE ARTICLES OF INCORPORATION OR BYLAWS, ACTION REGARDING DISSOLUTION, MERGER OR CONSOLIDATION, ACTION REGARDING SALE, LEASE, MORTGAGE, OR OTHER TRANSFER OF SUBSTANTIALLY ALL ASSETS, OR ADMITTING A NEW MEMBER OR TRANSFER OF A MEMBER'S INTEREST.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART VI, SECTION B, LINE 11B</FormAndLineReferenceDesc>
+        <ExplanationTxt>THE FORM 990 IS PREPARED BY A THIRD PARTY. A PRELIMINARY DRAFT IS REVIEWED BY THE INTERNAL FINANCE DEPARTMENT. THE FINAL COPY OF THE FORM 990 IS PROVIDED IN AN ELECTRONIC FORMAT TO ALL BOARD OF DIRECTOR MEMBERS PRIOR TO FILING WITH THE IRS.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART VI, SECTION B, LINE 12C</FormAndLineReferenceDesc>
+        <ExplanationTxt>ALL BOARD MEMBERS ARE COVERED UNDER THIS POLICY. CONFLICTS ARE REVIEWED AT MANAGEMENT LEVEL. BOARD MEMBERS RESCIND ON VOTING IF A CONFLICT EXISTS.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART VI, SECTION B, LINE 15</FormAndLineReferenceDesc>
+        <ExplanationTxt>UCHEALTH NOTHERN COLORADO FOUNDATION DOES NOT HAVE EMPLOYEES FOR FORM 990 REPORTING PURPOSES, AS ALL EMPLOYEES OF UCHEALTH NOTHERN COLORADO FOUNDATION ARE REPORTED ON THE PAYROLL OF UNIVERSITY OF COLORADO HOSPITAL AUTHORITY THROUGH 6/30/2024. EMPLOYEES ARE LEASED TO UCHEALTH NORTHERN COLORADO FOUNDATION. THE EXPENSES THAT ARE REPORTED FOR SALARIES AND BENEFITS ON THE STATEMENT OF FUNCTIONAL EXPENSES REPRESENT THE EMPLOYEE LEASE EXPENSE FOR THE YEAR ENDED 6/30/2024.</ExplanationTxt>
+      </SupplementalInformationDetail>
+      <SupplementalInformationDetail>
+        <FormAndLineReferenceDesc>FORM 990, PART VI, SECTION C, LINE 19</FormAndLineReferenceDesc>
+        <ExplanationTxt>GOVERNING DOCUMENTS, FINANCIAL STATEMENTS, AND THE CONFLICT OF INTEREST POLICY ARE MADE AVAILABLE TO THE PUBLIC UPON REQUEST WITH A LEGITIMATE BUSINESS PURPOSE.</ExplanationTxt>
+      </SupplementalInformationDetail>
+    </IRS990ScheduleO>
+    <IRS990ScheduleR documentId="RetDoc1043400001">
+      <IdRelatedTaxExemptOrgGrp>
+        <DisregardedEntityName>
+          <BusinessNameLine1Txt>POUDRE VALLEY HEALTH CARE INC</BusinessNameLine1Txt>
+        </DisregardedEntityName>
+        <USAddress>
+          <AddressLine1Txt>2315 E HARMONY RD SUITE 200</AddressLine1Txt>
+          <CityNm>FORT COLLINS</CityNm>
+          <StateAbbreviationCd>CO</StateAbbreviationCd>
+          <ZIPCd>80528</ZIPCd>
+        </USAddress>
+        <EIN>841262971</EIN>
+        <PrimaryActivitiesTxt>HOSPITAL</PrimaryActivitiesTxt>
+        <LegalDomicileStateCd>CO</LegalDomicileStateCd>
+        <ExemptCodeSectionTxt>501(C)(3)</ExemptCodeSectionTxt>
+        <PublicCharityStatusTxt>LINE 3</PublicCharityStatusTxt>
+        <DirectControllingNACd>N/A</DirectControllingNACd>
+        <ControlledOrganizationInd>0</ControlledOrganizationInd>
+      </IdRelatedTaxExemptOrgGrp>
+      <IdRelatedTaxExemptOrgGrp>
+        <DisregardedEntityName>
+          <BusinessNameLine1Txt>MEDICAL CENTER OF THE ROCKIES</BusinessNameLine1Txt>
+        </DisregardedEntityName>
+        <USAddress>
+          <AddressLine1Txt>2315 E HARMONY RD SUITE 200</AddressLine1Txt>
+          <CityNm>FORT COLLINS</CityNm>
+          <StateAbbreviationCd>CO</StateAbbreviationCd>
+          <ZIPCd>80528</ZIPCd>
+        </USAddress>
+        <EIN>043730045</EIN>
+        <PrimaryActivitiesTxt>HOSPITAL</PrimaryActivitiesTxt>
+        <LegalDomicileStateCd>CO</LegalDomicileStateCd>
+        <ExemptCodeSectionTxt>501(C)(3)</ExemptCodeSectionTxt>
+        <PublicCharityStatusTxt>LINE 3</PublicCharityStatusTxt>
+        <DirectControllingNACd>N/A</DirectControllingNACd>
+        <ControlledOrganizationInd>0</ControlledOrganizationInd>
+      </IdRelatedTaxExemptOrgGrp>
+      <IdRelatedOrgTxblCorpTrGrp>
+        <RelatedOrganizationName>
+          <BusinessNameLine1Txt>INNOVATION ENTERPRISES</BusinessNameLine1Txt>
+        </RelatedOrganizationName>
+        <USAddress>
+          <AddressLine1Txt>2315 E HARMONY RD SUITE 200</AddressLine1Txt>
+          <CityNm>FORT COLLINS</CityNm>
+          <StateAbbreviationCd>CO</StateAbbreviationCd>
+          <ZIPCd>80528</ZIPCd>
+        </USAddress>
+        <EIN>202036774</EIN>
+        <PrimaryActivitiesTxt>IT CONSULTING</PrimaryActivitiesTxt>
+        <LegalDomicileStateCd>CO</LegalDomicileStateCd>
+        <DirectControllingNACd>N/A</DirectControllingNACd>
+        <EntityTypeTxt>C</EntityTypeTxt>
+        <ControlledOrganizationInd>0</ControlledOrganizationInd>
+      </IdRelatedOrgTxblCorpTrGrp>
+      <ReceiptOfIntAnntsRntsRyltsInd>0</ReceiptOfIntAnntsRntsRyltsInd>
+      <GiftGrntOrCapContriToOthOrgInd>1</GiftGrntOrCapContriToOthOrgInd>
+      <GiftGrntCapContriFromOthOrgInd>1</GiftGrntCapContriFromOthOrgInd>
+      <LoansOrGuaranteesToOtherOrgInd>0</LoansOrGuaranteesToOtherOrgInd>
+      <LoansOrGuaranteesFromOthOrgInd>0</LoansOrGuaranteesFromOthOrgInd>
+      <DivRelatedOrganizationInd>0</DivRelatedOrganizationInd>
+      <AssetSaleToOtherOrgInd>0</AssetSaleToOtherOrgInd>
+      <AssetPurchaseFromOtherOrgInd>0</AssetPurchaseFromOtherOrgInd>
+      <AssetExchangeInd>0</AssetExchangeInd>
+      <RentalOfFacilitiesToOthOrgInd>0</RentalOfFacilitiesToOthOrgInd>
+      <RentalOfFcltsFromOthOrgInd>1</RentalOfFcltsFromOthOrgInd>
+      <PerformOfServicesForOthOrgInd>0</PerformOfServicesForOthOrgInd>
+      <PerformOfServicesByOtherOrgInd>1</PerformOfServicesByOtherOrgInd>
+      <SharingOfFacilitiesInd>1</SharingOfFacilitiesInd>
+      <PaidEmployeesSharingInd>1</PaidEmployeesSharingInd>
+      <ReimbursementPaidToOtherOrgInd>1</ReimbursementPaidToOtherOrgInd>
+      <ReimbursementPaidByOtherOrgInd>1</ReimbursementPaidByOtherOrgInd>
+      <TransferToOtherOrgInd>0</TransferToOtherOrgInd>
+      <TransferFromOtherOrgInd>0</TransferFromOtherOrgInd>
+    </IRS990ScheduleR>
+  </ReturnData>
+</Return>
