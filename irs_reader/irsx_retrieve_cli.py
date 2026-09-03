@@ -18,6 +18,7 @@ import os
 import re
 import io
 import argparse
+import shutil
 import tarfile
 import time
 from zipfile import ZipFile
@@ -105,7 +106,11 @@ def download_and_extract_zip(url, output_dir, verbose=False):
             if os.path.exists(out_path):
                 skipped += 1
                 continue
-            zipObj.extract(name, output_dir)
+            # Some years (2023, 2024) nest XML under a directory inside the
+            # zip; others (2025) are flat. extract() would preserve that
+            # prefix, so copy the member to the flat out_path instead.
+            with zipObj.open(name) as src, open(out_path, 'wb') as dst:
+                shutil.copyfileobj(src, dst)
             count += 1
 
     os.remove(local_path)
