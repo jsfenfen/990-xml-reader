@@ -99,3 +99,6 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# query output — large, reproducible from new_queries/
+new_results/

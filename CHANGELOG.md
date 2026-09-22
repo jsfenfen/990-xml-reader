@@ -6,6 +6,11 @@ All notable changes are documented in this file.
 
 ## 0.5.1 - 2026-04-17
 
+Metadata submodule bumped to the 2024 and 2025 schemas. Documentation site at
+irsx.info rebuilt from that metadata on 2026-09-22 — the previous build was from
+2019 and was missing 91 repeating groups. The site is now baked from the metadata
+.csv files by the 990-generate-docs repo, rather than by 990-xml-database.
+
 Update to support python 3.10+. Fix bug affecting repeating groups that appear once.
 
 Change ergonomics downstream of IRS' removal of an S3 bucket, and instead expect to retrieve files to a local dir from the irs or the internet archive. More robust testing across a greater range of versions. 
